@@ -63,105 +63,6 @@ backdrop-filter: blur(12px);
 border: 1px solid rgba(255, 255, 255, 0.05);
 }
 /* Glassmorphism effects for Light Mode */
-html:not(.dark) .glass-panel {
-  background: rgba(255, 255, 255, 0.88) !important;
-  backdrop-filter: blur(16px) !important;
-  border: 1px solid #cbd5e1 !important; /* Defined crisp slate border for day mode */
-  box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.08), 0 1px 3px rgba(15, 23, 42, 0.02) !important;
-}
-
-html:not(.dark) .glass-card {
-  background: #ffffff !important;
-  border: 1px solid #cbd5e1 !important; /* Visible borders instead of faint ones */
-  box-shadow: 0 10px 25px -10px rgba(15, 23, 42, 0.08), 0 4px 10px -5px rgba(15, 23, 42, 0.04) !important;
-}
-
-html:not(.dark) .glass-card:hover {
-  border-color: #00f2fe !important;
-  box-shadow: 0 16px 30px -10px rgba(0, 242, 254, 0.25) !important;
-}
-
-/* Day mode overrides for the live showcase container frame (replaces dark box with gray) */
-html:not(.dark) .mock-showcase-container {
-  background-color: #f8fafc !important; /* Soft premium slate-gray */
-  border-color: #cbd5e1 !important;
-}
-
-/* Force dark overlay with 75% opacity on hover in Light Mode to ensure white 'Ver más grande' stands out */
-html:not(.dark) .mock-view .group .absolute.inset-0 {
-  background-color: rgba(15, 23, 42, 0.75) !important;
-}
-
-/* Light mode overrides for mock-views content details */
-html:not(.dark) .mock-view {
-  color: #334155 !important;
-}
-
-html:not(.dark) .mock-view h4,
-html:not(.dark) .mock-view .text-white,
-html:not(.dark) .mock-view strong {
-  color: #0f172a !important; /* Intense readable charcoal gray/black headers and bold texts */
-}
-
-html:not(.dark) .mock-view .text-slate-300,
-html:not(.dark) .mock-view .text-slate-400,
-html:not(.dark) .mock-view .text-brand-textMuted {
-  color: #475569 !important; /* Readable gray/blue instead of unreadable light gray */
-}
-
-/* Remap neon colors to professional corporate colors in Day Mode inside mockups */
-html:not(.dark) .mock-view .text-brand-cyan {
-  color: #0284c7 !important; /* Vibrant dark sky-blue */
-}
-html:not(.dark) .mock-view .text-brand-purple {
-  color: #6d28d9 !important; /* Rich corporate violet */
-}
-html:not(.dark) .mock-view .text-brand-green {
-  color: #15803d !important; /* Premium corporate forest green */
-}
-
-/* Card boxes on the right side of the split layout inside mockups */
-html:not(.dark) .mock-view .bg-brand-card\/80,
-html:not(.dark) .mock-view .bg-brand-card\/60,
-html:not(.dark) .mock-view .bg-brand-card\/50,
-html:not(.dark) .mock-view .bg-brand-card\/40,
-html:not(.dark) .mock-view .bg-brand-card\/30,
-html:not(.dark) .mock-view .bg-slate-800\/60 {
-  background-color: #ffffff !important; /* Pure white card backgrounds */
-  border: 1px solid #e2e8f0 !important; /* Subtle visible grey borders */
-}
-
-html:not(.dark) .mock-view .border-brand-border,
-html:not(.dark) .mock-view .border-brand-border\/60,
-html:not(.dark) .mock-view .border-brand-border\/40,
-html:not(.dark) .mock-view .border-slate-800 {
-  border-color: #cbd5e1 !important; /* Clear dividers */
-}
-
-/* Console simulation day mode */
-html:not(.dark) .sim-console-container {
-  background-color: #ffffff !important;
-  border-color: #cbd5e1 !important;
-}
-html:not(.dark) .sim-console-container #sim-logs div {
-  color: #334155 !important;
-}
-html:not(.dark) .sim-console-container #sim-logs .text-brand-cyan {
-  color: #0284c7 !important;
-  font-weight: 600;
-}
-html:not(.dark) .sim-console-container #sim-logs .text-brand-purple {
-  color: #6d28d9 !important;
-  font-weight: 600;
-}
-html:not(.dark) .sim-console-container #sim-logs .text-brand-green {
-  color: #15803d !important;
-  font-weight: 600;
-}
-html:not(.dark) .sim-console-container .text-brand-textMuted {
-  color: #475569 !important;
-}
-
 .glass-panel {
 background: rgba(255, 255, 255, 0.8);
 backdrop-filter: blur(12px);
@@ -324,60 +225,6 @@ html:not(.dark) .sim-console-container .text-brand-textMuted {
 html:not(.dark) .border-slate-200 {
   border-color: #e2e8f0 !important;
 }
-
-/* Guarantee outstanding readability for right column texts in Light Mode */
-html:not(.dark) .mock-view p,
-html:not(.dark) .mock-view span,
-html:not(.dark) .mock-view strong,
-html:not(.dark) .mock-view div {
-  text-shadow: none !important;
-}
-
-html:not(.dark) .mock-view .text-slate-300,
-html:not(.dark) .mock-view p.text-slate-300,
-html:not(.dark) .mock-view span.text-slate-300 {
-  color: #334155 !important; /* Elegant deep slate instead of unreadable gray */
-}
-
-html:not(.dark) .mock-view .text-slate-400,
-html:not(.dark) .mock-view p.text-slate-400,
-html:not(.dark) .mock-view span.text-slate-400 {
-  color: #475569 !important; /* Balanced contrast slate */
-}
-
-html:not(.dark) .mock-view .text-slate-200,
-html:not(.dark) .mock-view p.text-slate-200,
-html:not(.dark) .mock-view span.text-slate-200 {
-  color: #1e293b !important; /* High contrast dark charcoal */
-}
-
-html:not(.dark) .mock-view .text-white,
-html:not(.dark) .mock-view strong.text-white {
-  color: #0f172a !important; /* Solid readable black for titles */
-}
-
-html:not(.dark) .mock-view .bg-brand-card\/80,
-html:not(.dark) .mock-view .bg-brand-card\/60,
-html:not(.dark) .mock-view .bg-brand-card\/50,
-html:not(.dark) .mock-view .bg-brand-card\/40,
-html:not(.dark) .mock-view .bg-brand-card\/30,
-html:not(.dark) .mock-view .bg-slate-800\/60 {
-  background-color: #ffffff !important; /* Crisp white backgrounds for metric cards */
-  border: 1px solid #cbd5e1 !important; /* Visible crisp borders */
-}
-
-/* Make sure active tab buttons look high-contrast and professional in Light Mode */
-html:not(.dark) .mock-tab-btn[class*="bg-brand-cyan"] {
-  background-color: rgba(2, 132, 199, 0.1) !important;
-  color: #0284c7 !important;
-  border-color: rgba(2, 132, 199, 0.3) !important;
-}
-
-/* Force dark overlay with 85% opacity on hover in Light Mode to make white text pop beautifully */
-html:not(.dark) .mock-view .group .absolute.inset-0 {
-  background-color: rgba(15, 23, 42, 0.85) !important;
-}
-
 </style>
 </head>
 <body class="selection:bg-brand-cyan selection:text-brand-dark font-sans">
@@ -406,8 +253,8 @@ NB
 <i id="theme-icon-moon" data-lucide="moon" class="w-4 h-4 block dark:hidden"></i>
 </button>
 <!-- Download CV Button -->
-<a href="#" onclick="showCVMessage(event)" class="hidden sm:flex px-3 py-1.5 text-[10px] font-semibold uppercase tracking-wider text-slate-800 dark:text-brand-dark bg-slate-200 dark:bg-brand-cyan hover:bg-brand-cyan dark:hover:bg-white transition-all rounded-md flex items-center gap-1.5">
-<i data-lucide="download" class="w-3 h-3"></i> CV (PDF)
+<a href="#contact" class="hidden sm:flex px-3 py-1.5 text-[10px] font-semibold uppercase tracking-wider text-slate-800 dark:text-brand-dark bg-slate-200 dark:bg-brand-cyan hover:bg-brand-cyan dark:hover:bg-white transition-all rounded-md flex items-center gap-1.5">
+<i data-lucide="message-square" class="w-3 h-3"></i> Contacto
 </a>
 <!-- Mobile Hamburger Toggle -->
 <button onclick="toggleMobileMenu()" class="md:hidden p-1.5 rounded-lg border border-slate-200 dark:border-brand-border text-slate-700 dark:text-white hover:bg-slate-100 dark:hover:bg-brand-card/50">
@@ -422,8 +269,8 @@ NB
 <a href="#pipeline" onclick="toggleMobileMenu()" class="text-slate-700 dark:text-brand-textMuted hover:text-brand-cyan dark:hover:text-white py-1.5 border-b border-slate-200 dark:border-brand-border/40">Mi Infraestructura</a>
 <a href="#projects" onclick="toggleMobileMenu()" class="text-slate-700 dark:text-brand-textMuted hover:text-brand-cyan dark:hover:text-white py-1.5 border-b border-slate-200 dark:border-brand-border/40">Proyectos</a>
 <a href="#contact" onclick="toggleMobileMenu()" class="text-slate-700 dark:text-brand-textMuted hover:text-brand-cyan dark:hover:text-white py-1.5 border-b border-slate-200 dark:border-brand-border/40">Contacto</a>
-<a href="#" onclick="showCVMessage(event)" class="w-full py-2 bg-brand-cyan text-brand-dark font-bold text-center rounded-lg flex items-center justify-center gap-2 text-[11px] uppercase tracking-wider mt-1">
-<i data-lucide="download" class="w-3.5 h-3.5"></i> Descargar Currículum (PDF)
+<a href="#contact" onclick="toggleMobileMenu()" class="w-full py-2 bg-brand-cyan text-brand-dark font-bold text-center rounded-lg flex items-center justify-center gap-2 text-[11px] uppercase tracking-wider mt-1">
+<i data-lucide="mail" class="w-3.5 h-3.5"></i> Contactame Directo
 </a>
 </div>
 
@@ -865,16 +712,16 @@ Para garantizar la privacidad de los datos empresariales, he desarrollado simula
 <!-- Stock Mock -->
 <div id="stock-mock" class="mock-view w-full h-full p-4 grid grid-cols-1 md:grid-cols-12 gap-4">
   <!-- Left: Dashboard Image (Clickable) -->
-  <div onclick="openImageModal('stock-mock')" class="col-span-12 md:col-span-7 flex items-center justify-center bg-slate-100/80 dark:bg-slate-900/40 rounded-xl p-2 border border-slate-200 dark:border-slate-800/60 relative group overflow-hidden cursor-pointer" title="Hacé clic para ver la captura real en pantalla completa">
-    <img src="images/stock-dashboard.png" class="max-w-full max-h-[220px] md:max-h-[320px] object-contain rounded-lg shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]" alt="Stock Dashboard">
-    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center gap-2">
-      <div class="w-10 h-10 rounded-full bg-brand-cyan/20 border border-brand-cyan/40 text-brand-cyan flex items-center justify-center shadow-lg transition-transform duration-300 scale-90 group-hover:scale-100">
+  <div onclick="openImageModal('stock-mock')" class="col-span-12 md:col-span-7 flex items-center justify-center bg-slate-900/40 rounded-xl p-2 border border-slate-800/60 relative group/img overflow-hidden cursor-pointer" title="Hacé clic para ver la captura real en pantalla completa">
+    <img src="images/stock-dashboard.png" class="max-w-full max-h-[220px] md:max-h-[320px] object-contain rounded-lg shadow-2xl transition-transform duration-500 group-hover/img:scale-[1.02]" alt="Stock Dashboard">
+    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover/img:opacity-100 transition-all duration-300 flex flex-col items-center justify-center gap-2">
+      <div class="w-10 h-10 rounded-full bg-brand-cyan/20 border border-brand-cyan/40 text-brand-cyan flex items-center justify-center shadow-lg transition-transform duration-300 scale-90 group-hover/img:scale-100">
         <svg class="w-5 h-5 text-brand-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" xmlns="http://www.w3.org/2000/svg">
           <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
           <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
         </svg>
       </div>
-      <span class="text-[9px] font-mono font-bold text-white uppercase tracking-wider bg-slate-950/80 px-2.5 py-1 rounded border border-slate-800">Ver más grande</span>
+      
     </div>
   </div>
   <!-- Right: Technical Insights & Action Items -->
@@ -940,17 +787,13 @@ Para garantizar la privacidad de los datos empresariales, he desarrollado simula
 
 <!-- Sales & Rentabilidad Mock -->
 <div id="sales-mock" class="mock-view w-full h-full p-4 hidden grid grid-cols-1 md:grid-cols-12 gap-4">
-  <!-- Left: Dashboard Image (Clickable) -->
-  <div onclick="openImageModal('sales-mock')" class="col-span-12 md:col-span-7 flex items-center justify-center bg-slate-100/80 dark:bg-slate-900/40 rounded-xl p-2 border border-slate-200 dark:border-slate-800/60 relative group overflow-hidden cursor-pointer" title="Hacé clic para ver la captura real en pantalla completa">
-    <img src="images/sales-dashboard1.png" class="max-w-full max-h-[220px] md:max-h-[320px] object-contain rounded-lg shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]" alt="Ventas & Rentabilidad Dashboard">
-    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center gap-2">
-      <div class="w-10 h-10 rounded-full bg-brand-cyan/20 border border-brand-cyan/40 text-brand-cyan flex items-center justify-center shadow-lg transition-transform duration-300 scale-90 group-hover:scale-100">
-        <svg class="w-5 h-5 text-brand-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" xmlns="http://www.w3.org/2000/svg">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-          <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-        </svg>
-      </div>
-      <span class="text-[9px] font-mono font-bold text-white uppercase tracking-wider bg-slate-950/80 px-2.5 py-1 rounded border border-slate-800">Ver más grande</span>
+  <!-- Left: Dashboard Image -->
+  <div class="col-span-12 md:col-span-7 flex items-center justify-center bg-slate-900/40 rounded-xl p-2 border border-slate-800/60 relative group/img overflow-hidden">
+    <img src="images/sales-dashboard1.png" class="max-w-full max-h-[220px] md:max-h-[320px] object-contain rounded-lg shadow-2xl transition-transform duration-500 group-hover/img:scale-[1.02]" alt="Ventas & Rentabilidad Dashboard">
+    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover/img:opacity-100 transition-opacity flex items-center justify-center gap-2 pointer-events-none">
+      <span class="px-3 py-1.5 bg-brand-cyan text-brand-dark text-[10px] font-mono font-bold uppercase rounded-lg shadow-lg flex items-center gap-1">
+        <i data-lucide="zoom-in" class="w-3.5 h-3.5"></i> Ver en alta definición
+      </span>
     </div>
   </div>
   <!-- Right: Technical Insights & Action Items -->
@@ -1017,16 +860,16 @@ Para garantizar la privacidad de los datos empresariales, he desarrollado simula
 <!-- RFM Mock -->
 <div id="rfm-mock" class="mock-view w-full h-full p-4 hidden grid grid-cols-1 md:grid-cols-12 gap-4">
   <!-- Left: Dashboard Image (Clickable) -->
-  <div onclick="openImageModal('rfm-mock')" class="col-span-12 md:col-span-7 flex items-center justify-center bg-slate-100/80 dark:bg-slate-900/40 rounded-xl p-2 border border-slate-200 dark:border-slate-800/60 relative group overflow-hidden cursor-pointer" title="Hacé clic para ver el análisis real en pantalla completa">
-    <img src="images/rfm-dashboard1.png" class="max-w-full max-h-[220px] md:max-h-[320px] object-contain rounded-lg shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]" alt="RFM Dashboard">
-    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center gap-2">
-      <div class="w-10 h-10 rounded-full bg-brand-cyan/20 border border-brand-cyan/40 text-brand-cyan flex items-center justify-center shadow-lg transition-transform duration-300 scale-90 group-hover:scale-100">
+  <div onclick="openImageModal('rfm-mock')" class="col-span-12 md:col-span-7 flex items-center justify-center bg-slate-900/40 rounded-xl p-2 border border-slate-800/60 relative group/img overflow-hidden cursor-pointer" title="Hacé clic para ver el análisis real en pantalla completa">
+    <img src="images/rfm-dashboard1.png" class="max-w-full max-h-[220px] md:max-h-[320px] object-contain rounded-lg shadow-2xl transition-transform duration-500 group-hover/img:scale-[1.02]" alt="RFM Dashboard">
+    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover/img:opacity-100 transition-all duration-300 flex flex-col items-center justify-center gap-2">
+      <div class="w-10 h-10 rounded-full bg-brand-cyan/20 border border-brand-cyan/40 text-brand-cyan flex items-center justify-center shadow-lg transition-transform duration-300 scale-90 group-hover/img:scale-100">
         <svg class="w-5 h-5 text-brand-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" xmlns="http://www.w3.org/2000/svg">
           <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
           <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
         </svg>
       </div>
-      <span class="text-[9px] font-mono font-bold text-white uppercase tracking-wider bg-slate-950/80 px-2.5 py-1 rounded border border-slate-800">Ver más grande</span>
+      
     </div>
   </div>
   <!-- Right: Technical Insights & Action Items -->
@@ -1093,16 +936,16 @@ Para garantizar la privacidad de los datos empresariales, he desarrollado simula
 <!-- Churn Mock -->
 <div id="churn-mock" class="mock-view w-full h-full p-4 hidden grid grid-cols-1 md:grid-cols-12 gap-4">
   <!-- Left: Dashboard Image (Clickable) -->
-  <div onclick="openImageModal('churn-mock')" class="col-span-12 md:col-span-7 flex items-center justify-center bg-slate-100/80 dark:bg-slate-900/40 rounded-xl p-2 border border-slate-200 dark:border-slate-800/60 relative group overflow-hidden cursor-pointer" title="Hacé clic para ver la captura real en pantalla completa">
-    <img src="images/churn-dashboard.png" class="max-w-full max-h-[220px] md:max-h-[320px] object-contain rounded-lg shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]" alt="Churn Dashboard">
-    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center gap-2">
-      <div class="w-10 h-10 rounded-full bg-brand-cyan/20 border border-brand-cyan/40 text-brand-cyan flex items-center justify-center shadow-lg transition-transform duration-300 scale-90 group-hover:scale-100">
+  <div onclick="openImageModal('churn-mock')" class="col-span-12 md:col-span-7 flex items-center justify-center bg-slate-900/40 rounded-xl p-2 border border-slate-800/60 relative group/img overflow-hidden cursor-pointer" title="Hacé clic para ver la captura real en pantalla completa">
+    <img src="images/churn-dashboard.png" class="max-w-full max-h-[220px] md:max-h-[320px] object-contain rounded-lg shadow-2xl transition-transform duration-500 group-hover/img:scale-[1.02]" alt="Churn Dashboard">
+    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover/img:opacity-100 transition-all duration-300 flex flex-col items-center justify-center gap-2">
+      <div class="w-10 h-10 rounded-full bg-brand-cyan/20 border border-brand-cyan/40 text-brand-cyan flex items-center justify-center shadow-lg transition-transform duration-300 scale-90 group-hover/img:scale-100">
         <svg class="w-5 h-5 text-brand-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" xmlns="http://www.w3.org/2000/svg">
           <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
           <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
         </svg>
       </div>
-      <span class="text-[9px] font-mono font-bold text-white uppercase tracking-wider bg-slate-950/80 px-2.5 py-1 rounded border border-slate-800">Ver más grande</span>
+      
     </div>
   </div>
   <!-- Right: Technical Insights & Action Items -->
@@ -1169,16 +1012,16 @@ Para garantizar la privacidad de los datos empresariales, he desarrollado simula
 <!-- HR Mock -->
 <div id="hr-mock" class="mock-view w-full h-full p-4 hidden grid grid-cols-1 md:grid-cols-12 gap-4">
   <!-- Left: Dashboard Image (Clickable) -->
-  <div onclick="openImageModal('hr-mock')" class="col-span-12 md:col-span-7 flex items-center justify-center bg-slate-100/80 dark:bg-slate-900/40 rounded-xl p-2 border border-slate-200 dark:border-slate-800/60 relative group overflow-hidden cursor-pointer" title="Hacé clic para ver la captura real en pantalla completa">
-    <img src="images/hr-dashboard.png" class="max-w-full max-h-[220px] md:max-h-[320px] object-contain rounded-lg shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]" alt="HR Dashboard">
-    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center gap-2">
-      <div class="w-10 h-10 rounded-full bg-brand-cyan/20 border border-brand-cyan/40 text-brand-cyan flex items-center justify-center shadow-lg transition-transform duration-300 scale-90 group-hover:scale-100">
+  <div onclick="openImageModal('hr-mock')" class="col-span-12 md:col-span-7 flex items-center justify-center bg-slate-900/40 rounded-xl p-2 border border-slate-800/60 relative group/img overflow-hidden cursor-pointer" title="Hacé clic para ver la captura real en pantalla completa">
+    <img src="images/hr-dashboard.png" class="max-w-full max-h-[220px] md:max-h-[320px] object-contain rounded-lg shadow-2xl transition-transform duration-500 group-hover/img:scale-[1.02]" alt="HR Dashboard">
+    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover/img:opacity-100 transition-all duration-300 flex flex-col items-center justify-center gap-2">
+      <div class="w-10 h-10 rounded-full bg-brand-cyan/20 border border-brand-cyan/40 text-brand-cyan flex items-center justify-center shadow-lg transition-transform duration-300 scale-90 group-hover/img:scale-100">
         <svg class="w-5 h-5 text-brand-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" xmlns="http://www.w3.org/2000/svg">
           <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
           <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
         </svg>
       </div>
-      <span class="text-[9px] font-mono font-bold text-white uppercase tracking-wider bg-slate-950/80 px-2.5 py-1 rounded border border-slate-800">Ver más grande</span>
+      
     </div>
   </div>
   <!-- Right: Technical Insights & Action Items -->
@@ -1783,11 +1626,6 @@ function closeAllDrawers() {
 }
 
 // CV Download helper
-function showCVMessage(event) {
-  event.preventDefault();
-  alert("¡Hola! Para vincular tu Currículum real en PDF, subilo a tu Google Drive de forma pública y copiá el enlace de descarga en la etiqueta <a> del botón en tu código HTML. ¡Éxitos con tu postulación!");
-}
-
 // INTERACTIVE CI/CD PIPELINE SIMULATOR - BUG FIX APPLIED
 function startPipelineSimulation() {
   const btn = document.getElementById('btn-simulate');
