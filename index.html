@@ -497,6 +497,39 @@
                     </div>
                 </div>
 
+                <!-- Project 5: Ventas & Rentabilidad (XSales) -->
+                <div class="project-card glass-card p-6 rounded-2xl flex flex-col justify-between h-full relative overflow-hidden text-left" data-category="retail">
+                    <div class="flex flex-col gap-4">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-mono text-brand-cyan uppercase px-2 py-0.5 rounded bg-brand-cyan/10 border border-brand-cyan/20">Ventas & Rentabilidad</span>
+                            <i data-lucide="bar-chart-3" class="w-5 h-5 text-brand-cyan"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-slate-900 dark:text-white">Visión General de Ventas & Rentabilidad (XSales) [8]</h4>
+                        
+                        <!-- Antes vs Después al estilo PB DevHouse -->
+                        <div class="space-y-4 my-2 border-t border-b border-slate-100 dark:border-brand-border/40 py-4 text-sm">
+                            <div class="text-slate-600 dark:text-brand-textMuted">
+                                <span class="text-red-400 font-bold font-mono text-xs block uppercase mb-1">El Caos Operativo (Antes):</span>
+                                "Dificultad para rastrear el lucro real, falta de visibilidad geográfica de la facturación y desconocimiento del rendimiento por tipo de cliente. [8]"
+                            </div>
+                            <div>
+                                <span class="text-brand-green font-bold font-mono text-xs block uppercase mb-1">El Sistema Automatizado (Después):</span>
+                                <ul class="space-y-2 font-mono text-xs text-slate-700 dark:text-slate-300">
+                                    <li><span class="text-brand-cyan">&gt;</span> Monitoreo en tiempo real de Facturación Líquida ($92,3M) y Lucro total ($12,0M). [8]</li>
+                                    <li><span class="text-brand-cyan">&gt;</span> Análisis cruzado por países (Canadá, EE.UU., Alemania) y segmentación por margen de beneficio. [8]</li>
+                                    <li><span class="text-brand-cyan">&gt;</span> Tabla dinámica de rentabilidad por producto detallando costos y porcentaje de lucro neto. [8]</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between mt-6">
+                        <span class="text-[11px] font-mono text-slate-500 dark:text-brand-textMuted">DAX · Lucro Neto · Análisis Geográfico [8]</span>
+                        <button onclick="openDrawer('drawer-sales')" class="px-4 py-2 text-xs font-bold text-slate-700 dark:text-white bg-slate-100 dark:bg-brand-border hover:bg-brand-cyan hover:text-brand-dark rounded-md transition-all flex items-center gap-1">
+                            Ver Código & Specs <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+                        </button>
+                    </div>
+                </div>
+
                 <!-- Project 2: RFM Analysis -->
                 <div class="project-card glass-card p-6 rounded-2xl flex flex-col justify-between h-full relative overflow-hidden text-left" data-category="marketing">
                     <div class="flex flex-col gap-4">
@@ -610,6 +643,7 @@
                 <!-- Tab switching for mock dashboards -->
                 <div class="flex justify-center border-b border-slate-200 dark:border-brand-border/60 pb-3 gap-2 text-xs font-mono overflow-x-auto">
                     <button onclick="switchMock('stock-mock')" id="btn-mock-stock" class="mock-tab-btn px-4 py-2 rounded bg-brand-cyan/20 text-brand-cyan border border-brand-cyan/30 whitespace-nowrap">Stock Dashboard</button>
+                    <button onclick="switchMock('sales-mock')" id="btn-mock-sales" class="mock-tab-btn px-4 py-2 rounded text-slate-500 dark:text-brand-textMuted hover:text-slate-900 dark:hover:text-white border border-transparent whitespace-nowrap">XSales Dashboard</button>
                     <button onclick="switchMock('rfm-mock')" id="btn-mock-rfm" class="mock-tab-btn px-4 py-2 rounded text-slate-500 dark:text-brand-textMuted hover:text-slate-900 dark:hover:text-white border border-transparent whitespace-nowrap">RFM Dashboard</button>
                     <button onclick="switchMock('churn-mock')" id="btn-mock-churn" class="mock-tab-btn px-4 py-2 rounded text-slate-500 dark:text-brand-textMuted hover:text-slate-900 dark:hover:text-white border border-transparent whitespace-nowrap">Churn Dashboard</button>
                     <button onclick="switchMock('hr-mock')" id="btn-mock-hr" class="mock-tab-btn px-4 py-2 rounded text-slate-500 dark:text-brand-textMuted hover:text-slate-900 dark:hover:text-white border border-transparent whitespace-nowrap">HR Dashboard</button>
@@ -811,7 +845,82 @@
                         </div>
                     </div>
 
-                    <!-- HR Mock -->
+                    <!-- Sales & Rentabilidad Mock (XSales) -->
+                    <div id="sales-mock" class="mock-view w-full h-full p-4 hidden flex flex-col justify-between">
+                        <!-- Top KPI banner -->
+                        <div class="grid grid-cols-4 gap-2">
+                            <div class="bg-brand-card/80 p-2 border border-brand-border text-left">
+                                <span class="text-[8px] text-brand-textMuted block">Facturación Líquida</span>
+                                <span class="text-sm font-extrabold text-brand-cyan">$92.3M</span>
+                            </div>
+                            <div class="bg-brand-card/80 p-2 border border-brand-border text-left">
+                                <span class="text-[8px] text-brand-textMuted block">Costo Total</span>
+                                <span class="text-sm font-extrabold text-red-400">$80.4M</span>
+                            </div>
+                            <div class="bg-brand-card/80 p-2 border border-brand-border text-left">
+                                <span class="text-[8px] text-brand-textMuted block">Lucro Neto</span>
+                                <span class="text-sm font-extrabold text-brand-green">$12.0M</span>
+                            </div>
+                            <div class="bg-brand-card/80 p-2 border border-brand-border text-left">
+                                <span class="text-[8px] text-brand-textMuted block">Margen Promedio</span>
+                                <span class="text-sm font-extrabold text-brand-cyan">12.9%</span>
+                            </div>
+                        </div>
+
+                        <!-- Middle Section -->
+                        <div class="grid grid-cols-12 gap-3 my-1.5 flex-grow">
+                            <!-- Left: Facturación por País -->
+                            <div class="col-span-6 bg-brand-card/40 p-3 rounded-xl border border-brand-border/60 text-left flex flex-col justify-between">
+                                <span class="text-[10px] font-bold text-white block">Facturación & Margen por País [8]</span>
+                                <div class="space-y-1.5 mt-1.5 text-[8px] font-mono">
+                                    <div class="flex justify-between border-b border-brand-border/40 pb-0.5">
+                                        <span>EE.UU. ($19.9M)</span>
+                                        <span class="text-brand-cyan">Margen: 11.5%</span>
+                                    </div>
+                                    <div class="flex justify-between border-b border-brand-border/40 pb-0.5">
+                                        <span>Canadá ($19.7M)</span>
+                                        <span class="text-brand-cyan">Margen: 12.9%</span>
+                                    </div>
+                                    <div class="flex justify-between border-b border-brand-border/40 pb-0.5">
+                                        <span>Francia ($19.2M)</span>
+                                        <span class="text-brand-cyan">Margen: 14.0%</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span>Alemania ($17.3M)</span>
+                                        <span class="text-brand-cyan">Margen: 13.4%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Right: Lucro por Producto -->
+                            <div class="col-span-6 bg-brand-card/40 p-3 rounded-xl border border-brand-border/60 text-left flex flex-col justify-between">
+                                <span class="text-[10px] font-bold text-white block">Top Productos por Rentabilidad [8]</span>
+                                <div class="space-y-1 mt-1 text-[7.5px] font-mono">
+                                    <div class="flex justify-between text-brand-textMuted font-bold border-b border-brand-border/40 pb-0.5">
+                                        <span>Producto</span>
+                                        <span>Fact. / Lucro / Margen</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span>Producto 3</span>
+                                        <span class="text-brand-green">$27.1M / $3.7M / 13.6%</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span>Producto 5</span>
+                                        <span class="text-brand-green">$15.1M / $2.1M / 14.3%</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span>Producto 6</span>
+                                        <span class="text-brand-green">$14.2M / $2.0M / 14.3%</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span>Producto 4</span>
+                                        <span class="text-brand-green">$12.0M / $1.7M / 14.0%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                                        <!-- HR Mock -->
                     <div id="hr-mock" class="mock-view w-full h-full p-4 hidden flex flex-col justify-between">
                         <div class="grid grid-cols-4 gap-2">
                             <div class="bg-brand-card/80 p-2.5 rounded-lg border border-brand-border text-left">
@@ -1160,7 +1269,60 @@ FROM Calculo_RFM
         </div>
     </div>
 
-    <!-- 5. HR Analytics Drawer -->
+    <!-- 6. Ventas & Rentabilidad Drawer (XSales) -->
+    <div id="drawer-sales" class="drawer fixed top-0 right-0 h-full w-full max-w-2xl bg-white dark:bg-brand-card/95 border-l border-slate-200 dark:border-brand-border z-50 shadow-2xl translate-x-full overflow-y-auto p-6 md:p-8">
+        <div class="flex justify-between items-center border-b border-slate-200 dark:border-brand-border pb-4 mb-6">
+            <div class="flex items-center gap-2">
+                <i data-lucide="bar-chart-3" class="text-brand-cyan w-5 h-5"></i>
+                <h3 class="text-lg font-bold text-slate-950 dark:text-white text-left">Especificaciones de Ventas & Rentabilidad (XSales)</h3>
+            </div>
+            <button onclick="closeAllDrawers()" class="text-slate-500 dark:text-brand-textMuted hover:text-slate-900 dark:hover:text-white p-1 rounded-lg hover:bg-slate-100 dark:hover:bg-white/5">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <div class="space-y-6 text-sm text-left">
+            <div>
+                <h4 class="font-bold text-slate-950 dark:text-white mb-2">Modelado Dimensional (Esquema de Estrella) [1]</h4>
+                <p class="text-slate-500 dark:text-brand-textMuted text-xs mb-3">Implementación de relaciones físicas 1:N unidireccionales para garantizar velocidad y consistencia de filtros. [1]</p>
+                <div class="bg-slate-950 p-4 rounded-lg border border-slate-800 font-mono text-xs text-slate-300">
+                    <span class="text-brand-cyan">Fact Table:</span> <span class="text-white">fVentas</span> (Métricas de transacciones, ingresos, costos)<br>
+                    <span class="text-brand-purple">Dimension Tables:</span> <span class="text-white">dProductos</span> (Categorías), <span class="text-white">dTienda</span>, <span class="text-white">dCalendario</span> (Lógica temporal), <span class="text-white">fMetas</span> (Metas de venta).
+                </div>
+            </div>
+
+            <div>
+                <h4 class="font-bold text-slate-950 dark:text-white mb-2">Lógica de Rentabilidad en DAX Avanzado</h4>
+                <p class="text-slate-500 dark:text-brand-textMuted text-xs mb-3">Cálculo dinámico de margen operativo y lucro líquido por categorías de producto y regiones. [8]</p>
+                <pre class="bg-slate-950 p-4 rounded-lg border border-slate-800 text-brand-purple font-mono text-[11px] overflow-x-auto text-left">
+Lucro = [Facturacion Liquida] - [Costo Total]
+
+Lucro% = DIVIDE([Lucro], [Facturacion Liquida], 0)
+
+Facturacion Media Mensual = 
+AVERAGEX(
+    VALUES(dCalendario[mes_año]), 
+    [Facturacion Liquida]
+)</pre>
+            </div>
+
+            <div>
+                <h4 class="font-bold text-slate-950 dark:text-white mb-2">Análisis Geográfico y por Clientes [8]</h4>
+                <p class="text-slate-500 dark:text-brand-textMuted text-xs mb-3">Visualización de facturación acumulada por países y clasificación de tipos de clientes (Gobierno, Empresas Pequeñas, Grandes y Medianas, y Ventas Online). [8]</p>
+                <div class="bg-slate-100 dark:bg-brand-dark/40 p-4 rounded-xl border border-slate-200 dark:border-brand-border">
+                    <ul class="space-y-2 text-slate-700 dark:text-slate-300 font-mono text-xs">
+                        <li><span class="text-brand-cyan">EE.UU.:</span> $19.9M (Margen de Lucro: 11.5%)</li>
+                        <li><span class="text-brand-cyan">Canadá:</span> $19.7M (Margen de Lucro: 12.9%)</li>
+                        <li><span class="text-brand-cyan">Francia:</span> $19.2M (Margen de Lucro: 14.0%)</li>
+                        <li><span class="text-brand-cyan">Alemania:</span> $17.3M (Margen de Lucro: 13.4%)</li>
+                        <li><span class="text-brand-cyan">Chile:</span> $16.2M (Margen de Lucro: 13.1%)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!-- 5. HR Analytics Drawer -->
     <div id="drawer-hr" class="drawer fixed top-0 right-0 h-full w-full max-w-2xl bg-white dark:bg-brand-card/95 border-l border-slate-200 dark:border-brand-border z-50 shadow-2xl translate-x-full overflow-y-auto p-6 md:p-8">
         <div class="flex justify-between items-center border-b border-slate-200 dark:border-brand-border pb-4 mb-6">
             <div class="flex items-center gap-2">
@@ -1288,6 +1450,7 @@ AVERAGEX(
             if (mockId === 'stock-mock') btnId = 'btn-mock-stock';
             else if (mockId === 'rfm-mock') btnId = 'btn-mock-rfm';
             else if (mockId === 'churn-mock') btnId = 'btn-mock-churn';
+            else if (mockId === 'sales-mock') btnId = 'btn-mock-sales';
             else if (mockId === 'hr-mock') btnId = 'btn-mock-hr';
 
             const activeTab = document.getElementById(btnId);
