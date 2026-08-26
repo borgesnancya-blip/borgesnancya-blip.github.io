@@ -225,6 +225,118 @@ html:not(.dark) .sim-console-container .text-brand-textMuted {
 html:not(.dark) .border-slate-200 {
   border-color: #e2e8f0 !important;
 }
+
+/* EXTRA HIGH-FIDELITY LIGHT MODE CONTRAST & ADAPTATION DEVELOPED FOR NANCY */
+
+/* Crisper glass containers with more defined contours for day mode */
+html:not(.dark) .glass-panel {
+  background: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(16px) !important;
+  border: 1px solid #cbd5e1 !important; /* Visible, elegant slate border instead of invisible white */
+  box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.08), 0 1px 3px rgba(15, 23, 42, 0.02) !important;
+}
+
+html:not(.dark) .glass-card {
+  background: #ffffff !important;
+  border: 1px solid #cbd5e1 !important; /* Stronger gray borders so cards have excellent definition */
+  box-shadow: 0 10px 25px -10px rgba(15, 23, 42, 0.08), 0 4px 10px -5px rgba(15, 23, 42, 0.04) !important;
+}
+
+html:not(.dark) .glass-card:hover {
+  border-color: #00f2fe !important;
+  box-shadow: 0 16px 30px -10px rgba(0, 242, 254, 0.25) !important;
+}
+
+/* Light mode overrides for the live showcase container frame (no more forced dark box) */
+html:not(.dark) .mock-showcase-container {
+  background-color: #f1f5f9 !important; /* Elegant light background instead of deep black */
+  border-color: #cbd5e1 !important; /* Symmetrical borders matching the card contours */
+}
+
+/* Light mode overrides for mock-views content details */
+html:not(.dark) .mock-view {
+  color: #1e293b !important;
+}
+html:not(.dark) .mock-view h4,
+html:not(.dark) .mock-view .text-white,
+html:not(.dark) .mock-view strong {
+  color: #0f172a !important; /* Bold headings in deep slate */
+}
+
+/* Fix the invisible text on the right side panel */
+html:not(.dark) .mock-view .text-slate-300,
+html:not(.dark) .mock-view .text-slate-400,
+html:not(.dark) .mock-view .text-brand-textMuted {
+  color: #334155 !important; /* Highly readable dark slate instead of unreadable light gray */
+}
+
+html:not(.dark) .mock-view .bg-brand-card\/80,
+html:not(.dark) .mock-view .bg-brand-card\/60,
+html:not(.dark) .mock-view .bg-brand-card\/50,
+html:not(.dark) .mock-view .bg-brand-card\/40,
+html:not(.dark) .mock-view .bg-brand-card\/30,
+html:not(.dark) .mock-view .bg-slate-800\/60 {
+  background-color: #ffffff !important; /* Clear card backgrounds in day mode */
+  border: 1px solid #cbd5e1 !important; /* Define borders on cards inside mockup */
+}
+html:not(.dark) .mock-view .border-brand-border,
+html:not(.dark) .mock-view .border-brand-border\/60,
+html:not(.dark) .mock-view .border-brand-border\/40,
+html:not(.dark) .mock-view .border-slate-800 {
+  border-color: #cbd5e1 !important; /* Crisp divider borders instead of invisible dark lines */
+}
+html:not(.dark) .mock-view .bg-slate-900\/40 {
+  background-color: #f1f5f9 !important; /* Light background for mockup image wrapper */
+  border-color: #cbd5e1 !important;
+}
+
+/* Force dark overlay with 65% opacity on hover in Light Mode to ensure white 'Ver Captura HD' stands out */
+html:not(.dark) .mock-view .group .absolute.inset-0 {
+  background-color: rgba(15, 23, 42, 0.7) !important;
+}
+
+/* Ensure neon/light-colored text is darkened to readable colors in Light Mode */
+html:not(.dark) .mock-view .text-brand-cyan {
+  color: #0284c7 !important; /* Intense, legible ocean-blue */
+}
+html:not(.dark) .mock-view .text-brand-purple {
+  color: #6d28d9 !important; /* Vibrant royal purple */
+}
+html:not(.dark) .mock-view .text-brand-green {
+  color: #15803d !important; /* Legible deep forest green */
+}
+html:not(.dark) .mock-view .text-red-400,
+html:not(.dark) .mock-view .text-red-300 {
+  color: #dc2626 !important; /* Deep red for high contrast alerts and losses */
+}
+
+/* Console simulation day mode */
+html:not(.dark) .sim-console-container {
+  background-color: #ffffff !important;
+  border-color: #cbd5e1 !important;
+}
+html:not(.dark) .sim-console-container #sim-logs div {
+  color: #475569 !important; /* Slate gray font for standard logs */
+}
+html:not(.dark) .sim-console-container #sim-logs .text-brand-cyan {
+  color: #0284c7 !important; /* Darker sky-blue for cyan in day mode */
+  font-weight: 600;
+}
+html:not(.dark) .sim-console-container #sim-logs .text-brand-purple {
+  color: #7c3aed !important; /* Darker indigo for purple in day mode */
+  font-weight: 600;
+}
+html:not(.dark) .sim-console-container #sim-logs .text-brand-green {
+  color: #10b981 !important; /* Rich green for day mode success messages */
+  font-weight: 600;
+}
+html:not(.dark) .sim-console-container .text-brand-textMuted {
+  color: #64748b !important;
+}
+html:not(.dark) .border-slate-200 {
+  border-color: #e2e8f0 !important;
+}
+
 </style>
 </head>
 <body class="selection:bg-brand-cyan selection:text-brand-dark font-sans">
@@ -712,16 +824,16 @@ Para garantizar la privacidad de los datos empresariales, he desarrollado simula
 <!-- Stock Mock -->
 <div id="stock-mock" class="mock-view w-full h-full p-4 grid grid-cols-1 md:grid-cols-12 gap-4">
   <!-- Left: Dashboard Image (Clickable) -->
-  <div onclick="openImageModal('stock-mock')" class="col-span-12 md:col-span-7 flex items-center justify-center bg-slate-900/40 rounded-xl p-2 border border-slate-800/60 relative group/img overflow-hidden cursor-pointer" title="Hacé clic para ver la captura real en pantalla completa">
-    <img src="images/stock-dashboard.png" class="max-w-full max-h-[220px] md:max-h-[320px] object-contain rounded-lg shadow-2xl transition-transform duration-500 group-hover/img:scale-[1.02]" alt="Stock Dashboard">
-    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover/img:opacity-100 transition-all duration-300 flex flex-col items-center justify-center gap-2">
-      <div class="w-10 h-10 rounded-full bg-brand-cyan/20 border border-brand-cyan/40 text-brand-cyan flex items-center justify-center shadow-lg transition-transform duration-300 scale-90 group-hover/img:scale-100">
+  <div onclick="openImageModal('stock-mock')" class="col-span-12 md:col-span-7 flex items-center justify-center bg-slate-100/80 dark:bg-slate-900/40 rounded-xl p-2 border border-slate-200 dark:border-slate-800/60 relative group overflow-hidden cursor-pointer" title="Hacé clic para ver la captura real en pantalla completa">
+    <img src="images/stock-dashboard.png" class="max-w-full max-h-[220px] md:max-h-[320px] object-contain rounded-lg shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]" alt="Stock Dashboard">
+    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center gap-2">
+      <div class="w-10 h-10 rounded-full bg-brand-cyan/20 border border-brand-cyan/40 text-brand-cyan flex items-center justify-center shadow-lg transition-transform duration-300 scale-90 group-hover:scale-100">
         <svg class="w-5 h-5 text-brand-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" xmlns="http://www.w3.org/2000/svg">
           <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
           <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
         </svg>
       </div>
-      
+      <span class="text-[9px] font-mono font-bold text-white uppercase tracking-wider bg-slate-950/80 px-2.5 py-1 rounded border border-slate-800">Ver Captura HD</span>
     </div>
   </div>
   <!-- Right: Technical Insights & Action Items -->
@@ -787,13 +899,17 @@ Para garantizar la privacidad de los datos empresariales, he desarrollado simula
 
 <!-- Sales & Rentabilidad Mock -->
 <div id="sales-mock" class="mock-view w-full h-full p-4 hidden grid grid-cols-1 md:grid-cols-12 gap-4">
-  <!-- Left: Dashboard Image -->
-  <div class="col-span-12 md:col-span-7 flex items-center justify-center bg-slate-900/40 rounded-xl p-2 border border-slate-800/60 relative group/img overflow-hidden">
-    <img src="images/sales-dashboard1.png" class="max-w-full max-h-[220px] md:max-h-[320px] object-contain rounded-lg shadow-2xl transition-transform duration-500 group-hover/img:scale-[1.02]" alt="Ventas & Rentabilidad Dashboard">
-    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover/img:opacity-100 transition-opacity flex items-center justify-center gap-2 pointer-events-none">
-      <span class="px-3 py-1.5 bg-brand-cyan text-brand-dark text-[10px] font-mono font-bold uppercase rounded-lg shadow-lg flex items-center gap-1">
-        <i data-lucide="zoom-in" class="w-3.5 h-3.5"></i> Ver en alta definición
-      </span>
+  <!-- Left: Dashboard Image (Clickable) -->
+  <div onclick="openImageModal('sales-mock')" class="col-span-12 md:col-span-7 flex items-center justify-center bg-slate-100/80 dark:bg-slate-900/40 rounded-xl p-2 border border-slate-200 dark:border-slate-800/60 relative group overflow-hidden cursor-pointer" title="Hacé clic para ver la captura real en pantalla completa">
+    <img src="images/sales-dashboard1.png" class="max-w-full max-h-[220px] md:max-h-[320px] object-contain rounded-lg shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]" alt="Ventas & Rentabilidad Dashboard">
+    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center gap-2">
+      <div class="w-10 h-10 rounded-full bg-brand-cyan/20 border border-brand-cyan/40 text-brand-cyan flex items-center justify-center shadow-lg transition-transform duration-300 scale-90 group-hover:scale-100">
+        <svg class="w-5 h-5 text-brand-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+        </svg>
+      </div>
+      <span class="text-[9px] font-mono font-bold text-white uppercase tracking-wider bg-slate-950/80 px-2.5 py-1 rounded border border-slate-800">Ver Captura HD / PDF</span>
     </div>
   </div>
   <!-- Right: Technical Insights & Action Items -->
@@ -860,16 +976,16 @@ Para garantizar la privacidad de los datos empresariales, he desarrollado simula
 <!-- RFM Mock -->
 <div id="rfm-mock" class="mock-view w-full h-full p-4 hidden grid grid-cols-1 md:grid-cols-12 gap-4">
   <!-- Left: Dashboard Image (Clickable) -->
-  <div onclick="openImageModal('rfm-mock')" class="col-span-12 md:col-span-7 flex items-center justify-center bg-slate-900/40 rounded-xl p-2 border border-slate-800/60 relative group/img overflow-hidden cursor-pointer" title="Hacé clic para ver el análisis real en pantalla completa">
-    <img src="images/rfm-dashboard1.png" class="max-w-full max-h-[220px] md:max-h-[320px] object-contain rounded-lg shadow-2xl transition-transform duration-500 group-hover/img:scale-[1.02]" alt="RFM Dashboard">
-    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover/img:opacity-100 transition-all duration-300 flex flex-col items-center justify-center gap-2">
-      <div class="w-10 h-10 rounded-full bg-brand-cyan/20 border border-brand-cyan/40 text-brand-cyan flex items-center justify-center shadow-lg transition-transform duration-300 scale-90 group-hover/img:scale-100">
+  <div onclick="openImageModal('rfm-mock')" class="col-span-12 md:col-span-7 flex items-center justify-center bg-slate-100/80 dark:bg-slate-900/40 rounded-xl p-2 border border-slate-200 dark:border-slate-800/60 relative group overflow-hidden cursor-pointer" title="Hacé clic para ver el análisis real en pantalla completa">
+    <img src="images/rfm-dashboard1.png" class="max-w-full max-h-[220px] md:max-h-[320px] object-contain rounded-lg shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]" alt="RFM Dashboard">
+    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center gap-2">
+      <div class="w-10 h-10 rounded-full bg-brand-cyan/20 border border-brand-cyan/40 text-brand-cyan flex items-center justify-center shadow-lg transition-transform duration-300 scale-90 group-hover:scale-100">
         <svg class="w-5 h-5 text-brand-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" xmlns="http://www.w3.org/2000/svg">
           <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
           <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
         </svg>
       </div>
-      
+      <span class="text-[9px] font-mono font-bold text-white uppercase tracking-wider bg-slate-950/80 px-2.5 py-1 rounded border border-slate-800">Ver Captura HD / PDF</span>
     </div>
   </div>
   <!-- Right: Technical Insights & Action Items -->
@@ -936,16 +1052,16 @@ Para garantizar la privacidad de los datos empresariales, he desarrollado simula
 <!-- Churn Mock -->
 <div id="churn-mock" class="mock-view w-full h-full p-4 hidden grid grid-cols-1 md:grid-cols-12 gap-4">
   <!-- Left: Dashboard Image (Clickable) -->
-  <div onclick="openImageModal('churn-mock')" class="col-span-12 md:col-span-7 flex items-center justify-center bg-slate-900/40 rounded-xl p-2 border border-slate-800/60 relative group/img overflow-hidden cursor-pointer" title="Hacé clic para ver la captura real en pantalla completa">
-    <img src="images/churn-dashboard.png" class="max-w-full max-h-[220px] md:max-h-[320px] object-contain rounded-lg shadow-2xl transition-transform duration-500 group-hover/img:scale-[1.02]" alt="Churn Dashboard">
-    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover/img:opacity-100 transition-all duration-300 flex flex-col items-center justify-center gap-2">
-      <div class="w-10 h-10 rounded-full bg-brand-cyan/20 border border-brand-cyan/40 text-brand-cyan flex items-center justify-center shadow-lg transition-transform duration-300 scale-90 group-hover/img:scale-100">
+  <div onclick="openImageModal('churn-mock')" class="col-span-12 md:col-span-7 flex items-center justify-center bg-slate-100/80 dark:bg-slate-900/40 rounded-xl p-2 border border-slate-200 dark:border-slate-800/60 relative group overflow-hidden cursor-pointer" title="Hacé clic para ver la captura real en pantalla completa">
+    <img src="images/churn-dashboard.png" class="max-w-full max-h-[220px] md:max-h-[320px] object-contain rounded-lg shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]" alt="Churn Dashboard">
+    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center gap-2">
+      <div class="w-10 h-10 rounded-full bg-brand-cyan/20 border border-brand-cyan/40 text-brand-cyan flex items-center justify-center shadow-lg transition-transform duration-300 scale-90 group-hover:scale-100">
         <svg class="w-5 h-5 text-brand-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" xmlns="http://www.w3.org/2000/svg">
           <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
           <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
         </svg>
       </div>
-      
+      <span class="text-[9px] font-mono font-bold text-white uppercase tracking-wider bg-slate-950/80 px-2.5 py-1 rounded border border-slate-800">Ver Captura HD</span>
     </div>
   </div>
   <!-- Right: Technical Insights & Action Items -->
@@ -1012,16 +1128,16 @@ Para garantizar la privacidad de los datos empresariales, he desarrollado simula
 <!-- HR Mock -->
 <div id="hr-mock" class="mock-view w-full h-full p-4 hidden grid grid-cols-1 md:grid-cols-12 gap-4">
   <!-- Left: Dashboard Image (Clickable) -->
-  <div onclick="openImageModal('hr-mock')" class="col-span-12 md:col-span-7 flex items-center justify-center bg-slate-900/40 rounded-xl p-2 border border-slate-800/60 relative group/img overflow-hidden cursor-pointer" title="Hacé clic para ver la captura real en pantalla completa">
-    <img src="images/hr-dashboard.png" class="max-w-full max-h-[220px] md:max-h-[320px] object-contain rounded-lg shadow-2xl transition-transform duration-500 group-hover/img:scale-[1.02]" alt="HR Dashboard">
-    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover/img:opacity-100 transition-all duration-300 flex flex-col items-center justify-center gap-2">
-      <div class="w-10 h-10 rounded-full bg-brand-cyan/20 border border-brand-cyan/40 text-brand-cyan flex items-center justify-center shadow-lg transition-transform duration-300 scale-90 group-hover/img:scale-100">
+  <div onclick="openImageModal('hr-mock')" class="col-span-12 md:col-span-7 flex items-center justify-center bg-slate-100/80 dark:bg-slate-900/40 rounded-xl p-2 border border-slate-200 dark:border-slate-800/60 relative group overflow-hidden cursor-pointer" title="Hacé clic para ver la captura real en pantalla completa">
+    <img src="images/hr-dashboard.png" class="max-w-full max-h-[220px] md:max-h-[320px] object-contain rounded-lg shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]" alt="HR Dashboard">
+    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center gap-2">
+      <div class="w-10 h-10 rounded-full bg-brand-cyan/20 border border-brand-cyan/40 text-brand-cyan flex items-center justify-center shadow-lg transition-transform duration-300 scale-90 group-hover:scale-100">
         <svg class="w-5 h-5 text-brand-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" xmlns="http://www.w3.org/2000/svg">
           <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
           <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
         </svg>
       </div>
-      
+      <span class="text-[9px] font-mono font-bold text-white uppercase tracking-wider bg-slate-950/80 px-2.5 py-1 rounded border border-slate-800">Ver Captura HD</span>
     </div>
   </div>
   <!-- Right: Technical Insights & Action Items -->
@@ -1626,6 +1742,11 @@ function closeAllDrawers() {
 }
 
 // CV Download helper
+function showCVMessage(event) {
+  event.preventDefault();
+  alert("¡Hola! Para vincular tu Currículum real en PDF, subilo a tu Google Drive de forma pública y copiá el enlace de descarga en la etiqueta <a> del botón en tu código HTML. ¡Éxitos con tu postulación!");
+}
+
 // INTERACTIVE CI/CD PIPELINE SIMULATOR - BUG FIX APPLIED
 function startPipelineSimulation() {
   const btn = document.getElementById('btn-simulate');
