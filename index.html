@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es" class="dark">
 <head>
@@ -397,9 +396,14 @@
                                 <span class="text-xs text-slate-500 dark:text-brand-textMuted">Hacé clic en el botón para ver cómo funciona el despliegue automático en Fabric en tiempo real.</span>
                             </div>
                         </div>
-                        <button onclick="startPipelineSimulation()" id="btn-simulate" class="w-full sm:w-auto px-5 py-2.5 rounded bg-brand-purple text-white hover:bg-brand-cyan hover:text-brand-dark font-bold text-xs uppercase tracking-wider transition-all shadow-md flex items-center justify-center gap-2">
-                            <i data-lucide="play" class="w-4 h-4"></i> Simular Despliegue (Push)
-                        </button>
+                        <div class="flex flex-wrap items-center gap-2 w-full sm:w-auto">
+                            <button onclick="startPipelineSimulation()" id="btn-simulate" class="w-full sm:w-auto px-5 py-2.5 rounded bg-brand-purple text-white hover:bg-brand-cyan hover:text-brand-dark font-bold text-xs uppercase tracking-wider transition-all shadow-md flex items-center justify-center gap-2">
+                                <i data-lucide="play" class="w-4 h-4"></i> Simular Despliegue (Push)
+                            </button>
+                            <button onclick="openImageModal('images/git-pipeline.png', 'Mapa de Arquitectura Git & Fabric')" class="w-full sm:w-auto px-5 py-2.5 rounded border border-slate-200 dark:border-brand-border text-slate-700 dark:text-white hover:bg-slate-100 dark:hover:bg-brand-card/50 font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2">
+                                <i data-lucide="map" class="w-4 h-4"></i> Ver Diagrama Real
+                            </button>
+                        </div>
                     </div>
 
                     <!-- Progress bar -->
@@ -980,6 +984,13 @@
                         </div>
                     </div>
 
+                    <!-- Floating hover button to view real high-definition image -->
+                    <div class="absolute bottom-4 right-4 z-20 transition-all duration-300 opacity-0 group-hover:opacity-100 sm:opacity-90">
+                        <button onclick="viewActiveRealDashboard()" class="px-4 py-2 bg-brand-cyan hover:bg-white text-brand-dark hover:text-brand-dark rounded-lg font-bold text-xs uppercase tracking-wider transition-all shadow-lg flex items-center gap-1.5">
+                            <i data-lucide="eye" class="w-4 h-4"></i> Ver Captura Real (Full HD)
+                        </button>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -1356,6 +1367,65 @@ AVERAGEX(
         </div>
     </div>
 
+    
+    <!-- REAL IMAGE MODAL (LIGHTBOX) -->
+    <div id="image-modal" class="fixed inset-0 z-50 flex items-center justify-center hidden p-4 sm:p-6 bg-black/90 backdrop-blur-md transition-all duration-300">
+        <div class="absolute inset-0 cursor-pointer" onclick="closeImageModal()"></div>
+        
+        <div class="relative max-w-5xl w-full max-h-[90vh] bg-slate-900/80 rounded-2xl border border-slate-700/50 shadow-2xl flex flex-col overflow-hidden z-10 transition-all scale-95 duration-300" id="image-modal-card">
+            <!-- Modal Header -->
+            <div class="flex justify-between items-center p-4 border-b border-slate-800 bg-slate-950/80">
+                <div class="flex items-center gap-2">
+                    <i data-lucide="image" class="text-brand-cyan w-5 h-5"></i>
+                    <h3 class="text-sm font-bold text-white uppercase tracking-wider" id="image-modal-title">Captura del Tablero Real</h3>
+                </div>
+                <div class="flex items-center gap-2">
+                    <button onclick="closeImageModal()" class="text-slate-400 hover:text-white p-1 rounded-lg hover:bg-white/10 transition-all" title="Cerrar (Esc)">
+                        <i data-lucide="x" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Modal Content (Scrollable, fits image) -->
+            <div class="flex-grow p-4 flex items-center justify-center overflow-auto bg-slate-950/40 min-h-[300px] relative">
+                <!-- Image Container -->
+                <img id="image-modal-img" src="" alt="Cargando tablero..." class="max-w-full max-h-[70vh] object-contain rounded-lg shadow-lg border border-slate-800/40 hidden" onload="onModalImageLoad()" onerror="onModalImageError()">
+                
+                <!-- Loading Spinner -->
+                <div id="image-modal-spinner" class="flex flex-col items-center gap-3">
+                    <div class="w-10 h-10 border-4 border-brand-cyan border-t-transparent rounded-full animate-spin"></div>
+                    <span class="text-xs font-mono text-brand-textMuted uppercase tracking-wider">Cargando Captura HD...</span>
+                </div>
+
+                <!-- Custom Error Box (For Nancy's local development) -->
+                <div id="image-modal-error" class="hidden max-w-md p-6 rounded-xl bg-slate-900 border border-red-500/30 text-left flex flex-col gap-4">
+                    <div class="flex items-center gap-2 text-red-400">
+                        <i data-lucide="alert-triangle" class="w-5 h-5"></i>
+                        <span class="font-bold text-sm uppercase font-mono">¡Imagen pendiente en tu GitHub!</span>
+                    </div>
+                    <p class="text-xs text-slate-300 leading-relaxed font-sans">
+                        Nancy, para ver tu captura real en este pop-up, solo tenés que subir la imagen a tu repositorio de GitHub con esta ruta exacta:
+                    </p>
+                    <div class="bg-slate-950 p-3 rounded font-mono text-xs text-brand-cyan select-all break-all border border-slate-800" id="image-modal-error-path">
+                        images/stock-dashboard.png
+                    </div>
+                    <p class="text-xs text-slate-400 leading-relaxed font-sans">
+                        Al subir tu captura en formato PNG con ese nombre adentro de una carpeta llamada <code class="font-mono text-brand-purple">images</code> en tu proyecto, la web la mostrará de forma mágica y automática aquí en Full HD. ¡Te quedará impecable!
+                    </p>
+                    <button onclick="closeImageModal()" class="w-full py-2 bg-slate-800 hover:bg-slate-700 text-white rounded font-bold text-xs uppercase transition-all">
+                        Entendido
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Modal Footer -->
+            <div class="p-3 border-t border-slate-800 bg-slate-950/60 flex justify-between items-center text-[10px] font-mono text-brand-textMuted">
+                <span>💡 Se recomienda visualizar en pantalla completa (F11) para mayor detalle.</span>
+                <span class="text-brand-cyan font-bold">Sincronización de Portafolio Técnico</span>
+            </div>
+        </div>
+    </div>
+
     <!-- JAVASCRIPT FOR DYNAMIC INTERACTIVE BEHAVIOR -->
     <script>
         // Initialize Lucide icons
@@ -1567,6 +1637,92 @@ AVERAGEX(
                 btn.classList.remove('opacity-50', 'cursor-not-allowed');
             }, 8500);
         }
+
+                // 9. Real Image Modal Control (V5)
+        function openImageModal(imgSrc, title) {
+            const modal = document.getElementById('image-modal');
+            const modalCard = document.getElementById('image-modal-card');
+            const modalImg = document.getElementById('image-modal-img');
+            const modalTitle = document.getElementById('image-modal-title');
+            const spinner = document.getElementById('image-modal-spinner');
+            const errorBox = document.getElementById('image-modal-error');
+            const errorPath = document.getElementById('image-modal-error-path');
+
+            // Set title
+            modalTitle.textContent = title;
+            
+            // Show modal and reset loading states
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modalCard.classList.remove('scale-95');
+                modalCard.classList.add('scale-100');
+            }, 10);
+            
+            modalImg.classList.add('hidden');
+            errorBox.classList.add('hidden');
+            spinner.classList.remove('hidden');
+            
+            // Set image source
+            modalImg.src = imgSrc;
+            errorPath.textContent = imgSrc;
+            
+            // Prevent body scroll
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeImageModal() {
+            const modal = document.getElementById('image-modal');
+            const modalCard = document.getElementById('image-modal-card');
+            
+            modalCard.classList.remove('scale-100');
+            modalCard.classList.add('scale-95');
+            
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                // Restore scroll if no drawer is open
+                const activeDrawers = Array.from(document.querySelectorAll('.drawer')).some(d => !d.classList.contains('translate-x-full'));
+                if (!activeDrawers) {
+                    document.body.style.overflow = 'auto';
+                }
+            }, 200);
+        }
+
+        function onModalImageLoad() {
+            document.getElementById('image-modal-spinner').classList.add('hidden');
+            document.getElementById('image-modal-img').classList.remove('hidden');
+        }
+
+        function onModalImageError() {
+            document.getElementById('image-modal-spinner').classList.add('hidden');
+            document.getElementById('image-modal-img').classList.add('hidden');
+            document.getElementById('image-modal-error').classList.remove('hidden');
+        }
+
+        function viewActiveRealDashboard() {
+            const views = {
+                'stock-mock': { img: 'images/stock-dashboard.png', title: 'Dashboard de Control de Stock - Captura Real' },
+                'sales-mock': { img: 'images/sales-dashboard.png', title: 'Dashboard de Ventas & Rentabilidad (XSales) - Captura Real' },
+                'rfm-mock': { img: 'images/rfm-dashboard.png', title: 'Dashboard de Segmentación RFM - Captura Real' },
+                'churn-mock': { img: 'images/churn-dashboard.png', title: 'Dashboard de Churn Analytics - Captura Real' },
+                'hr-mock': { img: 'images/hr-dashboard.png', title: 'Dashboard de HR Analytics - Captura Real' }
+            };
+
+            for (const [id, data] of Object.entries(views)) {
+                const el = document.getElementById(id);
+                if (el && !el.classList.contains('hidden')) {
+                    openImageModal(data.img, data.title);
+                    return;
+                }
+            }
+        }
+
+        // ESC key to close modal and drawers
+        window.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeImageModal();
+                closeAllDrawers();
+            }
+        });
 
         // 8. Contact Form Submissions
         function getContactData() {
