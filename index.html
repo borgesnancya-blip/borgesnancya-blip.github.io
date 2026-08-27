@@ -357,35 +357,6 @@ html:not(.dark) .mock-view .group .absolute.inset-0 {
   background-color: rgba(15, 23, 42, 0.7) !important;
 }
 
-/* Ensure brand-cyan elements are high-contrast and fully readable in Light Mode (Day Mode) globally */
-html:not(.dark) .text-brand-cyan,
-html:not(.dark) [class*="text-brand-cyan"] {
-  color: #0284c7 !important; /* Rich readable cyan/deep sky blue */
-}
-html:not(.dark) .bg-brand-cyan,
-html:not(.dark) [class*="bg-brand-cyan"] {
-  background-color: #0284c7 !important;
-}
-html:not(.dark) .bg-brand-cyan\/10 {
-  background-color: rgba(2, 132, 199, 0.1) !important;
-}
-html:not(.dark) .border-brand-cyan,
-html:not(.dark) .border-brand-cyan\/40,
-html:not(.dark) .border-brand-cyan\/30,
-html:not(.dark) .border-brand-cyan\/20,
-html:not(.dark) .border-brand-cyan\/10 {
-  border-color: #0284c7 !important;
-}
-html:not(.dark) .border-brand-cyan\/20 {
-  border-color: rgba(2, 132, 199, 0.2) !important;
-}
-html:not(.dark) .border-brand-cyan\/30 {
-  border-color: rgba(2, 132, 199, 0.35) !important;
-}
-html:not(.dark) .border-brand-cyan\/40 {
-  border-color: rgba(2, 132, 199, 0.45) !important;
-}
-
 /* Ensure neon/light-colored text is darkened to readable colors in Light Mode */
 html:not(.dark) .mock-view .text-brand-cyan {
   color: #0284c7 !important; /* Intense, legible ocean-blue */
@@ -490,6 +461,74 @@ html:not(.dark) .mock-view .absolute.inset-0.bg-black\/60 .bg-brand-cyan\/20 {
 }
 
 
+
+/* Ensure brand-cyan elements are high-contrast and fully readable in Light Mode (Day Mode) globally */
+html:not(.dark) .text-brand-cyan {
+  color: #0284c7 !important; /* Vibrant high-contrast ocean-blue */
+}
+html:not(.dark) .bg-brand-cyan {
+  background-color: #0284c7 !important;
+}
+html:not(.dark) .border-brand-cyan {
+  border-color: #0284c7 !important;
+}
+html:not(.dark) .hover\:text-brand-cyan:hover {
+  color: #0284c7 !important;
+}
+html:not(.dark) .hover\:bg-brand-cyan:hover {
+  background-color: #0284c7 !important;
+}
+html:not(.dark) .selection\:bg-brand-cyan::selection {
+  background-color: #0284c7 !important;
+}
+
+/* Day Mode styling for the glass cards and sections to make them look ultra-premium and defined */
+html:not(.dark) #reto-datos .glass-card {
+  background: #ffffff !important;
+  border: 1px solid #cbd5e1 !important; /* Visible crisp border */
+  box-shadow: 0 10px 25px -10px rgba(15, 23, 42, 0.08), 0 4px 10px -5px rgba(15, 23, 42, 0.04) !important;
+}
+html:not(.dark) #reto-datos .font-mono.text-brand-cyan {
+  color: #0284c7 !important;
+}
+
+/* Day Mode responsive styling for the showcase outer container */
+html:not(.dark) .mock-showcase-container {
+  background-color: #f1f5f9 !important; /* Light slate gray */
+  border-color: #cbd5e1 !important;
+}
+
+/* Clean up light mode hover overlays to use white backdrop-blur with a crisp ocean-blue icon and NO text */
+html:not(.dark) .mock-view .group .absolute.inset-0 {
+  background-color: rgba(255, 255, 255, 0.6) !important;
+  backdrop-filter: blur(2px) !important;
+}
+html:not(.dark) .mock-view .group .absolute.inset-0 svg {
+  color: #0284c7 !important; /* Ocean-blue eye icon */
+}
+html:not(.dark) .mock-view .group .absolute.inset-0 .w-10.h-10 {
+  background-color: rgba(2, 132, 199, 0.1) !important;
+  border-color: rgba(2, 132, 199, 0.3) !important;
+}
+
+/* Ensure the success modal matches the day/night theme perfectly */
+html:not(.dark) #success-modal .relative {
+  background-color: #ffffff !important;
+  border-color: #cbd5e1 !important;
+}
+html:not(.dark) #success-modal h3 {
+  color: #0f172a !important;
+}
+html:not(.dark) #success-modal p {
+  color: #475569 !important;
+}
+html:not(.dark) #success-modal button {
+  background-color: #10b981 !important;
+  color: #ffffff !important;
+}
+html:not(.dark) #success-modal button:hover {
+  background-color: #0f172a !important;
+}
 </style>
 </head>
 <body class="selection:bg-brand-cyan selection:text-brand-dark font-sans">
@@ -1016,7 +1055,8 @@ Para garantizar la privacidad de los datos empresariales, he desarrollado simula
           <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
         </svg>
       </div>
-          </div>
+      
+    </div>
   </div>
   <!-- Right: Technical Insights & Action Items -->
   <div class="col-span-12 md:col-span-5 flex flex-col justify-between h-full text-left space-y-4">
@@ -1091,7 +1131,8 @@ Para garantizar la privacidad de los datos empresariales, he desarrollado simula
           <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
         </svg>
       </div>
-          </div>
+      
+    </div>
   </div>
   <!-- Right: Technical Insights & Action Items -->
   <div class="col-span-12 md:col-span-5 flex flex-col justify-between h-full text-left space-y-4">
@@ -1166,7 +1207,8 @@ Para garantizar la privacidad de los datos empresariales, he desarrollado simula
           <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
         </svg>
       </div>
-          </div>
+      
+    </div>
   </div>
   <!-- Right: Technical Insights & Action Items -->
   <div class="col-span-12 md:col-span-5 flex flex-col justify-between h-full text-left space-y-4">
@@ -1241,7 +1283,8 @@ Para garantizar la privacidad de los datos empresariales, he desarrollado simula
           <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
         </svg>
       </div>
-          </div>
+      
+    </div>
   </div>
   <!-- Right: Technical Insights & Action Items -->
   <div class="col-span-12 md:col-span-5 flex flex-col justify-between h-full text-left space-y-4">
@@ -1316,7 +1359,8 @@ Para garantizar la privacidad de los datos empresariales, he desarrollado simula
           <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
         </svg>
       </div>
-          </div>
+      
+    </div>
   </div>
   <!-- Right: Technical Insights & Action Items -->
   <div class="col-span-12 md:col-span-5 flex flex-col justify-between h-full text-left space-y-4">
@@ -1481,6 +1525,23 @@ Llevá tu negocio al siguiente nivel. Diseñemos juntos un ecosistema de Busines
   </div>
 </div>
 
+<!-- CUSTOM EMAIL SUCCESS MODAL -->
+<div id="email-success-modal" class="fixed inset-0 z-50 flex items-center justify-center hidden p-4 sm:p-6 bg-black/80 backdrop-blur-sm transition-all duration-300">
+  <div class="absolute inset-0 cursor-pointer" onclick="closeEmailSuccessModal()"></div>
+  <div class="relative max-w-sm w-full bg-slate-900 border border-brand-cyan/30 rounded-2xl shadow-2xl p-6 text-center z-10 transition-all scale-95 duration-300" id="email-success-modal-card">
+    <div class="w-12 h-12 bg-brand-cyan/10 border border-brand-cyan/20 rounded-full flex items-center justify-center mx-auto mb-4 animate-bounce">
+      <i data-lucide="mail" class="w-6 h-6 text-brand-cyan"></i>
+    </div>
+    <h3 class="text-sm font-mono font-bold text-white uppercase tracking-wider mb-2">¡Correo Copiado!</h3>
+    <p class="text-xs text-slate-300 leading-relaxed mb-5">
+      La dirección <strong class="text-brand-cyan">borgesnancya@gmail.com</strong> se copió al portapapeles.<br><br>
+      Se está abriendo tu cliente de correo. Si no se abre, podés abrir tu Gmail o webmail y pegarla directamente.
+    </p>
+    <button onclick="closeEmailSuccessModal()" class="w-full py-2.5 bg-brand-cyan hover:bg-white text-slate-900 hover:text-brand-dark rounded-lg font-bold text-xs uppercase tracking-wider transition-all shadow-md">
+      Entendido
+    </button>
+  </div>
+</div>
 
 
 <!-- REAL IMAGE MODAL (LIGHTBOX WITH MULTI-IMAGE CAROUSEL) -->
@@ -1967,23 +2028,44 @@ function copyEmailToClipboard() {
   const btn = document.getElementById('copy-email-btn');
   const originalHTML = btn.innerHTML;
   
-  navigator.clipboard.writeText(email).then(() => {
-    btn.innerHTML = '<i data-lucide="check" class="w-3 h-3 text-brand-green"></i> ¡Copiado!';
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(email).then(() => {
+      showCopyFeedback(btn, originalHTML);
+    }).catch(() => {
+      fallbackCopyText(email, btn, originalHTML);
+    });
+  } else {
+    fallbackCopyText(email, btn, originalHTML);
+  }
+}
+
+function showCopyFeedback(btn, originalHTML) {
+  btn.innerHTML = '<i data-lucide="check" class="w-3.5 h-3.5 text-brand-green"></i> ¡Copiado!';
+  if (window.lucide) { lucide.createIcons(); }
+  setTimeout(() => {
+    btn.innerHTML = originalHTML;
     if (window.lucide) { lucide.createIcons(); }
-    setTimeout(() => {
-      btn.innerHTML = originalHTML;
-      if (window.lucide) { lucide.createIcons(); }
-    }, 2000);
-  }).catch(err => {
+  }, 2000);
+}
+
+function fallbackCopyText(text, btn, originalHTML) {
+  const textArea = document.createElement("textarea");
+  textArea.value = text;
+  textArea.style.position = "fixed";
+  document.body.appendChild(textArea);
+  textArea.focus();
+  textArea.select();
+  try {
+    document.execCommand('copy');
+    showCopyFeedback(btn, originalHTML);
+  } catch (err) {
     btn.innerHTML = '¡Copiado!';
     setTimeout(() => {
       btn.innerHTML = originalHTML;
       if (window.lucide) { lucide.createIcons(); }
     }, 2000);
-  });
-}).catch(err => {
-    alert('Correo: borgesnancya@gmail.com');
-  });
+  }
+  document.body.removeChild(textArea);
 }
 
 function closeSuccessModal() {
@@ -2054,11 +2136,33 @@ function sendWhatsAppMessage() {
   window.open(`https://wa.me/5493385467284?text=${encodedText}`, '_blank', 'noopener,noreferrer');
 }
 
-, 200);
+function openEmailSuccessModal() {
+  const modal = document.getElementById('email-success-modal');
+  const card = document.getElementById('email-success-modal-card');
+  modal.classList.remove('hidden');
+  setTimeout(() => {
+    card.classList.remove('scale-95');
+    card.classList.add('scale-100');
+  }, 10);
+  if (window.lucide) { lucide.createIcons(); }
+}
+
+function closeEmailSuccessModal() {
+  const modal = document.getElementById('email-success-modal');
+  const card = document.getElementById('email-success-modal-card');
+  card.classList.remove('scale-100');
+  card.classList.add('scale-95');
+  setTimeout(() => {
+    modal.classList.add('hidden');
+    document.body.style.overflow = 'auto';
+  }, 200);
 }
 
 
-`);
+function sendEmailMessage() {
+  const data = getContactData();
+  if (!data) return;
+  const subject = encodeURIComponent(`Contacto Portafolio - ${data.name}`);
   let body = `Hola Nancy,\nMi nombre es ${data.name}`;
   if (data.business) body += ` de ${data.business}`;
   body += `.\nTe escribo para consultarte lo siguiente:\n"${data.message}"\nSaludos.`;
