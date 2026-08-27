@@ -1989,7 +1989,6 @@ function openSuccessModal(title = '¡Proceso Exitoso!', text = 'Has desplegado u
   const modal = document.getElementById('success-modal');
   const card = document.getElementById('success-modal-card');
   const iconBox = card.querySelector('.w-12.h-12');
-  const icon = iconBox.querySelector('i');
   const h3 = card.querySelector('h3');
   const p = card.querySelector('p');
   const btn = card.querySelector('button');
@@ -1999,17 +1998,17 @@ function openSuccessModal(title = '¡Proceso Exitoso!', text = 'Has desplegado u
 
   if (type === 'email') {
     iconBox.className = "w-12 h-12 bg-brand-cyan/10 border border-brand-cyan/20 rounded-full flex items-center justify-center mx-auto mb-4 animate-bounce";
-    icon.setAttribute('data-lucide', 'copy');
+    iconBox.innerHTML = '<i data-lucide="copy" class="w-6 h-6 text-brand-cyan"></i>';
     btn.className = "w-full py-2.5 bg-brand-cyan hover:bg-white text-slate-900 hover:text-brand-dark rounded-lg font-bold text-xs uppercase tracking-wider transition-all shadow-md";
     btn.textContent = "Entendido";
   } else if (type === 'warning') {
     iconBox.className = "w-12 h-12 bg-amber-500/10 border border-amber-500/20 rounded-full flex items-center justify-center mx-auto mb-4 animate-bounce";
-    icon.setAttribute('data-lucide', 'alert-triangle');
+    iconBox.innerHTML = '<i data-lucide="alert-triangle" class="w-6 h-6 text-amber-500"></i>';
     btn.className = "w-full py-2.5 bg-amber-500 hover:bg-white text-slate-900 hover:text-brand-dark rounded-lg font-bold text-xs uppercase tracking-wider transition-all shadow-md";
     btn.textContent = "Entendido";
   } else {
     iconBox.className = "w-12 h-12 bg-brand-green/10 border border-brand-green/20 rounded-full flex items-center justify-center mx-auto mb-4 animate-bounce";
-    icon.setAttribute('data-lucide', 'check');
+    iconBox.innerHTML = '<i data-lucide="check" class="w-6 h-6 text-brand-green"></i>';
     btn.className = "w-full py-2.5 bg-brand-green hover:bg-white text-slate-900 hover:text-brand-dark rounded-lg font-bold text-xs uppercase tracking-wider transition-all shadow-md";
     btn.textContent = "Entendido";
   }
