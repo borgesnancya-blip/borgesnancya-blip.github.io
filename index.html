@@ -221,6 +221,34 @@ html:not(.dark) .sim-console-container .text-brand-textMuted {
   color: #64748b !important;
 }
 
+/* Custom Light Mode style overrides for success modal */
+html:not(.dark) #success-modal .relative {
+  background-color: #ffffff !important;
+  border-color: #cbd5e1 !important;
+}
+html:not(.dark) #success-modal h3 {
+  color: #0f172a !important;
+}
+html:not(.dark) #success-modal p {
+  color: #475569 !important;
+}
+html:not(.dark) #success-modal button {
+  background-color: #10b981 !important;
+  color: #ffffff !important;
+}
+html:not(.dark) #success-modal button:hover {
+  background-color: #0f172a !important;
+}
+
+/* Micro-interaction hovers for step cards */
+#sim-step-1 i, #sim-step-2 i, #sim-step-3 svg, #sim-step-4 i {
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+#sim-step-1:hover i { transform: scale(1.15) rotate(8deg); }
+#sim-step-2:hover i { transform: scale(1.15) translateY(-3px); }
+#sim-step-3:hover svg { transform: scale(1.15) rotate(-8deg); }
+#sim-step-4:hover i { transform: scale(1.15) translateY(-3px); }
+
 /* Ensure borders on profile card flex details stand out in light mode */
 html:not(.dark) .border-slate-200 {
   border-color: #e2e8f0 !important;
@@ -347,6 +375,34 @@ html:not(.dark) .sim-console-container #sim-logs .text-brand-green {
 html:not(.dark) .sim-console-container .text-brand-textMuted {
   color: #64748b !important;
 }
+
+/* Custom Light Mode style overrides for success modal */
+html:not(.dark) #success-modal .relative {
+  background-color: #ffffff !important;
+  border-color: #cbd5e1 !important;
+}
+html:not(.dark) #success-modal h3 {
+  color: #0f172a !important;
+}
+html:not(.dark) #success-modal p {
+  color: #475569 !important;
+}
+html:not(.dark) #success-modal button {
+  background-color: #10b981 !important;
+  color: #ffffff !important;
+}
+html:not(.dark) #success-modal button:hover {
+  background-color: #0f172a !important;
+}
+
+/* Micro-interaction hovers for step cards */
+#sim-step-1 i, #sim-step-2 i, #sim-step-3 svg, #sim-step-4 i {
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+#sim-step-1:hover i { transform: scale(1.15) rotate(8deg); }
+#sim-step-2:hover i { transform: scale(1.15) translateY(-3px); }
+#sim-step-3:hover svg { transform: scale(1.15) rotate(-8deg); }
+#sim-step-4:hover i { transform: scale(1.15) translateY(-3px); }
 html:not(.dark) .border-slate-200 {
   border-color: #e2e8f0 !important;
 }
@@ -613,11 +669,23 @@ No trabajo con archivos locales sueltos. He diseñado e implementado una arquite
 <!-- Live console logs -->
 <div class="bg-slate-950 p-3.5 rounded-lg font-mono text-[11px] text-slate-300 border border-slate-800 text-left min-h-[90px] flex flex-col justify-end overflow-hidden relative sim-console-container">
 <div class="absolute top-1.5 right-2.5 flex items-center gap-1">
-<span class="w-1.5 h-1.5 rounded-full bg-brand-green"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-brand-green animate-pulse"></span>
 <span class="text-[8px] text-brand-textMuted uppercase">Agente Activo</span>
 </div>
 <div class="space-y-0.5" id="sim-logs">
 <div class="text-brand-textMuted">&gt; Presione "Simular Despliegue" para iniciar el agente de sincronización local...</div>
+</div>
+</div>
+</div>
+
+<div class="p-4 rounded-xl bg-slate-100/50 dark:bg-brand-dark/40 border border-slate-200 dark:border-brand-border/60 flex flex-col md:flex-row gap-4 justify-between items-center mt-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-brand-purple/10 border border-brand-purple/30 flex items-center justify-center text-brand-purple">
+<i data-lucide="settings" class="w-4 h-4 animate-spin"></i>
+</div>
+<div class="text-left">
+<span class="font-bold text-slate-900 dark:text-white text-xs block">Integración Sólida y Profesional</span>
+<span class="text-[10px] text-slate-500 dark:text-brand-textMuted font-mono">Control de ramas (develop / main), Pipelines automáticos y despliegues sin fricciones.</span>
 </div>
 </div>
 </div>
@@ -1271,6 +1339,23 @@ Llevá tu negocio al siguiente nivel. Diseñemos juntos un ecosistema de Busines
 </div>
 </section>
 
+<!-- CUSTOM SUCCESS MODAL (ALERTA PREMIUM) -->
+<div id="success-modal" class="fixed inset-0 z-50 flex items-center justify-center hidden p-4 sm:p-6 bg-black/80 backdrop-blur-sm transition-all duration-300">
+  <div class="absolute inset-0 cursor-pointer" onclick="closeSuccessModal()"></div>
+  <div class="relative max-w-sm w-full bg-slate-900 border border-brand-green/30 rounded-2xl shadow-2xl p-6 text-center z-10 transition-all scale-95 duration-300" id="success-modal-card">
+    <div class="w-12 h-12 bg-brand-green/10 border border-brand-green/20 rounded-full flex items-center justify-center mx-auto mb-4 animate-bounce">
+      <i data-lucide="check" class="w-6 h-6 text-brand-green"></i>
+    </div>
+    <h3 class="text-sm font-mono font-bold text-white uppercase tracking-wider mb-2">Sincronización Exitosa</h3>
+    <p class="text-xs text-slate-300 leading-relaxed mb-5">
+      Has desplegado una actualización de tus modelos de BI desde local hasta Microsoft Fabric de forma 100% automatizada.
+    </p>
+    <button onclick="closeSuccessModal()" class="w-full py-2.5 bg-brand-green hover:bg-white text-slate-900 hover:text-brand-dark rounded-lg font-bold text-xs uppercase tracking-wider transition-all shadow-md">
+      Entendido
+    </button>
+  </div>
+</div>
+
 <!-- REAL IMAGE MODAL (LIGHTBOX WITH MULTI-IMAGE CAROUSEL) -->
 <div id="image-modal" class="fixed inset-0 z-50 flex items-center justify-center hidden p-4 sm:p-6 bg-black/90 backdrop-blur-md transition-all duration-300">
   <div class="absolute inset-0 cursor-pointer" onclick="closeImageModal()"></div>
@@ -1459,7 +1544,11 @@ function startPipelineSimulation() {
   // Reset UI states
   progressContainer.classList.remove('hidden');
   progressBar.style.width = '0%';
-  steps.forEach(s => s.classList.remove('ring-4', 'ring-brand-cyan', 'ring-brand-purple', 'ring-brand-green', 'ring-slate-400', 'scale-105'));
+  steps.forEach(s => {
+    s.classList.remove('ring-4', 'ring-brand-cyan', 'ring-brand-purple', 'ring-brand-green', 'ring-slate-400', 'scale-105');
+    const ic = s.querySelector('div');
+    if (ic) ic.classList.remove('animate-pulse', 'animate-bounce', 'scale-110');
+  });
   logsContainer.innerHTML = '';
   
   const appendLog = (text, type = 'info') => {
@@ -1475,13 +1564,19 @@ function startPipelineSimulation() {
   setTimeout(() => {
     appendLog('Iniciando orquestación local en VS Code...', 'process');
     steps[0].classList.add('ring-4', 'ring-brand-cyan', 'scale-105');
+    const ic = steps[0].querySelector('div');
+    if (ic) ic.classList.add('animate-pulse', 'scale-110');
     progressBar.style.width = '25%';
   }, 500);
 
   setTimeout(() => {
     appendLog('Sincronizador local Git: git add . && git commit -m "update: modelo semántico estrella"', 'git');
     steps[0].classList.remove('ring-4', 'ring-brand-cyan', 'scale-105');
+    const ic0 = steps[0].querySelector('div');
+    if (ic0) ic0.classList.remove('animate-pulse', 'scale-110');
     steps[1].classList.add('ring-4', 'ring-brand-purple', 'scale-105'); // Fixed index
+    const ic1 = steps[1].querySelector('div');
+    if (ic1) ic1.classList.add('animate-pulse', 'scale-110');
     progressBar.style.width = '50%';
   }, 2500);
 
@@ -1489,7 +1584,11 @@ function startPipelineSimulation() {
     appendLog('Subiendo commit a GitHub: git push origin main', 'git');
     appendLog('Webhook disparado de manera segura en GitHub Actions...', 'process');
     steps[1].classList.remove('ring-4', 'ring-brand-purple', 'scale-105'); // Fixed index
+    const ic1 = steps[1].querySelector('div');
+    if (ic1) ic1.classList.remove('animate-pulse', 'scale-110');
     steps[2].classList.add('ring-4', 'ring-slate-400', 'scale-105'); // Fixed index
+    const ic2 = steps[2].querySelector('div');
+    if (ic2) ic2.classList.add('animate-pulse', 'scale-110');
     progressBar.style.width = '75%';
   }, 4500);
 
@@ -1498,14 +1597,20 @@ function startPipelineSimulation() {
     appendLog('Notificando API de Microsoft Fabric Cloud...', 'process');
     appendLog('Fabric: Sincronización automática de Metadatos completada.', 'info');
     steps[2].classList.remove('ring-4', 'ring-slate-400', 'scale-105'); // Fixed index
+    const ic2 = steps[2].querySelector('div');
+    if (ic2) ic2.classList.remove('animate-pulse', 'scale-110');
     steps[3].classList.add('ring-4', 'ring-brand-green', 'scale-105'); // Fixed index
+    const ic3 = steps[3].querySelector('div');
+    if (ic3) ic3.classList.add('animate-bounce', 'scale-110');
     progressBar.style.width = '100%';
   }, 6500);
 
   setTimeout(() => {
     appendLog('¡PROCESO CI/CD EXITOSO! Dashboard en vivo de Fabric actualizado sin intervención manual.', 'success');
     steps[3].classList.remove('ring-4', 'ring-brand-green', 'scale-105'); // Fixed index cleanup
-    alert("¡Simulación exitosa!");
+    const ic3 = steps[3].querySelector('div');
+    if (ic3) ic3.classList.remove('animate-bounce', 'scale-110');
+    openSuccessModal();
     // Re-enable button
     btn.disabled = false;
     btn.classList.remove('opacity-50', 'cursor-not-allowed');
@@ -1700,6 +1805,28 @@ function closeImageModal() {
   }, 200);
 }
 
+function openSuccessModal() {
+  const modal = document.getElementById('success-modal');
+  const card = document.getElementById('success-modal-card');
+  modal.classList.remove('hidden');
+  setTimeout(() => {
+    card.classList.remove('scale-95');
+    card.classList.add('scale-100');
+  }, 10);
+  if (window.lucide) { lucide.createIcons(); }
+}
+
+function closeSuccessModal() {
+  const modal = document.getElementById('success-modal');
+  const card = document.getElementById('success-modal-card');
+  card.classList.remove('scale-100');
+  card.classList.add('scale-95');
+  setTimeout(() => {
+    modal.classList.add('hidden');
+    document.body.style.overflow = 'auto';
+  }, 200);
+}
+
 function onModalImageLoad() {
   document.getElementById('image-modal-spinner').classList.add('hidden');
   document.getElementById('image-modal-img').classList.remove('hidden');
@@ -1769,7 +1896,7 @@ Te escribo para consultarte lo siguiente:
 "${data.message}"
 Saludos.`;
   const encodedBody = encodeURIComponent(body);
-  window.open(`mailto:borgesnancya@gmail.com?subject=${subject}&body=${encodedBody}`, '_blank', 'noopener,noreferrer');
+  window.location.href = `mailto:borgesnancya@gmail.com?subject=${subject}&body=${encodedBody}`;
 }
 </script>
 </body>
