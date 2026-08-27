@@ -222,23 +222,11 @@ html:not(.dark) .sim-console-container .text-brand-textMuted {
 }
 
 /* Custom Light Mode style overrides for success modal */
-html:not(.dark) #success-modal .relative {
-  background-color: #ffffff !important;
-  border-color: #cbd5e1 !important;
-}
-html:not(.dark) #success-modal h3 {
-  color: #0f172a !important;
-}
-html:not(.dark) #success-modal p {
-  color: #475569 !important;
-}
-html:not(.dark) #success-modal button {
-  background-color: #10b981 !important;
-  color: #ffffff !important;
-}
-html:not(.dark) #success-modal button:hover {
-  background-color: #0f172a !important;
-}
+
+
+
+
+
 
 /* Micro-interaction hovers for step cards */
 #sim-step-1 i, #sim-step-2 i, #sim-step-3 svg, #sim-step-4 i {
@@ -397,23 +385,11 @@ html:not(.dark) .sim-console-container .text-brand-textMuted {
 }
 
 /* Custom Light Mode style overrides for success modal */
-html:not(.dark) #success-modal .relative {
-  background-color: #ffffff !important;
-  border-color: #cbd5e1 !important;
-}
-html:not(.dark) #success-modal h3 {
-  color: #0f172a !important;
-}
-html:not(.dark) #success-modal p {
-  color: #475569 !important;
-}
-html:not(.dark) #success-modal button {
-  background-color: #10b981 !important;
-  color: #ffffff !important;
-}
-html:not(.dark) #success-modal button:hover {
-  background-color: #0f172a !important;
-}
+
+
+
+
+
 
 /* Micro-interaction hovers for step cards */
 #sim-step-1 i, #sim-step-2 i, #sim-step-3 svg, #sim-step-4 i {
@@ -512,6 +488,13 @@ html:not(.dark) .mock-view .group .absolute.inset-0 .w-10.h-10 {
 }
 
 /* Ensure the success modal matches the day/night theme perfectly */
+
+
+
+
+
+
+/* Custom Light Mode style overrides for success modal */
 html:not(.dark) #success-modal .relative {
   background-color: #ffffff !important;
   border-color: #cbd5e1 !important;
@@ -522,13 +505,22 @@ html:not(.dark) #success-modal h3 {
 html:not(.dark) #success-modal p {
   color: #475569 !important;
 }
-html:not(.dark) #success-modal button {
+html:not(.dark) #success-modal button.bg-brand-green {
   background-color: #10b981 !important;
+  color: #ffffff !important;
+}
+html:not(.dark) #success-modal button.bg-brand-cyan {
+  background-color: #0284c7 !important;
+  color: #ffffff !important;
+}
+html:not(.dark) #success-modal button.bg-amber-500 {
+  background-color: #d97706 !important;
   color: #ffffff !important;
 }
 html:not(.dark) #success-modal button:hover {
   background-color: #0f172a !important;
 }
+
 </style>
 </head>
 <body class="selection:bg-brand-cyan selection:text-brand-dark font-sans">
@@ -2009,10 +2001,17 @@ function openSuccessModal(title = '¡Proceso Exitoso!', text = 'Has desplegado u
     iconBox.className = "w-12 h-12 bg-brand-cyan/10 border border-brand-cyan/20 rounded-full flex items-center justify-center mx-auto mb-4 animate-bounce";
     icon.setAttribute('data-lucide', 'copy');
     btn.className = "w-full py-2.5 bg-brand-cyan hover:bg-white text-slate-900 hover:text-brand-dark rounded-lg font-bold text-xs uppercase tracking-wider transition-all shadow-md";
+    btn.textContent = "Entendido";
+  } else if (type === 'warning') {
+    iconBox.className = "w-12 h-12 bg-amber-500/10 border border-amber-500/20 rounded-full flex items-center justify-center mx-auto mb-4 animate-bounce";
+    icon.setAttribute('data-lucide', 'alert-triangle');
+    btn.className = "w-full py-2.5 bg-amber-500 hover:bg-white text-slate-900 hover:text-brand-dark rounded-lg font-bold text-xs uppercase tracking-wider transition-all shadow-md";
+    btn.textContent = "Entendido";
   } else {
     iconBox.className = "w-12 h-12 bg-brand-green/10 border border-brand-green/20 rounded-full flex items-center justify-center mx-auto mb-4 animate-bounce";
     icon.setAttribute('data-lucide', 'check');
     btn.className = "w-full py-2.5 bg-brand-green hover:bg-white text-slate-900 hover:text-brand-dark rounded-lg font-bold text-xs uppercase tracking-wider transition-all shadow-md";
+    btn.textContent = "Entendido";
   }
 
   modal.classList.remove('hidden');
@@ -2118,7 +2117,7 @@ function getContactData() {
   const business = document.getElementById('contact-business').value.trim();
   const message = document.getElementById('contact-message').value.trim();
   if (!name || !message) {
-    alert("Por favor completá los campos obligatorios: Nombre y Mensaje.");
+    openSuccessModal('Campos Requeridos', 'Por favor completá los campos obligatorios: Nombre y Mensaje para poder enviar el mensaje.', 'warning');
     return null;
   }
   return { name, business, message };
