@@ -171,7 +171,7 @@ color: #1e293b !important;
 html:not(.dark) .mock-view h4,
 html:not(.dark) .mock-view .text-white,
 html:not(.dark) .mock-view strong {
-color: #0f172a !important; /* Bold headings in deep slate */
+color: #334155 !important; /* Bold headings in soft slate-700 instead of deep slate */
 }
 /* Fix the invisible text on the right side panel */
 html:not(.dark) .mock-view .text-slate-300,
@@ -265,7 +265,7 @@ border-color: rgba(2, 132, 199, 0.3) !important;
 }
 html:not(.dark) .mock-view .group .absolute.inset-0 span {
 background-color: #ffffff !important;
-color: #0f172a !important;
+color: #334155 !important;
 border-color: #cbd5e1 !important;
 box-shadow: 0 4px 12px -2px rgba(15, 23, 42, 0.1) !important;
 }
@@ -333,7 +333,7 @@ background-color: #ffffff !important;
 border-color: #cbd5e1 !important;
 }
 html:not(.dark) #success-modal h3 {
-color: #0f172a !important;
+color: #334155 !important;
 }
 html:not(.dark) #success-modal p {
 color: #475569 !important;
@@ -351,7 +351,7 @@ background-color: #d97706 !important;
 color: #ffffff !important;
 }
 html:not(.dark) #success-modal button:hover {
-background-color: #0f172a !important;
+background-color: #334155 !important;
 }
 /* Single Page View Transitions */
 .view-section {
@@ -360,6 +360,82 @@ transition: opacity 0.3s ease-in-out;
 }
 .view-section:not(.hidden) {
 opacity: 1;
+}
+
+/* Master Corporate Soft Gray Overrides for Legible Day Mode */
+html:not(.dark) body {
+    color: #475569 !important; /* Soft slate gray body text */
+}
+html:not(.dark) .text-slate-900,
+html:not(.dark) .text-slate-950,
+html:not(.dark) .text-slate-800,
+html:not(.dark) h1,
+html:not(.dark) h3,
+html:not(.dark) h4,
+html:not(.dark) strong,
+html:not(.dark) p,
+html:not(.dark) li,
+html:not(.dark) a:not(.bg-brand-cyan):not(.bg-slate-900) {
+    color: #334155 !important; /* Softer, elegant corporate charcoal gray instead of black */
+}
+html:not(.dark) #success-modal h3 {
+    color: #334155 !important;
+}
+html:not(.dark) #success-modal p {
+    color: #475569 !important;
+}
+html:not(.dark) .border-slate-200,
+html:not(.dark) .border-slate-300 {
+    border-color: #cbd5e1 !important; /* Standardize elegant borders */
+}
+
+/* ==========================================================================
+   PREMIUM CORPORATE DESIGN & COLOR IMPROVEMENTS BY GEMINI NOTEBOOK
+   ========================================================================== */
+.mock-tab-btn, .filter-btn, .project-card, .glass-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Active Tab button styling - Glowing premium gradients */
+.dark .mock-tab-btn.active {
+    background: linear-gradient(90deg, rgba(0,242,254,0.15) 0%, rgba(155,81,224,0.1) 100%) !important;
+    color: #00f2fe !important;
+    border-color: rgba(0, 242, 254, 0.4) !important;
+    box-shadow: 0 0 15px rgba(0, 242, 254, 0.1) !important;
+    transform: translateY(-1px);
+}
+html:not(.dark) .mock-tab-btn.active {
+    background: rgba(2, 132, 199, 0.08) !important;
+    color: #0284c7 !important;
+    border-color: rgba(2, 132, 199, 0.3) !important;
+    box-shadow: 0 4px 12px rgba(2, 132, 199, 0.05) !important;
+    transform: translateY(-1px);
+}
+
+/* Active Filter button styling - Beautiful tech-themed gradients */
+.dark .filter-btn.active {
+    background: linear-gradient(135deg, #00f2fe 0%, #9b51e0 100%) !important;
+    color: #0a0c10 !important;
+    box-shadow: 0 4px 15px rgba(0, 242, 254, 0.25) !important;
+    font-weight: 700 !important;
+    transform: translateY(-1px) scale(1.02);
+}
+html:not(.dark) .filter-btn.active {
+    background: linear-gradient(135deg, #0284c7 0%, #7c3aed 100%) !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 12px rgba(2, 132, 199, 0.15) !important;
+    font-weight: 700 !important;
+    transform: translateY(-1px) scale(1.02);
+}
+
+/* Extra premium interactive glow for Project Cards in dark mode */
+.dark .project-card:hover {
+    border-color: rgba(0, 242, 254, 0.3) !important;
+    box-shadow: 0 10px 25px -5px rgba(0, 242, 254, 0.1), 0 8px 10px -6px rgba(155, 81, 224, 0.05) !important;
+}
+html:not(.dark) .project-card:hover {
+    border-color: rgba(2, 132, 199, 0.3) !important;
+    box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.06) !important;
 }
 </style>
 </head>
@@ -505,8 +581,8 @@ Ver Proyectos <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
 <div class="max-w-5xl mx-auto">
 <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
 <div>
-<h2 class="text-[10px] font-mono uppercase tracking-widest text-brand-purple mb-1">INFRAESTRUCTURA DE DESARROLLO</h2>
-<h3 class="text-2xl md:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">El Pipeline de Datos Automatizado</h3>
+<h2 class="text-[10px] font-mono uppercase tracking-widest text-brand-cyan mb-1">INFRAESTRUCTURA DE DESARROLLO</h2>
+<h3 class="text-2xl md:text-3xl font-extrabold text-brand-cyan tracking-tight">El Pipeline de Datos Automatizado</h3>
 </div>
 <p class="text-slate-600 dark:text-brand-textMuted max-w-md text-xs md:text-sm">
 No trabajo con archivos locales sueltos. He diseñado e implementado una arquitectura moderna de CI/CD para centralizar, auditar y desplegar cada reporte de forma profesional.
@@ -623,7 +699,7 @@ No trabajo con archivos locales sueltos. He diseñado e implementado una arquite
 <section id="reto-datos" class="pt-28 pb-12 px-6 md:px-12 bg-slate-100 dark:bg-brand-dark/20 border-t border-slate-200 dark:border-brand-border/40 transition-colors">
 <div class="max-w-5xl mx-auto text-center">
 <h2 class="text-[10px] font-mono uppercase tracking-widest text-brand-cyan mb-1.5">EL VERDADERO RETO DE LOS DATOS</h2>
-<h3 class="text-2xl md:text-3xl font-extrabold text-slate-900 dark:text-white mb-4">¿Por qué las empresas pierden dinero hoy?</h3>
+<h3 class="text-2xl md:text-3xl font-extrabold text-brand-cyan mb-4">¿Por qué las empresas pierden dinero hoy?</h3>
 <p class="text-slate-600 dark:text-brand-textMuted max-w-2xl mx-auto text-xs md:text-sm mb-10 leading-relaxed">
 Muchas compañías operan a ciegas. Tienen datos, pero están dispersos, son manuales o se actualizan tarde. En mi portafolio, decidí resolver desafíos reales inspirados en problemas corporativos de alta demanda:
 </p>
@@ -676,7 +752,7 @@ Pérdida silenciosa de depositantes detectada cuando ya retiraron sus fondos.
 <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
 <div class="text-left">
 <h2 class="text-[10px] font-mono uppercase tracking-widest text-brand-cyan mb-1">PORTAFOLIO DE PROYECTOS</h2>
-<h3 class="text-2xl md:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">Modelos Analíticos que Resuelven Desafíos de Negocio</h3>
+<h3 class="text-2xl md:text-3xl font-extrabold text-brand-cyan tracking-tight">Modelos Analíticos que Resuelven Desafíos de Negocio</h3>
 </div>
 <!-- Category Filters -->
 <div class="flex flex-wrap gap-1.5 text-[10px] font-mono">
@@ -853,7 +929,7 @@ Análisis integral de funcionarios activos para optimizar costos de masa salaria
 <section class="pt-28 pb-12 px-6 md:px-12 bg-slate-50 dark:bg-brand-dark/20 border-t border-slate-200 dark:border-brand-border/40">
 <div class="max-w-5xl mx-auto text-center">
 <h2 class="text-[10px] font-mono uppercase tracking-widest text-brand-cyan mb-1">GALERÍA VISUAL DE TABLEROS</h2>
-<h3 class="text-2xl font-extrabold text-slate-900 dark:text-white mb-4">Explora la Interfaz de Usuario</h3>
+<h3 class="text-2xl font-extrabold text-brand-cyan mb-4">Explora la Interfaz de Usuario</h3>
 <p class="text-slate-600 dark:text-brand-textMuted max-w-xl mx-auto text-xs md:text-sm mb-8">
 Para garantizar la privacidad de los datos empresariales, he desarrollado simuladores visuales de alta calidad que reflejan el diseño UX de mis dashboards reales. Hacé clic sobre cualquier tablero para verlo en pantalla completa.
 </p>
@@ -946,7 +1022,7 @@ Para garantizar la privacidad de los datos empresariales, he desarrollado simula
 <div class="max-w-xl mx-auto text-center relative z-10 flex flex-col gap-6">
 <div class="text-center">
 <h2 class="text-[10px] font-mono uppercase tracking-widest text-brand-cyan mb-1">HABLEMOS DE TU PROYECTO</h2>
-<h3 class="text-2xl md:text-3xl font-extrabold text-slate-900 dark:text-white">¿Tenés datos que potenciar?</h3>
+<h3 class="text-2xl md:text-3xl font-extrabold text-brand-cyan">¿Tenés datos que potenciar?</h3>
 <p class="text-slate-600 dark:text-brand-textMuted text-xs md:text-sm mt-2 leading-relaxed">
 Llevá tu negocio al siguiente nivel. Diseñemos juntos un ecosistema de Business Intelligence automatizado, reportes dinámicos en tiempo real y decisiones estratégicas pensadas para multiplicar tu rentabilidad.
 </p>
@@ -1054,6 +1130,8 @@ Entendido
 <!-- Backdrop Click to Close -->
 <div class="absolute inset-0 cursor-pointer" onclick="closeImageModal()"></div>
 
+
+
 <!-- Floating Close Button -->
 <button onclick="closeImageModal()" class="absolute top-4 right-4 z-50 text-slate-400 hover:text-white bg-black/60 hover:bg-black/80 p-3 rounded-full transition-all shadow-lg border border-white/10" title="Cerrar (Esc)">
 <i data-lucide="x" class="w-6 h-6"></i>
@@ -1146,14 +1224,14 @@ const cards = document.querySelectorAll('.project-card');
 const buttons = document.querySelectorAll('.filter-btn');
 // Reset active styles on all buttons
 buttons.forEach(btn => {
-btn.classList.remove('bg-brand-cyan', 'text-brand-dark', 'font-semibold');
+btn.classList.remove('active', 'bg-brand-cyan', 'text-brand-dark', 'font-semibold');
 btn.classList.add('border-slate-200', 'dark:border-brand-border', 'text-slate-600', 'dark:text-brand-textMuted');
 });
 // Activate chosen button style
 const activeButton = document.getElementById('btn-' + category);
 if (activeButton) {
 activeButton.classList.remove('border-slate-200', 'dark:border-brand-border', 'text-slate-600', 'dark:text-brand-textMuted');
-activeButton.classList.add('bg-brand-cyan', 'text-brand-dark', 'font-semibold');
+activeButton.classList.add('active');
 }
 // Filter cards
 cards.forEach(card => {
@@ -1174,7 +1252,7 @@ views.forEach(v => v.classList.add('hidden'));
 document.getElementById(mockId).classList.remove('hidden');
 // Reset active state for tabs
 buttons.forEach(b => {
-b.classList.remove('bg-brand-cyan/20', 'text-brand-cyan', 'border-brand-cyan/30');
+b.classList.remove('active', 'bg-brand-cyan/20', 'text-brand-cyan', 'border-brand-cyan/30');
 b.classList.add('text-slate-500', 'dark:text-brand-textMuted', 'border-transparent');
 });
 // Set active state for clicked tab
@@ -1187,7 +1265,7 @@ else if (mockId === 'hr-mock') btnId = 'btn-mock-hr';
 const activeTab = document.getElementById(btnId);
 if (activeTab) {
 activeTab.classList.remove('text-slate-500', 'dark:text-brand-textMuted', 'border-transparent');
-activeTab.classList.add('bg-brand-cyan/20', 'text-brand-cyan', 'border-brand-cyan/30');
+activeTab.classList.add('active');
 }
 }
 // Sliding Drawers Control
@@ -1464,8 +1542,19 @@ const nextBtn = document.getElementById('modal-next-btn');
 const indicators = document.getElementById('modal-indicators');
 const footerTip = document.getElementById('modal-footer-tip');
 if (currentSlides.length > 1) {
+// Show navigation buttons linearly
+if (currentSlideIndex === 0) {
+prevBtn.classList.add('hidden');
+} else {
 prevBtn.classList.remove('hidden');
+}
+
+if (currentSlideIndex === currentSlides.length - 1) {
+nextBtn.classList.add('hidden');
+} else {
 nextBtn.classList.remove('hidden');
+}
+
 indicators.classList.remove('hidden');
 footerTip.textContent = `💡 Diapositiva ${currentSlideIndex + 1} de ${currentSlides.length}. Podés usar las flechas laterales para navegar por el análisis.`;
 // Generar botones de puntos (dots) de navegación
@@ -1484,13 +1573,17 @@ footerTip.textContent = '💡 Se recomienda visualizar en pantalla completa (F11
 }
 function prevSlide() {
 if (currentSlides.length <= 1) return;
-currentSlideIndex = (currentSlideIndex - 1 + currentSlides.length) % currentSlides.length;
+if (currentSlideIndex > 0) {
+currentSlideIndex--;
 updateModalSlide();
+}
 }
 function nextSlide() {
 if (currentSlides.length <= 1) return;
-currentSlideIndex = (currentSlideIndex + 1) % currentSlides.length;
+if (currentSlideIndex < currentSlides.length - 1) {
+currentSlideIndex++;
 updateModalSlide();
+}
 }
 function goToSlide(index) {
 if (index < 0 || index >= currentSlides.length) return;
