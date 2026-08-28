@@ -689,11 +689,8 @@ NB
 <span class="w-1.5 h-1.5 rounded-full bg-brand-cyan animate-pulse"></span>
 <span class="text-[10px] text-brand-cyan font-mono uppercase tracking-wider">Disponible para Proyectos / Propuestas 2026</span>
 </div>
-<h1 class="text-[11px] md:text-3.5xl font-extrabold tracking-tight leading-tight text-slate-900 dark:text-white">
-Transformo datos en <br>
-<span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan via-brand-purple to-brand-green">
-Decisiones de Negocio
-</span>
+<h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-none text-brand-cyan">
+Transformo datos en <br>Decisiones de Negocio
 </h1>
 <p class="text-[11px] md:text-base text-slate-600 dark:text-brand-textMuted max-w-xl leading-relaxed">
 Desarrolladora de Business Intelligence con base en Río Cuarto, Córdoba. Me especializo en diseñar soluciones analíticas end-to-end: desde la ingeniería de datos en <strong>SQL Server</strong> y la automatización de flujos de despliegue continuo (<strong>CI/CD con GitHub y Microsoft Fabric</strong>), hasta el modelado dimensional en estrella y la creación de tableros de control ejecutivos que impactan la rentabilidad del negocio.
@@ -719,11 +716,7 @@ Desarrolladora de Business Intelligence con base en Río Cuarto, Córdoba. Me es
 </div>
 </div>
 
-<div class="flex flex-wrap items-center gap-3 mt-1.5">
-  <button onclick="showView('view-showcase')" class="px-5 py-2.5 rounded-lg font-semibold text-white dark:text-brand-dark bg-slate-900 dark:bg-brand-cyan hover:bg-slate-800 dark:hover:bg-white transition-all text-[11px] glow-cyan flex items-center gap-1.5 shadow-lg">
-    Ver Dashboards <i data-lucide="bar-chart-3" class="w-3.5 h-3.5"></i>
-  </button>
-</div>
+
 </div>
 
 <!-- Profile card with quick specifications -->
@@ -776,7 +769,7 @@ Desarrolladora de Business Intelligence con base en Río Cuarto, Córdoba. Me es
 
 <div id="view-pipeline" class="view-section hidden">
 <!-- PIPELINE ARCHITECTURE SECTION WITH INTERACTIVE SIMULATOR -->
-<section id="pipeline" class="py-6 px-4 md:px-8 bg-slate-50 dark:bg-brand-dark/40 border-y border-slate-200 dark:border-brand-border/50 relative">
+<section id="pipeline" class="pt-24 pb-12 px-4 md:px-8 bg-slate-50 dark:bg-brand-dark/40 border-y border-slate-200 dark:border-brand-border/50 relative">
 <div class="max-w-5xl mx-auto">
 <div class="flex flex-col md:flex-row md:items-end justify-between mb-3 gap-2">
 <div>
@@ -907,7 +900,7 @@ No trabajo con archivos locales sueltos. He diseñado e implementado una arquite
 
 <div id="view-projects" class="view-section hidden">
 <!-- PORTFOLIO OF PROJECTS GRID (BEAUTIFUL STORYTELLING CARDS WITH NO NUMBERS) -->
-<section id="projects" class="py-10 px-4 md:px-8 bg-slate-50 dark:bg-brand-dark/20 border-t border-slate-200 dark:border-brand-border/40">
+<section id="projects" class="pt-24 pb-12 px-4 md:px-8 bg-slate-50 dark:bg-brand-dark/20 border-t border-slate-200 dark:border-brand-border/40">
   <div class="max-w-5xl mx-auto">
     <div class="flex flex-col md:flex-row md:items-end justify-between mb-2 gap-2">
       <div class="text-left">
@@ -1106,7 +1099,7 @@ No trabajo con archivos locales sueltos. He diseñado e implementado una arquite
 <div id="view-showcase" class="view-section hidden">
 <!-- EL VERDADERO RETO DE LOS DATOS -->
 <!-- LIVE INTERACTIVE SHOWCASE (CENTERED GRAPHICS ONLY - NO SIDE PANEL FOR CLEAN STORYTELLING) -->
-<section id="showcase" class="py-10 px-4 md:px-8 bg-slate-100 dark:bg-brand-dark/40 border-t border-slate-200 dark:border-brand-border/40">
+<section id="showcase" class="pt-24 pb-12 px-4 md:px-8 bg-slate-100 dark:bg-brand-dark/40 border-t border-slate-200 dark:border-brand-border/40">
   <div class="max-w-5xl mx-auto text-center">
     <h2 class="text-[11px] font-mono uppercase tracking-widest text-brand-cyan mb-2">DASHBOARD: INTERFAZ INTERACTIVA</h2>
     <h3 class="text-base font-extrabold text-slate-900 dark:text-white mb-2">Explorá los Tableros en Detalle</h3>
@@ -1207,7 +1200,7 @@ No trabajo con archivos locales sueltos. He diseñado e implementado una arquite
 
 <div id="view-contact" class="view-section hidden">
 <!-- CONTACT SECTION WITH FUNCTIONAL INTERACTION -->
-<section id="contact" class="py-6 px-4 md:px-8 bg-slate-100 dark:bg-brand-dark transition-colors relative overflow-hidden">
+<section id="contact" class="pt-24 pb-12 px-4 md:px-8 bg-slate-100 dark:bg-brand-dark transition-colors relative overflow-hidden">
 <div class="absolute -bottom-10 right-0 w-[300px] h-[300px] bg-brand-cyan/5 rounded-full blur-[80px] pointer-events-none"></div>
 <div class="max-w-xl mx-auto text-center relative z-10 flex flex-col gap-3">
 <div class="text-center">
@@ -1327,55 +1320,42 @@ Llevá tu negocio al siguiente nivel. Diseñemos juntos un ecosistema de Busines
 
 
 <!-- REAL IMAGE MODAL (LIGHTBOX WITH MULTI-IMAGE CAROUSEL) -->
-<div id="image-modal" class="fixed inset-0 z-50 flex items-center justify-center hidden p-2 sm:p-4 bg-black/95 backdrop-blur-sm transition-all duration-300">
+<div id="image-modal" class="fixed inset-0 z-50 flex items-center justify-center hidden bg-black/98 transition-all duration-300">
+  <!-- Backdrop Click to Close -->
   <div class="absolute inset-0 cursor-pointer" onclick="closeImageModal()"></div>
   
   <!-- Close Button (floating in top right) -->
-  <button onclick="closeImageModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white p-2.5 rounded-full bg-black/60 hover:bg-black/90 transition-all z-50 border border-slate-800" title="Cerrar (Esc)">
+  <button onclick="closeImageModal()" class="absolute top-4 right-4 text-white hover:text-brand-cyan p-3 rounded-full bg-black/40 hover:bg-black/80 transition-all z-50 border border-white/10" title="Cerrar (Esc)">
     <i data-lucide="x" class="w-6 h-6"></i>
   </button>
 
   <!-- Prev Button (floating left) -->
-  <button id="modal-prev-btn" onclick="prevSlide()" class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-brand-cyan hover:text-brand-dark text-white p-4 rounded-full transition-all z-40 hidden border border-slate-800" title="Anterior">
+  <button id="modal-prev-btn" onclick="prevSlide()" class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-brand-cyan hover:text-brand-dark text-white p-4 rounded-full transition-all z-40 hidden border border-white/10" title="Anterior">
     <i data-lucide="chevron-left" class="w-8 h-8"></i>
   </button>
 
-  <!-- Main Image (Fullscreen, fits viewport) -->
-  <img id="image-modal-img" src="" alt="Cargando tablero..." class="max-w-[95vw] max-h-[95vh] object-contain rounded-lg shadow-2xl z-30 hidden" onload="onModalImageLoad()" onerror="onModalImageError()">
+  <!-- Main Image (True Fullscreen, fits viewport) -->
+  <div class="w-full h-full flex items-center justify-center p-2 sm:p-4 pointer-events-none relative z-30">
+    <img id="image-modal-img" src="" alt="Cargando tablero..." class="max-w-full max-h-full object-contain shadow-2xl rounded-none border-0 hidden pointer-events-auto cursor-zoom-out" onclick="closeImageModal()">
+  </div>
 
   <!-- Next Button (floating right) -->
-  <button id="modal-next-btn" onclick="nextSlide()" class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-brand-cyan hover:text-brand-dark text-white p-4 rounded-full transition-all z-40 hidden border border-slate-800" title="Siguiente">
+  <button id="modal-next-btn" onclick="nextSlide()" class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-brand-cyan hover:text-brand-dark text-white p-4 rounded-full transition-all z-40 hidden border border-white/10" title="Siguiente">
     <i data-lucide="chevron-right" class="w-8 h-8"></i>
   </button>
 
   <!-- Slide Indicators (Dots) -->
-  <div id="modal-indicators" class="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-30 hidden bg-black/50 px-4 py-2 rounded-full backdrop-blur-sm"></div>
+  <div id="modal-indicators" class="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-40 hidden bg-black/50 px-4 py-2 rounded-full backdrop-blur-sm"></div>
 
   <!-- Loading Spinner -->
-  <div id="image-modal-spinner" class="absolute flex flex-col items-center gap-3 z-30">
+  <div id="image-modal-spinner" class="absolute flex flex-col items-center gap-3 z-40">
     <div class="w-12 h-12 border-4 border-brand-cyan border-t-transparent rounded-full animate-spin"></div>
     <span class="text-[11px] font-mono text-slate-400 uppercase tracking-wider">Cargando Tablero HD...</span>
   </div>
 
-  <!-- Custom Error Box (For Nancy's local development) -->
-  <div id="image-modal-error" class="hidden max-w-md p-6 rounded-xl bg-slate-900 border border-red-500/30 text-left flex flex-col gap-2 z-30">
-    <div class="flex items-center gap-2 text-red-400">
-      <i data-lucide="alert-triangle" class="w-5 h-5"></i>
-      <span class="font-bold text-[11px] uppercase font-mono">¡Imagen pendiente en tu GitHub!</span>
-    </div>
-    <p class="text-[11px] text-slate-300 leading-relaxed font-sans">
-      Nancy, para ver tu captura real en este pop-up, solo tenés que subir la imagen a tu repositorio de GitHub con esta ruta exacta:
-    </p>
-    <div class="bg-slate-950 p-3 rounded font-mono text-[11px] text-brand-cyan select-all break-all border border-slate-800" id="image-modal-error-path">
-      images/stock-dashboard.png
-    </div>
-    <p class="text-[11px] text-slate-400 leading-relaxed font-sans">
-      Al subir tu captura en formato PNG con ese nombre adentro de una carpeta llamada <code class="font-mono text-brand-purple">images</code> en tu proyecto, la web la mostrará de forma automática aquí en Full HD.
-    </p>
-    <button onclick="closeImageModal()" class="w-full py-2 bg-slate-800 hover:bg-slate-700 text-white rounded font-bold text-[11px] uppercase transition-all">
-      Entendido
-    </button>
-  </div>
+  <!-- Hidden error path helper (invisible but kept so JS doesn't break) -->
+  <div id="image-modal-error" class="hidden"></div>
+  <div id="image-modal-error-path" class="hidden"></div>
 </div>
 
 <!-- JAVASCRIPT FOR DYNAMIC INTERACTIVE BEHAVIOR -->
@@ -1643,7 +1623,12 @@ function loadImageWithFallback(imgElement, pathsArray) {
 // Control del Modal de Visualización Inteligente (Carousel V6)
 function openImageModal(target, defaultTitle = 'Captura del Tablero Real') {
   const modal = document.getElementById('image-modal');
-  const modalCard = document.getElementById('image-modal-card');
+  const modalImg = document.getElementById('image-modal-img');
+  
+  if (modalImg) {
+    modalImg.classList.remove('scale-100');
+    modalImg.classList.add('scale-95', 'transition-transform', 'duration-300');
+  }
   
   // Resolver si es una clave del diccionario o una ruta directa
   if (projectSlides[target]) {
@@ -1666,8 +1651,10 @@ function openImageModal(target, defaultTitle = 'Captura del Tablero Real') {
   // Mostrar modal principal
   modal.classList.remove('hidden');
   setTimeout(() => {
-    modalCard.classList.remove('scale-95');
-    modalCard.classList.add('scale-100');
+    if (modalImg) {
+      modalImg.classList.remove('scale-95');
+      modalImg.classList.add('scale-100');
+    }
   }, 10);
   
   // Actualizar contenido de la diapositiva
@@ -1760,9 +1747,11 @@ function goToSlide(index) {
 
 function closeImageModal() {
   const modal = document.getElementById('image-modal');
-  const modalCard = document.getElementById('image-modal-card');
-  modalCard.classList.remove('scale-100');
-  modalCard.classList.add('scale-95');
+  const modalImg = document.getElementById('image-modal-img');
+  if (modalImg) {
+    modalImg.classList.remove('scale-100');
+    modalImg.classList.add('scale-95');
+  }
   setTimeout(() => {
     modal.classList.add('hidden');
     // Restaurar el scroll únicamente si no hay paneles laterales abiertos
