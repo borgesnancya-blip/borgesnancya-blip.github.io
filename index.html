@@ -23,7 +23,7 @@ dark: '#0a0c10',
 card: '#121620',
 border: '#1f293d',
 cyan: '#00f2fe',
-purple: '#9b51e0',
+purple: '#c084fc',
 green: '#00f5a0',
 textMuted: '#94a3b8',
 // Light mode overrides
@@ -103,8 +103,8 @@ color: #00f2fe;
 text-shadow: 0 0 8px rgba(0, 242, 254, 0.4);
 }
 .dark .text-neon-purple {
-color: #9b51e0;
-text-shadow: 0 0 8px rgba(155, 81, 224, 0.4);
+color: #c084fc;
+text-shadow: 0 0 8px rgba(192, 132, 252, 0.4);
 }
 /* Custom scrollbar */
 ::-webkit-scrollbar {
@@ -210,7 +210,7 @@ html:not(.dark) .sim-console-container #sim-logs .text-brand-cyan {
   font-weight: 600;
 }
 html:not(.dark) .sim-console-container #sim-logs .text-brand-purple {
-  color: #7c3aed !important; /* Darker indigo for purple in day mode */
+  color: #a78bfa !important; /* Darker indigo for purple in day mode */
   font-weight: 600;
 }
 html:not(.dark) .sim-console-container #sim-logs .text-brand-green {
@@ -373,7 +373,7 @@ html:not(.dark) .sim-console-container #sim-logs .text-brand-cyan {
   font-weight: 600;
 }
 html:not(.dark) .sim-console-container #sim-logs .text-brand-purple {
-  color: #7c3aed !important; /* Darker indigo for purple in day mode */
+  color: #a78bfa !important; /* Darker indigo for purple in day mode */
   font-weight: 600;
 }
 html:not(.dark) .sim-console-container #sim-logs .text-brand-green {
@@ -521,6 +521,80 @@ html:not(.dark) #success-modal button:hover {
   background-color: #0f172a !important;
 }
 
+/* Custom Light Mode high contrast readability overrides */
+html:not(.dark) .text-slate-300 {
+  color: #475569 !important; /* Slate-600 */
+}
+html:not(.dark) .text-slate-400 {
+  color: #334155 !important; /* Slate-700 */
+}
+html:not(.dark) .text-slate-500 {
+  color: #1e293b !important; /* Slate-800 */
+}
+html:not(.dark) .text-slate-600 {
+  color: #0f172a !important; /* Slate-900 */
+}
+html:not(.dark) .text-slate-700 {
+  color: #020617 !important; /* Slate-950 */
+}
+html:not(.dark) .text-brand-textMuted {
+  color: #334155 !important; /* High-contrast slate-800 */
+}
+html:not(.dark) .text-slate-500.dark\:text-brand-textMuted {
+  color: #1e293b !important;
+}
+html:not(.dark) .text-slate-600.dark\:text-brand-textMuted {
+  color: #0f172a !important;
+}
+html:not(.dark) p.text-slate-600,
+html:not(.dark) p.text-slate-500 {
+  color: #1e293b !important;
+}
+html:not(.dark) .space-y-2.font-mono.text-xs {
+  color: #0f172a !important;
+}
+html:not(.dark) .text-slate-700.dark\:text-slate-300 {
+  color: #0f172a !important;
+}
+
+
+/* Visual polish & contrast overrides for Light Mode */
+html:not(.dark) .project-card .text-slate-600,
+html:not(.dark) .project-card .text-brand-textMuted,
+html:not(.dark) .project-card .text-slate-500,
+html:not(.dark) .project-card .text-slate-700,
+html:not(.dark) .project-card ul li {
+  color: #334155 !important; /* Highly legible charcoal slate for all body text */
+}
+html:not(.dark) .project-card {
+  border-color: #cbd5e1 !important; /* Visible clean borders */
+  box-shadow: 0 6px 18px -3px rgba(15, 23, 42, 0.04), 0 2px 6px -2px rgba(15, 23, 42, 0.02) !important;
+}
+html:not(.dark) .project-card:hover {
+  border-color: #00f2fe !important;
+  box-shadow: 0 12px 25px -10px rgba(0, 242, 254, 0.15) !important;
+}
+html:not(.dark) .text-brand-purple {
+  color: #8b5cf6 !important; /* Elegant royal purple for high contrast in light mode */
+}
+html:not(.dark) .text-brand-cyan {
+  color: #0369a1 !important; /* High contrast dark ocean-blue instead of neon cyan */
+}
+html:not(.dark) .text-brand-green {
+  color: #15803d !important; /* High contrast deep forest green */
+}
+html:not(.dark) .bg-brand-cyan\/10 {
+  background-color: rgba(3, 105, 161, 0.08) !important;
+}
+html:not(.dark) .border-brand-cyan\/20 {
+  border-color: rgba(3, 105, 161, 0.15) !important;
+}
+html:not(.dark) .bg-brand-purple\/10 {
+  background-color: rgba(139, 92, 246, 0.08) !important;
+}
+html:not(.dark) .border-brand-purple\/20 {
+  border-color: rgba(139, 92, 246, 0.15) !important;
+}
 </style>
 </head>
 <body class="selection:bg-brand-cyan selection:text-brand-dark font-sans">
@@ -539,7 +613,8 @@ NB
 <div class="hidden md:flex items-center gap-6 text-xs font-semibold uppercase tracking-wider">
 <a href="#about" class="text-slate-600 dark:text-brand-textMuted hover:text-brand-cyan dark:hover:text-white transition-colors">Quién Soy</a>
 <a href="#pipeline" class="text-slate-600 dark:text-brand-textMuted hover:text-brand-cyan dark:hover:text-white transition-colors">Mi Infraestructura</a>
-<a href="#projects" class="text-slate-600 dark:text-brand-textMuted hover:text-brand-cyan dark:hover:text-white transition-colors">Proyectos</a>
+<a href="#projects" class="text-slate-600 dark:text-brand-textMuted hover:text-brand-cyan dark:hover:text-white transition-colors">Casos de Negocio</a>
+      <a href="#showcase" class="text-slate-600 dark:text-brand-textMuted hover:text-brand-cyan dark:hover:text-white transition-colors">Así Trabajo</a>
 
 </div>
 <div class="flex items-center gap-3">
@@ -563,7 +638,8 @@ NB
 <div id="mobile-menu" class="fixed top-[57px] left-0 w-full bg-white dark:bg-brand-dark/95 border-b border-slate-200 dark:border-brand-border z-40 hidden md:hidden flex flex-col p-5 gap-3 font-medium transition-all shadow-xl text-sm">
 <a href="#about" onclick="toggleMobileMenu()" class="text-slate-700 dark:text-brand-textMuted hover:text-brand-cyan dark:hover:text-white py-1.5 border-b border-slate-200 dark:border-brand-border/40">Quién Soy</a>
 <a href="#pipeline" onclick="toggleMobileMenu()" class="text-slate-700 dark:text-brand-textMuted hover:text-brand-cyan dark:hover:text-white py-1.5 border-b border-slate-200 dark:border-brand-border/40">Mi Infraestructura</a>
-<a href="#projects" onclick="toggleMobileMenu()" class="text-slate-700 dark:text-brand-textMuted hover:text-brand-cyan dark:hover:text-white py-1.5 border-b border-slate-200 dark:border-brand-border/40">Proyectos</a>
+<a href="#projects" onclick="toggleMobileMenu()" class="text-slate-700 dark:text-brand-textMuted hover:text-brand-cyan dark:hover:text-white py-1.5 border-b border-slate-200 dark:border-brand-border/40">Casos de Negocio</a>
+<a href="#showcase" onclick="toggleMobileMenu()" class="text-slate-700 dark:text-brand-textMuted hover:text-brand-cyan dark:hover:text-white py-1.5 border-b border-slate-200 dark:border-brand-border/40">Así Trabajo</a>
 
 <a href="#contact" onclick="toggleMobileMenu()" class="w-full py-2 bg-brand-cyan text-brand-dark font-bold text-center rounded-lg flex items-center justify-center gap-2 text-[11px] uppercase tracking-wider mt-1">
 <i data-lucide="mail" class="w-3.5 h-3.5"></i> Contactame Directo
@@ -868,6 +944,7 @@ No trabajo con archivos locales sueltos. He diseñado e implementado una arquite
 </div>
 
 <!-- Grid of Projects -->
+<!-- Grid of Projects -->
 <div class="grid grid-cols-1 md:grid-cols-2 gap-5" id="projects-grid">
 <!-- Project 1: Control de Stock -->
 <div class="project-card glass-card p-5 rounded-2xl flex flex-col justify-between h-full relative overflow-hidden text-left" data-category="retail">
@@ -876,25 +953,28 @@ No trabajo con archivos locales sueltos. He diseñado e implementado una arquite
 <span class="text-[9px] font-mono text-brand-cyan uppercase px-2 py-0.5 rounded bg-brand-cyan/10 border border-brand-cyan/20">Ventas & Inventario</span>
 <i data-lucide="box" class="w-4 h-4 text-brand-cyan"></i>
 </div>
-<h4 class="text-lg font-bold text-slate-900 dark:text-white">Sustentación de Control de Stock y Ventas</h4>
+<h4 class="text-lg font-bold text-slate-900 dark:text-white">La Pesadilla de los Inventarios Ciegos: Control de Stock</h4>
 <!-- Antes vs Después -->
 <div class="space-y-3 my-1 border-t border-b border-slate-200 dark:border-brand-border/40 py-3 text-xs">
 <div class="text-slate-600 dark:text-brand-textMuted">
 <span class="text-red-400 font-bold font-mono text-[10px] block uppercase mb-0.5">El Desafío Comercial (Antes):</span>
-Control manual de inventarios, quiebres de stock recurrentes y total incertidumbre sobre el valor financiero inmovilizado.
+"Control manual de inventarios, quiebres de stock recurrentes que hacían perder ventas todos los días y total incertidumbre sobre el valor financiero inmovilizado en depósito."
 </div>
 <div>
 <span class="text-brand-green font-bold font-mono text-[10px] block uppercase mb-0.5">El Sistema Automatizado (Después):</span>
-<ul class="space-y-1 font-mono text-[11px] text-slate-700 dark:text-slate-300">
-<li><span class="text-brand-cyan">&gt;</span> Alertas de Stock Crítico y de Seguridad para anticipar compras eficientemente.</li>
-<li><span class="text-brand-cyan">&gt;</span> Valoración del inventario en tiempo real clasificado por categorías de margen.</li>
-<li><span class="text-brand-cyan">&gt;</span> Mapeo y auditoría instantánea de mermas y ajustes para mitigar pérdidas.</li>
+<ul class="space-y-1.5 font-mono text-[11px] text-slate-700 dark:text-slate-300">
+<li><span class="text-brand-cyan">&gt;</span> <strong>Auditoría de Desviaciones:</strong> Seguimiento preciso de ajustes de inventario para el control estricto de mermas y prevención de pérdidas operativas en almacén.</li>
+<li><span class="text-brand-cyan">&gt;</span> <strong>Proyección de Compras Eficiente:</strong> Alertas automáticas de Stock Mínimo y de Seguridad para anticipar compras de forma inteligente y evitar quiebres logísticos de manera preventiva.</li>
+<li><span class="text-brand-cyan">&gt;</span> <strong>Optimización de Capital Inmovilizado:</strong> Valoración financiera del stock por categoría, permitiendo tomar decisiones estratégicas sobre productos de baja rotación.</li>
 </ul>
 </div>
 </div>
 </div>
 <div class="flex items-center justify-between mt-4">
 <span class="text-[10px] font-mono text-slate-500 dark:text-brand-textMuted">DAX · Modelo Estrella · SQL</span>
+  <button onclick="scrollToShowcaseAndTab('stock-mock')" class="px-3 py-1.5 text-[10px] font-bold text-slate-700 dark:text-white bg-slate-100 dark:bg-brand-border hover:bg-brand-cyan hover:text-brand-dark rounded-md transition-all flex items-center gap-1">
+    Ver Dashboard <i data-lucide="eye" class="w-3.5 h-3.5"></i>
+  </button>
 </div>
 </div>
 
@@ -905,24 +985,27 @@ Control manual de inventarios, quiebres de stock recurrentes y total incertidumb
 <span class="text-[9px] font-mono text-brand-cyan uppercase px-2 py-0.5 rounded bg-brand-cyan/10 border border-brand-cyan/20">Ventas & Rentabilidad</span>
 <i data-lucide="bar-chart-3" class="w-4 h-4 text-brand-cyan"></i>
 </div>
-<h4 class="text-lg font-bold text-slate-900 dark:text-white">Visión General de Ventas & Rentabilidad</h4>
+<h4 class="text-lg font-bold text-slate-900 dark:text-white">El Mapa de la Rentabilidad: Ventas & Margen Líquido</h4>
 <div class="space-y-3 my-1 border-t border-b border-slate-200 dark:border-brand-border/40 py-3 text-xs">
 <div class="text-slate-600 dark:text-brand-textMuted">
 <span class="text-red-400 font-bold font-mono text-[10px] block uppercase mb-0.5">El Desafío Comercial (Antes):</span>
-Dificultad para rastrear el lucro real, falta de visibilidad geográfica de la facturación y desconocimiento del rendimiento por tipo de cliente.
+"Dificultad para rastrear el lucro real de la facturación global, con costos logísticos ocultos y total ceguera sobre qué productos y países daban el mejor rendimiento financiero."
 </div>
 <div>
 <span class="text-brand-green font-bold font-mono text-[10px] block uppercase mb-0.5">El Sistema Automatizado (Después):</span>
-<ul class="space-y-1 font-mono text-[11px] text-slate-700 dark:text-slate-300">
-<li><span class="text-brand-cyan">&gt;</span> Monitoreo en tiempo real de Facturación Líquida ($92,3M) y Lucro total ($12,0M).</li>
-<li><span class="text-brand-cyan">&gt;</span> Análisis cruzado por países (Canadá, EE.UU., Alemania) y segmentación por margen de beneficio.</li>
-<li><span class="text-brand-cyan">&gt;</span> Tabla dinámica de rentabilidad por producto detallando costos y porcentaje de lucro neto.</li>
+<ul class="space-y-1.5 font-mono text-[11px] text-slate-700 dark:text-slate-300">
+<li><span class="text-brand-cyan">&gt;</span> <strong>Análisis de Facturación & Margen:</strong> Monitoreo en tiempo real de los ingresos frente al costo de mercadería y el margen de lucro por categoría, identificando las líneas de productos más rentables.</li>
+<li><span class="text-brand-cyan">&gt;</span> <strong>Eficiencia Logística & Entregas:</strong> Control dinámico del tiempo medio de entrega por tienda y cumplimiento de pedidos para detectar cuellos de botella operativos en sucursales.</li>
+<li><span class="text-brand-cyan">&gt;</span> <strong>Análisis Geográfico & Estacionalidad:</strong> Desglose analítico de facturación por países y clasificación por segmento comercial, facilitando la planificación de recursos en base a hábitos de consumo.</li>
 </ul>
 </div>
 </div>
 </div>
 <div class="flex items-center justify-between mt-4">
-<span class="text-[10px] font-mono text-slate-500 dark:text-brand-textMuted">DAX · Lucro Neto · Análisis Geográfico</span>
+<span class="text-[10px] font-mono text-slate-500 dark:text-brand-textMuted">DAX · Lucro Neto · Geográfico</span>
+  <button onclick="scrollToShowcaseAndTab('sales-mock')" class="px-3 py-1.5 text-[10px] font-bold text-slate-700 dark:text-white bg-slate-100 dark:bg-brand-border hover:bg-brand-cyan hover:text-brand-dark rounded-md transition-all flex items-center gap-1">
+    Ver Dashboard <i data-lucide="eye" class="w-3.5 h-3.5"></i>
+  </button>
 </div>
 </div>
 
@@ -933,24 +1016,27 @@ Dificultad para rastrear el lucro real, falta de visibilidad geográfica de la f
 <span class="text-[9px] font-mono text-brand-purple uppercase px-2 py-0.5 rounded bg-brand-purple/10 border border-brand-purple/20">Fidelización & SQL</span>
 <i data-lucide="users" class="w-4 h-4 text-brand-purple"></i>
 </div>
-<h4 class="text-lg font-bold text-slate-900 dark:text-white">Segmentación de Clientes por Valor (RFM)</h4>
+<h4 class="text-lg font-bold text-slate-900 dark:text-white">Dejar de Disparar a Ciegas: Segmentación de Clientes RFM</h4>
 <div class="space-y-3 my-1 border-t border-b border-slate-200 dark:border-brand-border/40 py-3 text-xs">
 <div class="text-slate-600 dark:text-brand-textMuted">
 <span class="text-red-400 font-bold font-mono text-[10px] block uppercase mb-0.5">El Desafío Comercial (Antes):</span>
-Campañas de marketing masivas enviadas a ciegas, baja conversión, y fuga desapercibida de clientes de alto valor.
+"Campañas de marketing masivas enviadas a ciegas, baja conversión, presupuestos desperdiciados y fuga desapercibida de clientes de alto valor (VIP)."
 </div>
 <div>
 <span class="text-brand-green font-bold font-mono text-[10px] block uppercase mb-0.5">El Sistema Automatizado (Después):</span>
-<ul class="space-y-1 font-mono text-[11px] text-slate-700 dark:text-slate-300">
-<li><span class="text-brand-purple">&gt;</span> Segmentación estadística automatizada en SQL con funciones analíticas NTILE.</li>
-<li><span class="text-brand-purple">&gt;</span> Motor de recomendaciones comerciales dinámicas con reglas CASE WHEN en origen.</li>
-<li><span class="text-brand-purple">&gt;</span> Dashboard de fidelización interactivo que calcula LTV y clientes en riesgo.</li>
+<ul class="space-y-1.5 font-mono text-[11px] text-slate-700 dark:text-slate-300">
+<li><span class="text-brand-purple">&gt;</span> <strong>Marketing Dirigido & Automatización:</strong> Creación de audiencias personalizadas en origen para campañas segmentadas y alertas de reactivación basadas en recencia de compra.</li>
+<li><span class="text-brand-purple">&gt;</span> <strong>Programas de Fidelización & VIP:</strong> Identificación estadística automática de clientes 'Campeones' para diseñar beneficios exclusivos y potenciar a los usuarios de mayor valor.</li>
+<li><span class="text-brand-purple">&gt;</span> <strong>Optimización del LTV & Reactivación:</strong> Estrategias dinámicas para re-enganchar clientes 'Dormidos' o recuperar aquellos 'En Riesgo' según su comportamiento de compra.</li>
 </ul>
 </div>
 </div>
 </div>
 <div class="flex items-center justify-between mt-4">
 <span class="text-[10px] font-mono text-slate-500 dark:text-brand-textMuted">SQL Server · Vistas · NTILE</span>
+  <button onclick="scrollToShowcaseAndTab('rfm-mock')" class="px-3 py-1.5 text-[10px] font-bold text-slate-700 dark:text-white bg-slate-100 dark:bg-brand-border hover:bg-brand-purple hover:text-white rounded-md transition-all flex items-center gap-1">
+    Ver Dashboard <i data-lucide="eye" class="w-3.5 h-3.5"></i>
+  </button>
 </div>
 </div>
 
@@ -961,24 +1047,27 @@ Campañas de marketing masivas enviadas a ciegas, baja conversión, y fuga desap
 <span class="text-[9px] font-mono text-brand-cyan uppercase px-2 py-0.5 rounded bg-brand-cyan/10 border border-brand-cyan/20">Retención de Clientes</span>
 <i data-lucide="trending-down" class="w-4 h-4 text-brand-cyan"></i>
 </div>
-<h4 class="text-lg font-bold text-slate-900 dark:text-white">Churn Analytics para Banca Digital</h4>
+<h4 class="text-lg font-bold text-slate-900 dark:text-white">Anticiparse al Adiós: Retención Proactiva de Clientes</h4>
 <div class="space-y-3 my-1 border-t border-b border-slate-200 dark:border-brand-border/40 py-3 text-xs">
 <div class="text-slate-600 dark:text-brand-textMuted">
 <span class="text-red-400 font-bold font-mono text-[10px] block uppercase mb-0.5">El Desafío Comercial (Antes):</span>
-Pérdida silenciosa de depositantes detectada tarde, cuando los fondos ya se habían retirado de la plataforma bancaria.
+"Pérdida silenciosa de depositantes detectada tarde, cuando los fondos ya se habían retirado de la plataforma bancaria de forma definitiva."
 </div>
 <div>
 <span class="text-brand-green font-bold font-mono text-[10px] block uppercase mb-0.5">El Sistema Automatizado (Después):</span>
-<ul class="space-y-1 font-mono text-[11px] text-slate-700 dark:text-slate-300">
-<li><span class="text-brand-cyan">&gt;</span> Monitoreo en tiempo real de tasa de deserción versus metas operativas.</li>
-<li><span class="text-brand-cyan">&gt;</span> Alerta Riesgo Score basado en meses de inactividad y volumen de reclamos.</li>
-<li><span class="text-brand-cyan">&gt;</span> Cuantificación financiera de ingresos en riesgo para priorizar cuentas VIP.</li>
+<ul class="space-y-1.5 font-mono text-[11px] text-slate-700 dark:text-slate-300">
+<li><span class="text-brand-cyan">&gt;</span> <strong>Identificación Proactiva de Riesgo:</strong> Score de riesgo interactivo que combina inactividad y frecuencia de reclamos para alertar de forma temprana sobre clientes con probabilidad de abandono.</li>
+<li><span class="text-brand-cyan">&gt;</span> <strong>Impacto Económico de la Fuga:</strong> Cuantificación financiera de ingresos y de la cartera bajo riesgo de fuga para priorizar cuentas VIP y enfocar campañas preventivas.</li>
+<li><span class="text-brand-cyan">&gt;</span> <strong>Retención Focalizada:</strong> Segmentación por patrimonio y perfil demográfico para que los equipos comerciales concentren esfuerzos de forma eficiente antes de registrarse la fuga de capital.</li>
 </ul>
 </div>
 </div>
 </div>
 <div class="flex items-center justify-between mt-4">
-<span class="text-[10px] font-mono text-slate-500 dark:text-brand-textMuted">Métricas Churn · DAX · SQL Views</span>
+<span class="text-[10px] font-mono text-slate-500 dark:text-brand-textMuted">Métricas Churn · DAX · SQL</span>
+  <button onclick="scrollToShowcaseAndTab('churn-mock')" class="px-3 py-1.5 text-[10px] font-bold text-slate-700 dark:text-white bg-slate-100 dark:bg-brand-border hover:bg-brand-cyan hover:text-brand-dark rounded-md transition-all flex items-center gap-1">
+    Ver Dashboard <i data-lucide="eye" class="w-3.5 h-3.5"></i>
+  </button>
 </div>
 </div>
 
@@ -989,38 +1078,171 @@ Pérdida silenciosa de depositantes detectada tarde, cuando los fondos ya se hab
 <span class="text-[9px] font-mono text-brand-green uppercase px-2 py-0.5 rounded bg-brand-green/10 border border-brand-green/20">Análisis Humano</span>
 <i data-lucide="user-check" class="w-4 h-4 text-brand-green"></i>
 </div>
-<h4 class="text-lg font-bold text-slate-900 dark:text-white">HR Analytics & Gestión de Capital Humano</h4>
+<h4 class="text-lg font-bold text-slate-900 dark:text-white">El Factor Humano: Estabilidad & Masa Salarial</h4>
 <div class="space-y-3 my-1 border-t border-b border-slate-200 dark:border-brand-border/40 py-3 text-xs">
 <div class="text-slate-600 dark:text-brand-textMuted">
 <span class="text-red-400 font-bold font-mono text-[10px] block uppercase mb-0.5">El Desafío Comercial (Antes):</span>
-Alta rotación de personal inexplicable, clima laboral ciego y dinero invertido a ciegas en portales de selección.
+"Fuga inesperada de talento clave, presupuestos salariales descontrolados y contratación a ciegas en portales ineficientes."
 </div>
 <div>
 <span class="text-brand-green font-bold font-mono text-[10px] block uppercase mb-0.5">El Sistema Automatizado (Después):</span>
-<ul class="space-y-1 font-mono text-[11px] text-slate-700 dark:text-slate-300">
-<li><span class="text-brand-green">&gt;</span> Identificación predictiva de departamentos con alto índice de deserción laboral.</li>
-<li><span class="text-brand-green">&gt;</span> Panel dinámico de correlación entre satisfacción, antigüedad y masa salarial.</li>
-<li><span class="text-brand-green">&gt;</span> Matriz de efectividad por fuente de reclutamiento para canalizar presupuestos.</li>
+<ul class="space-y-1.5 font-mono text-[11px] text-slate-700 dark:text-slate-300">
+<li><span class="text-brand-green">&gt;</span> <strong>Monitoreo de Clima & Costos:</strong> Correlación en tiempo real entre salarios e índices de satisfacción por departamento, manteniendo un control presupuestario de la masa salarial.</li>
+<li><span class="text-brand-green">&gt;</span> <strong>Optimización de Contratación:</strong> Mapeo de efectividad por canal de reclutamiento para enfocar el presupuesto en las fuentes que atraen personal más estable.</li>
+<li><span class="text-brand-green">&gt;</span> <strong>Análisis de Fuga:</strong> Identificación preventiva de áreas con alto riesgo de rotación de personal para anticipar salidas estratégicas de talento clave.</li>
 </ul>
 </div>
 </div>
 </div>
 <div class="flex items-center justify-between mt-4">
-<span class="text-[10px] font-mono text-slate-500 dark:text-brand-textMuted">Modelado RRHH · DAX · SQL server</span>
+<span class="text-[10px] font-mono text-slate-500 dark:text-brand-textMuted">Modelado RRHH · DAX · SQL</span>
+  <button onclick="scrollToShowcaseAndTab('hr-mock')" class="px-3 py-1.5 text-[10px] font-bold text-slate-700 dark:text-white bg-slate-100 dark:bg-brand-border hover:bg-brand-green hover:text-brand-dark rounded-md transition-all flex items-center gap-1">
+    Ver Dashboard <i data-lucide="eye" class="w-3.5 h-3.5"></i>
+  </button>
+</div>
+</div>
+</div>
+
+<div class="flex items-center justify-between mt-4">
+<span class="text-[10px] font-mono text-slate-500 dark:text-brand-textMuted">DAX · Modelo Estrella · SQL</span>
+  <button onclick="scrollToShowcaseAndTab('stock-mock')" class="px-3 py-1.5 text-[10px] font-bold text-slate-700 dark:text-white bg-slate-100 dark:bg-brand-border hover:bg-brand-cyan hover:text-brand-dark rounded-md transition-all flex items-center gap-1">
+    Ver Dashboard <i data-lucide="eye" class="w-3.5 h-3.5"></i>
+  </button>
+</div>
+</div>
+
+<!-- Project 5: Ventas & Rentabilidad -->
+<div class="project-card glass-card p-5 rounded-2xl flex flex-col justify-between h-full relative overflow-hidden text-left" data-category="retail">
+<div class="flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="text-[9px] font-mono text-brand-cyan uppercase px-2 py-0.5 rounded bg-brand-cyan/10 border border-brand-cyan/20">Ventas & Rentabilidad</span>
+<i data-lucide="bar-chart-3" class="w-4 h-4 text-brand-cyan"></i>
+</div>
+<h4 class="text-lg font-bold text-slate-900 dark:text-white">El Mapa de la Rentabilidad: Ventas & Margen Líquido</h4>
+<div class="space-y-3 my-1 border-t border-b border-slate-200 dark:border-brand-border/40 py-3 text-xs">
+<div class="text-slate-600 dark:text-brand-textMuted">
+<span class="text-red-400 font-bold font-mono text-[10px] block uppercase mb-0.5">El Desafío Comercial (Antes):</span>
+"Dificultad para rastrear el lucro real de la facturación global, con costos logísticos ocultos y total ceguera sobre qué productos y países daban el mejor rendimiento financiero."
+</div>
+<div>
+<span class="text-brand-green font-bold font-mono text-[10px] block uppercase mb-0.5">El Sistema Automatizado (Después):</span>
+<ul class="space-y-1 font-mono text-[11px] text-slate-700 dark:text-slate-300">
+<li><span class="text-brand-cyan">&gt;</span> <strong>Rentabilidad Geográfica:</strong> Identificación instantánea de qué países generan verdadero margen limpio y lucro total.</li>
+<li><span class="text-brand-cyan">&gt;</span> <strong>Monitoreo de Costos:</strong> Visibilidad total de costos operativos de importación frente al precio de venta y márgenes reales.</li>
+<li><span class="text-brand-cyan">&gt;</span> <strong>Top de Productos:</strong> Tabla dinámica que detalla costos, ingresos y porcentaje de lucro neto de los productos más lucrativos.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between mt-4">
+<span class="text-[10px] font-mono text-slate-500 dark:text-brand-textMuted">DAX · Lucro Neto · Geográfico</span>
+  <button onclick="scrollToShowcaseAndTab('sales-mock')" class="px-3 py-1.5 text-[10px] font-bold text-slate-700 dark:text-white bg-slate-100 dark:bg-brand-border hover:bg-brand-cyan hover:text-brand-dark rounded-md transition-all flex items-center gap-1">
+    Ver Dashboard <i data-lucide="eye" class="w-3.5 h-3.5"></i>
+  </button>
+</div>
+</div>
+
+<!-- Project 2: RFM Analysis -->
+<div class="project-card glass-card p-5 rounded-2xl flex flex-col justify-between h-full relative overflow-hidden text-left" data-category="marketing">
+<div class="flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="text-[9px] font-mono text-brand-purple uppercase px-2 py-0.5 rounded bg-brand-purple/10 border border-brand-purple/20">Fidelización & SQL</span>
+<i data-lucide="users" class="w-4 h-4 text-brand-purple"></i>
+</div>
+<h4 class="text-lg font-bold text-slate-900 dark:text-white">Dejar de Disparar a Ciegas: Segmentación de Clientes RFM</h4>
+<div class="space-y-3 my-1 border-t border-b border-slate-200 dark:border-brand-border/40 py-3 text-xs">
+<div class="text-slate-600 dark:text-brand-textMuted">
+<span class="text-red-400 font-bold font-mono text-[10px] block uppercase mb-0.5">El Desafío Comercial (Antes):</span>
+"Campañas de marketing masivas enviadas a ciegas, baja conversión, presupuestos tirados a la basura y fuga desapercibida de clientes de alto valor (VIP)."
+</div>
+<div>
+<span class="text-brand-green font-bold font-mono text-[10px] block uppercase mb-0.5">El Sistema Automatizado (Después):</span>
+<ul class="space-y-1 font-mono text-[11px] text-slate-700 dark:text-slate-300">
+<li><span class="text-brand-purple">&gt;</span> <strong>Fidelización Inteligente:</strong> Algoritmo en SQL Server que clasifica automáticamente a cada cliente por su valor real de compra.</li>
+<li><span class="text-brand-purple">&gt;</span> <strong>Acciones Recomendadas:</strong> Reglas de negocio automatizadas con CASE WHEN en origen que le dicen al equipo a quién llamar hoy.</li>
+<li><span class="text-brand-purple">&gt;</span> <strong>Clientes en Riesgo:</strong> Dashboard de fidelización interactivo para detectar clientes VIP inactivos y priorizarlos.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between mt-4">
+<span class="text-[10px] font-mono text-slate-500 dark:text-brand-textMuted">SQL Server · Vistas · NTILE</span>
+  <button onclick="scrollToShowcaseAndTab('rfm-mock')" class="px-3 py-1.5 text-[10px] font-bold text-slate-700 dark:text-white bg-slate-100 dark:bg-brand-border hover:bg-brand-purple hover:text-white rounded-md transition-all flex items-center gap-1">
+    Ver Dashboard <i data-lucide="eye" class="w-3.5 h-3.5"></i>
+  </button>
+</div>
+</div>
+
+<!-- Project 3: Churn Analytics -->
+<div class="project-card glass-card p-5 rounded-2xl flex flex-col justify-between h-full relative overflow-hidden text-left" data-category="banking">
+<div class="flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="text-[9px] font-mono text-brand-cyan uppercase px-2 py-0.5 rounded bg-brand-cyan/10 border border-brand-cyan/20">Retención de Clientes</span>
+<i data-lucide="trending-down" class="w-4 h-4 text-brand-cyan"></i>
+</div>
+<h4 class="text-lg font-bold text-slate-900 dark:text-white">Anticiparse al Adiós: Retención Proactiva de Clientes</h4>
+<div class="space-y-3 my-1 border-t border-b border-slate-200 dark:border-brand-border/40 py-3 text-xs">
+<div class="text-slate-600 dark:text-brand-textMuted">
+<span class="text-red-400 font-bold font-mono text-[10px] block uppercase mb-0.5">El Desafío Comercial (Antes):</span>
+"Reaccionar tarde, cuando el cliente ya retiró todos sus fondos de la plataforma de banca digital de forma definitiva."
+</div>
+<div>
+<span class="text-brand-green font-bold font-mono text-[10px] block uppercase mb-0.5">El Sistema Automatizado (Después):</span>
+<ul class="space-y-1 font-mono text-[11px] text-slate-700 dark:text-slate-300">
+<li><span class="text-brand-cyan">&gt;</span> <strong>Score de Riesgo:</strong> Alerta predictiva basada en meses de inactividad financiera y volumen de reclamos operativos.</li>
+<li><span class="text-brand-cyan">&gt;</span> <strong>Priorización Financiera:</strong> Cuantificación del capital bajo riesgo de fuga para proteger las cuentas VIP.</li>
+<li><span class="text-brand-cyan">&gt;</span> <strong>Filtros por Perfil:</strong> Segmentación por nivel académico para que los directores realicen campañas de retención proactivas oportunas.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between mt-4">
+<span class="text-[10px] font-mono text-slate-500 dark:text-brand-textMuted">Métricas Churn · DAX · SQL</span>
+  <button onclick="scrollToShowcaseAndTab('churn-mock')" class="px-3 py-1.5 text-[10px] font-bold text-slate-700 dark:text-white bg-slate-100 dark:bg-brand-border hover:bg-brand-cyan hover:text-brand-dark rounded-md transition-all flex items-center gap-1">
+    Ver Dashboard <i data-lucide="eye" class="w-3.5 h-3.5"></i>
+  </button>
+</div>
+</div>
+
+<!-- Project 4: HR Analytics -->
+<div class="project-card glass-card p-5 rounded-2xl flex flex-col justify-between h-full relative overflow-hidden text-left" data-category="hr">
+<div class="flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="text-[9px] font-mono text-brand-green uppercase px-2 py-0.5 rounded bg-brand-green/10 border border-brand-green/20">Análisis Humano</span>
+<i data-lucide="user-check" class="w-4 h-4 text-brand-green"></i>
+</div>
+<h4 class="text-lg font-bold text-slate-900 dark:text-white">El Factor Humano: Estabilidad & Masa Salarial</h4>
+<div class="space-y-3 my-1 border-t border-b border-slate-200 dark:border-brand-border/40 py-3 text-xs">
+<div class="text-slate-600 dark:text-brand-textMuted">
+<span class="text-red-400 font-bold font-mono text-[10px] block uppercase mb-0.5">El Desafío Comercial (Antes):</span>
+"Fuga inesperada de talento clave, presupuestos salariales descontrolados y contratación a ciegas en portales ineficientes."
+</div>
+<div>
+<span class="text-brand-green font-bold font-mono text-[10px] block uppercase mb-0.5">El Sistema Automatizado (Después):</span>
+<ul class="space-y-1 font-mono text-[11px] text-slate-700 dark:text-slate-300">
+<li><span class="text-brand-green">&gt;</span> <strong>Correlación Clima vs Salario:</strong> Detección de departamentos críticos con alto riesgo de rotación de personal.</li>
+<li><span class="text-brand-green">&gt;</span> <strong>Retorno de Selección:</strong> Análisis de rentabilidad de canales de reclutamiento para enfocar el presupuesto donde se consiguen los empleados más estables.</li>
+<li><span class="text-brand-green">&gt;</span> <strong>Control Presupuestario:</strong> Visualización mensual de masa salarial para anticipar desvíos presupuestarios.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between mt-4">
+<span class="text-[10px] font-mono text-slate-500 dark:text-brand-textMuted">Modelado RRHH · DAX · SQL</span>
+  <button onclick="scrollToShowcaseAndTab('hr-mock')" class="px-3 py-1.5 text-[10px] font-bold text-slate-700 dark:text-white bg-slate-100 dark:bg-brand-border hover:bg-brand-green hover:text-brand-dark rounded-md transition-all flex items-center gap-1">
+    Ver Dashboard <i data-lucide="eye" class="w-3.5 h-3.5"></i>
+  </button>
 </div>
 </div>
 </div>
 </div>
 </section>
 
-<!-- LIVE INTERACTIVE SHOWCASE (MOCK POWER BI DESIGNS) -->
-<section class="py-12 px-6 md:px-12 bg-slate-50 dark:bg-brand-dark/20 border-t border-slate-200 dark:border-brand-border/40">
+<!-- LIVE INTERACTIVE SHOWCASE (PURELY VISUAL & CENTRED) -->
+<section id="showcase" class="py-12 px-6 md:px-12 bg-slate-50 dark:bg-brand-dark/20 border-t border-slate-200 dark:border-brand-border/40">
 <div class="max-w-5xl mx-auto text-center">
-<h2 class="text-[10px] font-mono uppercase tracking-widest text-brand-cyan mb-1">GALERÍA VISUAL DE TABLEROS</h2>
-<h3 class="text-2xl font-extrabold text-slate-900 dark:text-white mb-4">Explora la Interfaz de Usuario</h3>
-<p class="text-slate-600 dark:text-brand-textMuted max-w-xl mx-auto text-xs md:text-sm mb-8">
-Para garantizar la privacidad de los datos empresariales, he desarrollado simuladores visuales de alta calidad y estructuras interactivas que reflejan el diseño UX de mis dashboards reales.
-</p>
+<h2 class="text-[10px] font-mono uppercase tracking-widest text-brand-cyan mb-1">ASÍ TRABAJO: INTERFAZ INTERACTIVA</h2>
+<h3 class="text-2xl font-extrabold text-slate-900 dark:text-white mb-6">Exploración Visual de Tableros</h3>
 
 <div class="glass-panel p-4 rounded-3xl border border-slate-200 dark:border-brand-border max-w-4xl mx-auto relative overflow-hidden">
 <!-- Tab switching for mock dashboards -->
@@ -1033,393 +1255,78 @@ Para garantizar la privacidad de los datos empresariales, he desarrollado simula
 </div>
 
 <!-- Showcase display area -->
-<div class="mt-4 min-h-[580px] md:min-h-[400px] lg:min-h-[440px] w-full rounded-xl bg-slate-100/50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 flex items-center justify-center overflow-hidden relative group mock-showcase-container">
+<div class="mt-4 min-h-[300px] md:min-h-[420px] lg:min-h-[480px] w-full rounded-xl bg-slate-100/50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 flex items-center justify-center overflow-hidden relative group mock-showcase-container">
 
 <!-- Stock Mock -->
-<div id="stock-mock" class="mock-view w-full h-full p-4 grid grid-cols-1 md:grid-cols-12 gap-4">
-  <!-- Left: Dashboard Image (Clickable) -->
-  <div onclick="openImageModal('stock-mock')" class="col-span-12 md:col-span-7 flex items-center justify-center bg-slate-100/80 dark:bg-slate-900/40 rounded-xl p-2 border border-slate-200 dark:border-slate-800/60 relative group overflow-hidden cursor-pointer" title="Hacé clic para ver la captura real en pantalla completa">
-    <img src="images/stock-dashboard.png" class="max-w-full max-h-[220px] md:max-h-[320px] object-contain rounded-lg shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]" alt="Stock Dashboard">
-    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center gap-2.5">
-      <div class="w-10 h-10 rounded-full bg-brand-cyan/20 border border-brand-cyan/40 text-brand-cyan flex items-center justify-center shadow-lg transition-all duration-300 scale-90 group-hover:scale-100 hover:scale-110">
-        <svg class="w-5 h-5 text-brand-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" xmlns="http://www.w3.org/2000/svg">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-          <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-        </svg>
+<div id="stock-mock" class="mock-view w-full h-full p-2 flex items-center justify-center">
+  <div onclick="openImageModal('stock-mock')" class="w-full max-w-3xl flex items-center justify-center bg-slate-100/80 dark:bg-slate-900/40 rounded-xl p-3 border border-slate-200 dark:border-slate-800/60 relative group overflow-hidden cursor-pointer" title="Hacé clic para ver la captura real en pantalla completa">
+    <img src="images/stock-dashboard.png" class="max-w-full max-h-[340px] md:max-h-[440px] object-contain rounded-lg shadow-2xl transition-transform duration-500 group-hover:scale-[1.01]" alt="Stock Dashboard">
+    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center gap-2">
+      <div class="w-12 h-12 rounded-full bg-brand-cyan/20 border border-brand-cyan/40 text-brand-cyan flex items-center justify-center shadow-lg transition-all duration-300 scale-90 group-hover:scale-100 hover:scale-110">
+        <i data-lucide="eye" class="w-6 h-6 text-brand-cyan"></i>
       </div>
-      
-    </div>
-  </div>
-  <!-- Right: Technical Insights & Action Items -->
-  <div class="col-span-12 md:col-span-5 flex flex-col justify-between h-full text-left space-y-4">
-    <div>
-      <div class="flex items-center gap-2 mb-2">
-        <i data-lucide="box" class="text-brand-cyan w-4 h-4"></i>
-        <span class="text-xs font-mono font-bold text-brand-cyan uppercase tracking-wider">Control de Inventario</span>
-      </div>
-      <h4 class="text-base font-bold text-white leading-tight">Sustentación de Control de Stock y Ventas</h4>
-      <p class="text-[11px] text-brand-textMuted mt-1 leading-relaxed">
-        Solución analítica orientada a mitigar la incertidumbre sobre el capital inmovilizado y evitar quiebres recurrentes de existencias.
-      </p>
-    </div>
-    
-    <!-- KPIs -->
-    <div class="grid grid-cols-3 gap-2">
-      <div class="bg-brand-card/60 p-2 rounded-lg border border-brand-border">
-        <span class="text-[8px] text-brand-textMuted block uppercase">Existencias</span>
-        <span class="text-xs font-extrabold text-brand-green">24K u.</span>
-      </div>
-      <div class="bg-brand-card/60 p-2 rounded-lg border border-brand-border">
-        <span class="text-[8px] text-brand-textMuted block uppercase">Ajustes</span>
-        <span class="text-xs font-extrabold text-red-400">-284 u.</span>
-      </div>
-      <div class="bg-brand-card/60 p-2 rounded-lg border border-brand-border">
-        <span class="text-[8px] text-brand-textMuted block uppercase">Estado</span>
-        <span class="text-[10px] font-bold text-brand-cyan block">Óptimo</span>
-      </div>
-    </div>
-    
-    <!-- Strategic Actions from PDF -->
-    <div class="space-y-2 text-[11px]">
-      <div class="flex gap-2">
-        <span class="text-brand-cyan font-bold">&gt;</span>
-        <p class="text-slate-300 leading-tight">
-          <strong class="text-white">Auditoría de Desviaciones:</strong> Mapeo preciso de ajustes de inventario para el control de mermas y errores operativos.
-        </p>
-      </div>
-      <div class="flex gap-2">
-        <span class="text-brand-cyan font-bold">&gt;</span>
-        <p class="text-slate-300 leading-tight">
-          <strong class="text-white">Proyección de Compras:</strong> Alertas automáticas de Stock Mínimo y de Seguridad para anticipar compras de forma inteligente.
-        </p>
-      </div>
-      <div class="flex gap-2">
-        <span class="text-brand-cyan font-bold">&gt;</span>
-        <p class="text-slate-300 leading-tight">
-          <strong class="text-white">Capital Inmovilizado:</strong> Valoración financiera del stock clasificado por categorías de margen de lucro neto.
-        </p>
-      </div>
-    </div>
-    
-    <!-- Tech Badge -->
-    <div class="flex items-center gap-1.5 border-t border-brand-border/60 pt-2 text-[9px] font-mono text-brand-textMuted">
-      <span>TECNOLOGÍAS:</span>
-      <span class="px-1.5 py-0.5 bg-brand-cyan/10 text-brand-cyan rounded border border-brand-cyan/20">Power BI</span>
-      <span class="px-1.5 py-0.5 bg-brand-purple/10 text-brand-purple rounded border border-brand-purple/20">SQL Server</span>
-      <span class="px-1.5 py-0.5 bg-brand-green/10 text-brand-green rounded border border-brand-green/20">DAX</span>
+      <span class="text-xs font-mono font-bold text-brand-cyan uppercase tracking-wider bg-slate-950/80 px-3 py-1.5 rounded border border-brand-cyan/20">Ver Captura Real (Full HD)</span>
     </div>
   </div>
 </div>
 
 <!-- Sales & Rentabilidad Mock -->
-<div id="sales-mock" class="mock-view w-full h-full p-4 hidden grid grid-cols-1 md:grid-cols-12 gap-4">
-  <!-- Left: Dashboard Image (Clickable) -->
-  <div onclick="openImageModal('sales-mock')" class="col-span-12 md:col-span-7 flex items-center justify-center bg-slate-100/80 dark:bg-slate-900/40 rounded-xl p-2 border border-slate-200 dark:border-slate-800/60 relative group overflow-hidden cursor-pointer" title="Hacé clic para ver la captura real en pantalla completa">
-    <img src="images/sales-dashboard1.png" class="max-w-full max-h-[220px] md:max-h-[320px] object-contain rounded-lg shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]" alt="Ventas & Rentabilidad Dashboard">
-    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center gap-2.5">
-      <div class="w-10 h-10 rounded-full bg-brand-cyan/20 border border-brand-cyan/40 text-brand-cyan flex items-center justify-center shadow-lg transition-all duration-300 scale-90 group-hover:scale-100 hover:scale-110">
-        <svg class="w-5 h-5 text-brand-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" xmlns="http://www.w3.org/2000/svg">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-          <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-        </svg>
+<div id="sales-mock" class="mock-view w-full h-full p-2 hidden flex items-center justify-center">
+  <div onclick="openImageModal('sales-mock')" class="w-full max-w-3xl flex items-center justify-center bg-slate-100/80 dark:bg-slate-900/40 rounded-xl p-3 border border-slate-200 dark:border-slate-800/60 relative group overflow-hidden cursor-pointer" title="Hacé clic para ver la captura real en pantalla completa">
+    <img src="images/sales-dashboard1.png" class="max-w-full max-h-[340px] md:max-h-[440px] object-contain rounded-lg shadow-2xl transition-transform duration-500 group-hover:scale-[1.01]" alt="Ventas & Rentabilidad Dashboard">
+    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center gap-2">
+      <div class="w-12 h-12 rounded-full bg-brand-cyan/20 border border-brand-cyan/40 text-brand-cyan flex items-center justify-center shadow-lg transition-all duration-300 scale-90 group-hover:scale-100 hover:scale-110">
+        <i data-lucide="eye" class="w-6 h-6 text-brand-cyan"></i>
       </div>
-      
-    </div>
-  </div>
-  <!-- Right: Technical Insights & Action Items -->
-  <div class="col-span-12 md:col-span-5 flex flex-col justify-between h-full text-left space-y-4">
-    <div>
-      <div class="flex items-center gap-2 mb-2">
-        <i data-lucide="bar-chart-3" class="text-brand-cyan w-4 h-4"></i>
-        <span class="text-xs font-mono font-bold text-brand-cyan uppercase tracking-wider">Ventas & Rentabilidad</span>
-      </div>
-      <h4 class="text-base font-bold text-white leading-tight">Visión General de Ventas & Rentabilidad</h4>
-      <p class="text-[11px] text-brand-textMuted mt-1 leading-relaxed">
-        Monitoreo en tiempo real de facturación y rentabilidad neta distribuido por geografía (EE.UU., Canadá, Francia, Alemania) y canales de venta.
-      </p>
-    </div>
-    
-    <!-- KPIs -->
-    <div class="grid grid-cols-3 gap-2">
-      <div class="bg-brand-card/60 p-2 rounded-lg border border-brand-border">
-        <span class="text-[8px] text-brand-textMuted block uppercase">Fact. Líquida</span>
-        <span class="text-xs font-extrabold text-brand-cyan">$92.3M</span>
-      </div>
-      <div class="bg-brand-card/60 p-2 rounded-lg border border-brand-border">
-        <span class="text-[8px] text-brand-textMuted block uppercase">Lucro Neto</span>
-        <span class="text-xs font-extrabold text-brand-green">$12.0M</span>
-      </div>
-      <div class="bg-brand-card/60 p-2 rounded-lg border border-brand-border">
-        <span class="text-[8px] text-brand-textMuted block uppercase">Margen Prom.</span>
-        <span class="text-xs font-extrabold text-brand-cyan">12.9%</span>
-      </div>
-    </div>
-    
-    <!-- Strategic Actions from PDF -->
-    <div class="space-y-2 text-[11px]">
-      <div class="flex gap-2">
-        <span class="text-brand-cyan font-bold">&gt;</span>
-        <p class="text-slate-300 leading-tight">
-          <strong class="text-white">Facturación & Margen:</strong> Seguimiento automático de los ingresos frente al margen de lucro por categoría de productos.
-        </p>
-      </div>
-      <div class="flex gap-2">
-        <span class="text-brand-cyan font-bold">&gt;</span>
-        <p class="text-slate-300 leading-tight">
-          <strong class="text-white">Eficiencia Logística:</strong> Monitoreo del tiempo medio de entrega por tienda física y cumplimiento estricto de pedidos.
-        </p>
-      </div>
-      <div class="flex gap-2">
-        <span class="text-brand-cyan font-bold">&gt;</span>
-        <p class="text-slate-300 leading-tight">
-          <strong class="text-white">Análisis Geográfico:</strong> Distribución analítica de la facturación y clasificación por segmento comercial.
-        </p>
-      </div>
-    </div>
-    
-    <!-- Tech Badge -->
-    <div class="flex items-center gap-1.5 border-t border-brand-border/60 pt-2 text-[9px] font-mono text-brand-textMuted">
-      <span>TECNOLOGÍAS:</span>
-      <span class="px-1.5 py-0.5 bg-brand-cyan/10 text-brand-cyan rounded border border-brand-cyan/20">Power BI</span>
-      <span class="px-1.5 py-0.5 bg-brand-purple/10 text-brand-purple rounded border border-brand-purple/20">SQL Server</span>
-      <span class="px-1.5 py-0.5 bg-brand-green/10 text-brand-green rounded border border-brand-green/20">DAX</span>
+      <span class="text-xs font-mono font-bold text-brand-cyan uppercase tracking-wider bg-slate-950/80 px-3 py-1.5 rounded border border-brand-cyan/20">Ver Captura Real (Full HD)</span>
     </div>
   </div>
 </div>
 
 <!-- RFM Mock -->
-<div id="rfm-mock" class="mock-view w-full h-full p-4 hidden grid grid-cols-1 md:grid-cols-12 gap-4">
-  <!-- Left: Dashboard Image (Clickable) -->
-  <div onclick="openImageModal('rfm-mock')" class="col-span-12 md:col-span-7 flex items-center justify-center bg-slate-100/80 dark:bg-slate-900/40 rounded-xl p-2 border border-slate-200 dark:border-slate-800/60 relative group overflow-hidden cursor-pointer" title="Hacé clic para ver el análisis real en pantalla completa">
-    <img src="images/rfm-dashboard1.png" class="max-w-full max-h-[220px] md:max-h-[320px] object-contain rounded-lg shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]" alt="RFM Dashboard">
-    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center gap-2.5">
-      <div class="w-10 h-10 rounded-full bg-brand-cyan/20 border border-brand-cyan/40 text-brand-cyan flex items-center justify-center shadow-lg transition-all duration-300 scale-90 group-hover:scale-100 hover:scale-110">
-        <svg class="w-5 h-5 text-brand-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" xmlns="http://www.w3.org/2000/svg">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-          <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-        </svg>
+<div id="rfm-mock" class="mock-view w-full h-full p-2 hidden flex items-center justify-center">
+  <div onclick="openImageModal('rfm-mock')" class="w-full max-w-3xl flex items-center justify-center bg-slate-100/80 dark:bg-slate-900/40 rounded-xl p-3 border border-slate-200 dark:border-slate-800/60 relative group overflow-hidden cursor-pointer" title="Hacé clic para ver la captura real en pantalla completa">
+    <img src="images/rfm-dashboard1.png" class="max-w-full max-h-[340px] md:max-h-[440px] object-contain rounded-lg shadow-2xl transition-transform duration-500 group-hover:scale-[1.01]" alt="RFM Dashboard">
+    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center gap-2">
+      <div class="w-12 h-12 rounded-full bg-brand-cyan/20 border border-brand-cyan/40 text-brand-cyan flex items-center justify-center shadow-lg transition-all duration-300 scale-90 group-hover:scale-100 hover:scale-110">
+        <i data-lucide="eye" class="w-6 h-6 text-brand-cyan"></i>
       </div>
-      
-    </div>
-  </div>
-  <!-- Right: Technical Insights & Action Items -->
-  <div class="col-span-12 md:col-span-5 flex flex-col justify-between h-full text-left space-y-4">
-    <div>
-      <div class="flex items-center gap-2 mb-2">
-        <i data-lucide="users" class="text-brand-purple w-4 h-4"></i>
-        <span class="text-xs font-mono font-bold text-brand-purple uppercase tracking-wider">Fidelización & SQL</span>
-      </div>
-      <h4 class="text-base font-bold text-white leading-tight">Segmentación de Clientes por Valor (RFM)</h4>
-      <p class="text-[11px] text-brand-textMuted mt-1 leading-relaxed">
-        Agrupación estadística automática de 1,445 clientes totales utilizando funciones analíticas en origen para potenciar ventas repetidas.
-      </p>
-    </div>
-    
-    <!-- KPIs -->
-    <div class="grid grid-cols-3 gap-2">
-      <div class="bg-brand-card/60 p-2 rounded-lg border border-brand-border">
-        <span class="text-[8px] text-brand-textMuted block uppercase">Ingresos</span>
-        <span class="text-xs font-extrabold text-brand-purple">$7.69M</span>
-      </div>
-      <div class="bg-brand-card/60 p-2 rounded-lg border border-brand-border">
-        <span class="text-[8px] text-brand-textMuted block uppercase">Clientes</span>
-        <span class="text-xs font-extrabold text-brand-cyan">1,445</span>
-      </div>
-      <div class="bg-brand-card/60 p-2 rounded-lg border border-brand-border">
-        <span class="text-[8px] text-brand-textMuted block uppercase">Ticket Med.</span>
-        <span class="text-xs font-extrabold text-brand-green">$5.32K</span>
-      </div>
-    </div>
-    
-    <!-- Strategic Actions from PDF -->
-    <div class="space-y-2 text-[11px]">
-      <div class="flex gap-2">
-        <span class="text-brand-purple font-bold">&gt;</span>
-        <p class="text-slate-300 leading-tight">
-          <strong class="text-white">Marketing Dirigido:</strong> Creación de audiencias personalizadas para campañas de Email Marketing altamente segmentadas.
-        </p>
-      </div>
-      <div class="flex gap-2">
-        <span class="text-brand-purple font-bold">&gt;</span>
-        <p class="text-slate-300 leading-tight">
-          <strong class="text-white">Fidelización & VIP:</strong> Identificación de clientes "Campeones" para el diseño de beneficios exclusivos y ofertas dedicadas.
-        </p>
-      </div>
-      <div class="flex gap-2">
-        <span class="text-brand-purple font-bold">&gt;</span>
-        <p class="text-slate-300 leading-tight">
-          <strong class="text-white">Optimización del LTV:</strong> Recuperación de clientes "Dormidos" y "En Riesgo" mediante estrategias de remarketing temporales.
-        </p>
-      </div>
-    </div>
-    
-    <!-- Tech Badge -->
-    <div class="flex items-center gap-1.5 border-t border-brand-border/60 pt-2 text-[9px] font-mono text-brand-textMuted">
-      <span>TECNOLOGÍAS:</span>
-      <span class="px-1.5 py-0.5 bg-brand-cyan/10 text-brand-cyan rounded border border-brand-cyan/20">Power BI</span>
-      <span class="px-1.5 py-0.5 bg-brand-purple/10 text-brand-purple rounded border border-brand-purple/20">SQL Server</span>
-      <span class="px-1.5 py-0.5 bg-brand-green/10 text-brand-green rounded border border-brand-green/20">DAX</span>
+      <span class="text-xs font-mono font-bold text-brand-cyan uppercase tracking-wider bg-slate-950/80 px-3 py-1.5 rounded border border-brand-cyan/20">Ver Captura Real (Full HD)</span>
     </div>
   </div>
 </div>
 
 <!-- Churn Mock -->
-<div id="churn-mock" class="mock-view w-full h-full p-4 hidden grid grid-cols-1 md:grid-cols-12 gap-4">
-  <!-- Left: Dashboard Image (Clickable) -->
-  <div onclick="openImageModal('churn-mock')" class="col-span-12 md:col-span-7 flex items-center justify-center bg-slate-100/80 dark:bg-slate-900/40 rounded-xl p-2 border border-slate-200 dark:border-slate-800/60 relative group overflow-hidden cursor-pointer" title="Hacé clic para ver la captura real en pantalla completa">
-    <img src="images/churn-dashboard.png" class="max-w-full max-h-[220px] md:max-h-[320px] object-contain rounded-lg shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]" alt="Churn Dashboard">
-    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center gap-2.5">
-      <div class="w-10 h-10 rounded-full bg-brand-cyan/20 border border-brand-cyan/40 text-brand-cyan flex items-center justify-center shadow-lg transition-all duration-300 scale-90 group-hover:scale-100 hover:scale-110">
-        <svg class="w-5 h-5 text-brand-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" xmlns="http://www.w3.org/2000/svg">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-          <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-        </svg>
+<div id="churn-mock" class="mock-view w-full h-full p-2 hidden flex items-center justify-center">
+  <div onclick="openImageModal('churn-mock')" class="w-full max-w-3xl flex items-center justify-center bg-slate-100/80 dark:bg-slate-900/40 rounded-xl p-3 border border-slate-200 dark:border-slate-800/60 relative group overflow-hidden cursor-pointer" title="Hacé clic para ver la captura real en pantalla completa">
+    <img src="images/churn-dashboard.png" class="max-w-full max-h-[340px] md:max-h-[440px] object-contain rounded-lg shadow-2xl transition-transform duration-500 group-hover:scale-[1.01]" alt="Churn Dashboard">
+    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center gap-2">
+      <div class="w-12 h-12 rounded-full bg-brand-cyan/20 border border-brand-cyan/40 text-brand-cyan flex items-center justify-center shadow-lg transition-all duration-300 scale-90 group-hover:scale-100 hover:scale-110">
+        <i data-lucide="eye" class="w-6 h-6 text-brand-cyan"></i>
       </div>
-      
-    </div>
-  </div>
-  <!-- Right: Technical Insights & Action Items -->
-  <div class="col-span-12 md:col-span-5 flex flex-col justify-between h-full text-left space-y-4">
-    <div>
-      <div class="flex items-center gap-2 mb-2">
-        <i data-lucide="trending-down" class="text-brand-cyan w-4 h-4"></i>
-        <span class="text-xs font-mono font-bold text-brand-cyan uppercase tracking-wider">Retención de Clientes</span>
-      </div>
-      <h4 class="text-base font-bold text-white leading-tight">Churn Analytics - Banca Digital</h4>
-      <p class="text-[11px] text-brand-textMuted mt-1 leading-relaxed">
-        Monitoreo y alerta temprana para prevenir la pérdida silenciosa de depositantes y priorizar carteras VIP antes del retiro de fondos.
-      </p>
-    </div>
-    
-    <!-- KPIs -->
-    <div class="grid grid-cols-3 gap-2">
-      <div class="bg-brand-card/60 p-2 rounded-lg border border-brand-border">
-        <span class="text-[8px] text-brand-textMuted block uppercase">Churn Rate</span>
-        <span class="text-xs font-extrabold text-red-400">16.07%</span>
-      </div>
-      <div class="bg-brand-card/60 p-2 rounded-lg border border-brand-border">
-        <span class="text-[8px] text-brand-textMuted block uppercase">Frec. Reclamos</span>
-        <span class="text-xs font-extrabold text-brand-cyan">2.46</span>
-      </div>
-      <div class="bg-brand-card/60 p-2 rounded-lg border border-brand-border">
-        <span class="text-[8px] text-brand-textMuted block uppercase">Inactividad</span>
-        <span class="text-xs font-extrabold text-brand-green">2.34 meses</span>
-      </div>
-    </div>
-    
-    <!-- Strategic Actions from PDF -->
-    <div class="space-y-2 text-[11px]">
-      <div class="flex gap-2">
-        <span class="text-brand-cyan font-bold">&gt;</span>
-        <p class="text-slate-300 leading-tight">
-          <strong class="text-white">Impacto de la Fuga:</strong> Cuantificación financiera de ingresos bajo riesgo directo (27.49% de la cartera total).
-        </p>
-      </div>
-      <div class="flex gap-2">
-        <span class="text-brand-cyan font-bold">&gt;</span>
-        <p class="text-slate-300 leading-tight">
-          <strong class="text-white">Identificación Proactiva:</strong> Score interactivo de riesgo para detectar inactividad y volumen de reclamos operativos.
-        </p>
-      </div>
-      <div class="flex gap-2">
-        <span class="text-brand-cyan font-bold">&gt;</span>
-        <p class="text-slate-300 leading-tight">
-          <strong class="text-white">Retención Focalizada:</strong> Segmentación por patrimonio para priorizar esfuerzos proactivos en clientes VIP.
-        </p>
-      </div>
-    </div>
-    
-    <!-- Tech Badge -->
-    <div class="flex items-center gap-1.5 border-t border-brand-border/60 pt-2 text-[9px] font-mono text-brand-textMuted">
-      <span>TECNOLOGÍAS:</span>
-      <span class="px-1.5 py-0.5 bg-brand-cyan/10 text-brand-cyan rounded border border-brand-cyan/20">Power BI</span>
-      <span class="px-1.5 py-0.5 bg-brand-purple/10 text-brand-purple rounded border border-brand-purple/20">SQL Server</span>
-      <span class="px-1.5 py-0.5 bg-brand-green/10 text-brand-green rounded border border-brand-green/20">DAX</span>
+      <span class="text-xs font-mono font-bold text-brand-cyan uppercase tracking-wider bg-slate-950/80 px-3 py-1.5 rounded border border-brand-cyan/20">Ver Captura Real (Full HD)</span>
     </div>
   </div>
 </div>
 
 <!-- HR Mock -->
-<div id="hr-mock" class="mock-view w-full h-full p-4 hidden grid grid-cols-1 md:grid-cols-12 gap-4">
-  <!-- Left: Dashboard Image (Clickable) -->
-  <div onclick="openImageModal('hr-mock')" class="col-span-12 md:col-span-7 flex items-center justify-center bg-slate-100/80 dark:bg-slate-900/40 rounded-xl p-2 border border-slate-200 dark:border-slate-800/60 relative group overflow-hidden cursor-pointer" title="Hacé clic para ver la captura real en pantalla completa">
-    <img src="images/hr-dashboard.png" class="max-w-full max-h-[220px] md:max-h-[320px] object-contain rounded-lg shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]" alt="HR Dashboard">
-    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center gap-2.5">
-      <div class="w-10 h-10 rounded-full bg-brand-cyan/20 border border-brand-cyan/40 text-brand-cyan flex items-center justify-center shadow-lg transition-all duration-300 scale-90 group-hover:scale-100 hover:scale-110">
-        <svg class="w-5 h-5 text-brand-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" xmlns="http://www.w3.org/2000/svg">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-          <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-        </svg>
+<div id="hr-mock" class="mock-view w-full h-full p-2 hidden flex items-center justify-center">
+  <div onclick="openImageModal('hr-mock')" class="w-full max-w-3xl flex items-center justify-center bg-slate-100/80 dark:bg-slate-900/40 rounded-xl p-3 border border-slate-200 dark:border-slate-800/60 relative group overflow-hidden cursor-pointer" title="Hacé clic para ver la captura real en pantalla completa">
+    <img src="images/hr-dashboard.png" class="max-w-full max-h-[340px] md:max-h-[440px] object-contain rounded-lg shadow-2xl transition-transform duration-500 group-hover:scale-[1.01]" alt="HR Dashboard">
+    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center gap-2">
+      <div class="w-12 h-12 rounded-full bg-brand-cyan/20 border border-brand-cyan/40 text-brand-cyan flex items-center justify-center shadow-lg transition-all duration-300 scale-90 group-hover:scale-100 hover:scale-110">
+        <i data-lucide="eye" class="w-6 h-6 text-brand-cyan"></i>
       </div>
-      
-    </div>
-  </div>
-  <!-- Right: Technical Insights & Action Items -->
-  <div class="col-span-12 md:col-span-5 flex flex-col justify-between h-full text-left space-y-4">
-    <div>
-      <div class="flex items-center gap-2 mb-2">
-        <i data-lucide="user-check" class="text-brand-green w-4 h-4"></i>
-        <span class="text-xs font-mono font-bold text-brand-green uppercase tracking-wider">Gestión de Talento</span>
-      </div>
-      <h4 class="text-base font-bold text-white leading-tight">HR Analytics & Capital Humano</h4>
-      <p class="text-[11px] text-brand-textMuted mt-1 leading-relaxed">
-        Análisis integral de 207 funcionarios activos para optimizar costos de masa salarial, medir el clima de trabajo y analizar canales de reclutamiento.
-      </p>
-    </div>
-    
-    <!-- KPIs -->
-    <div class="grid grid-cols-3 gap-2">
-      <div class="bg-brand-card/60 p-2 rounded-lg border border-brand-border">
-        <span class="text-[8px] text-brand-textMuted block uppercase">Funcionarios</span>
-        <span class="text-xs font-extrabold text-brand-green">207 u.</span>
-      </div>
-      <div class="bg-brand-card/60 p-2 rounded-lg border border-brand-border">
-        <span class="text-[8px] text-brand-textMuted block uppercase">Clima Laboral</span>
-        <span class="text-xs font-extrabold text-brand-cyan">3.9 / 5</span>
-      </div>
-      <div class="bg-brand-card/60 p-2 rounded-lg border border-brand-border">
-        <span class="text-[8px] text-brand-textMuted block uppercase">Permanencia</span>
-        <span class="text-xs font-extrabold text-brand-cyan">3.4 años</span>
-      </div>
-    </div>
-    
-    <!-- Strategic Actions from PDF -->
-    <div class="space-y-2 text-[11px]">
-      <div class="flex gap-2">
-        <span class="text-brand-green font-bold">&gt;</span>
-        <p class="text-slate-300 leading-tight">
-          <strong class="text-white">Clima & Costos:</strong> Correlación en tiempo real entre salarios, satisfacción por departamento y masa salarial ($1.39M).
-        </p>
-      </div>
-      <div class="flex gap-2">
-        <span class="text-brand-green font-bold">&gt;</span>
-        <p class="text-slate-300 leading-tight">
-          <strong class="text-white">Reclutamiento Óptimo:</strong> Análisis de efectividad de canales de selección (Web de empleo liderando con 87 ingresos).
-        </p>
-      </div>
-      <div class="flex gap-2">
-        <span class="text-brand-green font-bold">&gt;</span>
-        <p class="text-slate-300 leading-tight">
-          <strong class="text-white">Análisis de Fuga:</strong> Identificación proactiva de departamentos con alto riesgo de rotación voluntaria.
-        </p>
-      </div>
-    </div>
-    
-    <!-- Tech Badge -->
-    <div class="flex items-center gap-1.5 border-t border-brand-border/60 pt-2 text-[9px] font-mono text-brand-textMuted">
-      <span>TECNOLOGÍAS:</span>
-      <span class="px-1.5 py-0.5 bg-brand-cyan/10 text-brand-cyan rounded border border-brand-cyan/20">Power BI</span>
-      <span class="px-1.5 py-0.5 bg-brand-purple/10 text-brand-purple rounded border border-brand-purple/20">SQL Server</span>
-      <span class="px-1.5 py-0.5 bg-brand-green/10 text-brand-green rounded border border-brand-green/20">DAX</span>
+      <span class="text-xs font-mono font-bold text-brand-cyan uppercase tracking-wider bg-slate-950/80 px-3 py-1.5 rounded border border-brand-cyan/20">Ver Captura Real (Full HD)</span>
     </div>
   </div>
 </div>
+
 </div>
 </div>
 </div>
 </section>
-
-<!-- CONTACT SECTION WITH FUNCTIONAL INTERACTION -->
+ WITH FUNCTIONAL INTERACTION -->
 <section id="contact" class="py-12 px-6 md:px-12 bg-slate-100 dark:bg-brand-dark transition-colors relative overflow-hidden">
 <div class="absolute -bottom-10 right-0 w-[300px] h-[300px] bg-brand-cyan/5 rounded-full blur-[80px] pointer-events-none"></div>
 <div class="max-w-xl mx-auto text-center relative z-10 flex flex-col gap-6">
@@ -1607,6 +1514,17 @@ Llevá tu negocio al siguiente nivel. Diseñemos juntos un ecosistema de Busines
 
 <!-- JAVASCRIPT FOR DYNAMIC INTERACTIVE BEHAVIOR -->
 <script>
+// Helper to scroll to showcase and activate tab
+function scrollToShowcaseAndTab(mockId) {
+  const target = document.getElementById('showcase');
+  if (target) {
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    setTimeout(() => {
+      switchMock(mockId);
+    }, 400);
+  }
+}
+
 // Initialize Lucide icons
 lucide.createIcons();
 
@@ -1932,8 +1850,47 @@ function updateModalSlide() {
   const footerTip = document.getElementById('modal-footer-tip');
   
   if (currentSlides.length > 1) {
-    prevBtn.classList.remove('hidden');
-    nextBtn.classList.remove('hidden');
+    // Esconder flecha izquierda si es la primera diapositiva, mostrar de lo contrario
+    if (currentSlideIndex === 0) {
+      prevBtn.classList.add('hidden');
+    } else {
+      prevBtn.classList.remove('hidden');
+    }
+    
+    // Esconder flecha derecha si es la última diapositiva, mostrar de lo contrario
+    if (currentSlideIndex === currentSlides.length - 1) {
+      nextBtn.classList.add('hidden');
+    } else {
+      nextBtn.classList.remove('hidden');
+    }
+    
+    indicators.classList.remove('hidden');
+    footerTip.textContent = `💡 Diapositiva ${currentSlideIndex + 1} de ${currentSlides.length}. Podés usar las flechas laterales para navegar por el análisis.`;
+    
+    // Generar botones de puntos (dots) de navegación
+    let dotsHtml = '';
+    for (let i = 0; i < currentSlides.length; i++) {
+      const activeClass = i === currentSlideIndex ? 'bg-brand-cyan scale-125' : 'bg-slate-600 hover:bg-slate-400';
+      dotsHtml += `<button onclick="goToSlide(${i})" class="w-2 md:w-2.5 h-2 md:h-2.5 rounded-full transition-all ${activeClass}" title="Ver Diapositiva ${i+1}"></button>`;
+    }
+    indicators.innerHTML = dotsHtml;
+  } else {
+    prevBtn.classList.add('hidden');
+    nextBtn.classList.add('hidden');
+    indicators.classList.add('hidden');
+    footerTip.textContent = '💡 Se recomienda visualizar en pantalla completa (F11) para mayor detalle.';
+  }
+} else {
+      prevBtn.classList.remove('hidden');
+    }
+    
+    // Si estamos en la última diapositiva, ocultamos la flecha "Siguiente"
+    if (currentSlideIndex === currentSlides.length - 1) {
+      nextBtn.classList.add('hidden');
+    } else {
+      nextBtn.classList.remove('hidden');
+    }
+    
     indicators.classList.remove('hidden');
     footerTip.textContent = `💡 Diapositiva ${currentSlideIndex + 1} de ${currentSlides.length}. Podés usar las flechas laterales para navegar por el análisis.`;
     
@@ -1954,14 +1911,20 @@ function updateModalSlide() {
 
 function prevSlide() {
   if (currentSlides.length <= 1) return;
-  currentSlideIndex = (currentSlideIndex - 1 + currentSlides.length) % currentSlides.length;
-  updateModalSlide();
+  if (currentSlideIndex > 0) {
+    currentSlideIndex--;
+    updateModalSlide();
+  }
+}
 }
 
 function nextSlide() {
   if (currentSlides.length <= 1) return;
-  currentSlideIndex = (currentSlideIndex + 1) % currentSlides.length;
-  updateModalSlide();
+  if (currentSlideIndex < currentSlides.length - 1) {
+    currentSlideIndex++;
+    updateModalSlide();
+  }
+}
 }
 
 function goToSlide(index) {
