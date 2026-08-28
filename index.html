@@ -396,36 +396,40 @@ html:not(.dark) .border-slate-300 {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Active Tab button styling - Glowing premium gradients */
+/* Active Tab button styling - Solid, matching filters */
 .dark .mock-tab-btn.active {
-    background: linear-gradient(90deg, rgba(0,242,254,0.15) 0%, rgba(155,81,224,0.1) 100%) !important;
-    color: #00f2fe !important;
-    border-color: rgba(0, 242, 254, 0.4) !important;
-    box-shadow: 0 0 15px rgba(0, 242, 254, 0.1) !important;
+    background-color: #00f2fe !important;
+    background: #00f2fe !important;
+    color: #0a0c10 !important;
+    border-color: #00f2fe !important;
+    box-shadow: 0 4px 15px rgba(0, 242, 254, 0.2) !important;
     transform: translateY(-1px);
 }
 html:not(.dark) .mock-tab-btn.active {
-    background: rgba(2, 132, 199, 0.08) !important;
-    color: #0284c7 !important;
-    border-color: rgba(2, 132, 199, 0.3) !important;
-    box-shadow: 0 4px 12px rgba(2, 132, 199, 0.05) !important;
+    background-color: #475569 !important;
+    background: #475569 !important;
+    color: #ffffff !important;
+    border-color: #475569 !important;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.1) !important;
     transform: translateY(-1px);
 }
 
-/* Active Filter button styling - Beautiful tech-themed gradients */
+/* Active Filter button styling - Solid color, no gradient */
 .dark .filter-btn.active {
-    background: linear-gradient(135deg, #00f2fe 0%, #9b51e0 100%) !important;
+    background-color: #00f2fe !important;
+    background: #00f2fe !important;
     color: #0a0c10 !important;
-    box-shadow: 0 4px 15px rgba(0, 242, 254, 0.25) !important;
-    font-weight: 700 !important;
-    transform: translateY(-1px) scale(1.02);
+    box-shadow: 0 4px 15px rgba(0, 242, 254, 0.2) !important;
+    font-weight: 500 !important;
+    transform: translateY(-1px);
 }
 html:not(.dark) .filter-btn.active {
-    background: linear-gradient(135deg, #0284c7 0%, #7c3aed 100%) !important;
+    background-color: #475569 !important;
+    background: #475569 !important;
     color: #ffffff !important;
-    box-shadow: 0 4px 12px rgba(2, 132, 199, 0.15) !important;
-    font-weight: 700 !important;
-    transform: translateY(-1px) scale(1.02);
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.1) !important;
+    font-weight: 500 !important;
+    transform: translateY(-1px);
 }
 
 /* Extra premium interactive glow for Project Cards in dark mode */
@@ -472,6 +476,12 @@ html:not(.dark) .project-label {
     font-weight: 500 !important;
 }
 
+/* Dark Mode project-label - change to blue-celeste (#00f2fe) and no bold */
+.dark .project-label {
+    color: #00f2fe !important;
+    font-weight: 500 !important;
+}
+
 </style>
 </head>
 <body class="selection:bg-brand-cyan selection:text-brand-dark font-sans">
@@ -479,15 +489,15 @@ html:not(.dark) .project-label {
 <nav class="fixed top-0 left-0 w-full z-50 glass-panel py-3 px-6 md:px-12 flex justify-between items-center transition-all">
 <div class="flex items-center gap-3">
 <div>
-<span class="font-normal text-base tracking-wider text-slate-900 dark:text-white">NANCY BORGES</span>
+<span class="font-bold text-base tracking-wider text-slate-900 dark:text-white">NANCY BORGES</span>
 </div>
 </div>
 <!-- Desktop menu -->
 <div class="hidden md:flex items-center gap-4 text-xs font-semibold uppercase tracking-wider font-mono">
-<a href="#about" onclick="showView('view-about'); return false;" class="px-2.5 py-1 rounded-full border border-transparent text-slate-600 dark:text-brand-textMuted hover:border-brand-cyan/20 hover:bg-brand-cyan/5 transition-all">Quién Soy</a>
-<a href="#pipeline" onclick="showView('view-pipeline'); return false;" class="px-2.5 py-1 rounded-full border border-transparent text-slate-600 dark:text-brand-textMuted hover:border-brand-cyan/20 hover:bg-brand-cyan/5 transition-all">Mi Infraestructura</a>
-<a href="#projects" onclick="showView('view-projects'); return false;" class="px-2.5 py-1 rounded-full border border-transparent text-slate-600 dark:text-brand-textMuted hover:border-brand-cyan/20 hover:bg-brand-cyan/5 transition-all">Proyectos</a>
-<a href="#showcase" onclick="showView('view-showcase'); return false;" class="px-2.5 py-1 rounded-full border border-transparent text-slate-600 dark:text-brand-textMuted hover:border-brand-cyan/20 hover:bg-brand-cyan/5 transition-all">Dashboard</a>
+<a href="#about" onclick="showView('view-about'); return false;" class="px-2.5 py-1 rounded-none border border-transparent text-slate-600 dark:text-brand-textMuted hover:border-brand-cyan/20 hover:bg-brand-cyan/5 transition-all">Quién Soy</a>
+<a href="#pipeline" onclick="showView('view-pipeline'); return false;" class="px-2.5 py-1 rounded-none border border-transparent text-slate-600 dark:text-brand-textMuted hover:border-brand-cyan/20 hover:bg-brand-cyan/5 transition-all">Mi Infraestructura</a>
+<a href="#projects" onclick="showView('view-projects'); return false;" class="px-2.5 py-1 rounded-none border border-transparent text-slate-600 dark:text-brand-textMuted hover:border-brand-cyan/20 hover:bg-brand-cyan/5 transition-all">Proyectos</a>
+<a href="#showcase" onclick="showView('view-showcase'); return false;" class="px-2.5 py-1 rounded-none border border-transparent text-slate-600 dark:text-brand-textMuted hover:border-brand-cyan/20 hover:bg-brand-cyan/5 transition-all">Dashboard</a>
 </div>
 <div class="flex items-center gap-3">
 <!-- Dark/Light Mode Switcher -->
@@ -496,7 +506,7 @@ html:not(.dark) .project-label {
 <i id="theme-icon-moon" data-lucide="moon" class="w-4 h-4 block dark:hidden"></i>
 </button>
 <!-- Contact Menu Trigger Link -->
-<a href="#contact" onclick="showView('view-contact'); return false;" class="hidden sm:flex px-3 py-1.5 text-[10px] font-semibold uppercase tracking-wider text-slate-800 dark:text-brand-dark bg-slate-200 dark:bg-brand-cyan hover:bg-brand-cyan dark:hover:bg-white transition-all rounded-md flex items-center gap-1.5">
+<a href="#contact" onclick="showView('view-contact'); return false;" class="hidden sm:flex px-3 py-1.5 text-[10px] font-semibold uppercase tracking-wider text-slate-800 dark:text-brand-dark bg-slate-200 dark:bg-brand-cyan hover:bg-brand-cyan dark:hover:bg-white transition-all rounded-none flex items-center gap-1.5">
 <i data-lucide="message-square" class="w-3 h-3"></i> Contacto
 </a>
 <!-- Mobile Hamburger Toggle -->
@@ -511,7 +521,7 @@ html:not(.dark) .project-label {
 <a href="#pipeline" onclick="showView('view-pipeline'); toggleMobileMenu(); return false;" class="text-slate-700 dark:text-brand-textMuted hover:text-brand-cyan dark:hover:text-white py-1.5 border-b border-slate-200 dark:border-brand-border/40">Mi Infraestructura</a>
 <a href="#projects" onclick="showView('view-projects'); toggleMobileMenu(); return false;" class="text-slate-700 dark:text-brand-textMuted hover:text-brand-cyan dark:hover:text-white py-1.5 border-b border-slate-200 dark:border-brand-border/40">Proyectos</a>
 <a href="#showcase" onclick="showView('view-showcase'); toggleMobileMenu(); return false;" class="text-slate-700 dark:text-brand-textMuted hover:text-brand-cyan dark:hover:text-white py-1.5 border-b border-slate-200 dark:border-brand-border/40">Dashboard</a>
-<a href="#contact" onclick="showView('view-contact'); toggleMobileMenu(); return false;" class="w-full py-2 bg-brand-cyan text-brand-dark font-bold text-center rounded-lg flex items-center justify-center gap-2 text-[11px] uppercase tracking-wider mt-1">
+<a href="#contact" onclick="showView('view-contact'); toggleMobileMenu(); return false;" class="w-full py-2 bg-brand-cyan text-brand-dark font-bold text-center rounded-none flex items-center justify-center gap-2 text-[11px] uppercase tracking-wider mt-1">
 <i data-lucide="mail" class="w-3.5 h-3.5"></i> Contactame Directo
 </a>
 </div>
@@ -606,7 +616,7 @@ Desarrolladora de Business Intelligence con base en Río Cuarto, Córdoba. Me es
 <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
 <div>
 <h2 class="text-[10px] font-mono uppercase tracking-widest text-brand-cyan mb-1">INFRAESTRUCTURA DE DESARROLLO</h2>
-<h3 class="text-2xl md:text-3xl font-extrabold text-brand-cyan tracking-tight">El Pipeline de Datos Automatizado</h3>
+<h3 class="text-2xl md:text-3xl font-normal text-slate-900 dark:text-white tracking-tight">El Pipeline de Datos Automatizado</h3>
 </div>
 <p class="text-slate-600 dark:text-brand-textMuted max-w-md text-xs md:text-sm">
 No trabajo con archivos locales sueltos. He diseñado e implementado una arquitectura moderna de CI/CD para centralizar, auditar y desplegar cada reporte de forma profesional.
@@ -723,7 +733,7 @@ No trabajo con archivos locales sueltos. He diseñado e implementado una arquite
 <section id="reto-datos" class="pt-28 pb-12 px-6 md:px-12 bg-slate-100 dark:bg-brand-dark/20 border-t border-slate-200 dark:border-brand-border/40 transition-colors">
 <div class="max-w-5xl mx-auto text-center">
 <h2 class="text-[10px] font-mono uppercase tracking-widest text-brand-cyan mb-1.5">EL VERDADERO RETO DE LOS DATOS</h2>
-<h3 class="text-2xl md:text-3xl font-extrabold text-brand-cyan mb-4">¿Por qué las empresas pierden dinero hoy?</h3>
+<h3 class="text-2xl md:text-3xl font-normal text-slate-900 dark:text-white mb-4">¿Por qué las empresas pierden dinero hoy?</h3>
 <p class="text-slate-600 dark:text-brand-textMuted max-w-2xl mx-auto text-xs md:text-sm mb-10 leading-relaxed">
 Muchas compañías operan a ciegas. Tienen datos, pero están dispersos, son manuales o se actualizan tarde. En mi portafolio, decidí resolver desafíos reales inspirados en problemas corporativos de alta demanda:
 </p>
@@ -776,15 +786,15 @@ Pérdida silenciosa de depositantes detectada cuando ya retiraron sus fondos.
 <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
 <div class="text-left">
 <h2 class="text-[10px] font-mono uppercase tracking-widest text-brand-cyan mb-1">PORTAFOLIO DE PROYECTOS</h2>
-<h3 class="text-2xl md:text-3xl font-extrabold text-brand-cyan tracking-tight">Modelos Analíticos que Resuelven Desafíos de Negocio</h3>
+<h3 class="text-2xl md:text-3xl font-normal text-slate-900 dark:text-white tracking-tight">Modelos Analíticos que Resuelven Desafíos de Negocio</h3>
 </div>
 <!-- Category Filters -->
 <div class="flex flex-wrap gap-1.5 text-[10px] font-mono">
-<button onclick="filterProjects('all')" id="btn-all" class="filter-btn px-3 py-1.5 rounded bg-brand-cyan text-brand-dark font-semibold transition-all shadow-sm">Todos</button>
-<button onclick="filterProjects('retail')" id="btn-retail" class="filter-btn px-3 py-1.5 rounded border border-slate-200 dark:border-brand-border hover:border-brand-cyan/40 text-slate-600 dark:text-brand-textMuted hover:text-slate-900 dark:hover:text-white transition-all">Ventas, Stock & Rentabilidad</button>
-<button onclick="filterProjects('marketing')" id="btn-marketing" class="filter-btn px-3 py-1.5 rounded border border-slate-200 dark:border-brand-border hover:border-brand-cyan/40 text-slate-600 dark:text-brand-textMuted hover:text-slate-900 dark:hover:text-white transition-all font-mono">Clientes & RFM</button>
-<button onclick="filterProjects('banking')" id="btn-banking" class="filter-btn px-3 py-1.5 rounded border border-slate-200 dark:border-brand-border hover:border-brand-cyan/40 text-slate-600 dark:text-brand-textMuted hover:text-slate-900 dark:hover:text-white transition-all font-mono font-mono">Finanzas & Churn</button>
-<button onclick="filterProjects('hr')" id="btn-hr" class="filter-btn px-3 py-1.5 rounded border border-slate-200 dark:border-brand-border hover:border-brand-cyan/40 text-slate-600 dark:text-brand-textMuted hover:text-slate-900 dark:hover:text-white transition-all font-mono font-mono">Gestión RRHH</button>
+<button onclick="filterProjects('all')" id="btn-all" class="filter-btn px-3 py-1.5 rounded-none bg-brand-cyan text-brand-dark font-semibold transition-all shadow-sm">Todos</button>
+<button onclick="filterProjects('retail')" id="btn-retail" class="filter-btn px-3 py-1.5 rounded-none border border-slate-200 dark:border-brand-border hover:border-brand-cyan/40 text-slate-600 dark:text-brand-textMuted hover:text-slate-900 dark:hover:text-white transition-all">Ventas, Stock & Rentabilidad</button>
+<button onclick="filterProjects('marketing')" id="btn-marketing" class="filter-btn px-3 py-1.5 rounded-none border border-slate-200 dark:border-brand-border hover:border-brand-cyan/40 text-slate-600 dark:text-brand-textMuted hover:text-slate-900 dark:hover:text-white transition-all font-mono">Clientes & RFM</button>
+<button onclick="filterProjects('banking')" id="btn-banking" class="filter-btn px-3 py-1.5 rounded-none border border-slate-200 dark:border-brand-border hover:border-brand-cyan/40 text-slate-600 dark:text-brand-textMuted hover:text-slate-900 dark:hover:text-white transition-all font-mono font-mono">Finanzas & Churn</button>
+<button onclick="filterProjects('hr')" id="btn-hr" class="filter-btn px-3 py-1.5 rounded-none border border-slate-200 dark:border-brand-border hover:border-brand-cyan/40 text-slate-600 dark:text-brand-textMuted hover:text-slate-900 dark:hover:text-white transition-all font-mono font-mono">Gestión RRHH</button>
 </div>
 </div>
 <!-- Grid of Projects -->
@@ -953,18 +963,18 @@ Análisis integral de funcionarios activos para optimizar costos de masa salaria
 <section class="pt-28 pb-12 px-6 md:px-12 bg-slate-50 dark:bg-brand-dark/20 border-t border-slate-200 dark:border-brand-border/40">
 <div class="max-w-5xl mx-auto text-center">
 <h2 class="text-[10px] font-mono uppercase tracking-widest text-brand-cyan mb-1">GALERÍA VISUAL DE TABLEROS</h2>
-<h3 class="text-2xl font-extrabold text-brand-cyan mb-4">Explora la Interfaz de Usuario</h3>
+<h3 class="text-2xl font-normal text-slate-900 dark:text-white mb-4">Explora la Interfaz de Usuario</h3>
 <p class="text-slate-600 dark:text-brand-textMuted max-w-xl mx-auto text-xs md:text-sm mb-8">
 Para garantizar la privacidad de los datos empresariales, he desarrollado simuladores visuales de alta calidad que reflejan el diseño UX de mis dashboards reales. Hacé clic sobre cualquier tablero para verlo en pantalla completa.
 </p>
 <div class="glass-panel p-4 rounded-3xl border border-slate-200 dark:border-brand-border max-w-4xl mx-auto relative overflow-hidden">
 <!-- Tab switching for mock dashboards -->
 <div class="flex justify-center border-b border-slate-200 dark:border-brand-border/60 pb-3 gap-1.5 text-[11px] font-mono overflow-x-auto">
-<button onclick="switchMock('stock-mock')" id="btn-mock-stock" class="mock-tab-btn px-3 py-1.5 rounded bg-brand-cyan/20 text-brand-cyan border border-brand-cyan/30 whitespace-nowrap">Stock Dashboard</button>
-<button onclick="switchMock('sales-mock')" id="btn-mock-sales" class="mock-tab-btn px-3 py-1.5 rounded text-slate-500 dark:text-brand-textMuted hover:text-slate-900 dark:hover:text-white border border-transparent whitespace-nowrap">Ventas & Rentabilidad</button>
-<button onclick="switchMock('rfm-mock')" id="btn-mock-rfm" class="mock-tab-btn px-3 py-1.5 rounded text-slate-500 dark:text-brand-textMuted hover:text-slate-900 dark:hover:text-white border border-transparent whitespace-nowrap font-mono">RFM Dashboard</button>
-<button onclick="switchMock('churn-mock')" id="btn-mock-churn" class="mock-tab-btn px-3 py-1.5 rounded text-slate-500 dark:text-brand-textMuted hover:text-slate-900 dark:hover:text-white border border-transparent whitespace-nowrap font-mono">Churn Dashboard</button>
-<button onclick="switchMock('hr-mock')" id="btn-mock-hr" class="mock-tab-btn px-3 py-1.5 rounded text-slate-500 dark:text-brand-textMuted hover:text-slate-900 dark:hover:text-white border border-transparent whitespace-nowrap font-mono">HR Dashboard</button>
+<button onclick="switchMock('stock-mock')" id="btn-mock-stock" class="mock-tab-btn px-3 py-1.5 rounded-none bg-brand-cyan/20 text-brand-cyan border border-brand-cyan/30 whitespace-nowrap">Stock Dashboard</button>
+<button onclick="switchMock('sales-mock')" id="btn-mock-sales" class="mock-tab-btn px-3 py-1.5 rounded-none text-slate-500 dark:text-brand-textMuted hover:text-slate-900 dark:hover:text-white border border-transparent whitespace-nowrap">Ventas & Rentabilidad</button>
+<button onclick="switchMock('rfm-mock')" id="btn-mock-rfm" class="mock-tab-btn px-3 py-1.5 rounded-none text-slate-500 dark:text-brand-textMuted hover:text-slate-900 dark:hover:text-white border border-transparent whitespace-nowrap font-mono">RFM Dashboard</button>
+<button onclick="switchMock('churn-mock')" id="btn-mock-churn" class="mock-tab-btn px-3 py-1.5 rounded-none text-slate-500 dark:text-brand-textMuted hover:text-slate-900 dark:hover:text-white border border-transparent whitespace-nowrap font-mono">Churn Dashboard</button>
+<button onclick="switchMock('hr-mock')" id="btn-mock-hr" class="mock-tab-btn px-3 py-1.5 rounded-none text-slate-500 dark:text-brand-textMuted hover:text-slate-900 dark:hover:text-white border border-transparent whitespace-nowrap font-mono">HR Dashboard</button>
 </div>
 <!-- Showcase display area - updated heights for pure visual impact -->
 <div class="mt-4 min-h-[300px] md:min-h-[500px] lg:min-h-[550px] w-full rounded-xl bg-slate-100/50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 flex items-center justify-center overflow-hidden relative group mock-showcase-container">
@@ -1046,8 +1056,8 @@ Para garantizar la privacidad de los datos empresariales, he desarrollado simula
 <div class="max-w-xl mx-auto text-center relative z-10 flex flex-col gap-6">
 <div class="text-center">
 <h2 class="text-[10px] font-mono uppercase tracking-widest text-brand-cyan mb-1">HABLEMOS DE TU PROYECTO</h2>
-<h3 class="text-2xl md:text-3xl font-extrabold text-brand-cyan">¿Tenés datos que potenciar?</h3>
-<p class="text-slate-600 dark:text-brand-textMuted text-xs md:text-sm mt-2 leading-relaxed">
+<h3 class="text-2xl md:text-3xl font-normal text-slate-900 dark:text-white mb-4">¿Tenés datos que potenciar?</h3>
+<p class="text-slate-600 dark:text-white text-xs md:text-sm mt-2 leading-relaxed">
 Llevá tu negocio al siguiente nivel. Diseñemos juntos un ecosistema de Business Intelligence automatizado, reportes dinámicos en tiempo real y decisiones estratégicas pensadas para multiplicar tu rentabilidad.
 </p>
 </div>
@@ -1056,22 +1066,22 @@ Llevá tu negocio al siguiente nivel. Diseñemos juntos un ecosistema de Busines
 <div class="space-y-3">
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
 <div>
-<label class="block text-[10px] font-mono font-bold text-slate-700 dark:text-brand-textMuted mb-1 uppercase">Nombre</label>
+<label class="block text-[10px] font-mono font-bold text-slate-700 dark:text-white mb-1 uppercase">Nombre</label>
 <input type="text" id="contact-name" placeholder="Tu Nombre" class="w-full bg-slate-100 dark:bg-brand-dark text-slate-950 dark:text-white text-xs p-2.5 rounded-lg border border-slate-200 dark:border-brand-border focus:outline-none focus:border-brand-cyan font-sans">
 </div>
 <div>
-<label class="block text-[10px] font-mono font-bold text-slate-700 dark:text-brand-textMuted mb-1 uppercase font-mono">Negocio o Rubro</label>
+<label class="block text-[10px] font-mono font-bold text-slate-700 dark:text-white mb-1 uppercase font-mono">Negocio o Rubro</label>
 <input type="text" id="contact-business" placeholder="Tu Negocio (Opcional)" class="w-full bg-slate-100 dark:bg-brand-dark text-slate-950 dark:text-white text-xs p-2.5 rounded-lg border border-slate-200 dark:border-brand-border focus:outline-none focus:border-brand-cyan font-sans">
 </div>
 </div>
 <div>
-<label class="block text-[10px] font-mono font-bold text-slate-700 dark:text-brand-textMuted mb-1 uppercase">¿Cómo funciona tu negocio hoy o qué necesitás?</label>
+<label class="block text-[10px] font-mono font-bold text-slate-700 dark:text-white mb-1 uppercase">¿Cómo funciona tu negocio hoy o qué necesitás?</label>
 <textarea id="contact-message" rows="2.5" placeholder="Contame brevemente qué datos te gustaría automatizar o analizar..." class="w-full bg-slate-100 dark:bg-brand-dark text-slate-950 dark:text-white text-xs p-2.5 rounded-lg border border-slate-200 dark:border-brand-border focus:outline-none focus:border-brand-cyan font-sans"></textarea>
 </div>
 </div>
 <!-- Action choices -->
 <div class="pt-1">
-<button onclick="sendWhatsAppMessage()" class="w-full py-3 bg-brand-green text-slate-900 font-bold text-center rounded-lg transition-all shadow-md flex items-center justify-center gap-2 uppercase tracking-wider text-xs hover:bg-white hover:text-brand-green border border-transparent hover:border-brand-green">
+<button onclick="sendWhatsAppMessage()" class="w-full py-3 bg-brand-green text-slate-900 font-bold text-center rounded-none transition-all shadow-md flex items-center justify-center gap-2 uppercase tracking-wider text-xs hover:bg-white hover:text-brand-green border border-transparent hover:border-brand-green">
 <i data-lucide="message-square" class="w-4 h-4"></i> Enviar por WhatsApp
 </button>
 </div>
@@ -1082,10 +1092,10 @@ Llevá tu negocio al siguiente nivel. Diseñemos juntos un ecosistema de Busines
 </div>
 <div class="flex-grow flex justify-between items-center">
 <div>
-<span class="text-[9px] text-slate-500 dark:text-brand-textMuted block font-mono">CORREO DIRECTO</span>
+<span class="text-[9px] text-slate-500 dark:text-slate-200 block font-mono">CORREO DIRECTO</span>
 <span class="text-xs font-semibold text-slate-950 dark:text-white select-all">borgesnancya@gmail.com</span>
 </div>
-<button onclick="copyEmailToClipboard()" id="copy-email-btn" class="px-2.5 py-1 bg-slate-200 hover:bg-slate-300 dark:bg-brand-border dark:hover:bg-brand-border/80 border border-slate-300 dark:border-brand-border text-slate-700 dark:text-white rounded text-[10px] font-mono font-bold transition-all uppercase flex items-center gap-1.5" title="Copiar correo al portapapeles">
+<button onclick="copyEmailToClipboard()" id="copy-email-btn" class="px-2.5 py-1 bg-slate-200 hover:bg-slate-300 dark:bg-brand-border dark:hover:bg-brand-border/80 border border-slate-300 dark:border-brand-border text-slate-700 dark:text-white rounded-none text-[10px] font-mono font-bold transition-all uppercase flex items-center gap-1.5" title="Copiar correo al portapapeles">
 <i data-lucide="copy" class="w-3 h-3"></i> Copiar
 </button>
 </div>
@@ -1097,7 +1107,7 @@ Llevá tu negocio al siguiente nivel. Diseñemos juntos un ecosistema de Busines
 </svg>
 </div>
 <div>
-<span class="text-[9px] text-slate-500 dark:text-brand-textMuted block font-mono">LINKEDIN PROFESIONAL</span>
+<span class="text-[9px] text-slate-500 dark:text-slate-200 block font-mono">LINKEDIN PROFESIONAL</span>
 <a href="https://www.linkedin.com/in/nancy-borgesa/" target="_blank" class="text-xs font-semibold text-slate-950 dark:text-white hover:text-brand-purple transition-colors">linkedin.com/in/nancy-borgesa/</a>
 </div>
 </div>
@@ -1106,7 +1116,7 @@ Llevá tu negocio al siguiente nivel. Diseñemos juntos un ecosistema de Busines
 <i data-lucide="map-pin" class="w-4 h-4"></i>
 </div>
 <div>
-<span class="text-[9px] text-slate-500 dark:text-brand-textMuted block font-mono">UBICACIÓN</span>
+<span class="text-[9px] text-slate-500 dark:text-slate-200 block font-mono">UBICACIÓN</span>
 <span class="text-xs font-semibold text-slate-950 dark:text-white">Río Cuarto, Córdoba, Argentina</span>
 </div>
 </div>
@@ -1641,17 +1651,17 @@ p.textContent = text;
 if (type === 'email') {
 iconBox.className = "w-12 h-12 bg-brand-cyan/10 border border-brand-cyan/20 rounded-full flex items-center justify-center mx-auto mb-4 animate-bounce";
 iconBox.innerHTML = '<i data-lucide="copy" class="w-6 h-6 text-brand-cyan"></i>';
-btn.className = "w-full py-2.5 bg-brand-cyan hover:bg-white text-slate-900 hover:text-brand-dark rounded-lg font-bold text-xs uppercase tracking-wider transition-all shadow-md";
+btn.className = "w-full py-2.5 bg-brand-cyan hover:bg-white text-slate-900 hover:text-brand-dark rounded-none font-bold text-xs uppercase tracking-wider transition-all shadow-md";
 btn.textContent = "Entendido";
 } else if (type === 'warning') {
 iconBox.className = "w-12 h-12 bg-amber-500/10 border border-amber-500/20 rounded-full flex items-center justify-center mx-auto mb-4 animate-bounce";
 iconBox.innerHTML = '<i data-lucide="alert-triangle" class="w-6 h-6 text-amber-500"></i>';
-btn.className = "w-full py-2.5 bg-amber-500 hover:bg-white text-slate-900 hover:text-brand-dark rounded-lg font-bold text-xs uppercase tracking-wider transition-all shadow-md";
+btn.className = "w-full py-2.5 bg-amber-500 hover:bg-white text-slate-900 hover:text-brand-dark rounded-none font-bold text-xs uppercase tracking-wider transition-all shadow-md";
 btn.textContent = "Entendido";
 } else {
 iconBox.className = "w-12 h-12 bg-brand-green/10 border border-brand-green/20 rounded-full flex items-center justify-center mx-auto mb-4 animate-bounce";
 iconBox.innerHTML = '<i data-lucide="check" class="w-6 h-6 text-brand-green"></i>';
-btn.className = "w-full py-2.5 bg-brand-green hover:bg-white text-slate-900 hover:text-brand-dark rounded-lg font-bold text-xs uppercase tracking-wider transition-all shadow-md";
+btn.className = "w-full py-2.5 bg-brand-green hover:bg-white text-slate-900 hover:text-brand-dark rounded-none font-bold text-xs uppercase tracking-wider transition-all shadow-md";
 btn.textContent = "Entendido";
 }
 modal.classList.remove('hidden');
