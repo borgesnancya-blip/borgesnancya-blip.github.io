@@ -482,6 +482,40 @@ html:not(.dark) .project-label {
     font-weight: 500 !important;
 }
 
+
+/* Master Input Placeholder color in dark mode */
+.dark ::placeholder {
+    color: rgba(255, 255, 255, 0.6) !important;
+    opacity: 1 !important;
+}
+
+/* Master Project Label color in Light Mode - High-contrast day-mode ocean blue */
+html:not(.dark) .project-label {
+    color: #0284c7 !important;
+    font-weight: 600 !important;
+}
+
+/* Premium Hover Glow for Showcase Mockup Image wrappers */
+.mock-view > div {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+.dark .mock-view > div:hover {
+    border-color: rgba(0, 242, 254, 0.5) !important;
+    box-shadow: 0 15px 35px -10px rgba(0, 242, 254, 0.3) !important;
+    transform: translateY(-2px);
+}
+html:not(.dark) .mock-view > div:hover {
+    border-color: #0284c7 !important;
+    box-shadow: 0 15px 35px -10px rgba(2, 132, 199, 0.2) !important;
+    transform: translateY(-2px);
+}
+
+/* Day Mode Titles - same soft corporate charcoal gray, no bold */
+html:not(.dark) h3 {
+    color: #334155 !important;
+    font-weight: 400 !important;
+}
+
 </style>
 </head>
 <body class="selection:bg-brand-cyan selection:text-brand-dark font-sans">
@@ -964,9 +998,7 @@ Análisis integral de funcionarios activos para optimizar costos de masa salaria
 <div class="max-w-5xl mx-auto text-center">
 <h2 class="text-[10px] font-mono uppercase tracking-widest text-brand-cyan mb-1">GALERÍA VISUAL DE TABLEROS</h2>
 <h3 class="text-2xl font-normal text-slate-900 dark:text-white mb-4">Explora la Interfaz de Usuario</h3>
-<p class="text-slate-600 dark:text-brand-textMuted max-w-xl mx-auto text-xs md:text-sm mb-8">
-Para garantizar la privacidad de los datos empresariales, he desarrollado simuladores visuales de alta calidad que reflejan el diseño UX de mis dashboards reales. Hacé clic sobre cualquier tablero para verlo en pantalla completa.
-</p>
+
 <div class="glass-panel p-4 rounded-3xl border border-slate-200 dark:border-brand-border max-w-4xl mx-auto relative overflow-hidden">
 <!-- Tab switching for mock dashboards -->
 <div class="flex justify-center border-b border-slate-200 dark:border-brand-border/60 pb-3 gap-1.5 text-[11px] font-mono overflow-x-auto">
@@ -981,7 +1013,7 @@ Para garantizar la privacidad de los datos empresariales, he desarrollado simula
 
 <!-- Stock Mock -->
 <div id="stock-mock" class="mock-view w-full h-full p-2 flex items-center justify-center">
-<div onclick="openImageModal('stock-mock')" class="w-full flex items-center justify-center bg-slate-100/30 dark:bg-slate-900/10 rounded-xl p-2 relative group overflow-hidden cursor-pointer" title="Hacé clic para ver la captura real en pantalla completa">
+<div onclick="openImageModal('stock-mock')" class="w-full flex items-center justify-center bg-slate-100/30 dark:bg-slate-900/10 rounded-xl p-2 relative group overflow-hidden cursor-pointer" >
 <img src="images/stock-dashboard.png" class="max-w-full max-h-[460px] md:max-h-[520px] object-contain rounded-lg shadow-2xl transition-transform duration-500 group-hover:scale-[1.015]" alt="Stock Dashboard">
 <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center gap-2.5">
 <div class="w-12 h-12 rounded-full bg-brand-cyan/20 border border-brand-cyan/40 text-brand-cyan flex items-center justify-center shadow-lg transition-all duration-300 scale-90 group-hover:scale-100 hover:scale-110">
@@ -994,7 +1026,7 @@ Para garantizar la privacidad de los datos empresariales, he desarrollado simula
 
 <!-- Sales & Rentabilidad Mock -->
 <div id="sales-mock" class="mock-view w-full h-full p-2 hidden flex items-center justify-center">
-<div onclick="openImageModal('sales-mock')" class="w-full flex items-center justify-center bg-slate-100/30 dark:bg-slate-900/10 rounded-xl p-2 relative group overflow-hidden cursor-pointer" title="Hacé clic para ver la captura real en pantalla completa">
+<div onclick="openImageModal('sales-mock')" class="w-full flex items-center justify-center bg-slate-100/30 dark:bg-slate-900/10 rounded-xl p-2 relative group overflow-hidden cursor-pointer" >
 <img src="images/sales-dashboard1.png" class="max-w-full max-h-[460px] md:max-h-[520px] object-contain rounded-lg shadow-2xl transition-transform duration-500 group-hover:scale-[1.015]" alt="Ventas & Rentabilidad Dashboard">
 <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center gap-2.5">
 <div class="w-12 h-12 rounded-full bg-brand-cyan/20 border border-brand-cyan/40 text-brand-cyan flex items-center justify-center shadow-lg transition-all duration-300 scale-90 group-hover:scale-100 hover:scale-110">
@@ -1007,7 +1039,7 @@ Para garantizar la privacidad de los datos empresariales, he desarrollado simula
 
 <!-- RFM Mock -->
 <div id="rfm-mock" class="mock-view w-full h-full p-2 hidden flex items-center justify-center">
-<div onclick="openImageModal('rfm-mock')" class="w-full flex items-center justify-center bg-slate-100/30 dark:bg-slate-900/10 rounded-xl p-2 relative group overflow-hidden cursor-pointer" title="Hacé clic para ver el análisis real en pantalla completa">
+<div onclick="openImageModal('rfm-mock')" class="w-full flex items-center justify-center bg-slate-100/30 dark:bg-slate-900/10 rounded-xl p-2 relative group overflow-hidden cursor-pointer" >
 <img src="images/rfm-dashboard1.png" class="max-w-full max-h-[460px] md:max-h-[520px] object-contain rounded-lg shadow-2xl transition-transform duration-500 group-hover:scale-[1.015]" alt="RFM Dashboard">
 <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center gap-2.5">
 <div class="w-12 h-12 rounded-full bg-brand-cyan/20 border border-brand-cyan/40 text-brand-cyan flex items-center justify-center shadow-lg transition-all duration-300 scale-90 group-hover:scale-100 hover:scale-110">
@@ -1020,7 +1052,7 @@ Para garantizar la privacidad de los datos empresariales, he desarrollado simula
 
 <!-- Churn Mock -->
 <div id="churn-mock" class="mock-view w-full h-full p-2 hidden flex items-center justify-center">
-<div onclick="openImageModal('churn-mock')" class="w-full flex items-center justify-center bg-slate-100/30 dark:bg-slate-900/10 rounded-xl p-2 relative group overflow-hidden cursor-pointer" title="Hacé clic para ver la captura real en pantalla completa">
+<div onclick="openImageModal('churn-mock')" class="w-full flex items-center justify-center bg-slate-100/30 dark:bg-slate-900/10 rounded-xl p-2 relative group overflow-hidden cursor-pointer" >
 <img src="images/churn-dashboard.png" class="max-w-full max-h-[460px] md:max-h-[520px] object-contain rounded-lg shadow-2xl transition-transform duration-500 group-hover:scale-[1.015]" alt="Churn Dashboard">
 <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center gap-2.5">
 <div class="w-12 h-12 rounded-full bg-brand-cyan/20 border border-brand-cyan/40 text-brand-cyan flex items-center justify-center shadow-lg transition-all duration-300 scale-90 group-hover:scale-100 hover:scale-110">
@@ -1033,7 +1065,7 @@ Para garantizar la privacidad de los datos empresariales, he desarrollado simula
 
 <!-- HR Mock -->
 <div id="hr-mock" class="mock-view w-full h-full p-2 hidden flex items-center justify-center">
-<div onclick="openImageModal('hr-mock')" class="w-full flex items-center justify-center bg-slate-100/30 dark:bg-slate-900/10 rounded-xl p-2 relative group overflow-hidden cursor-pointer" title="Hacé clic para ver la captura real en pantalla completa">
+<div onclick="openImageModal('hr-mock')" class="w-full flex items-center justify-center bg-slate-100/30 dark:bg-slate-900/10 rounded-xl p-2 relative group overflow-hidden cursor-pointer" >
 <img src="images/hr-dashboard.png" class="max-w-full max-h-[460px] md:max-h-[520px] object-contain rounded-lg shadow-2xl transition-transform duration-500 group-hover:scale-[1.015]" alt="HR Dashboard">
 <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center gap-2.5">
 <div class="w-12 h-12 rounded-full bg-brand-cyan/20 border border-brand-cyan/40 text-brand-cyan flex items-center justify-center shadow-lg transition-all duration-300 scale-90 group-hover:scale-100 hover:scale-110">
@@ -1051,7 +1083,7 @@ Para garantizar la privacidad de los datos empresariales, he desarrollado simula
 </div>
 <div id="view-contact" class="view-section hidden">
 <!-- CONTACT SECTION -->
-<section id="contact" class="pt-28 pb-12 px-6 md:px-12 bg-slate-100 dark:bg-brand-dark transition-colors relative overflow-hidden">
+<section id="contact" class="pt-28 pb-12 px-6 md:px-12 bg-slate-100 dark:bg-[#1e2533] transition-colors relative overflow-hidden">
 <div class="absolute -bottom-10 right-0 w-[300px] h-[300px] bg-brand-cyan/5 rounded-full blur-[80px] pointer-events-none"></div>
 <div class="max-w-xl mx-auto text-center relative z-10 flex flex-col gap-6">
 <div class="text-center">
@@ -1062,21 +1094,21 @@ Llevá tu negocio al siguiente nivel. Diseñemos juntos un ecosistema de Busines
 </p>
 </div>
 <!-- Form & contact links card -->
-<div class="glass-panel p-6 md:p-8 rounded-2xl border border-slate-200 dark:border-brand-border/80 flex flex-col gap-5 text-left">
+<div class="glass-panel p-6 md:p-8 rounded-none border border-slate-200 dark:border-slate-700 dark:bg-[#2a3244] flex flex-col gap-5 text-left">
 <div class="space-y-3">
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
 <div>
 <label class="block text-[10px] font-mono font-bold text-slate-700 dark:text-white mb-1 uppercase">Nombre</label>
-<input type="text" id="contact-name" placeholder="Tu Nombre" class="w-full bg-slate-100 dark:bg-brand-dark text-slate-950 dark:text-white text-xs p-2.5 rounded-lg border border-slate-200 dark:border-brand-border focus:outline-none focus:border-brand-cyan font-sans">
+<input type="text" id="contact-name" placeholder="Tu Nombre" class="w-full bg-slate-100 dark:bg-[#131722] text-slate-950 dark:text-white placeholder-slate-400 dark:placeholder-slate-300 text-xs p-2.5 rounded-none border border-slate-200 dark:border-slate-700 focus:outline-none focus:border-brand-cyan font-sans">
 </div>
 <div>
 <label class="block text-[10px] font-mono font-bold text-slate-700 dark:text-white mb-1 uppercase font-mono">Negocio o Rubro</label>
-<input type="text" id="contact-business" placeholder="Tu Negocio (Opcional)" class="w-full bg-slate-100 dark:bg-brand-dark text-slate-950 dark:text-white text-xs p-2.5 rounded-lg border border-slate-200 dark:border-brand-border focus:outline-none focus:border-brand-cyan font-sans">
+<input type="text" id="contact-business" placeholder="Tu Negocio (Opcional)" class="w-full bg-slate-100 dark:bg-[#131722] text-slate-950 dark:text-white placeholder-slate-400 dark:placeholder-slate-300 text-xs p-2.5 rounded-none border border-slate-200 dark:border-slate-700 focus:outline-none focus:border-brand-cyan font-sans">
 </div>
 </div>
 <div>
 <label class="block text-[10px] font-mono font-bold text-slate-700 dark:text-white mb-1 uppercase">¿Cómo funciona tu negocio hoy o qué necesitás?</label>
-<textarea id="contact-message" rows="2.5" placeholder="Contame brevemente qué datos te gustaría automatizar o analizar..." class="w-full bg-slate-100 dark:bg-brand-dark text-slate-950 dark:text-white text-xs p-2.5 rounded-lg border border-slate-200 dark:border-brand-border focus:outline-none focus:border-brand-cyan font-sans"></textarea>
+<textarea id="contact-message" rows="2.5" placeholder="Contame brevemente qué datos te gustaría automatizar o analizar..." class="w-full bg-slate-100 dark:bg-[#131722] text-slate-950 dark:text-white placeholder-slate-400 dark:placeholder-slate-300 text-xs p-2.5 rounded-none border border-slate-200 dark:border-slate-700 focus:outline-none focus:border-brand-cyan font-sans"></textarea>
 </div>
 </div>
 <!-- Action choices -->
@@ -1122,7 +1154,7 @@ Llevá tu negocio al siguiente nivel. Diseñemos juntos un ecosistema de Busines
 </div>
 </div>
 </div>
-<span class="text-[10px] text-slate-500 dark:text-brand-textMuted font-mono mt-4 block">© 2026 Nancy Borges. Todos los derechos reservados.</span>
+<span class="text-[10px] text-slate-500 dark:text-slate-200 font-mono mt-4 block">© 2026 Nancy Borges. Todos los derechos reservados.</span>
 </div>
 </section>
 </div>
