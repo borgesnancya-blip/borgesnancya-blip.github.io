@@ -20,8 +20,8 @@ theme: {
 extend: {
 colors: {
 brand: {
-dark: '#0a0c10',
-card: '#121620',
+dark: '#131722',
+card: '#1b2030',
 border: '#1f293d',
 cyan: '#00f2fe',
 purple: '#9b51e0',
@@ -51,7 +51,7 @@ overflow-x: hidden;
 overflow-y: auto;
 }
 .dark body {
-background-color: #0a0c10;
+background-color: #131722;
 color: #f8fafc;
 }
 body {
@@ -63,7 +63,7 @@ overflow: hidden !important;
 }
 /* Glassmorphism effects for Dark Mode */
 .dark .glass-panel {
-background: rgba(18, 22, 32, 0.7);
+background: rgba(26, 32, 48, 0.7);
 backdrop-filter: blur(12px);
 border: 1px solid rgba(255, 255, 255, 0.05);
 }
@@ -75,7 +75,7 @@ border: 1px solid rgba(0, 0, 0, 0.05);
 box-shadow: 0 4px 20px -5px rgba(0, 0, 0, 0.05);
 }
 .dark .glass-card {
-background: rgba(18, 22, 32, 0.55);
+background: rgba(26, 32, 48, 0.55);
 backdrop-filter: blur(8px);
 border: 1px solid rgba(255, 255, 255, 0.04);
 transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -117,10 +117,10 @@ width: 8px;
 height: 8px;
 }
 ::-webkit-scrollbar-track {
-background: #0a0c10;
+background: #131722;
 }
 .dark ::-webkit-scrollbar-track {
-background: #0a0c10;
+background: #131722;
 }
 ::-webkit-scrollbar-thumb {
 background: #cbd5e1;
@@ -437,18 +437,49 @@ html:not(.dark) .project-card:hover {
     border-color: rgba(2, 132, 199, 0.3) !important;
     box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.06) !important;
 }
+
+/* Console simulation text contrast improvement & highly readable colors by Gemini Notebook */
+.sim-console-container #sim-logs .text-brand-cyan {
+    color: #22d3ee !important; /* Vibrant bright cyan */
+    font-weight: 600;
+}
+.sim-console-container #sim-logs .text-brand-purple {
+    color: #d8b4fe !important; /* Soft, bright, highly-readable lavender/violet */
+    font-weight: 600;
+}
+.sim-console-container #sim-logs .text-brand-green {
+    color: #4ade80 !important; /* Vibrant bright green */
+    font-weight: 600;
+}
+
+/* Day Mode console logs - keep them deep and readable */
+html:not(.dark) .sim-console-container #sim-logs .text-brand-cyan {
+    color: #0284c7 !important;
+    font-weight: 600;
+}
+html:not(.dark) .sim-console-container #sim-logs .text-brand-purple {
+    color: #7c3aed !important; /* Darker legible violet for day mode */
+    font-weight: 600;
+}
+html:not(.dark) .sim-console-container #sim-logs .text-brand-green {
+    color: #16a34a !important;
+    font-weight: 600;
+}
+
+/* Day Mode project-label - change to elegant dark gray (#334155) and no bold */
+html:not(.dark) .project-label {
+    color: #334155 !important;
+    font-weight: 500 !important;
+}
+
 </style>
 </head>
 <body class="selection:bg-brand-cyan selection:text-brand-dark font-sans">
 <!-- NAVBAR -->
 <nav class="fixed top-0 left-0 w-full z-50 glass-panel py-3 px-6 md:px-12 flex justify-between items-center transition-all">
 <div class="flex items-center gap-3">
-<div class="w-9 h-9 rounded-lg bg-gradient-to-tr from-brand-cyan to-brand-purple flex items-center justify-center font-bold text-lg text-white">
-NB
-</div>
 <div>
-<span class="font-extrabold text-base tracking-wider text-slate-900 dark:text-white">NANCY BORGES</span>
-<span class="hidden md:inline-block text-[10px] text-brand-cyan ml-2 px-2 py-0.5 rounded-full border border-brand-cyan/20 bg-brand-cyan/10 font-mono">DATA ANALYST BI</span>
+<span class="font-normal text-base tracking-wider text-slate-900 dark:text-white">NANCY BORGES</span>
 </div>
 </div>
 <!-- Desktop menu -->
@@ -497,11 +528,8 @@ NB
 <span class="w-1.5 h-1.5 rounded-full bg-brand-cyan animate-pulse"></span>
 <span class="text-[10px] text-brand-cyan font-mono uppercase tracking-wider">Disponible para Proyectos / Propuestas 2026</span>
 </div>
-<h1 class="text-3xl md:text-5xl font-extrabold tracking-tight leading-tight text-slate-900 dark:text-white">
-Transformo datos en <br>
-<span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan via-brand-purple to-brand-green">
-Decisiones de Negocio
-</span>
+<h1 class="text-3xl md:text-5xl font-normal tracking-tight leading-tight text-slate-900 dark:text-white">
+Transformo datos en <br>Decisiones de Negocio
 </h1>
 <p class="text-sm md:text-base text-slate-600 dark:text-brand-textMuted max-w-xl leading-relaxed">
 Desarrolladora de Business Intelligence con base en Río Cuarto, Córdoba. Me especializo en diseñar soluciones analíticas end-to-end: desde la ingeniería de datos en <strong>SQL Server</strong> y la automatización de flujos de despliegue continuo (<strong>CI/CD con GitHub y Microsoft Fabric</strong>), hasta el modelado dimensional en estrella y la creación de tableros de control ejecutivos que impactan la rentabilidad del negocio.
@@ -525,11 +553,7 @@ Desarrolladora de Business Intelligence con base en Río Cuarto, Córdoba. Me es
 <div class="text-[10px] text-slate-500 dark:text-brand-textMuted font-mono">Infraestructura Nube</div>
 </div>
 </div>
-<div class="flex flex-wrap items-center gap-3 mt-4">
-<a href="#projects" onclick="showView('view-projects'); return false;" class="px-5 py-2.5 rounded-lg font-semibold text-white dark:text-brand-dark bg-slate-900 dark:bg-brand-cyan hover:bg-slate-800 dark:hover:bg-white transition-all text-xs glow-cyan flex items-center gap-1.5 shadow-lg">
-Ver Proyectos <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-</a>
-</div>
+
 </div>
 <!-- Profile card with quick specifications -->
 <div class="md:col-span-4 glass-card p-5 rounded-xl border border-slate-200 dark:border-brand-border/80 flex flex-col gap-3.5 relative overflow-hidden group">
@@ -776,11 +800,11 @@ Pérdida silenciosa de depositantes detectada cuando ya retiraron sus fondos.
 <!-- Antes vs Después -->
 <div class="space-y-3 my-1 border-t border-b border-slate-200 dark:border-brand-border/40 py-3 text-xs">
 <div class="text-slate-600 dark:text-brand-textMuted">
-<span class="text-red-400 font-bold font-mono text-[10px] block uppercase mb-0.5">El Desafío Comercial (Antes):</span>
+<span class="project-label text-brand-cyan font-medium font-mono text-[10px] block uppercase mb-0.5">El Desafío Comercial (Antes):</span>
 Control manual de inventarios, quiebres de stock recurrentes y total incertidumbre sobre el valor financiero inmovilizado.
 </div>
 <div>
-<span class="text-brand-green font-bold font-mono text-[10px] block uppercase mb-0.5">El Sistema Automatizado (Después):</span>
+<span class="project-label text-brand-cyan font-medium font-mono text-[10px] block uppercase mb-0.5">El Sistema Automatizado (Después):</span>
 <p class="text-[11px] text-slate-600 dark:text-brand-textMuted mb-2 leading-relaxed">
 Solución analítica orientada a mitigar la incertidumbre sobre el capital inmovilizado y evitar quiebres recurrentes de existencias.
 </p>
@@ -807,11 +831,11 @@ Solución analítica orientada a mitigar la incertidumbre sobre el capital inmov
 <h4 class="text-lg font-bold text-slate-900 dark:text-white">Visión General de Ventas & Rentabilidad</h4>
 <div class="space-y-3 my-1 border-t border-b border-slate-200 dark:border-brand-border/40 py-3 text-xs">
 <div class="text-slate-600 dark:text-brand-textMuted">
-<span class="text-red-400 font-bold font-mono text-[10px] block uppercase mb-0.5">El Desafío Comercial (Antes):</span>
+<span class="project-label text-brand-cyan font-medium font-mono text-[10px] block uppercase mb-0.5">El Desafío Comercial (Antes):</span>
 Dificultad para rastrear el lucro real, falta de visibilidad geográfica de la facturación y desconocimiento del rendimiento por tipo de cliente.
 </div>
 <div>
-<span class="text-brand-green font-bold font-mono text-[10px] block uppercase mb-0.5">El Sistema Automatizado (Después):</span>
+<span class="project-label text-brand-cyan font-medium font-mono text-[10px] block uppercase mb-0.5">El Sistema Automatizado (Después):</span>
 <p class="text-[11px] text-slate-600 dark:text-brand-textMuted mb-2 leading-relaxed">
 Monitoreo en tiempo real de facturación y rentabilidad neta distribuido por geografía y canales de venta.
 </p>
@@ -838,11 +862,11 @@ Monitoreo en tiempo real de facturación y rentabilidad neta distribuido por geo
 <h4 class="text-lg font-bold text-slate-900 dark:text-white">Segmentación de Clientes por Valor (RFM)</h4>
 <div class="space-y-3 my-1 border-t border-b border-slate-200 dark:border-brand-border/40 py-3 text-xs">
 <div class="text-slate-600 dark:text-brand-textMuted">
-<span class="text-red-400 font-bold font-mono text-[10px] block uppercase mb-0.5">El Desafío Comercial (Antes):</span>
+<span class="project-label text-brand-cyan font-medium font-mono text-[10px] block uppercase mb-0.5">El Desafío Comercial (Antes):</span>
 Campañas de marketing masivas enviadas a ciegas, baja conversión, y fuga desapercibida de clientes de alto valor.
 </div>
 <div>
-<span class="text-brand-green font-bold font-mono text-[10px] block uppercase mb-0.5">El Sistema Automatizado (Después):</span>
+<span class="project-label text-brand-cyan font-medium font-mono text-[10px] block uppercase mb-0.5">El Sistema Automatizado (Después):</span>
 <p class="text-[11px] text-slate-600 dark:text-brand-textMuted mb-2 leading-relaxed">
 Agrupación estadística automática de clientes utilizando funciones analíticas en origen para potenciar ventas repetidas.
 </p>
@@ -869,11 +893,11 @@ Agrupación estadística automática de clientes utilizando funciones analítica
 <h4 class="text-lg font-bold text-slate-900 dark:text-white">Churn Analytics para Banca Digital</h4>
 <div class="space-y-3 my-1 border-t border-b border-slate-200 dark:border-brand-border/40 py-3 text-xs">
 <div class="text-slate-600 dark:text-brand-textMuted">
-<span class="text-red-400 font-bold font-mono text-[10px] block uppercase mb-0.5">El Desafío Comercial (Antes):</span>
+<span class="project-label text-brand-cyan font-medium font-mono text-[10px] block uppercase mb-0.5">El Desafío Comercial (Antes):</span>
 Pérdida silenciosa de depositantes detectada tarde, cuando los fondos ya se habían retirado de la plataforma bancaria.
 </div>
 <div>
-<span class="text-brand-green font-bold font-mono text-[10px] block uppercase mb-0.5">El Sistema Automatizado (Después):</span>
+<span class="project-label text-brand-cyan font-medium font-mono text-[10px] block uppercase mb-0.5">El Sistema Automatizado (Después):</span>
 <p class="text-[11px] text-slate-600 dark:text-brand-textMuted mb-2 leading-relaxed">
 Monitoreo y alerta temprana para prevenir la pérdida silenciosa de depositantes y priorizar carteras VIP antes del retiro de fondos.
 </p>
@@ -900,11 +924,11 @@ Monitoreo y alerta temprana para prevenir la pérdida silenciosa de depositantes
 <h4 class="text-lg font-bold text-slate-900 dark:text-white">HR Analytics & Gestión de Capital Humano</h4>
 <div class="space-y-3 my-1 border-t border-b border-slate-200 dark:border-brand-border/40 py-3 text-xs">
 <div class="text-slate-600 dark:text-brand-textMuted">
-<span class="text-red-400 font-bold font-mono text-[10px] block uppercase mb-0.5">El Desafío Comercial (Antes):</span>
+<span class="project-label text-brand-cyan font-medium font-mono text-[10px] block uppercase mb-0.5">El Desafío Comercial (Antes):</span>
 Alta rotación de personal inexplicable, clima laboral ciego y dinero invertido a ciegas en portales de selección.
 </div>
 <div>
-<span class="text-brand-green font-bold font-mono text-[10px] block uppercase mb-0.5">El Sistema Automatizado (Después):</span>
+<span class="project-label text-brand-cyan font-medium font-mono text-[10px] block uppercase mb-0.5">El Sistema Automatizado (Después):</span>
 <p class="text-[11px] text-slate-600 dark:text-brand-textMuted mb-2 leading-relaxed">
 Análisis integral de funcionarios activos para optimizar costos de masa salarial, medir el clima de trabajo y analizar canales de reclutamiento.
 </p>
