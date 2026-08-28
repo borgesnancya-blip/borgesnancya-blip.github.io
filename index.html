@@ -641,11 +641,11 @@ NB
 </div>
 </div>
 <!-- Desktop menu -->
-<div class="hidden md:flex items-center gap-3 text-xs md:text-sm font-semibold uppercase tracking-wider">
-<a href="#about" onclick="showView('view-about'); return false;" class="text-slate-600 dark:text-brand-textMuted hover:text-brand-cyan dark:hover:text-white transition-colors">Quién Soy</a>
-<a href="#pipeline" onclick="showView('view-pipeline'); return false;" class="text-slate-600 dark:text-brand-textMuted hover:text-brand-cyan dark:hover:text-white transition-colors">Mi Infraestructura</a>
-<a href="#projects" onclick="showView('view-projects'); return false;" class="text-slate-600 dark:text-brand-textMuted hover:text-brand-cyan dark:hover:text-white transition-colors">Proyectos</a>
-<a href="#showcase" onclick="showView('view-showcase'); return false;" class="text-slate-600 dark:text-brand-textMuted hover:text-brand-cyan dark:hover:text-white transition-colors">Dashboard</a>
+<div class="hidden md:flex items-center gap-1.5 text-[11px] md:text-xs font-mono uppercase tracking-wider">
+<a href="#about" onclick="showView('view-about'); return false;" class="px-3 py-1.5 rounded-full border border-transparent text-slate-600 dark:text-brand-textMuted hover:text-brand-cyan hover:border-brand-cyan/25 hover:bg-brand-cyan/5 transition-all duration-300">Quién Soy</a>
+<a href="#pipeline" onclick="showView('view-pipeline'); return false;" class="px-3 py-1.5 rounded-full border border-transparent text-slate-600 dark:text-brand-textMuted hover:text-brand-cyan hover:border-brand-cyan/25 hover:bg-brand-cyan/5 transition-all duration-300">Mi Infraestructura</a>
+<a href="#projects" onclick="showView('view-projects'); return false;" class="px-3 py-1.5 rounded-full border border-transparent text-slate-600 dark:text-brand-textMuted hover:text-brand-cyan hover:border-brand-cyan/25 hover:bg-brand-cyan/5 transition-all duration-300">Proyectos</a>
+<a href="#showcase" onclick="showView('view-showcase'); return false;" class="px-3 py-1.5 rounded-full border border-transparent text-slate-600 dark:text-brand-textMuted hover:text-brand-cyan hover:border-brand-cyan/25 hover:bg-brand-cyan/5 transition-all duration-300">Dashboard</a>
 </div>
 <div class="flex items-center gap-3">
 <!-- Dark/Light Mode Switcher -->
@@ -678,7 +678,7 @@ NB
 
 <div id="view-about" class="view-section">
 <!-- HERO SECTION -->
-<section id="about" class="min-h-screen pt-28 pb-10 px-4 md:px-8 flex flex-col justify-center relative overflow-hidden">
+<section id="about" class="pt-16 pb-8 px-4 md:px-8 flex flex-col justify-start relative overflow-hidden">
 <!-- Glowing decorative blur -->
 <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-brand-cyan/10 rounded-full blur-[100px] pointer-events-none"></div>
 <div class="absolute bottom-10 left-10 w-[300px] h-[300px] bg-brand-purple/10 rounded-full blur-[80px] pointer-events-none"></div>
@@ -689,7 +689,7 @@ NB
 <span class="w-1.5 h-1.5 rounded-full bg-brand-cyan animate-pulse"></span>
 <span class="text-[10px] text-brand-cyan font-mono uppercase tracking-wider">Disponible para Proyectos / Propuestas 2026</span>
 </div>
-<h1 class="text-xl md:text-2xl lg:text-3xl font-extrabold tracking-tight leading-none text-slate-900 dark:text-white mb-2">
+<h1 class="text-2xl md:text-3.5xl lg:text-4xl font-extrabold tracking-tight leading-tight text-slate-900 dark:text-white mb-2">
 Transformo datos en <br>Decisiones de Negocio
 </h1>
 <p class="text-xs md:text-sm md:text-base text-slate-600 dark:text-brand-textMuted max-w-xl leading-relaxed">
@@ -697,22 +697,22 @@ Desarrolladora de Business Intelligence con base en Río Cuarto, Córdoba. Me es
 </p>
 
 <!-- Key Metrics row -->
-<div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-2 border-t border-slate-200 dark:border-brand-border/60 pt-4">
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-3 border-t border-slate-200 dark:border-brand-border/60 pt-3">
 <div>
-<div class="text-base md:text-xs md:text-sm font-extrabold text-slate-900 dark:text-white">5+</div>
-<div class="text-[10px] text-slate-500 dark:text-brand-textMuted font-mono">Proyectos de BI</div>
+<div class="text-lg md:text-xl font-extrabold text-brand-cyan dark:text-brand-cyan">5+</div>
+<div class="text-[11px] md:text-xs text-slate-700 dark:text-slate-300 font-mono">Proyectos de BI</div>
 </div>
 <div>
-<div class="text-base md:text-xs md:text-sm font-extrabold text-slate-900 dark:text-white">100%</div>
-<div class="text-[10px] text-slate-500 dark:text-brand-textMuted font-mono">Sincronizado CI/CD</div>
+<div class="text-lg md:text-xl font-extrabold text-brand-cyan dark:text-brand-cyan">100%</div>
+<div class="text-[11px] md:text-xs text-slate-700 dark:text-slate-300 font-mono">Sincronizado CI/CD</div>
 </div>
 <div>
-<div class="text-base md:text-xs md:text-sm font-extrabold text-slate-900 dark:text-white">SQL/DAX</div>
-<div class="text-[10px] text-slate-500 dark:text-brand-textMuted font-mono">Modelado Sólido</div>
+<div class="text-lg md:text-xl font-extrabold text-brand-cyan dark:text-brand-cyan">SQL/DAX</div>
+<div class="text-[11px] md:text-xs text-slate-700 dark:text-slate-300 font-mono">Modelado Sólido</div>
 </div>
 <div>
-<div class="text-base md:text-xs md:text-sm font-extrabold text-slate-900 dark:text-white">Fabric</div>
-<div class="text-[10px] text-slate-500 dark:text-brand-textMuted font-mono">Infraestructura Nube</div>
+<div class="text-lg md:text-xl font-extrabold text-brand-cyan dark:text-brand-cyan">Fabric</div>
+<div class="text-[11px] md:text-xs text-slate-700 dark:text-slate-300 font-mono">Infraestructura Nube</div>
 </div>
 </div>
 
@@ -905,7 +905,7 @@ No trabajo con archivos locales sueltos. He diseñado e implementado una arquite
     <div class="flex flex-col md:flex-row md:items-end justify-between mb-2 gap-2">
       <div class="text-left">
         <h2 class="text-xs md:text-sm font-mono uppercase tracking-widest text-brand-cyan mb-2">PORTAFOLIO DE PROYECTOS</h2>
-        <h3 class="text-base md:text-lg lg:text-xl font-bold text-slate-900 dark:text-white tracking-tight mb-2">Modelos Analíticos que Resuelven Desafíos de Negocio</h3>
+        <h3 class="text-2xl md:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">Modelos Analíticos que Resuelven Desafíos de Negocio</h3>
       </div>
       <!-- Category Filters -->
       <div class="flex flex-wrap gap-2 text-xs md:text-sm font-mono">
@@ -918,16 +918,16 @@ No trabajo con archivos locales sueltos. He diseñado e implementado una arquite
     </div>
 
     <!-- Grid of Projects -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-3" id="projects-grid">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8" id="projects-grid">
       
       <!-- Card 1: Stock -->
-      <div class="project-card glass-card p-6 rounded-2xl flex flex-col justify-between h-full relative overflow-hidden text-left" data-category="retail">
-        <div class="flex flex-col gap-2">
+      <div class="project-card glass-card p-8 rounded-3xl flex flex-col justify-between h-full relative overflow-hidden text-left" data-category="retail">
+        <div class="flex flex-col gap-4">
           <div class="flex items-center justify-between">
             <span class="text-xs md:text-sm font-mono text-slate-600 dark:text-slate-300 bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/60 uppercase px-2 py-0.5 rounded">Ventas & Inventario</span>
             <i data-lucide="box" class="w-5 h-5 text-brand-cyan"></i>
           </div>
-          <h4 class="text-base font-bold text-slate-900 dark:text-white">Sustentación de Control de Stock y Ventas</h4>
+          <h4 class="text-lg md:text-xl font-bold text-slate-900 dark:text-white">Sustentación de Control de Stock y Ventas</h4>
           <p class="text-xs md:text-sm text-slate-500 dark:text-brand-textMuted mt-1 leading-relaxed">
             La Pesadilla de los Inventarios Ciegos: Una metodología analítica robusta para optimizar el capital de trabajo y mitigar pérdidas operativas de forma proactiva.
           </p>
@@ -952,13 +952,13 @@ No trabajo con archivos locales sueltos. He diseñado e implementado una arquite
       </div>
 
       <!-- Card 2: Ventas -->
-      <div class="project-card glass-card p-6 rounded-2xl flex flex-col justify-between h-full relative overflow-hidden text-left" data-category="retail">
-        <div class="flex flex-col gap-2">
+      <div class="project-card glass-card p-8 rounded-3xl flex flex-col justify-between h-full relative overflow-hidden text-left" data-category="retail">
+        <div class="flex flex-col gap-4">
           <div class="flex items-center justify-between">
             <span class="text-xs md:text-sm font-mono text-slate-600 dark:text-slate-300 bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/60 uppercase px-2 py-0.5 rounded">Ventas & Rentabilidad</span>
             <i data-lucide="bar-chart-3" class="w-5 h-5 text-brand-cyan"></i>
           </div>
-          <h4 class="text-base font-bold text-slate-900 dark:text-white">Visión General de Ventas & Rentabilidad</h4>
+          <h4 class="text-lg md:text-xl font-bold text-slate-900 dark:text-white">Visión General de Ventas & Rentabilidad</h4>
           <p class="text-xs md:text-sm text-slate-500 dark:text-brand-textMuted mt-1 leading-relaxed">
             El Mapa de la Rentabilidad: Monitoreo en tiempo real de ingresos y rentabilidad líquida distribuida por geografía y canales de venta.
           </p>
@@ -983,13 +983,13 @@ No trabajo con archivos locales sueltos. He diseñado e implementado una arquite
       </div>
 
       <!-- Card 3: RFM -->
-      <div class="project-card glass-card p-6 rounded-2xl flex flex-col justify-between h-full relative overflow-hidden text-left" data-category="marketing">
-        <div class="flex flex-col gap-2">
+      <div class="project-card glass-card p-8 rounded-3xl flex flex-col justify-between h-full relative overflow-hidden text-left" data-category="marketing">
+        <div class="flex flex-col gap-4">
           <div class="flex items-center justify-between">
             <span class="text-xs md:text-sm font-mono text-slate-600 dark:text-slate-300 bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/60 uppercase px-2 py-0.5 rounded">Fidelización & SQL</span>
             <i data-lucide="box" class="w-5 h-5 text-brand-cyan"></i>
           </div>
-          <h4 class="text-base font-bold text-slate-900 dark:text-white">Segmentación de Clientes por Valor (RFM)</h4>
+          <h4 class="text-lg md:text-xl font-bold text-slate-900 dark:text-white">Segmentación de Clientes por Valor (RFM)</h4>
           <p class="text-xs md:text-sm text-slate-500 dark:text-brand-textMuted mt-1 leading-relaxed">
             Dejar de Disparar a Ciegas: Agrupación estadística automática de clientes para potenciar ventas de forma proactiva.
           </p>
@@ -1017,13 +1017,13 @@ No trabajo con archivos locales sueltos. He diseñado e implementado una arquite
       </div>
 
       <!-- Card 4: Churn -->
-      <div class="project-card glass-card p-6 rounded-2xl flex flex-col justify-between h-full relative overflow-hidden text-left" data-category="banking">
-        <div class="flex flex-col gap-2">
+      <div class="project-card glass-card p-8 rounded-3xl flex flex-col justify-between h-full relative overflow-hidden text-left" data-category="banking">
+        <div class="flex flex-col gap-4">
           <div class="flex items-center justify-between">
             <span class="text-xs md:text-sm font-mono text-slate-600 dark:text-slate-300 bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/60 uppercase px-2 py-0.5 rounded">Retención de Clientes</span>
             <i data-lucide="trending-down" class="w-5 h-5 text-brand-cyan"></i>
           </div>
-          <h4 class="text-base font-bold text-slate-900 dark:text-white">Churn Analytics - Banca Digital</h4>
+          <h4 class="text-lg md:text-xl font-bold text-slate-900 dark:text-white">Churn Analytics - Banca Digital</h4>
           <p class="text-xs md:text-sm text-slate-500 dark:text-brand-textMuted mt-1 leading-relaxed">
             Anticiparse al Adiós: Monitoreo y alerta temprana para prevenir la pérdida silenciosa de depositantes financieros.
           </p>
@@ -1048,13 +1048,13 @@ No trabajo con archivos locales sueltos. He diseñado e implementado una arquite
       </div>
 
       <!-- Card 5: HR -->
-      <div class="project-card glass-card p-6 rounded-2xl flex flex-col justify-between h-full relative overflow-hidden text-left" data-category="hr">
-        <div class="flex flex-col gap-2">
+      <div class="project-card glass-card p-8 rounded-3xl flex flex-col justify-between h-full relative overflow-hidden text-left" data-category="hr">
+        <div class="flex flex-col gap-4">
           <div class="flex items-center justify-between">
             <span class="text-xs md:text-sm font-mono text-slate-600 dark:text-slate-300 bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/60 uppercase px-2 py-0.5 rounded">Gestión de Talento</span>
             <i data-lucide="box" class="w-5 h-5 text-brand-cyan"></i>
           </div>
-          <h4 class="text-base font-bold text-slate-900 dark:text-white">HR Analytics & Gestión de Capital Humano</h4>
+          <h4 class="text-lg md:text-xl font-bold text-slate-900 dark:text-white">HR Analytics & Gestión de Capital Humano</h4>
           <p class="text-xs md:text-sm text-slate-500 dark:text-brand-textMuted mt-1 leading-relaxed">
             El Factor Humano: Análisis integral de personal activo para mitigar la rotación y optimizar costos de reclutamiento.
           </p>
@@ -1576,7 +1576,7 @@ function getAlternativePaths(path) {
   return [
     path,                              // Opción 1: images/sales-dashboard1.png (Carpeta prolija)
     filename,                          // Opción 2: sales-dashboard1.png (Suelto en la raíz)
-    `images${cleanFilename}`,          // Opción 3: imagessales-dashboard1.png (Root prefijo inglés)
+    `images${cleanFilename}`,          // Opción 3: images/sales-dashboard1.png (Root prefijo inglés)
     `imágenes${cleanFilename}`,         // Opción 4: imágenesgit-pipeline1.png (Root prefijo español con acento)
     `images/${filename}`,              // Opción 5: images/sales-dashboard1.png
     `imágenes/${filename}`             // Opción 6: imágenes/sales-dashboard1.png (Con carpeta con acento)
@@ -1966,16 +1966,16 @@ function showView(viewId, mockId = null) {
   // Update navbar links active styling
   const navLinks = document.querySelectorAll('nav a, #mobile-menu a');
   navLinks.forEach(link => {
-    link.classList.remove('text-brand-cyan', 'dark:text-brand-cyan', 'text-white', 'font-bold');
-    link.classList.add('text-slate-600', 'dark:text-brand-textMuted');
+    link.classList.remove('text-brand-cyan', 'dark:text-brand-cyan', 'font-bold', 'bg-brand-cyan/10', 'border-brand-cyan/30');
+    link.classList.add('text-slate-600', 'dark:text-brand-textMuted', 'border-transparent');
   });
 
   // Highlight selected navbar link
   let linkHref = '#' + viewId.replace('view-', '');
   const activeLinks = document.querySelectorAll(`nav a[href="${linkHref}"], #mobile-menu a[href="${linkHref}"]`);
   activeLinks.forEach(link => {
-    link.classList.add('text-brand-cyan', 'dark:text-brand-cyan', 'font-bold');
-    link.classList.remove('text-slate-600', 'dark:text-brand-textMuted');
+    link.classList.add('text-brand-cyan', 'dark:text-brand-cyan', 'font-bold', 'bg-brand-cyan/10', 'border-brand-cyan/30');
+    link.classList.remove('text-slate-600', 'dark:text-brand-textMuted', 'border-transparent');
   });
 
   if (mockId) {
