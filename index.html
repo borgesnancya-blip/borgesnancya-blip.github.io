@@ -855,7 +855,7 @@ Análisis integral de funcionarios activos para optimizar costos de masa salaria
 <h2 class="text-[10px] font-mono uppercase tracking-widest text-brand-cyan mb-1">GALERÍA VISUAL DE TABLEROS</h2>
 <h3 class="text-2xl font-extrabold text-slate-900 dark:text-white mb-4">Explora la Interfaz de Usuario</h3>
 <p class="text-slate-600 dark:text-brand-textMuted max-w-xl mx-auto text-xs md:text-sm mb-8">
-Para garantizar la privacidad de los datos empresariales, he desarrollado simuladores visuales de alta calidad y estructuras interactivas que reflejan el diseño UX de mis dashboards reales.
+Para garantizar la privacidad de los datos empresariales, he desarrollado simuladores visuales de alta calidad que reflejan el diseño UX de mis dashboards reales. Hacé clic sobre cualquier tablero para verlo en pantalla completa.
 </p>
 <div class="glass-panel p-4 rounded-3xl border border-slate-200 dark:border-brand-border max-w-4xl mx-auto relative overflow-hidden">
 <!-- Tab switching for mock dashboards -->
@@ -866,363 +866,74 @@ Para garantizar la privacidad de los datos empresariales, he desarrollado simula
 <button onclick="switchMock('churn-mock')" id="btn-mock-churn" class="mock-tab-btn px-3 py-1.5 rounded text-slate-500 dark:text-brand-textMuted hover:text-slate-900 dark:hover:text-white border border-transparent whitespace-nowrap font-mono">Churn Dashboard</button>
 <button onclick="switchMock('hr-mock')" id="btn-mock-hr" class="mock-tab-btn px-3 py-1.5 rounded text-slate-500 dark:text-brand-textMuted hover:text-slate-900 dark:hover:text-white border border-transparent whitespace-nowrap font-mono">HR Dashboard</button>
 </div>
-<!-- Showcase display area -->
-<div class="mt-4 min-h-[580px] md:min-h-[400px] lg:min-h-[440px] w-full rounded-xl bg-slate-100/50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 flex items-center justify-center overflow-hidden relative group mock-showcase-container">
+<!-- Showcase display area - updated heights for pure visual impact -->
+<div class="mt-4 min-h-[300px] md:min-h-[500px] lg:min-h-[550px] w-full rounded-xl bg-slate-100/50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 flex items-center justify-center overflow-hidden relative group mock-showcase-container">
+
 <!-- Stock Mock -->
-<div id="stock-mock" class="mock-view w-full h-full p-4 grid grid-cols-1 md:grid-cols-12 gap-4">
-<!-- Left: Dashboard Image (Clickable) -->
-<div onclick="openImageModal('stock-mock')" class="col-span-12 md:col-span-7 flex items-center justify-center bg-slate-100/80 dark:bg-slate-900/40 rounded-xl p-2 border border-slate-200 dark:border-slate-800/60 relative group overflow-hidden cursor-pointer" title="Hacé clic para ver la captura real en pantalla completa">
-<img src="images/stock-dashboard.png" class="max-w-full max-h-[220px] md:max-h-[320px] object-contain rounded-lg shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]" alt="Stock Dashboard">
+<div id="stock-mock" class="mock-view w-full h-full p-2 flex items-center justify-center">
+<div onclick="openImageModal('stock-mock')" class="w-full flex items-center justify-center bg-slate-100/30 dark:bg-slate-900/10 rounded-xl p-2 relative group overflow-hidden cursor-pointer" title="Hacé clic para ver la captura real en pantalla completa">
+<img src="images/stock-dashboard.png" class="max-w-full max-h-[460px] md:max-h-[520px] object-contain rounded-lg shadow-2xl transition-transform duration-500 group-hover:scale-[1.015]" alt="Stock Dashboard">
 <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center gap-2.5">
-<div class="w-10 h-10 rounded-full bg-brand-cyan/20 border border-brand-cyan/40 text-brand-cyan flex items-center justify-center shadow-lg transition-all duration-300 scale-90 group-hover:scale-100 hover:scale-110">
-<svg class="w-5 h-5 text-brand-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" xmlns="http://www.w3.org/2000/svg">
-<path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-<path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-</svg>
+<div class="w-12 h-12 rounded-full bg-brand-cyan/20 border border-brand-cyan/40 text-brand-cyan flex items-center justify-center shadow-lg transition-all duration-300 scale-90 group-hover:scale-100 hover:scale-110">
+<i data-lucide="maximize-2" class="w-6 h-6 text-brand-cyan"></i>
+</div>
+<span class="text-xs font-mono font-bold text-white uppercase tracking-wider bg-slate-950/80 px-3 py-1.5 rounded-lg border border-slate-800">Ver Pantalla Completa</span>
 </div>
 </div>
 </div>
-<!-- Right: Technical Insights & Action Items -->
-<div class="col-span-12 md:col-span-5 flex flex-col justify-between h-full text-left space-y-4">
-<div>
-<div class="flex items-center gap-2 mb-2">
-<i data-lucide="box" class="text-brand-cyan w-4 h-4"></i>
-<span class="text-xs font-mono font-bold text-brand-cyan uppercase tracking-wider">Control de Inventario</span>
-</div>
-<h4 class="text-base font-bold text-white leading-tight">Sustentación de Control de Stock y Ventas</h4>
-<p class="text-[11px] text-brand-textMuted mt-1 leading-relaxed">
-Solución analítica orientada a mitigar la incertidumbre sobre el capital inmovilizado y evitar quiebres recurrentes de existencias.
-</p>
-</div>
-<!-- KPIs -->
-<div class="grid grid-cols-3 gap-2">
-<div class="bg-brand-card/60 p-2 rounded-lg border border-brand-border">
-<span class="text-[8px] text-brand-textMuted block uppercase">Existencias</span>
-<span class="text-xs font-extrabold text-brand-green">24K u.</span>
-</div>
-<div class="bg-brand-card/60 p-2 rounded-lg border border-brand-border">
-<span class="text-[8px] text-brand-textMuted block uppercase">Ajustes</span>
-<span class="text-xs font-extrabold text-red-400">-284 u.</span>
-</div>
-<div class="bg-brand-card/60 p-2 rounded-lg border border-brand-border">
-<span class="text-[8px] text-brand-textMuted block uppercase">Estado</span>
-<span class="text-[10px] font-bold text-brand-cyan block">Óptimo</span>
-</div>
-</div>
-<!-- Strategic Actions from PDF -->
-<div class="space-y-2 text-[11px]">
-<div class="flex gap-2">
-<span class="text-brand-cyan font-bold">&gt;</span>
-<p class="text-slate-300 leading-tight">
-<strong class="text-white">Auditoría de Desviaciones:</strong> Mapeo preciso de ajustes de inventario para el control de mermas y errores operativos.
-</p>
-</div>
-<div class="flex gap-2">
-<span class="text-brand-cyan font-bold">&gt;</span>
-<p class="text-slate-300 leading-tight">
-<strong class="text-white">Proyección de Compras:</strong> Alertas automáticas de Stock Mínimo y de Seguridad para anticipar compras de forma inteligente.
-</p>
-</div>
-<div class="flex gap-2">
-<span class="text-brand-cyan font-bold">&gt;</span>
-<p class="text-slate-300 leading-tight">
-<strong class="text-white">Capital Inmovilizado:</strong> Valoración financiera del stock clasificado por categorías de margen de lucro neto.
-</p>
-</div>
-</div>
-<!-- Tech Badge -->
-<div class="flex items-center gap-1.5 border-t border-brand-border/60 pt-2 text-[9px] font-mono text-brand-textMuted">
-<span>TECNOLOGÍAS:</span>
-<span class="px-1.5 py-0.5 bg-brand-cyan/10 text-brand-cyan rounded border border-brand-cyan/20">Power BI</span>
-<span class="px-1.5 py-0.5 bg-brand-purple/10 text-brand-purple rounded border border-brand-purple/20">SQL Server</span>
-<span class="px-1.5 py-0.5 bg-brand-green/10 text-brand-green rounded border border-brand-green/20">DAX</span>
-</div>
-</div>
-</div>
+
 <!-- Sales & Rentabilidad Mock -->
-<div id="sales-mock" class="mock-view w-full h-full p-4 hidden grid grid-cols-1 md:grid-cols-12 gap-4">
-<!-- Left: Dashboard Image (Clickable) -->
-<div onclick="openImageModal('sales-mock')" class="col-span-12 md:col-span-7 flex items-center justify-center bg-slate-100/80 dark:bg-slate-900/40 rounded-xl p-2 border border-slate-200 dark:border-slate-800/60 relative group overflow-hidden cursor-pointer" title="Hacé clic para ver la captura real en pantalla completa">
-<img src="images/sales-dashboard1.png" class="max-w-full max-h-[220px] md:max-h-[320px] object-contain rounded-lg shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]" alt="Ventas & Rentabilidad Dashboard">
+<div id="sales-mock" class="mock-view w-full h-full p-2 hidden flex items-center justify-center">
+<div onclick="openImageModal('sales-mock')" class="w-full flex items-center justify-center bg-slate-100/30 dark:bg-slate-900/10 rounded-xl p-2 relative group overflow-hidden cursor-pointer" title="Hacé clic para ver la captura real en pantalla completa">
+<img src="images/sales-dashboard1.png" class="max-w-full max-h-[460px] md:max-h-[520px] object-contain rounded-lg shadow-2xl transition-transform duration-500 group-hover:scale-[1.015]" alt="Ventas & Rentabilidad Dashboard">
 <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center gap-2.5">
-<div class="w-10 h-10 rounded-full bg-brand-cyan/20 border border-brand-cyan/40 text-brand-cyan flex items-center justify-center shadow-lg transition-all duration-300 scale-90 group-hover:scale-100 hover:scale-110">
-<svg class="w-5 h-5 text-brand-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" xmlns="http://www.w3.org/2000/svg">
-<path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-<path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-</svg>
+<div class="w-12 h-12 rounded-full bg-brand-cyan/20 border border-brand-cyan/40 text-brand-cyan flex items-center justify-center shadow-lg transition-all duration-300 scale-90 group-hover:scale-100 hover:scale-110">
+<i data-lucide="maximize-2" class="w-6 h-6 text-brand-cyan"></i>
+</div>
+<span class="text-xs font-mono font-bold text-white uppercase tracking-wider bg-slate-950/80 px-3 py-1.5 rounded-lg border border-slate-800">Ver Pantalla Completa</span>
 </div>
 </div>
 </div>
-<!-- Right: Technical Insights & Action Items -->
-<div class="col-span-12 md:col-span-5 flex flex-col justify-between h-full text-left space-y-4">
-<div>
-<div class="flex items-center gap-2 mb-2">
-<i data-lucide="bar-chart-3" class="text-brand-cyan w-4 h-4"></i>
-<span class="text-xs font-mono font-bold text-brand-cyan uppercase tracking-wider">Ventas & Rentabilidad</span>
-</div>
-<h4 class="text-base font-bold text-white leading-tight">Visión General de Ventas & Rentabilidad</h4>
-<p class="text-[11px] text-brand-textMuted mt-1 leading-relaxed">
-Monitoreo en tiempo real de facturación y rentabilidad neta distribuido por geografía y canales de venta.
-</p>
-</div>
-<!-- KPIs -->
-<div class="grid grid-cols-3 gap-2">
-<div class="bg-brand-card/60 p-2 rounded-lg border border-brand-border">
-<span class="text-[8px] text-brand-textMuted block uppercase">Fact. Líquida</span>
-<span class="text-xs font-extrabold text-brand-cyan">$92.3M</span>
-</div>
-<div class="bg-brand-card/60 p-2 rounded-lg border border-brand-border">
-<span class="text-[8px] text-brand-textMuted block uppercase">Lucro Neto</span>
-<span class="text-xs font-extrabold text-brand-green">$12.0M</span>
-</div>
-<div class="bg-brand-card/60 p-2 rounded-lg border border-brand-border">
-<span class="text-[8px] text-brand-textMuted block uppercase">Margen Prom.</span>
-<span class="text-xs font-extrabold text-brand-cyan">12.9%</span>
-</div>
-</div>
-<!-- Strategic Actions from PDF -->
-<div class="space-y-2 text-[11px]">
-<div class="flex gap-2">
-<span class="text-brand-cyan font-bold">&gt;</span>
-<p class="text-slate-300 leading-tight">
-<strong class="text-white">Facturación & Margen:</strong> Seguimiento automático de los ingresos frente al margen de lucro por categoría de productos.
-</p>
-</div>
-<div class="flex gap-2">
-<span class="text-brand-cyan font-bold">&gt;</span>
-<p class="text-slate-300 leading-tight">
-<strong class="text-white">Eficiencia Logística:</strong> Monitoreo del tiempo medio de entrega por tienda física y cumplimiento estricto de pedidos.
-</p>
-</div>
-<div class="flex gap-2">
-<span class="text-brand-cyan font-bold">&gt;</span>
-<p class="text-slate-300 leading-tight">
-<strong class="text-white">Análisis Geográfico:</strong> Distribución analítica de la facturación y clasificación por segmento comercial.
-</p>
-</div>
-</div>
-<!-- Tech Badge -->
-<div class="flex items-center gap-1.5 border-t border-brand-border/60 pt-2 text-[9px] font-mono text-brand-textMuted">
-<span>TECNOLOGÍAS:</span>
-<span class="px-1.5 py-0.5 bg-brand-cyan/10 text-brand-cyan rounded border border-brand-cyan/20">Power BI</span>
-<span class="px-1.5 py-0.5 bg-brand-purple/10 text-brand-purple rounded border border-brand-purple/20">SQL Server</span>
-<span class="px-1.5 py-0.5 bg-brand-green/10 text-brand-green rounded border border-brand-green/20">DAX</span>
-</div>
-</div>
-</div>
+
 <!-- RFM Mock -->
-<div id="rfm-mock" class="mock-view w-full h-full p-4 hidden grid grid-cols-1 md:grid-cols-12 gap-4">
-<!-- Left: Dashboard Image (Clickable) -->
-<div onclick="openImageModal('rfm-mock')" class="col-span-12 md:col-span-7 flex items-center justify-center bg-slate-100/80 dark:bg-slate-900/40 rounded-xl p-2 border border-slate-200 dark:border-slate-800/60 relative group overflow-hidden cursor-pointer" title="Hacé clic para ver el análisis real en pantalla completa">
-<img src="images/rfm-dashboard1.png" class="max-w-full max-h-[220px] md:max-h-[320px] object-contain rounded-lg shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]" alt="RFM Dashboard">
+<div id="rfm-mock" class="mock-view w-full h-full p-2 hidden flex items-center justify-center">
+<div onclick="openImageModal('rfm-mock')" class="w-full flex items-center justify-center bg-slate-100/30 dark:bg-slate-900/10 rounded-xl p-2 relative group overflow-hidden cursor-pointer" title="Hacé clic para ver el análisis real en pantalla completa">
+<img src="images/rfm-dashboard1.png" class="max-w-full max-h-[460px] md:max-h-[520px] object-contain rounded-lg shadow-2xl transition-transform duration-500 group-hover:scale-[1.015]" alt="RFM Dashboard">
 <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center gap-2.5">
-<div class="w-10 h-10 rounded-full bg-brand-cyan/20 border border-brand-cyan/40 text-brand-cyan flex items-center justify-center shadow-lg transition-all duration-300 scale-90 group-hover:scale-100 hover:scale-110">
-<svg class="w-5 h-5 text-brand-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" xmlns="http://www.w3.org/2000/svg">
-<path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-<path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-</svg>
+<div class="w-12 h-12 rounded-full bg-brand-cyan/20 border border-brand-cyan/40 text-brand-cyan flex items-center justify-center shadow-lg transition-all duration-300 scale-90 group-hover:scale-100 hover:scale-110">
+<i data-lucide="maximize-2" class="w-6 h-6 text-brand-cyan"></i>
+</div>
+<span class="text-xs font-mono font-bold text-white uppercase tracking-wider bg-slate-950/80 px-3 py-1.5 rounded-lg border border-slate-800">Ver Pantalla Completa</span>
 </div>
 </div>
 </div>
-<!-- Right: Technical Insights & Action Items -->
-<div class="col-span-12 md:col-span-5 flex flex-col justify-between h-full text-left space-y-4">
-<div>
-<div class="flex items-center gap-2 mb-2">
-<i data-lucide="users" class="text-brand-purple w-4 h-4"></i>
-<span class="text-xs font-mono font-bold text-brand-purple uppercase tracking-wider">Fidelización & SQL</span>
-</div>
-<h4 class="text-base font-bold text-white leading-tight">Segmentación de Clientes por Valor (RFM)</h4>
-<p class="text-[11px] text-brand-textMuted mt-1 leading-relaxed">
-Agrupación estadística automática de clientes totales utilizando funciones analíticas en origen para potenciar ventas repetidas.
-</p>
-</div>
-<!-- KPIs -->
-<div class="grid grid-cols-3 gap-2">
-<div class="bg-brand-card/60 p-2 rounded-lg border border-brand-border">
-<span class="text-[8px] text-brand-textMuted block uppercase">Ingresos</span>
-<span class="text-xs font-extrabold text-brand-purple">$7.69M</span>
-</div>
-<div class="bg-brand-card/60 p-2 rounded-lg border border-brand-border">
-<span class="text-[8px] text-brand-textMuted block uppercase">Clientes</span>
-<span class="text-xs font-extrabold text-brand-cyan">1,445</span>
-</div>
-<div class="bg-brand-card/60 p-2 rounded-lg border border-brand-border">
-<span class="text-[8px] text-brand-textMuted block uppercase">Ticket Med.</span>
-<span class="text-xs font-extrabold text-brand-green">$5.32K</span>
-</div>
-</div>
-<!-- Strategic Actions from PDF -->
-<div class="space-y-2 text-[11px]">
-<div class="flex gap-2">
-<span class="text-brand-purple font-bold">&gt;</span>
-<p class="text-slate-300 leading-tight">
-<strong class="text-white">Marketing Dirigido:</strong> Creación de audiencias personalizadas para campañas de Email Marketing altamente segmentadas.
-</p>
-</div>
-<div class="flex gap-2">
-<span class="text-brand-purple font-bold">&gt;</span>
-<p class="text-slate-300 leading-tight">
-<strong class="text-white">Fidelización & VIP:</strong> Identificación de clientes "Campeones" para el diseño de benefits exclusivos y ofertas dedicadas.
-</p>
-</div>
-<div class="flex gap-2">
-<span class="text-brand-purple font-bold">&gt;</span>
-<p class="text-slate-300 leading-tight">
-<strong class="text-white">Optimización del LTV:</strong> Recuperación de clientes "Dormidos" y "En Riesgo" mediante estrategias de remarketing temporales.
-</p>
-</div>
-</div>
-<!-- Tech Badge -->
-<div class="flex items-center gap-1.5 border-t border-brand-border/60 pt-2 text-[9px] font-mono text-brand-textMuted">
-<span>TECNOLOGÍAS:</span>
-<span class="px-1.5 py-0.5 bg-brand-cyan/10 text-brand-cyan rounded border border-brand-cyan/20">Power BI</span>
-<span class="px-1.5 py-0.5 bg-brand-purple/10 text-brand-purple rounded border border-brand-purple/20">SQL Server</span>
-<span class="px-1.5 py-0.5 bg-brand-green/10 text-brand-green rounded border border-brand-green/20">DAX</span>
-</div>
-</div>
-</div>
+
 <!-- Churn Mock -->
-<div id="churn-mock" class="mock-view w-full h-full p-4 hidden grid grid-cols-1 md:grid-cols-12 gap-4">
-<!-- Left: Dashboard Image (Clickable) -->
-<div onclick="openImageModal('churn-mock')" class="col-span-12 md:col-span-7 flex items-center justify-center bg-slate-100/80 dark:bg-slate-900/40 rounded-xl p-2 border border-slate-200 dark:border-slate-800/60 relative group overflow-hidden cursor-pointer" title="Hacé clic para ver la captura real en pantalla completa">
-<img src="images/churn-dashboard.png" class="max-w-full max-h-[220px] md:max-h-[320px] object-contain rounded-lg shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]" alt="Churn Dashboard">
+<div id="churn-mock" class="mock-view w-full h-full p-2 hidden flex items-center justify-center">
+<div onclick="openImageModal('churn-mock')" class="w-full flex items-center justify-center bg-slate-100/30 dark:bg-slate-900/10 rounded-xl p-2 relative group overflow-hidden cursor-pointer" title="Hacé clic para ver la captura real en pantalla completa">
+<img src="images/churn-dashboard.png" class="max-w-full max-h-[460px] md:max-h-[520px] object-contain rounded-lg shadow-2xl transition-transform duration-500 group-hover:scale-[1.015]" alt="Churn Dashboard">
 <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center gap-2.5">
-<div class="w-10 h-10 rounded-full bg-brand-cyan/20 border border-brand-cyan/40 text-brand-cyan flex items-center justify-center shadow-lg transition-all duration-300 scale-90 group-hover:scale-100 hover:scale-110">
-<svg class="w-5 h-5 text-brand-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" xmlns="http://www.w3.org/2000/svg">
-<path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-<path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-</svg>
+<div class="w-12 h-12 rounded-full bg-brand-cyan/20 border border-brand-cyan/40 text-brand-cyan flex items-center justify-center shadow-lg transition-all duration-300 scale-90 group-hover:scale-100 hover:scale-110">
+<i data-lucide="maximize-2" class="w-6 h-6 text-brand-cyan"></i>
+</div>
+<span class="text-xs font-mono font-bold text-white uppercase tracking-wider bg-slate-950/80 px-3 py-1.5 rounded-lg border border-slate-800">Ver Pantalla Completa</span>
 </div>
 </div>
 </div>
-<!-- Right: Technical Insights & Action Items -->
-<div class="col-span-12 md:col-span-5 flex flex-col justify-between h-full text-left space-y-4">
-<div>
-<div class="flex items-center gap-2 mb-2">
-<i data-lucide="trending-down" class="text-brand-cyan w-4 h-4"></i>
-<span class="text-xs font-mono font-bold text-brand-cyan uppercase tracking-wider">Retención de Clientes</span>
-</div>
-<h4 class="text-base font-bold text-white leading-tight">Churn Analytics - Banca Digital</h4>
-<p class="text-[11px] text-brand-textMuted mt-1 leading-relaxed">
-Monitoreo y alerta temprana para prevenir la pérdida silenciosa de depositantes y priorizar carteras VIP antes del retiro de fondos.
-</p>
-</div>
-<!-- KPIs -->
-<div class="grid grid-cols-3 gap-2">
-<div class="bg-brand-card/60 p-2 rounded-lg border border-brand-border">
-<span class="text-[8px] text-brand-textMuted block uppercase">Churn Rate</span>
-<span class="text-xs font-extrabold text-red-400">16.07%</span>
-</div>
-<div class="bg-brand-card/60 p-2 rounded-lg border border-brand-border">
-<span class="text-[8px] text-brand-textMuted block uppercase">Frec. Reclamos</span>
-<span class="text-xs font-extrabold text-brand-cyan">2.46</span>
-</div>
-<div class="bg-brand-card/60 p-2 rounded-lg border border-brand-border">
-<span class="text-[8px] text-brand-textMuted block uppercase">Inactividad</span>
-<span class="text-xs font-extrabold text-brand-green">2.34 meses</span>
-</div>
-</div>
-<!-- Strategic Actions from PDF -->
-<div class="space-y-2 text-[11px]">
-<div class="flex gap-2">
-<span class="text-brand-cyan font-bold">&gt;</span>
-<p class="text-slate-300 leading-tight">
-<strong class="text-white">Impacto de la Fuga:</strong> Cuantificación financiera de ingresos bajo riesgo directo.
-</p>
-</div>
-<div class="flex gap-2">
-<span class="text-brand-cyan font-bold">&gt;</span>
-<p class="text-slate-300 leading-tight">
-<strong class="text-white">Identificación Proactiva:</strong> Score interactivo de riesgo para detectar inactividad y volumen de reclamos operativos.
-</p>
-</div>
-<div class="flex gap-2">
-<span class="text-brand-cyan font-bold">&gt;</span>
-<p class="text-slate-300 leading-tight">
-<strong class="text-white">Retención Focalizada:</strong> Segmentación por patrimonio para priorizar esfuerzos proactivos en clientes VIP.
-</p>
-</div>
-</div>
-<!-- Tech Badge -->
-<div class="flex items-center gap-1.5 border-t border-brand-border/60 pt-2 text-[9px] font-mono text-brand-textMuted">
-<span>TECNOLOGÍAS:</span>
-<span class="px-1.5 py-0.5 bg-brand-cyan/10 text-brand-cyan rounded border border-brand-cyan/20">Power BI</span>
-<span class="px-1.5 py-0.5 bg-brand-purple/10 text-brand-purple rounded border border-brand-purple/20">SQL Server</span>
-<span class="px-1.5 py-0.5 bg-brand-green/10 text-brand-green rounded border border-brand-green/20">DAX</span>
-</div>
-</div>
-</div>
+
 <!-- HR Mock -->
-<div id="hr-mock" class="mock-view w-full h-full p-4 hidden grid grid-cols-1 md:grid-cols-12 gap-4">
-<!-- Left: Dashboard Image (Clickable) -->
-<div onclick="openImageModal('hr-mock')" class="col-span-12 md:col-span-7 flex items-center justify-center bg-slate-100/80 dark:bg-slate-900/40 rounded-xl p-2 border border-slate-200 dark:border-slate-800/60 relative group overflow-hidden cursor-pointer" title="Hacé clic para ver la captura real en pantalla completa">
-<img src="images/hr-dashboard.png" class="max-w-full max-h-[220px] md:max-h-[320px] object-contain rounded-lg shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]" alt="HR Dashboard">
+<div id="hr-mock" class="mock-view w-full h-full p-2 hidden flex items-center justify-center">
+<div onclick="openImageModal('hr-mock')" class="w-full flex items-center justify-center bg-slate-100/30 dark:bg-slate-900/10 rounded-xl p-2 relative group overflow-hidden cursor-pointer" title="Hacé clic para ver la captura real en pantalla completa">
+<img src="images/hr-dashboard.png" class="max-w-full max-h-[460px] md:max-h-[520px] object-contain rounded-lg shadow-2xl transition-transform duration-500 group-hover:scale-[1.015]" alt="HR Dashboard">
 <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center gap-2.5">
-<div class="w-10 h-10 rounded-full bg-brand-cyan/20 border border-brand-cyan/40 text-brand-cyan flex items-center justify-center shadow-lg transition-all duration-300 scale-90 group-hover:scale-100 hover:scale-110">
-<svg class="w-5 h-5 text-brand-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" xmlns="http://www.w3.org/2000/svg">
-<path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-<path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-</svg>
+<div class="w-12 h-12 rounded-full bg-brand-cyan/20 border border-brand-cyan/40 text-brand-cyan flex items-center justify-center shadow-lg transition-all duration-300 scale-90 group-hover:scale-100 hover:scale-110">
+<i data-lucide="maximize-2" class="w-6 h-6 text-brand-cyan"></i>
+</div>
+<span class="text-xs font-mono font-bold text-white uppercase tracking-wider bg-slate-950/80 px-3 py-1.5 rounded-lg border border-slate-800">Ver Pantalla Completa</span>
 </div>
 </div>
 </div>
-<!-- Right: Technical Insights & Action Items -->
-<div class="col-span-12 md:col-span-5 flex flex-col justify-between h-full text-left space-y-4">
-<div>
-<div class="flex items-center gap-2 mb-2">
-<i data-lucide="user-check" class="text-brand-green w-4 h-4"></i>
-<span class="text-xs font-mono font-bold text-brand-green uppercase tracking-wider">Gestión de Talento</span>
-</div>
-<h4 class="text-base font-bold text-white leading-tight">HR Analytics & Capital Humano</h4>
-<p class="text-[11px] text-brand-textMuted mt-1 leading-relaxed">
-Análisis integral de funcionarios activos para optimizar costos de masa salarial, medir el clima de trabajo y analizar canales de reclutamiento.
-</p>
-</div>
-<!-- KPIs -->
-<div class="grid grid-cols-3 gap-2">
-<div class="bg-brand-card/60 p-2 rounded-lg border border-brand-border">
-<span class="text-[8px] text-brand-textMuted block uppercase">Funcionarios</span>
-<span class="text-xs font-extrabold text-brand-green">207 u.</span>
-</div>
-<div class="bg-brand-card/60 p-2 rounded-lg border border-brand-border">
-<span class="text-[8px] text-brand-textMuted block uppercase">Clima Laboral</span>
-<span class="text-xs font-extrabold text-brand-cyan">3.9 / 5</span>
-</div>
-<div class="bg-brand-card/60 p-2 rounded-lg border border-brand-border">
-<span class="text-[8px] text-brand-textMuted block uppercase">Permanencia</span>
-<span class="text-xs font-extrabold text-brand-cyan">3.4 años</span>
-</div>
-</div>
-<!-- Strategic Actions from PDF -->
-<div class="space-y-2 text-[11px]">
-<div class="flex gap-2">
-<span class="text-brand-green font-bold">&gt;</span>
-<p class="text-slate-300 leading-tight">
-<strong class="text-white">Clima & Costos:</strong> Correlación en tiempo real entre salarios, satisfacción por departamento y masa salarial.
-</p>
-</div>
-<div class="flex gap-2">
-<span class="text-brand-green font-bold">&gt;</span>
-<p class="text-slate-300 leading-tight">
-<strong class="text-white">Reclutamiento Óptimo:</strong> Análisis de efectividad de canales de selección.
-</p>
-</div>
-<div class="flex gap-2">
-<span class="text-brand-green font-bold">&gt;</span>
-<p class="text-slate-300 leading-tight">
-<strong class="text-white">Análisis de Fuga:</strong> Identificación proactiva de departamentos con alto riesgo de rotación voluntaria.
-</p>
-</div>
-</div>
-<!-- Tech Badge -->
-<div class="flex items-center gap-1.5 border-t border-brand-border/60 pt-2 text-[9px] font-mono text-brand-textMuted">
-<span>TECNOLOGÍAS:</span>
-<span class="px-1.5 py-0.5 bg-brand-cyan/10 text-brand-cyan rounded border border-brand-cyan/20">Power BI</span>
-<span class="px-1.5 py-0.5 bg-brand-purple/10 text-brand-purple rounded border border-brand-purple/20">SQL Server</span>
-<span class="px-1.5 py-0.5 bg-brand-green/10 text-brand-green rounded border border-brand-green/20">DAX</span>
-</div>
-</div>
-</div>
+
 </div>
 </div>
 </div>
@@ -1339,41 +1050,46 @@ Entendido
 </div>
 </div>
 <!-- REAL IMAGE MODAL (LIGHTBOX WITH MULTI-IMAGE CAROUSEL) -->
-<div id="image-modal" class="fixed inset-0 z-50 flex items-center justify-center hidden p-4 sm:p-6 bg-black/90 backdrop-blur-md transition-all duration-300">
+<div id="image-modal" class="fixed inset-0 z-50 flex items-center justify-center hidden p-4 sm:p-6 bg-black/95 backdrop-blur-sm transition-all duration-300">
+<!-- Backdrop Click to Close -->
 <div class="absolute inset-0 cursor-pointer" onclick="closeImageModal()"></div>
-<div class="relative max-w-5xl w-full max-h-[90vh] bg-slate-900/80 rounded-2xl border border-slate-700/50 shadow-2xl flex flex-col overflow-hidden z-10 transition-all scale-95 duration-300" id="image-modal-card">
-<!-- Modal Header -->
-<div class="flex justify-between items-center p-4 border-b border-slate-800 bg-slate-950/80">
-<div class="flex items-center gap-2">
-<i data-lucide="image" class="text-brand-cyan w-5 h-5"></i>
-<h3 class="text-xs font-bold text-white uppercase tracking-wider font-mono" id="image-modal-title">Captura del Tablero Real</h3>
-</div>
-<div class="flex items-center gap-2">
-<button onclick="closeImageModal()" class="text-slate-400 hover:text-white p-1 rounded-lg hover:bg-white/10 transition-all" title="Cerrar (Esc)">
-<i data-lucide="x" class="w-5 h-5"></i>
+
+<!-- Floating Close Button -->
+<button onclick="closeImageModal()" class="absolute top-4 right-4 z-50 text-slate-400 hover:text-white bg-black/60 hover:bg-black/80 p-3 rounded-full transition-all shadow-lg border border-white/10" title="Cerrar (Esc)">
+<i data-lucide="x" class="w-6 h-6"></i>
 </button>
-</div>
-</div>
-<!-- Modal Content -->
-<div class="flex-grow p-4 flex items-center justify-center overflow-auto bg-slate-950/40 min-h-[300px] relative group/modal">
+
+<!-- Invisible elements so JS doesn't throw errors -->
+<span id="image-modal-title" class="hidden"></span>
+<span id="modal-footer-tip" class="hidden"></span>
+
+<!-- The main container, now transparent and borderless -->
+<div class="relative max-w-6xl w-full max-h-[92vh] bg-transparent border-0 shadow-none flex flex-col justify-center items-center overflow-hidden z-10 transition-all scale-95 duration-300" id="image-modal-card">
+<!-- Modal Content (Pure image view) -->
+<div class="relative w-full flex items-center justify-center overflow-visible min-h-[300px]">
 <!-- Prev Slide Button -->
-<button id="modal-prev-btn" onclick="prevSlide()" class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-brand-cyan hover:text-brand-dark text-white p-3 rounded-full transition-all z-30 hidden shadow-lg focus:outline-none focus:ring-2 focus:ring-brand-cyan" title="Anterior">
+<button id="modal-prev-btn" onclick="prevSlide()" class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/75 hover:bg-brand-cyan hover:text-brand-dark text-white p-3 rounded-full transition-all z-30 hidden shadow-lg focus:outline-none focus:ring-2 focus:ring-brand-cyan border border-white/10" title="Anterior">
 <i data-lucide="chevron-left" class="w-6 h-6"></i>
 </button>
-<!-- Carousel Image -->
-<img id="image-modal-img" src="" alt="Cargando tablero..." class="max-w-full max-h-[70vh] object-contain rounded-lg shadow-lg border border-slate-800/40 hidden" onload="onModalImageLoad()" onerror="onModalImageError()">
+
+<!-- Carousel Image - max-h increased to 88vh for pure fullscreen display -->
+<img id="image-modal-img" src="" alt="Cargando tablero..." class="max-w-full max-h-[88vh] object-contain rounded-lg shadow-2xl border-0 hidden" onload="onModalImageLoad()" onerror="onModalImageError()">
+
 <!-- Next Slide Button -->
-<button id="modal-next-btn" onclick="nextSlide()" class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-brand-cyan hover:text-brand-dark text-white p-3 rounded-full transition-all z-30 hidden shadow-lg focus:outline-none focus:ring-2 focus:ring-brand-cyan" title="Siguiente">
+<button id="modal-next-btn" onclick="nextSlide()" class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/75 hover:bg-brand-cyan hover:text-brand-dark text-white p-3 rounded-full transition-all z-30 hidden shadow-lg focus:outline-none focus:ring-2 focus:ring-brand-cyan border border-white/10" title="Siguiente">
 <i data-lucide="chevron-right" class="w-6 h-6"></i>
 </button>
+
 <!-- Slide Indicators (Dots) -->
-<div id="modal-indicators" class="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-30 hidden bg-black/50 px-4 py-2 rounded-full backdrop-blur-sm"></div>
+<div id="modal-indicators" class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-30 hidden bg-black/60 px-4 py-2 rounded-full backdrop-blur-sm border border-white/10"></div>
+
 <!-- Loading Spinner -->
 <div id="image-modal-spinner" class="flex flex-col items-center gap-3">
 <div class="w-8 h-8 border-4 border-brand-cyan border-t-transparent rounded-full animate-spin"></div>
 <span class="text-[10px] font-mono text-brand-textMuted uppercase tracking-wider">Cargando Captura HD...</span>
 </div>
-<!-- Custom Error Box with dynamic path helper -->
+
+<!-- Custom Error Box -->
 <div id="image-modal-error" class="hidden max-w-md p-6 rounded-xl bg-slate-900 border border-red-500/30 text-left flex flex-col gap-4 font-sans z-30">
 <div class="flex items-center gap-2 text-red-400 font-sans">
 <i data-lucide="alert-triangle" class="w-5 h-5"></i>
@@ -1385,18 +1101,10 @@ Nancy, para ver tu captura real en este pop-up, solo tenés que subir la imagen 
 <div class="bg-slate-950 p-3 rounded font-mono text-xs text-brand-cyan select-all break-all border border-slate-800" id="image-modal-error-path">
 images/stock-dashboard.png
 </div>
-<p class="text-xs text-slate-400 leading-relaxed font-sans">
-Al subir tu captura en formato PNG con ese nombre adentro de una carpeta llamada <code class="font-mono text-brand-purple font-mono">images</code> en tu proyecto, la web la mostrará automáticamente aquí en Full HD. ¡Te quedará impecable!
-</p>
 <button onclick="closeImageModal()" class="w-full py-2 bg-slate-800 hover:bg-slate-700 text-white rounded font-bold text-xs uppercase transition-all">
 Entendido
 </button>
 </div>
-</div>
-<!-- Modal Footer -->
-<div class="p-3 border-t border-slate-800 bg-slate-950/60 flex justify-between items-center text-[9px] font-mono text-brand-textMuted">
-<span id="modal-footer-tip">💡 Se recomienda visualizar en pantalla completa (F11) para mayor detalle.</span>
-<span class="text-brand-cyan font-bold">Sincronización de Portafolio Técnico</span>
 </div>
 </div>
 </div>
