@@ -1063,7 +1063,7 @@ html:not(.dark) #projects h2,
 html:not(.dark) #pipeline h2,
 html:not(.dark) #showcase h2,
 html:not(.dark) #contact h2 {
-    color: #db2777 !important; /* Magenta Section Header h2 */
+    color: #475569 !important; /* Gris oscuro consistent w/ titles */
 }
 html:not(.dark) #reto-datos h3,
 html:not(.dark) #projects h3,
@@ -1072,6 +1072,81 @@ html:not(.dark) #showcase h3,
 html:not(.dark) #contact h3 {
     color: #334155 !important; /* Soft dark grey for titles h3 */
 }
+
+/* Nancy V22 Premium Color Overrides (Magenta, Pink & Purple Only for Day Mode) */
+html:not(.dark) .challenge-card-stock {
+    border-top-color: #db2777 !important; /* Magenta border */
+}
+html:not(.dark) .challenge-card-sales {
+    border-top-color: #ec4899 !important; /* Pink border */
+}
+html:not(.dark) .challenge-card-churn {
+    border-top-color: #7c3aed !important; /* Purple border */
+}
+html:not(.dark) .challenge-icon-stock {
+    background-color: rgba(219, 39, 119, 0.08) !important;
+    border-color: rgba(219, 39, 119, 0.2) !important;
+    color: #db2777 !important;
+}
+html:not(.dark) .challenge-icon-stock i {
+    color: #db2777 !important;
+}
+html:not(.dark) .challenge-icon-sales {
+    background-color: rgba(236, 72, 153, 0.08) !important;
+    border-color: rgba(236, 72, 153, 0.2) !important;
+    color: #ec4899 !important;
+}
+html:not(.dark) .challenge-icon-sales i {
+    color: #ec4899 !important;
+}
+html:not(.dark) .challenge-icon-churn {
+    background-color: rgba(124, 58, 237, 0.08) !important;
+    border-color: rgba(124, 58, 237, 0.2) !important;
+    color: #7c3aed !important;
+}
+html:not(.dark) .challenge-icon-churn i {
+    color: #7c3aed !important;
+}
+
+/* 8. Text elements, headings inside PERFIL DE RENDIMIENTO and Showcase details in Day Mode */
+html:not(.dark) .glass-card span,
+html:not(.dark) .glass-card strong,
+html:not(.dark) .glass-card p {
+    color: #334155 !important;
+}
+html:not(.dark) .glass-card .text-brand-purple {
+    color: #be185d !important; /* Magenta */
+}
+html:not(.dark) .glass-card .text-brand-green {
+    color: #7c3aed !important; /* Purple */
+}
+html:not(.dark) .glass-card .text-brand-cyan {
+    color: #db2777 !important; /* Pink */
+}
+html:not(.dark) .glass-card .text-slate-200 {
+    color: #7c3aed !important; /* Purple instead of green */
+}
+
+/* Day Mode global neon utility mapping overrides to Magenta, Pink and Purple */
+html:not(.dark) .text-brand-cyan {
+    color: #db2777 !important; /* Pink */
+}
+html:not(.dark) .text-brand-purple {
+    color: #7c3aed !important; /* Purple */
+}
+html:not(.dark) .text-brand-green {
+    color: #db2777 !important; /* Pink */
+}
+html:not(.dark) .text-slate-200 {
+    color: #7c3aed !important; /* Purple */
+}
+html:not(.dark) .bg-brand-cyan {
+    background-color: #db2777 !important;
+}
+html:not(.dark) .border-brand-cyan {
+    border-color: #db2777 !important;
+}
+
 </style>
 
 </head>
@@ -1135,19 +1210,19 @@ Desarrolladora de Business Intelligence con base en Río Cuarto, Córdoba. Me es
 </p>
 <!-- Key Metrics row -->
                 <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-4 pt-4">
-                    <div class="p-4 bg-white dark:bg-[#1b2030] border-l-4 border-l-[#0284c7] dark:border-l-brand-cyan border border-slate-200/80 dark:border-brand-border/40 rounded-none shadow-sm flex flex-col gap-1.5 transition-all duration-300 hover:shadow-md hover:-translate-y-1">
+                    <div class="metric-card p-4 bg-white dark:bg-[#1b2030] border-l-4 border-l-[#0284c7] dark:border-l-brand-cyan border border-slate-200/80 dark:border-brand-border/40 rounded-none shadow-sm flex flex-col gap-1.5 transition-all duration-300 hover:shadow-md hover:-translate-y-1">
                         <div class="text-2xl md:text-3xl font-semibold text-slate-800 dark:text-white">5+</div>
                         <div class="text-[10px] text-slate-600 dark:text-brand-textMuted font-mono uppercase tracking-wider font-semibold">Proyectos de BI</div>
                     </div>
-                    <div class="p-4 bg-white dark:bg-[#1b2030] border-l-4 border-l-[#0284c7] dark:border-l-brand-cyan border border-slate-200/80 dark:border-brand-border/40 rounded-none shadow-sm flex flex-col gap-1.5 transition-all duration-300 hover:shadow-md hover:-translate-y-1">
+                    <div class="metric-card p-4 bg-white dark:bg-[#1b2030] border-l-4 border-l-[#0284c7] dark:border-l-brand-cyan border border-slate-200/80 dark:border-brand-border/40 rounded-none shadow-sm flex flex-col gap-1.5 transition-all duration-300 hover:shadow-md hover:-translate-y-1">
                         <div class="text-2xl md:text-3xl font-semibold text-slate-800 dark:text-white">100%</div>
                         <div class="text-[10px] text-slate-600 dark:text-brand-textMuted font-mono uppercase tracking-wider font-semibold">Sincronizado CI/CD</div>
                     </div>
-                    <div class="p-4 bg-white dark:bg-[#1b2030] border-l-4 border-l-[#0284c7] dark:border-l-brand-cyan border border-slate-200/80 dark:border-brand-border/40 rounded-none shadow-sm flex flex-col gap-1.5 transition-all duration-300 hover:shadow-md hover:-translate-y-1">
+                    <div class="metric-card p-4 bg-white dark:bg-[#1b2030] border-l-4 border-l-[#0284c7] dark:border-l-brand-cyan border border-slate-200/80 dark:border-brand-border/40 rounded-none shadow-sm flex flex-col gap-1.5 transition-all duration-300 hover:shadow-md hover:-translate-y-1">
                         <div class="text-2xl md:text-3xl font-semibold text-slate-800 dark:text-white">SQL/DAX</div>
                         <div class="text-[10px] text-slate-600 dark:text-brand-textMuted font-mono uppercase tracking-wider font-semibold">Modelado Sólido</div>
                     </div>
-                    <div class="p-4 bg-white dark:bg-[#1b2030] border-l-4 border-l-[#0284c7] dark:border-l-brand-cyan border border-slate-200/80 dark:border-brand-border/40 rounded-none shadow-sm flex flex-col gap-1.5 transition-all duration-300 hover:shadow-md hover:-translate-y-1">
+                    <div class="metric-card p-4 bg-white dark:bg-[#1b2030] border-l-4 border-l-[#0284c7] dark:border-l-brand-cyan border border-slate-200/80 dark:border-brand-border/40 rounded-none shadow-sm flex flex-col gap-1.5 transition-all duration-300 hover:shadow-md hover:-translate-y-1">
                         <div class="text-2xl md:text-3xl font-semibold text-slate-800 dark:text-white">Fabric</div>
                         <div class="text-[10px] text-slate-600 dark:text-brand-textMuted font-mono uppercase tracking-wider font-semibold">Infraestructura</div>
                     </div>
@@ -1328,10 +1403,10 @@ Muchas compañías operan a ciegas. Tienen datos, pero están dispersos, son man
 <!-- Challenges Grid -->
 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left mb-10">
 <!-- Challenge 1: Stock -->
-<div class="bg-white dark:bg-[#1b2030] p-6 rounded-none border-t-4 border-t-amber-500 border border-slate-200/80 dark:border-brand-border/40 flex flex-col gap-3.5 relative overflow-hidden transition-all duration-300 hover:shadow-md hover:-translate-y-1 hover:border-slate-300 dark:hover:border-brand-cyan/30 group">
+<div class="challenge-card challenge-card-stock bg-white dark:bg-[#1b2030] p-6 rounded-none border-t-4 border-t-amber-500 border border-slate-200/80 dark:border-brand-border/40 flex flex-col gap-3.5 relative overflow-hidden transition-all duration-300 hover:shadow-md hover:-translate-y-1 hover:border-slate-300 dark:hover:border-brand-cyan/30 group">
 <div class="absolute -top-12 -right-12 w-24 h-24 bg-amber-500/5 rounded-full blur-xl group-hover:bg-amber-500/10 transition-all"></div>
 <div class="flex items-center gap-2.5">
-<div class="w-8 h-8 rounded-none bg-amber-500/10 dark:bg-amber-500/20 text-amber-600 dark:text-amber-400 border border-amber-500/20 flex items-center justify-center font-bold text-xs select-none">
+<div class="challenge-icon-stock w-8 h-8 rounded-none bg-amber-500/10 dark:bg-amber-500/20 text-amber-600 dark:text-amber-400 border border-amber-500/20 flex items-center justify-center font-bold text-xs select-none">
 <i data-lucide="alert-circle" class="w-4 h-4 text-amber-600 dark:text-amber-400"></i>
 </div>
 <h4 class="font-normal text-slate-800 dark:text-slate-200 text-xs uppercase tracking-wider font-mono">Control de Stock</h4>
@@ -1341,10 +1416,10 @@ Roturas recurrentes de stock y total incertidumbre sobre el valor financiero inm
 </p>
 </div>
 <!-- Challenge 2: Ventas -->
-<div class="bg-white dark:bg-[#1b2030] p-6 rounded-none border-t-4 border-t-red-500 border border-slate-200/80 dark:border-brand-border/40 flex flex-col gap-3.5 relative overflow-hidden transition-all duration-300 hover:shadow-md hover:-translate-y-1 hover:border-slate-300 dark:hover:border-brand-cyan/30 group">
+<div class="challenge-card challenge-card-sales bg-white dark:bg-[#1b2030] p-6 rounded-none border-t-4 border-t-red-500 border border-slate-200/80 dark:border-brand-border/40 flex flex-col gap-3.5 relative overflow-hidden transition-all duration-300 hover:shadow-md hover:-translate-y-1 hover:border-slate-300 dark:hover:border-brand-cyan/30 group">
 <div class="absolute -top-12 -right-12 w-24 h-24 bg-red-500/5 rounded-full blur-xl group-hover:bg-red-500/10 transition-all"></div>
 <div class="flex items-center gap-2.5">
-<div class="w-8 h-8 rounded-none bg-red-500/10 dark:bg-red-500/20 text-red-600 dark:text-red-400 border border-red-500/20 flex items-center justify-center font-bold text-xs select-none">
+<div class="challenge-icon-sales w-8 h-8 rounded-none bg-red-500/10 dark:bg-red-500/20 text-red-600 dark:text-red-400 border border-red-500/20 flex items-center justify-center font-bold text-xs select-none">
 <i data-lucide="alert-triangle" class="w-4 h-4 text-red-600 dark:text-red-400"></i>
 </div>
 <h4 class="font-normal text-slate-800 dark:text-slate-200 text-xs uppercase tracking-wider font-mono">Ventas & Lucro</h4>
@@ -1354,10 +1429,10 @@ Falta de visibilidad sobre el lucro neto real y el rendimiento geográfico por c
 </p>
 </div>
 <!-- Challenge 3: Fuga -->
-<div class="bg-white dark:bg-[#1b2030] p-6 rounded-none border-t-4 border-t-orange-500 border border-slate-200/80 dark:border-brand-border/40 flex flex-col gap-3.5 relative overflow-hidden transition-all duration-300 hover:shadow-md hover:-translate-y-1 hover:border-slate-300 dark:hover:border-brand-cyan/30 group">
+<div class="challenge-card challenge-card-churn bg-white dark:bg-[#1b2030] p-6 rounded-none border-t-4 border-t-orange-500 border border-slate-200/80 dark:border-brand-border/40 flex flex-col gap-3.5 relative overflow-hidden transition-all duration-300 hover:shadow-md hover:-translate-y-1 hover:border-slate-300 dark:hover:border-brand-cyan/30 group">
 <div class="absolute -top-12 -right-12 w-24 h-24 bg-orange-500/5 rounded-full blur-xl group-hover:bg-orange-500/10 transition-all"></div>
 <div class="flex items-center gap-2.5">
-<div class="w-8 h-8 rounded-none bg-orange-500/10 dark:bg-orange-500/20 text-orange-600 dark:text-orange-400 border border-orange-500/20 flex items-center justify-center font-bold text-xs select-none">
+<div class="challenge-icon-churn w-8 h-8 rounded-none bg-orange-500/10 dark:bg-orange-500/20 text-orange-600 dark:text-orange-400 border border-orange-500/20 flex items-center justify-center font-bold text-xs select-none">
 <i data-lucide="users" class="w-4 h-4 text-orange-600 dark:text-orange-400"></i>
 </div>
 <h4 class="font-normal text-slate-800 dark:text-slate-200 text-xs uppercase tracking-wider font-mono">Fuga de Clientes</h4>
