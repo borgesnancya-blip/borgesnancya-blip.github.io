@@ -643,6 +643,47 @@ html:not(.dark) .showcase-card-hover:hover {
     transform: translateY(-4px);
 }
 
+
+/* Exact premium hover transition for Perfil card and simulation console day mode */
+html:not(.dark) .glass-card:hover,
+html:not(.dark) .sim-console-container:hover,
+html:not(.dark) .project-card:hover {
+    border-color: #cbd5e1 !important;
+    box-shadow: 0 12px 25px -10px rgba(71, 85, 105, 0.2) !important;
+}
+
+/* Day Mode h2 subheadings style (gris oscuro consistent w/ titles) */
+html:not(.dark) h2,
+html:not(.dark) .project-label {
+    color: #475569 !important; /* Elegant slate grey */
+}
+
+/* Day Mode active button class unifications */
+html:not(.dark) .nav-link.active,
+html:not(.dark) .filter-btn.active,
+html:not(.dark) .mock-tab-btn.active {
+    background-color: #475569 !important;
+    background: #475569 !important;
+    color: #ffffff !important;
+    border-color: #475569 !important;
+}
+
+/* Interactive Showcase container hover lifting animation & shadows */
+#view-showcase .glass-panel {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    border-radius: 0px !important;
+}
+#view-showcase .glass-panel:hover {
+    transform: translateY(-4px) !important;
+}
+.dark #view-showcase .glass-panel:hover {
+    border-color: rgba(0, 242, 254, 0.3) !important;
+    box-shadow: 0 12px 30px -10px rgba(0, 242, 254, 0.15) !important;
+}
+html:not(.dark) #view-showcase .glass-panel:hover {
+    border-color: #cbd5e1 !important;
+    box-shadow: 0 12px 30px -10px rgba(71, 85, 105, 0.2) !important;
+}
 </style>
 </head>
 <body class="selection:bg-brand-cyan selection:text-brand-dark font-sans">
@@ -655,10 +696,10 @@ html:not(.dark) .showcase-card-hover:hover {
 </div>
 <!-- Desktop menu -->
 <div class="hidden md:flex items-center gap-4 text-xs font-semibold uppercase tracking-wider font-mono">
-<a href="#about" onclick="showView(\'view-about\'); return false;" class="nav-link">Quién Soy</a>
-<a href="#pipeline" onclick="showView(\'view-pipeline\'); return false;" class="nav-link">Mi Infraestructura</a>
-<a href="#projects" onclick="showView(\'view-projects\'); return false;" class="nav-link">Proyectos</a>
-<a href="#showcase" onclick="showView(\'view-showcase\'); return false;" class="nav-link">Dashboard</a>
+<a href="#about" onclick="showView('view-about'); return false;" class="nav-link">Quién Soy</a>
+<a href="#pipeline" onclick="showView('view-pipeline'); return false;" class="nav-link">Mi Infraestructura</a>
+<a href="#projects" onclick="showView('view-projects'); return false;" class="nav-link">Proyectos</a>
+<a href="#showcase" onclick="showView('view-showcase'); return false;" class="nav-link">Dashboard</a>
 </div>
 <div class="flex items-center gap-3">
 <!-- Dark/Light Mode Switcher -->
@@ -697,29 +738,29 @@ html:not(.dark) .showcase-card-hover:hover {
 <div class="md:col-span-8 flex flex-col gap-4">
 <div class="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full bg-brand-cyan/10 border border-brand-cyan/20 w-fit">
 <span class="w-1.5 h-1.5 rounded-full bg-brand-cyan animate-pulse"></span>
-<span class="text-[10px] text-white dark:text-white font-mono uppercase tracking-wider">Disponible para Proyectos / Propuestas 2026</span>
+<span class="text-[10px] text-brand-cyan dark:text-white font-mono uppercase tracking-wider">Disponible para Proyectos / Propuestas 2026</span>
 </div>
 <h1 class="text-3xl md:text-5xl font-normal tracking-tight leading-tight text-slate-700 dark:text-white">Transformo datos en <br>Decisiones de Negocio</h1>
 <p class="text-sm md:text-base text-slate-600 dark:text-brand-textMuted max-w-xl leading-relaxed">
 Desarrolladora de Business Intelligence con base en Río Cuarto, Córdoba. Me especializo en diseñar soluciones analíticas end-to-end: desde la ingeniería de datos en <strong>SQL Server</strong> y la automatización de flujos de despliegue continuo (<strong>CI/CD con GitHub y Microsoft Fabric</strong>), hasta el modelado dimensional en estrella y la creación de tableros de control ejecutivos que impactan la rentabilidad del negocio.
 </p>
 <!-- Key Metrics row -->
-                <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-2 pt-4">
-                    <div class="p-3.5 bg-white dark:bg-brand-card/30 border border-slate-200 dark:border-brand-border/60 rounded-none shadow-sm flex flex-col justify-between">
-                        <div class="text-xl md:text-2xl font-normal text-slate-900 dark:text-white">5+</div>
-                        <div class="text-[10px] text-slate-500 dark:text-brand-textMuted font-mono">Proyectos de BI</div>
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-4 pt-4">
+                    <div class="p-4 bg-slate-50 dark:bg-[#1b2030] border-l-2 border-l-brand-cyan border border-slate-200 dark:border-brand-border/40 rounded-none shadow-sm flex flex-col gap-1 transition-all duration-300 hover:shadow-md hover:translate-y-[-2px]">
+                        <div class="text-xl md:text-2xl font-normal text-slate-900 dark:text-white font-normal">5+</div>
+                        <div class="text-[10px] text-slate-500 dark:text-brand-textMuted font-mono uppercase tracking-wider">Proyectos de BI</div>
                     </div>
-                    <div class="p-3.5 bg-white dark:bg-brand-card/30 border border-slate-200 dark:border-brand-border/60 rounded-none shadow-sm flex flex-col justify-between">
-                        <div class="text-xl md:text-2xl font-normal text-slate-900 dark:text-white">100%</div>
-                        <div class="text-[10px] text-slate-500 dark:text-brand-textMuted font-mono">Sincronizado CI/CD</div>
+                    <div class="p-4 bg-slate-50 dark:bg-[#1b2030] border-l-2 border-l-brand-cyan border border-slate-200 dark:border-brand-border/40 rounded-none shadow-sm flex flex-col gap-1 transition-all duration-300 hover:shadow-md hover:translate-y-[-2px]">
+                        <div class="text-xl md:text-2xl font-normal text-slate-900 dark:text-white font-normal">100%</div>
+                        <div class="text-[10px] text-slate-500 dark:text-brand-textMuted font-mono uppercase tracking-wider">Sincronizado CI/CD</div>
                     </div>
-                    <div class="p-3.5 bg-white dark:bg-brand-card/30 border border-slate-200 dark:border-brand-border/60 rounded-none shadow-sm flex flex-col justify-between">
-                        <div class="text-xl md:text-2xl font-normal text-slate-900 dark:text-white">SQL/DAX</div>
-                        <div class="text-[10px] text-slate-500 dark:text-brand-textMuted font-mono">Modelado Sólido</div>
+                    <div class="p-4 bg-slate-50 dark:bg-[#1b2030] border-l-2 border-l-brand-cyan border border-slate-200 dark:border-brand-border/40 rounded-none shadow-sm flex flex-col gap-1 transition-all duration-300 hover:shadow-md hover:translate-y-[-2px]">
+                        <div class="text-xl md:text-2xl font-normal text-slate-900 dark:text-white font-normal">SQL/DAX</div>
+                        <div class="text-[10px] text-slate-500 dark:text-brand-textMuted font-mono uppercase tracking-wider">Modelado Sólido</div>
                     </div>
-                    <div class="p-3.5 bg-white dark:bg-brand-card/30 border border-slate-200 dark:border-brand-border/60 rounded-none shadow-sm flex flex-col justify-between">
-                        <div class="text-xl md:text-2xl font-normal text-slate-900 dark:text-white">Fabric</div>
-                        <div class="text-[10px] text-slate-500 dark:text-brand-textMuted font-mono">Infraestructura</div>
+                    <div class="p-4 bg-slate-50 dark:bg-[#1b2030] border-l-2 border-l-brand-cyan border border-slate-200 dark:border-brand-border/40 rounded-none shadow-sm flex flex-col gap-1 transition-all duration-300 hover:shadow-md hover:translate-y-[-2px]">
+                        <div class="text-xl md:text-2xl font-normal text-slate-900 dark:text-white font-normal">Fabric</div>
+                        <div class="text-[10px] text-slate-500 dark:text-brand-textMuted font-mono uppercase tracking-wider">Infraestructura</div>
                     </div>
                 </div>
 <!-- Profile card with quick specifications -->
@@ -848,7 +889,7 @@ No trabajo con archivos locales sueltos. He diseñado e implementado una arquite
 </div>
 </div>
 <div class="flex flex-wrap items-center gap-2 w-full sm:w-auto shrink-0">
-<button onclick="startPipelineSimulation()" id="btn-simulate" class="w-full sm:w-auto px-4 py-2 rounded-none bg-brand-cyan text-brand-dark hover:bg-white hover:text-brand-dark font-normal text-[10px] uppercase tracking-wider transition-all shadow-md flex items-center justify-center gap-1.5">
+<button onclick="startPipelineSimulation()" id="btn-simulate" class="w-full sm:w-auto px-4 py-2 rounded-none bg-slate-700 hover:bg-slate-600 text-white border border-slate-600 dark:bg-slate-800 dark:border-slate-700 dark:hover:bg-slate-700 dark:text-slate-200 transition-all font-normal text-[10px] uppercase tracking-wider shadow-sm flex items-center justify-center gap-1.5">
 <i data-lucide="play" class="w-3.5 h-3.5"></i> Simular Despliegue (Push)
 </button>
 <button onclick="openImageModal('images/git-pipeline.png', 'Mapa de Arquitectura Git & Fabric')" class="w-full sm:w-auto px-4 py-2 rounded border border-slate-200 dark:border-brand-border text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-brand-card/50 font-bold text-[10px] uppercase tracking-wider transition-all flex items-center justify-center gap-1.5">
@@ -897,35 +938,35 @@ Muchas compañías operan a ciegas. Tienen datos, pero están dispersos, son man
 <!-- Challenges Grid -->
 <div class="grid grid-cols-1 md:grid-cols-3 gap-5 text-left mb-10">
 <!-- Challenge 1: Stock -->
-<div class="glass-card p-5 rounded-xl border border-slate-200 dark:border-brand-border/60 flex flex-col gap-3 relative overflow-hidden group">
-<div class="absolute -top-10 -right-10 w-20 h-20 bg-red-500/10 rounded-full blur-xl group-hover:bg-red-500/15 transition-all"></div>
+<div class="bg-slate-50 dark:bg-[#1b2030] p-5 rounded-none border border-slate-200 dark:border-brand-border/40 flex flex-col gap-3 relative overflow-hidden transition-all duration-300 hover:shadow-md hover:translate-y-[-3px] hover:border-slate-300 dark:hover:border-brand-cyan/30 group">
+<div class="absolute -top-10 -right-10 w-20 h-20 bg-brand-cyan/5 rounded-full blur-xl group-hover:bg-brand-cyan/10 transition-all"></div>
 <div class="flex items-center gap-2">
-<span class="w-7 h-7 rounded bg-red-500/10 text-red-500 dark:text-red-400 flex items-center justify-center font-bold text-xs font-mono select-none">!</span>
-<h4 class="font-bold text-slate-900 dark:text-white text-xs uppercase tracking-wider font-mono">Control de Stock</h4>
+<span class="w-6 h-6 rounded-none bg-slate-200 dark:bg-brand-cyan/10 text-slate-600 dark:text-brand-cyan flex items-center justify-center font-bold text-xs font-mono select-none">!</span>
+<h4 class="font-normal text-slate-800 dark:text-slate-200 text-xs uppercase tracking-wider font-mono">Control de Stock</h4>
 </div>
-<p class="text-[11px] text-slate-600 dark:text-brand-textMuted leading-relaxed">
+<p class="text-[11px] text-slate-500 dark:text-brand-textMuted leading-relaxed font-normal">
 Roturas recurrentes de stock y total incertidumbre sobre el valor financiero inmovilizado.
 </p>
 </div>
 <!-- Challenge 2: Ventas -->
-<div class="glass-card p-5 rounded-xl border border-slate-200 dark:border-brand-border/60 flex flex-col gap-3 relative overflow-hidden group">
-<div class="absolute -top-10 -right-10 w-20 h-20 bg-brand-purple/10 rounded-full blur-xl group-hover:bg-brand-purple/15 transition-all"></div>
+<div class="bg-slate-50 dark:bg-[#1b2030] p-5 rounded-none border border-slate-200 dark:border-brand-border/40 flex flex-col gap-3 relative overflow-hidden transition-all duration-300 hover:shadow-md hover:translate-y-[-3px] hover:border-slate-300 dark:hover:border-brand-cyan/30 group">
+<div class="absolute -top-10 -right-10 w-20 h-20 bg-brand-cyan/5 rounded-full blur-xl group-hover:bg-brand-cyan/10 transition-all"></div>
 <div class="flex items-center gap-2">
-<span class="w-7 h-7 rounded bg-brand-purple/10 text-brand-purple flex items-center justify-center font-bold text-xs font-mono select-none">!</span>
-<h4 class="font-bold text-slate-900 dark:text-white text-xs uppercase tracking-wider font-mono">Ventas & Lucro</h4>
+<span class="w-6 h-6 rounded-none bg-slate-200 dark:bg-brand-cyan/10 text-slate-600 dark:text-brand-cyan flex items-center justify-center font-bold text-xs font-mono select-none">!</span>
+<h4 class="font-normal text-slate-800 dark:text-slate-200 text-xs uppercase tracking-wider font-mono">Ventas & Lucro</h4>
 </div>
-<p class="text-[11px] text-slate-600 dark:text-brand-textMuted leading-relaxed">
+<p class="text-[11px] text-slate-500 dark:text-brand-textMuted leading-relaxed font-normal">
 Falta de visibilidad sobre el lucro neto real y el rendimiento geográfico por cliente.
 </p>
 </div>
 <!-- Challenge 3: Fuga -->
-<div class="glass-card p-5 rounded-xl border border-slate-200 dark:border-brand-border/60 flex flex-col gap-3 relative overflow-hidden group">
-<div class="absolute -top-10 -right-10 w-20 h-20 bg-brand-green/10 rounded-full blur-xl group-hover:bg-brand-green/15 transition-all"></div>
+<div class="bg-slate-50 dark:bg-[#1b2030] p-5 rounded-none border border-slate-200 dark:border-brand-border/40 flex flex-col gap-3 relative overflow-hidden transition-all duration-300 hover:shadow-md hover:translate-y-[-3px] hover:border-slate-300 dark:hover:border-brand-cyan/30 group">
+<div class="absolute -top-10 -right-10 w-20 h-20 bg-brand-cyan/5 rounded-full blur-xl group-hover:bg-brand-cyan/10 transition-all"></div>
 <div class="flex items-center gap-2">
-<span class="w-7 h-7 rounded bg-brand-green/10 text-brand-green flex items-center justify-center font-bold text-xs font-mono select-none">!</span>
-<h4 class="font-bold text-slate-900 dark:text-white text-xs uppercase tracking-wider font-mono">Fuga de Clientes</h4>
+<span class="w-6 h-6 rounded-none bg-slate-200 dark:bg-brand-cyan/10 text-slate-600 dark:text-brand-cyan flex items-center justify-center font-bold text-xs font-mono select-none">!</span>
+<h4 class="font-normal text-slate-800 dark:text-slate-200 text-xs uppercase tracking-wider font-mono">Fuga de Clientes</h4>
 </div>
-<p class="text-[11px] text-slate-600 dark:text-brand-textMuted leading-relaxed">
+<p class="text-[11px] text-slate-500 dark:text-brand-textMuted leading-relaxed font-normal">
 Pérdida silenciosa de depositantes detectada cuando ya retiraron sus fondos.
 </p>
 </div>
@@ -1284,11 +1325,11 @@ Llevá tu negocio al siguiente nivel. Diseñemos juntos un ecosistema de Busines
 <!-- CUSTOM SUCCESS MODAL (ALERTA PREMIUM) -->
 <div id="success-modal" class="fixed inset-0 z-50 flex items-center justify-center hidden p-4 sm:p-6 bg-black/80 backdrop-blur-sm transition-all duration-300">
 <div class="absolute inset-0 cursor-pointer" onclick="closeSuccessModal()"></div>
-<div class="relative max-w-sm w-full bg-slate-900 border border-brand-green/30 rounded-2xl shadow-2xl p-6 text-center z-10 transition-all scale-95 duration-300" id="success-modal-card">
+<div class="relative max-w-sm w-full bg-[#1b2030] border border-slate-700 rounded-none shadow-2xl p-6 text-center z-10 transition-all scale-95 duration-300" id="success-modal-card">
 <div class="w-12 h-12 bg-brand-green/10 border border-brand-green/20 rounded-full flex items-center justify-center mx-auto mb-4 animate-bounce">
 <i data-lucide="check" class="w-6 h-6 text-brand-green"></i>
 </div>
-<h3 class="text-sm font-mono font-bold text-white uppercase tracking-wider mb-2">¡Proceso Exitoso!</h3>
+<h3 class="text-sm font-mono font-normal text-white uppercase tracking-wider mb-2">¡Proceso Exitoso!</h3>
 <p class="text-xs text-slate-300 leading-relaxed mb-5">
 Has desplegado una actualización de tus modelos de BI desde local hasta Microsoft Fabric de forma 100% automatizada.
 </p>
@@ -1300,11 +1341,11 @@ Entendido
 <!-- CUSTOM EMAIL SUCCESS MODAL -->
 <div id="email-success-modal" class="fixed inset-0 z-50 flex items-center justify-center hidden p-4 sm:p-6 bg-black/80 backdrop-blur-sm transition-all duration-300">
 <div class="absolute inset-0 cursor-pointer" onclick="closeEmailSuccessModal()"></div>
-<div class="relative max-w-sm w-full bg-slate-900 border border-brand-cyan/30 rounded-2xl shadow-2xl p-6 text-center z-10 transition-all scale-95 duration-300" id="email-success-modal-card">
+<div class="relative max-w-sm w-full bg-[#1b2030] border border-slate-700 rounded-none shadow-2xl p-6 text-center z-10 transition-all scale-95 duration-300" id="email-success-modal-card">
 <div class="w-12 h-12 bg-brand-cyan/10 border border-brand-cyan/20 rounded-full flex items-center justify-center mx-auto mb-4 animate-bounce">
 <i data-lucide="mail" class="w-6 h-6 text-brand-cyan"></i>
 </div>
-<h3 class="text-sm font-mono font-bold text-white uppercase tracking-wider mb-2">¡Correo Copiado!</h3>
+<h3 class="text-sm font-mono font-normal text-white uppercase tracking-wider mb-2">¡Correo Copiado!</h3>
 <p class="text-xs text-slate-300 leading-relaxed mb-5">
 La dirección <strong class="text-brand-cyan">borgesnancya@gmail.com</strong> se copió al portapapeles.<br><br>
 Se está abriendo tu cliente de correo. Si no se abre, podés abrir tu Gmail o webmail y pegarla directamente.
