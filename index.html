@@ -917,11 +917,10 @@ html:not(.dark) .nav-link,
 html:not(.dark) .filter-btn,
 html:not(.dark) .mock-tab-btn {
     border-radius: 0px !important;
-    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
     background-color: transparent !important;
-    background: transparent !important;
-    color: #475569 !important; /* Soft slate gray font */
-    border: 1px solid #e2e8f0 !important;
+    color: #475569 !important;
+    border: 1px solid #cbd5e1 !important;
 }
 
 /* Day Mode Navbar adjustments for inactive nav links */
@@ -930,43 +929,50 @@ html:not(.dark) nav .nav-link {
     border: 1px solid transparent !important;
 }
 
-/* Active style: SOLID Magenta fill with White text and soft shadow */
+/* Day Mode Contact Button in Navbar - Empty/Outline when inactive */
+html:not(.dark) nav a[href="#contact"] {
+    background-color: transparent !important;
+    border: 1px solid #db2777 !important;
+    color: #db2777 !important;
+}
+html:not(.dark) nav a[href="#contact"]:hover {
+    background-color: rgba(219, 39, 119, 0.04) !important;
+    border-color: #be185d !important;
+    color: #be185d !important;
+}
+
+/* Active style: Solid Magenta with WHITE text (No gray text allowed!) */
 html:not(.dark) .nav-link.active,
 html:not(.dark) .filter-btn.active,
-html:not(.dark) .mock-tab-btn.active {
-    background-color: #db2777 !important; /* Solid Magenta */
+html:not(.dark) .mock-tab-btn.active,
+html:not(.dark) nav a[href="#contact"].active {
+    background-color: #db2777 !important;
     background: #db2777 !important;
-    color: #ffffff !important; /* White letters */
-    border: 1px solid #db2777 !important;
-    box-shadow: 0 4px 14px rgba(219, 39, 119, 0.3) !important;
+    color: #ffffff !important; /* Pure white text */
+    border: 2px solid #db2777 !important; /* Magenta Border */
+    box-shadow: 0 4px 15px rgba(219, 39, 119, 0.2) !important;
     font-weight: 500 !important;
 }
 
-/* Hover effects: Empty with Hot Pink border and text */
+/* Hover effects: Beautiful outline rose-magenta on hover */
 html:not(.dark) .nav-link:hover,
 html:not(.dark) .filter-btn:hover,
 html:not(.dark) .mock-tab-btn:hover {
-    border-color: #ec4899 !important; /* Pink/Rosa */
-    color: #ec4899 !important; /* Pink/Rosa */
+    border-color: #ec4899 !important; /* Turns Pink on hover */
+    color: #ec4899 !important;
     background-color: rgba(236, 72, 153, 0.04) !important;
 }
 
-/* 2. Challenge cards in "El verdadero reto de los datos" (Stock, Sales, Churn) */
+/* 2. Challenge cards in "El verdadero reto de los datos" (Stock, Sales, Churn) - Unified Magenta Border */
 html:not(.dark) .challenge-card {
     background-color: #ffffff !important;
     border: 1px solid #cbd5e1 !important;
 }
 
-html:not(.dark) .challenge-card-stock {
-    border-top: 4px solid #db2777 !important; /* Magenta Top Border */
-}
-
-html:not(.dark) .challenge-card-sales {
-    border-top: 4px solid #ec4899 !important; /* Hot Pink Top Border */
-}
-
+html:not(.dark) .challenge-card-stock,
+html:not(.dark) .challenge-card-sales,
 html:not(.dark) .challenge-card-churn {
-    border-top: 4px solid #7c3aed !important; /* Royal Purple Top Border */
+    border-top: 4px solid #db2777 !important; /* Unified Magenta Top Border */
 }
 
 /* Hover effects on cards with a soft pink/purple shadow */
@@ -998,18 +1004,18 @@ html:not(.dark) .metric-card {
     border-left: 4px solid #db2777 !important; /* Magenta left vertical line */
 }
 
-/* 5. Siguiente paso bridge badge with gorgeous gradient background */
+/* 5. Siguiente paso bridge badge with gradient */
 html:not(.dark) .siguiente-paso-badge {
-    background: linear-gradient(135deg, #db2777, #ec4899, #7c3aed) !important; /* Premium Magical Gradient */
-    color: #ffffff !important;
-    border: none !important;
-    font-weight: 500 !important;
-    box-shadow: 0 4px 15px rgba(219, 39, 119, 0.25) !important;
+    background: linear-gradient(135deg, rgba(219, 39, 119, 0.05), rgba(124, 58, 237, 0.05)) !important;
+    border: 1.5px solid #ec4899 !important;
+    color: #7c3aed !important; /* Royal Purple */
+    font-weight: 600 !important;
     font-size: 15px !important;
     padding: 0.6rem 1.2rem !important;
+    box-shadow: 0 4px 15px rgba(236, 72, 153, 0.08) !important;
 }
 html:not(.dark) .siguiente-paso-badge span.bg-brand-cyan {
-    background-color: #ffffff !important; /* white dot */
+    background-color: #7c3aed !important; /* purple dot */
 }
 
 /* 6. Desafío Comercial (Antes) & Sistema Automatizado (Después) inside case cards */
@@ -1053,32 +1059,41 @@ html:not(.dark) .project-card[data-category="hr"] i {
     color: #db2777 !important;
 }
 
-/* 7. Success Warning Popups Modals and Email understood button styling in Day Mode */
+/* 7. Success Warning Popups Modals and Email understood button overrides in Day Mode */
 html:not(.dark) .modal-btn-theme {
-    background-color: #7c3aed !important; /* Purple */
-    border-color: #7c3aed !important;
+    background-color: #64748b !important; /* Elegant slate gray */
+    border-color: #64748b !important;
     color: #ffffff !important;
 }
 html:not(.dark) .modal-btn-theme:hover {
-    background-color: #6d28d9 !important; /* Deep Purple */
-    border-color: #6d28d9 !important;
+    background-color: #475569 !important; /* Deep slate gray */
+    border-color: #475569 !important;
 }
 
 /* 8. Text elements, headings inside PERFIL DE RENDIMIENTO and Showcase details in Day Mode */
-html:not(.dark) .glass-card span,
+html:not(.dark) .glass-card span:not(.font-mono),
 html:not(.dark) .glass-card strong,
 html:not(.dark) .glass-card p {
     color: #334155 !important;
 }
-html:not(.dark) .glass-card .text-brand-purple {
-    color: #be185d !important; /* Magenta */
+
+/* Day Mode technology tags - beautiful brand colors overrides (no more gray!) */
+html:not(.dark) .glass-card span.font-mono {
+    background-color: rgba(219, 39, 119, 0.05) !important;
+    border: 1px solid rgba(219, 39, 119, 0.2) !important;
+    color: #db2777 !important; /* Magenta */
 }
-html:not(.dark) .glass-card .text-brand-green {
+html:not(.dark) .glass-card span.font-mono:nth-child(even) {
+    background-color: rgba(124, 58, 237, 0.05) !important;
+    border: 1px solid rgba(124, 58, 237, 0.2) !important;
     color: #7c3aed !important; /* Purple */
 }
-html:not(.dark) .glass-card .text-brand-cyan {
-    color: #db2777 !important; /* Pink */
+html:not(.dark) .glass-card span.font-mono:nth-child(3n) {
+    background-color: rgba(236, 72, 153, 0.05) !important;
+    border: 1px solid rgba(236, 72, 153, 0.2) !important;
+    color: #ec4899 !important; /* Pink */
 }
+
 html:not(.dark) #reto-datos h2,
 html:not(.dark) #projects h2,
 html:not(.dark) #pipeline h2,
@@ -1095,175 +1110,83 @@ html:not(.dark) #contact h3 {
     color: #334155 !important; /* Soft dark grey for titles h3 */
 }
 
-/* 9. Theme Switcher Lunita Moon Icon Color in Day Mode */
-html:not(.dark) #theme-icon-moon {
-    color: #ec4899 !important; /* Pink moon */
+/* 9. Glass panel dark mode blue tint removal overrides */
+.dark .glass-panel {
+    background: rgba(18, 20, 26, 0.8) !important; /* Neutral dark overlay */
+}
+.dark .glass-card {
+    background: rgba(26, 32, 40, 0.6) !important; /* Neutral dark card bg */
 }
 
-/* 10. Day Mode Contact Button in Navbar with White Text */
-html:not(.dark) nav a[href="#contact"] {
-    background-color: #db2777 !important; /* Solid Magenta */
-    color: #ffffff !important; /* White text */
+/* 11. Day Mode Challenges Cards premium style overrides - Unified Magenta */
+html:not(.dark) .challenge-card-stock,
+html:not(.dark) .challenge-card-sales,
+html:not(.dark) .challenge-card-churn {
+    border-top-color: #db2777 !important; /* Unified Magenta */
 }
-html:not(.dark) nav a[href="#contact"]:hover {
-    background-color: #be185d !important;
-}
-
-/* 11. Day Mode Challenges Cards premium style overrides with Magenta, Pink & Purple */
-html:not(.dark) .challenge-card-stock {
-    border-top-color: #db2777 !important; /* Magenta */
-}
-html:not(.dark) .challenge-card-stock .absolute {
+html:not(.dark) .challenge-card-stock .absolute,
+html:not(.dark) .challenge-card-sales .absolute,
+html:not(.dark) .challenge-card-churn .absolute {
     background-color: rgba(219, 39, 119, 0.04) !important;
 }
-html:not(.dark) .challenge-card-stock .absolute:hover {
+html:not(.dark) .challenge-card-stock .absolute:hover,
+html:not(.dark) .challenge-card-sales .absolute:hover,
+html:not(.dark) .challenge-card-churn .absolute:hover {
     background-color: rgba(219, 39, 119, 0.08) !important;
 }
-html:not(.dark) .challenge-icon-stock {
+html:not(.dark) .challenge-icon-stock,
+html:not(.dark) .challenge-icon-sales,
+html:not(.dark) .challenge-icon-churn {
     background-color: rgba(219, 39, 119, 0.08) !important;
     border-color: rgba(219, 39, 119, 0.2) !important;
     color: #db2777 !important;
 }
-html:not(.dark) .challenge-icon-stock i {
+html:not(.dark) .challenge-icon-stock i,
+html:not(.dark) .challenge-icon-sales i,
+html:not(.dark) .challenge-icon-churn i {
     color: #db2777 !important;
 }
 
-html:not(.dark) .challenge-card-sales {
-    border-top-color: #ec4899 !important; /* Pink/Rosa */
-}
-html:not(.dark) .challenge-card-sales .absolute {
-    background-color: rgba(236, 72, 153, 0.04) !important;
-}
-html:not(.dark) .challenge-card-sales .absolute:hover {
-    background-color: rgba(236, 72, 153, 0.08) !important;
-}
-html:not(.dark) .challenge-icon-sales {
-    background-color: rgba(236, 72, 153, 0.08) !important;
-    border-color: rgba(236, 72, 153, 0.2) !important;
-    color: #ec4899 !important;
-}
-html:not(.dark) .challenge-icon-sales i {
-    color: #ec4899 !important;
-}
-
-html:not(.dark) .challenge-card-churn {
-    border-top-color: #7c3aed !important; /* Purple/Purpura */
-}
-html:not(.dark) .challenge-card-churn .absolute {
-    background-color: rgba(124, 58, 237, 0.04) !important;
-}
-html:not(.dark) .challenge-card-churn .absolute:hover {
-    background-color: rgba(124, 58, 237, 0.08) !important;
-}
-html:not(.dark) .challenge-icon-churn {
-    background-color: rgba(124, 58, 237, 0.08) !important;
-    border-color: rgba(124, 58, 237, 0.2) !important;
-    color: #7c3aed !important;
-}
-html:not(.dark) .challenge-icon-churn i {
-    color: #7c3aed !important;
-}
-
-/* 12. Contact section and card in Day Mode unifications to pure white with magical shadow */
+/* 12. Contact section and card in Day Mode unifications to pure white and pink glow */
 html:not(.dark) #contact {
     background-color: #ffffff !important;
 }
 html:not(.dark) #contact .glass-panel {
     background-color: #ffffff !important;
-    border: 1px solid #e2e8f0 !important;
-    border-top: 4px solid #db2777 !important; /* Magenta top accent */
-    box-shadow: 0 16px 45px -10px rgba(219, 39, 119, 0.08), 0 4px 12px rgba(219, 39, 119, 0.03) !important; /* Magical soft Pink shadow */
-}
-html:not(.dark) #contact input,
-html:not(.dark) #contact textarea {
-    background-color: #fff9fa !important; /* Soft warm pink background */
-    border: 1px solid #fbcfe8 !important; /* Soft pink border */
-    color: #334155 !important;
-    border-radius: 0px !important;
-}
-html:not(.dark) #contact input:focus,
-html:not(.dark) #contact textarea:focus {
-    border-color: #db2777 !important;
-    background-color: #ffffff !important;
-}
-html:not(.dark) #contact label {
-    color: #db2777 !important;
+    border-color: #e2e8f0 !important;
+    box-shadow: 0 10px 30px -5px rgba(219, 39, 119, 0.08) !important;
 }
 
-/* 13. High-fidelity custom tags for Stack Principal */
-.stack-tag-powerbi {
-    color: #00f2fe !important;
-    background-color: rgba(0, 242, 254, 0.1) !important;
-    border-color: rgba(0, 242, 254, 0.2) !important;
-}
-.stack-tag-sql {
-    color: #c084fc !important;
-    background-color: rgba(192, 132, 252, 0.1) !important;
-    border-color: rgba(192, 132, 252, 0.2) !important;
-}
-.stack-tag-warehouse {
-    color: #00f5a0 !important;
-    background-color: rgba(0, 245, 160, 0.1) !important;
-    border-color: rgba(0, 245, 160, 0.2) !important;
-}
-.stack-tag-lakehouse {
-    color: #00f2fe !important;
-    background-color: rgba(0, 242, 254, 0.1) !important;
-    border-color: rgba(0, 242, 254, 0.2) !important;
-}
-.stack-tag-pipelines {
-    color: #c084fc !important;
-    background-color: rgba(192, 132, 252, 0.1) !important;
-    border-color: rgba(192, 132, 252, 0.2) !important;
-}
-.stack-tag-git {
-    color: #00f5a0 !important;
-    background-color: rgba(0, 245, 160, 0.1) !important;
-    border-color: rgba(0, 245, 160, 0.2) !important;
-}
-
-html:not(.dark) .stack-tag-powerbi {
-    color: #db2777 !important;
-    background-color: rgba(219, 39, 119, 0.05) !important;
-    border-color: rgba(219, 39, 119, 0.2) !important;
-}
-html:not(.dark) .stack-tag-sql {
-    color: #7c3aed !important;
-    background-color: rgba(124, 58, 237, 0.05) !important;
-    border-color: rgba(124, 58, 237, 0.2) !important;
-}
-html:not(.dark) .stack-tag-warehouse {
-    color: #ec4899 !important;
-    background-color: rgba(236, 72, 153, 0.05) !important;
-    border-color: rgba(236, 72, 153, 0.2) !important;
-}
-html:not(.dark) .stack-tag-lakehouse {
-    color: #db2777 !important;
-    background-color: rgba(219, 39, 119, 0.05) !important;
-    border-color: rgba(219, 39, 119, 0.2) !important;
-}
-html:not(.dark) .stack-tag-pipelines {
-    color: #7c3aed !important;
-    background-color: rgba(124, 58, 237, 0.05) !important;
-    border-color: rgba(124, 58, 237, 0.2) !important;
-}
-html:not(.dark) .stack-tag-git {
-    color: #ec4899 !important;
-    background-color: rgba(236, 72, 153, 0.05) !important;
-    border-color: rgba(236, 72, 153, 0.2) !important;
-}
-
-/* 14. Day Mode Simulator Button */
+/* Day Mode simulate button and theme icon overrides */
 html:not(.dark) #btn-simulate {
-    background-color: #ec4899 !important; /* Pink */
-    border-color: #ec4899 !important;
+    background-color: #ec4899 !important; /* Solid pink */
     color: #ffffff !important;
-    box-shadow: 0 4px 12px rgba(236, 72, 153, 0.2) !important;
+    border-color: #ec4899 !important;
 }
 html:not(.dark) #btn-simulate:hover {
-    background-color: #db2777 !important; /* Hot Magenta */
+    background-color: #db2777 !important;
     border-color: #db2777 !important;
-    box-shadow: 0 6px 16px rgba(219, 39, 119, 0.3) !important;
+}
+html:not(.dark) #theme-icon-moon,
+html:not(.dark) button[onclick="toggleTheme()"] i {
+    color: #ec4899 !important; /* Hot pink switcher icon */
+}
+html:not(.dark) button[onclick="toggleTheme()"] {
+    border-color: rgba(236, 72, 153, 0.3) !important;
+}
+
+/* Day Mode Console Log coloring (Nancy V25) */
+html:not(.dark) .sim-console-container #sim-logs .text-brand-cyan {
+    color: #db2777 !important; /* Magenta for process */
+}
+html:not(.dark) .sim-console-container #sim-logs .text-brand-purple {
+    color: #7c3aed !important; /* Purple for git */
+}
+html:not(.dark) .sim-console-container #sim-logs .text-slate-500 {
+    color: #ec4899 !important; /* Pink for success */
+}
+html:not(.dark) .sim-console-container #sim-logs div:not(.text-brand-cyan):not(.text-brand-purple):not(.text-slate-500) {
+    color: #475569 !important; /* Default slate gray */
 }
 </style>
 
@@ -1322,7 +1245,7 @@ html:not(.dark) #btn-simulate:hover {
 <span class="w-1.5 h-1.5 rounded-full bg-brand-cyan animate-pulse"></span>
 <span class="disponible-badge text-[10px] font-mono uppercase tracking-wider">Disponible para Proyectos / Propuestas 2026</span>
 </div>
-<h1 class="text-3xl md:text-5xl font-normal tracking-tight leading-tight text-slate-900 dark:text-white">Transformo datos en <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-[#db2777] via-[#ec4899] to-[#7c3aed] dark:from-[#00f2fe] dark:via-[#9b51e0] dark:to-[#00f5a0] font-semibold">Decisiones de Negocio</span></h1>
+<h1 class="text-3xl md:text-5xl font-normal tracking-tight leading-tight text-slate-700 dark:text-white">Transformo datos en <br>Decisiones de Negocio</h1>
 <p class="text-sm md:text-base text-slate-600 dark:text-brand-textMuted max-w-xl leading-relaxed">
 Desarrolladora de Business Intelligence con base en Río Cuarto, Córdoba. Me especializo en diseñar soluciones analíticas end-to-end: desde la ingeniería de datos en <strong>SQL Server</strong> y la automatización de flujos de despliegue continuo (<strong>CI/CD con GitHub y Microsoft Fabric</strong>), hasta el modelado dimensional en estrella y la creación de tableros de control ejecutivos que impactan la rentabilidad del negocio.
 </p>
@@ -1377,14 +1300,14 @@ Desarrolladora de Business Intelligence con base en Río Cuarto, Córdoba. Me es
 </div>
 <div class="mt-2 pt-3 border-t border-slate-200 dark:border-brand-border/60">
 <span class="text-[11px] font-normal text-slate-800 dark:text-white block mb-1.5">Stack Principal</span>
-                    <div class="flex flex-wrap gap-1">
-                        <span class="stack-tag-powerbi px-1.5 py-0.5 text-[9px] rounded-none border font-mono">Power BI</span>
-                        <span class="stack-tag-sql px-1.5 py-0.5 text-[9px] rounded-none border font-mono">SQL Server</span>
-                        <span class="stack-tag-warehouse px-1.5 py-0.5 text-[9px] rounded-none border font-mono">Warehouse</span>
-                        <span class="stack-tag-lakehouse px-1.5 py-0.5 text-[9px] rounded-none border font-mono">Lakehouse</span>
-                        <span class="stack-tag-pipelines px-1.5 py-0.5 text-[9px] rounded-none border font-mono">Pipelines</span>
-                        <span class="stack-tag-git px-1.5 py-0.5 text-[9px] rounded-none border font-mono">Git/GitHub</span>
-                    </div>
+<div class="flex flex-wrap gap-1">
+<span class="px-1.5 py-0.5 bg-brand-cyan/10 dark:bg-brand-cyan/5 text-[9px] text-slate-200 rounded border border-brand-cyan/20 font-mono">Power BI</span>
+<span class="px-1.5 py-0.5 bg-brand-purple/10 dark:bg-brand-purple/5 text-[9px] text-brand-purple rounded border border-brand-purple/20 font-mono">SQL Server</span>
+<span class="px-1.5 py-0.5 bg-brand-green/10 dark:bg-brand-green/5 text-[9px] text-slate-200 rounded border border-brand-green/20 font-mono">Warehouse</span>
+<span class="px-1.5 py-0.5 bg-brand-cyan/10 dark:bg-brand-cyan/5 text-[9px] text-slate-200 rounded border border-brand-cyan/20 font-mono">Lakehouse</span>
+<span class="px-1.5 py-0.5 bg-brand-purple/10 dark:bg-brand-purple/5 text-[9px] text-brand-purple rounded border border-brand-purple/20 font-mono">Pipelines</span>
+<span class="px-1.5 py-0.5 bg-brand-green/10 dark:bg-brand-green/5 text-[9px] text-slate-200 rounded border border-brand-green/20 font-mono">Git/GitHub</span>
+</div>
 </div>
 </div>
 </div>
@@ -1443,7 +1366,7 @@ No trabajo con archivos locales sueltos. He diseñado e implementado una arquite
 </div>
 <!-- Fabric Cloud -->
 <div id="sim-step-4" class="p-4 rounded-xl bg-slate-100 dark:bg-brand-dark/80 border border-slate-200 dark:border-brand-border flex flex-col items-center text-center gap-2 relative transition-all duration-300">
-<div class="w-10 h-10 rounded-lg bg-brand-green/10 border border-brand-green/30 flex items-center justify-center text-slate-200">
+<div class="w-10 h-10 rounded-lg bg-brand-green/10 border border-slate-500/30 flex items-center justify-center text-slate-200">
 <i data-lucide="cloud" class="w-5 h-5"></i>
 </div>
 <div>
@@ -1897,7 +1820,7 @@ Llevá tu negocio al siguiente nivel. Diseñemos juntos un ecosistema de Busines
 </div>
 </div>
 <div class="flex items-center gap-2.5">
-<div class="w-8 h-8 rounded-lg bg-brand-green/10 border border-brand-green/20 flex items-center justify-center text-slate-200">
+<div class="w-8 h-8 rounded-lg bg-slate-500/10 border border-slate-500/20 flex items-center justify-center text-slate-200">
 <i data-lucide="map-pin" class="w-4 h-4"></i>
 </div>
 <div>
@@ -1915,14 +1838,14 @@ Llevá tu negocio al siguiente nivel. Diseñemos juntos un ecosistema de Busines
 <div id="success-modal" class="fixed inset-0 z-50 flex items-center justify-center hidden p-4 sm:p-6 bg-black/80 backdrop-blur-sm transition-all duration-300">
 <div class="absolute inset-0 cursor-pointer" onclick="closeSuccessModal()"></div>
 <div class="relative max-w-sm w-full bg-white dark:bg-[#1b2030] border border-slate-300 dark:border-slate-700 rounded-none shadow-2xl p-6 text-center z-10 transition-all scale-95 duration-300 shadow-[0_10px_40px_-10px_rgba(79,70,229,0.15)]" id="success-modal-card">
-<div class="w-12 h-12 bg-brand-green/10 border border-brand-green/20 rounded-full flex items-center justify-center mx-auto mb-4 animate-bounce">
+<div class="w-12 h-12 bg-slate-500/10 border border-slate-500/20 rounded-full flex items-center justify-center mx-auto mb-4 animate-bounce">
 <i data-lucide="check" class="w-6 h-6 text-[#10b981]"></i>
 </div>
 <h3 class="text-sm font-mono font-normal text-white uppercase tracking-wider mb-2">¡Proceso Exitoso!</h3>
 <p class="text-xs text-slate-300 leading-relaxed mb-5">
 Has desplegado una actualización de tus modelos de BI desde local hasta Microsoft Fabric de forma 100% automatizada.
 </p>
-<button onclick="closeSuccessModal()" class="w-full py-2.5 bg-[#10b981] hover:bg-[#059669] text-white font-normal text-xs uppercase tracking-wider transition-all rounded-none shadow-md border border-[#10b981] cursor-pointer">
+<button onclick="closeSuccessModal()" class="w-full py-2.5 bg-slate-600 hover:bg-slate-700 text-white font-normal text-xs uppercase tracking-wider transition-all rounded-none shadow-md border border-slate-600 cursor-pointer">
 Entendido
 </button>
 </div>
@@ -2428,24 +2351,28 @@ const btn = card.querySelector('button');
 h3.textContent = title;
 p.textContent = text;
 
-const isDark = document.documentElement.classList.contains('dark');
+// Unified corporate slate/charcoal gray theme ("que todo sea en gris y listo")
+h3.className = "text-sm font-mono font-bold text-slate-800 dark:text-slate-100 uppercase tracking-wider mb-2";
+p.className = "text-xs text-slate-500 dark:text-slate-300 leading-relaxed mb-5";
 
-if (isDark) {
-    // Dark Mode: Unified strictly to emerald green (#10b981) - NO double colors!
-    h3.className = "text-sm font-mono font-bold text-white uppercase tracking-wider mb-2";
-    p.className = "text-xs text-slate-300 leading-relaxed mb-5";
-    
-    iconBox.className = "w-12 h-12 bg-[#10b981]/10 border border-[#10b981]/30 rounded-none flex items-center justify-center mx-auto mb-4 animate-bounce";
-    if (type === 'warning') {
-        iconBox.innerHTML = '<i data-lucide="alert-triangle" class="w-6 h-6 text-[#10b981]"></i>';
-    } else if (type === 'email') {
-        iconBox.innerHTML = '<i data-lucide="copy" class="w-6 h-6 text-[#10b981]"></i>';
-    } else {
-        iconBox.innerHTML = '<i data-lucide="check" class="w-6 h-6 text-[#10b981]"></i>';
-    }
-    
-    btn.className = "w-full py-2.5 bg-[#10b981] hover:bg-[#059669] text-white font-normal text-xs uppercase tracking-wider transition-all rounded-none shadow-md border border-[#10b981] cursor-pointer";
-    btn.textContent = "Entendido";
+iconBox.className = "w-12 h-12 bg-slate-500/10 border border-slate-500/30 rounded-none flex items-center justify-center mx-auto mb-4 animate-bounce";
+if (type === 'warning') {
+    iconBox.innerHTML = '<i data-lucide="alert-triangle" class="w-6 h-6 text-slate-500 dark:text-slate-400"></i>';
+} else if (type === 'email') {
+    iconBox.innerHTML = '<i data-lucide="copy" class="w-6 h-6 text-slate-500 dark:text-slate-400"></i>';
+} else {
+    iconBox.innerHTML = '<i data-lucide="check" class="w-6 h-6 text-slate-500 dark:text-slate-400"></i>';
+}
+
+btn.className = "w-full py-2.5 bg-slate-600 hover:bg-slate-700 text-white font-normal text-xs uppercase tracking-wider transition-all rounded-none shadow-md border border-slate-600 cursor-pointer";
+btn.textContent = "Entendido";
+
+modal.classList.remove('hidden');
+setTimeout(() => {
+    card.classList.remove('scale-95');
+    card.classList.add('scale-100');
+}, 10);
+if (window.lucide) { lucide.createIcons(); }
 } else {
     // Light Mode: Dynamic beautiful Pink/Purple
     h3.className = "text-sm font-mono font-bold text-slate-800 uppercase tracking-wider mb-2";
