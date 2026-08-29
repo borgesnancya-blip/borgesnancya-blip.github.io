@@ -917,7 +917,163 @@ html:not(.dark) #email-success-modal button {
     border-color: #4f46e5 !important;
     color: #ffffff !important;
 }
+
+/* ==========================================================================
+   NANCY'S CUSTOM HIGH-FIDELITY MAGENTA, PINK & PURPLE LIGHT MODE OVERRIDES
+   ========================================================================== */
+html:not(.dark) body {
+    color: #334155 !important;
+}
+
+/* 1. Header Navigation & Filter Button selectors active and hover */
+html:not(.dark) .nav-link,
+html:not(.dark) .filter-btn,
+html:not(.dark) .mock-tab-btn {
+    border-radius: 0px !important;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    background-color: #f1f5f9 !important;
+    color: #475569 !important;
+    border: 1px solid #cbd5e1 !important;
+}
+
+/* Day Mode Navbar adjustments for inactive nav links */
+html:not(.dark) nav .nav-link {
+    background-color: transparent !important;
+    border: 1px solid transparent !important;
+}
+
+/* Active style: Outline-only with gorgeous Magenta and Royal Purple */
+html:not(.dark) .nav-link.active,
+html:not(.dark) .filter-btn.active,
+html:not(.dark) .mock-tab-btn.active {
+    background-color: transparent !important;
+    background: transparent !important;
+    color: #db2777 !important; /* Vibrant Magenta text */
+    border: 2px solid #db2777 !important; /* Magenta Border */
+    box-shadow: 0 4px 12px rgba(219, 39, 119, 0.12) !important;
+    font-weight: 500 !important;
+}
+
+/* Hover effects */
+html:not(.dark) .nav-link:hover,
+html:not(.dark) .filter-btn:hover,
+html:not(.dark) .mock-tab-btn:hover {
+    border-color: #7c3aed !important; /* Turns Royal Purple on hover */
+    color: #7c3aed !important;
+    background-color: rgba(124, 58, 237, 0.03) !important;
+}
+
+/* 2. Challenge cards in "El verdadero reto de los datos" (Stock, Sales, Churn) */
+html:not(.dark) .challenge-card {
+    background-color: #ffffff !important;
+    border: 1px solid #cbd5e1 !important;
+}
+
+html:not(.dark) .challenge-card-stock {
+    border-top: 4px solid #db2777 !important; /* Magenta Top Border */
+}
+
+html:not(.dark) .challenge-card-sales {
+    border-top: 4px solid #ec4899 !important; /* Hot Pink Top Border */
+}
+
+html:not(.dark) .challenge-card-churn {
+    border-top: 4px solid #7c3aed !important; /* Royal Purple Top Border */
+}
+
+/* Hover effects on cards with a soft pink/purple shadow */
+html:not(.dark) .glass-card:hover,
+html:not(.dark) .project-card:hover,
+html:not(.dark) .mock-showcase-container:hover,
+html:not(.dark) .challenge-card:hover,
+html:not(.dark) .showcase-card-hover:hover {
+    transform: translateY(-4px) !important;
+    border-color: #db2777 !important; /* Magenta border */
+    box-shadow: 0 12px 24px -6px rgba(219, 39, 119, 0.15) !important; /* Magenta soft glow shadow */
+}
+
+/* 3. Disponible Badge Hero top */
+html:not(.dark) .disponible-badge-container {
+    background-color: rgba(219, 39, 119, 0.06) !important;
+    border-color: rgba(219, 39, 119, 0.2) !important;
+}
+html:not(.dark) .disponible-badge {
+    color: #db2777 !important; /* Hot pink/Magenta */
+    font-weight: 500 !important;
+}
+html:not(.dark) .disponible-badge-container span.bg-brand-cyan {
+    background-color: #db2777 !important; /* Matching dot color */
+}
+
+/* 4. Metric Cards (5+, 100%, SQL/DAX, Fabric) left border tag */
+html:not(.dark) .metric-card {
+    border-left: 4px solid #db2777 !important; /* Magenta left vertical line */
+}
+
+/* 5. Siguiente paso bridge badge */
+html:not(.dark) .siguiente-paso-badge {
+    color: #7c3aed !important; /* Royal Purple */
+    border-color: rgba(124, 58, 237, 0.2) !important;
+    background-color: rgba(124, 58, 237, 0.05) !important;
+    font-size: 13px !important;
+}
+html:not(.dark) .siguiente-paso-badge span.bg-brand-cyan {
+    background-color: #7c3aed !important; /* purple dot */
+}
+
+/* 6. Desafío Comercial (Antes) & Sistema Automatizado (Después) inside case cards */
+html:not(.dark) .project-label,
+html:not(.dark) .card-badge-tag {
+    color: #7c3aed !important; /* Deep Royal Purple */
+    border-color: rgba(124, 58, 237, 0.25) !important;
+    background-color: rgba(124, 58, 237, 0.05) !important;
+    font-weight: 500 !important;
+}
+
+/* 7. Success Warning Popups Modals and Email understood buttons */
+html:not(.dark) #success-modal button,
+html:not(.dark) #email-success-modal button {
+    background-color: #7c3aed !important; /* Purple */
+    border-color: #7c3aed !important;
+    color: #ffffff !important;
+}
+html:not(.dark) #success-modal button:hover,
+html:not(.dark) #email-success-modal button:hover {
+    background-color: #6d28d9 !important; /* Deep Purple */
+    border-color: #6d28d9 !important;
+}
+
+/* 8. Text elements, headings inside PERFIL DE RENDIMIENTO and Showcase details in Day Mode */
+html:not(.dark) .glass-card span,
+html:not(.dark) .glass-card strong,
+html:not(.dark) .glass-card p {
+    color: #334155 !important;
+}
+html:not(.dark) .glass-card .text-brand-purple {
+    color: #be185d !important; /* Magenta */
+}
+html:not(.dark) .glass-card .text-brand-green {
+    color: #7c3aed !important; /* Purple */
+}
+html:not(.dark) .glass-card .text-brand-cyan {
+    color: #db2777 !important; /* Pink */
+}
+html:not(.dark) #reto-datos h2,
+html:not(.dark) #projects h2,
+html:not(.dark) #pipeline h2,
+html:not(.dark) #showcase h2,
+html:not(.dark) #contact h2 {
+    color: #db2777 !important; /* Magenta Section Header h2 */
+}
+html:not(.dark) #reto-datos h3,
+html:not(.dark) #projects h3,
+html:not(.dark) #pipeline h3,
+html:not(.dark) #showcase h3,
+html:not(.dark) #contact h3 {
+    color: #334155 !important; /* Soft dark grey for titles h3 */
+}
 </style>
+
 </head>
 <body class="selection:bg-brand-cyan selection:text-brand-dark font-sans">
 <!-- NAVBAR -->
@@ -969,7 +1125,7 @@ html:not(.dark) #email-success-modal button {
 <div class="absolute bottom-10 left-10 w-[300px] h-[300px] bg-brand-purple/10 rounded-full blur-[80px] pointer-events-none"></div>
 <div class="max-w-5xl mx-auto w-full grid grid-cols-1 md:grid-cols-12 gap-8 items-start relative z-10">
 <div class="md:col-span-8 flex flex-col gap-4">
-<div class="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full bg-brand-cyan/10 border border-brand-cyan/20 w-fit">
+<div class="disponible-badge-container inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full bg-brand-cyan/10 border border-brand-cyan/20 w-fit">
 <span class="w-1.5 h-1.5 rounded-full bg-brand-cyan animate-pulse"></span>
 <span class="disponible-badge text-[10px] font-mono uppercase tracking-wider">Disponible para Proyectos / Propuestas 2026</span>
 </div>
@@ -1212,7 +1368,7 @@ Pérdida silenciosa de depositantes detectada cuando ya retiraron sus fondos.
 </div>
 </div>
 <!-- Bridge text -->
-<div class="inline-flex items-center justify-center gap-2 py-2 px-4 rounded-lg bg-slate-200/50 dark:bg-brand-card/60 border border-slate-300/30 dark:border-brand-border font-mono text-sm md:text-[15px] text-slate-800 dark:text-white">
+<div class="siguiente-paso-badge inline-flex items-center justify-center gap-2 py-2 px-4 rounded-lg bg-slate-200/50 dark:bg-brand-card/60 border border-slate-300/30 dark:border-brand-border font-mono text-sm md:text-[15px] text-slate-800 dark:text-white">
 <span class="w-1.5 h-1.5 rounded-full bg-brand-cyan animate-pulse"></span>
 <span>Siguiente paso: Diseñar un sistema sólido para automatizar cada respuesta...</span>
 </div>
