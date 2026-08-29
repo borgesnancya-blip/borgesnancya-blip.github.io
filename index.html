@@ -864,22 +864,7 @@ html:not(.dark) .mock-tab-btn {
     border: 1px solid #cbd5e1 !important;
 }
 
-/* Day Mode brand and label colors unifications - Almost Red (#dc2626) and Fuga Orange (#ea580c) */
-html:not(.dark) .card-badge-tag {
-    color: #dc2626 !important;
-    border-color: rgba(220, 38, 38, 0.25) !important;
-    background-color: rgba(220, 38, 38, 0.05) !important;
-    font-weight: 500 !important;
-}
-html:not(.dark) .project-label {
-    color: #ea580c !important;
-    font-weight: 500 !important;
-}
-html:not(.dark) .text-slate-200,
-html:not(.dark) .text-brand-purple,
-html:not(.dark) .text-brand-cyan {
-    color: #dc2626 !important;
-}
+
 
 /* Enforce darker readable colors in Day Mode inside PERFIL DE RENDIMIENTO spec lists */
 html:not(.dark) .glass-card span,
@@ -890,9 +875,7 @@ html:not(.dark) .glass-card p {
 html:not(.dark) .glass-card .text-brand-purple {
     color: #6d28d9 !important; /* Deep Purple */
 }
-html:not(.dark) .glass-card .text-slate-200 {
-    color: #15803d !important; /* Deep Green */
-}
+
 html:not(.dark) .glass-card .text-brand-cyan {
     color: #0284c7 !important; /* Deep Ocean-Blue */
 }
@@ -1063,7 +1046,8 @@ html:not(.dark) #projects h2,
 html:not(.dark) #pipeline h2,
 html:not(.dark) #showcase h2,
 html:not(.dark) #contact h2 {
-    color: #475569 !important; /* Gris oscuro consistent w/ titles */
+    color: #475569 !important; /* Gris pizarra oscuro subheadings instead of magenta */
+    font-weight: 500 !important;
 }
 html:not(.dark) #reto-datos h3,
 html:not(.dark) #projects h3,
@@ -1073,15 +1057,15 @@ html:not(.dark) #contact h3 {
     color: #334155 !important; /* Soft dark grey for titles h3 */
 }
 
-/* Nancy V22 Premium Color Overrides (Magenta, Pink & Purple Only for Day Mode) */
+/* Nancy's Custom Magenta, Pink & Purple Day Mode Overrides for Challenges and Project Cards */
 html:not(.dark) .challenge-card-stock {
-    border-top-color: #db2777 !important; /* Magenta border */
+    border-top-color: #db2777 !important; /* Magenta */
 }
-html:not(.dark) .challenge-card-sales {
-    border-top-color: #ec4899 !important; /* Pink border */
+html:not(.dark) .challenge-card-stock .absolute {
+    background-color: rgba(219, 39, 119, 0.04) !important;
 }
-html:not(.dark) .challenge-card-churn {
-    border-top-color: #7c3aed !important; /* Purple border */
+html:not(.dark) .challenge-card-stock .absolute:hover {
+    background-color: rgba(219, 39, 119, 0.08) !important;
 }
 html:not(.dark) .challenge-icon-stock {
     background-color: rgba(219, 39, 119, 0.08) !important;
@@ -1091,6 +1075,16 @@ html:not(.dark) .challenge-icon-stock {
 html:not(.dark) .challenge-icon-stock i {
     color: #db2777 !important;
 }
+
+html:not(.dark) .challenge-card-sales {
+    border-top-color: #ec4899 !important; /* Pink/Rosa */
+}
+html:not(.dark) .challenge-card-sales .absolute {
+    background-color: rgba(236, 72, 153, 0.04) !important;
+}
+html:not(.dark) .challenge-card-sales .absolute:hover {
+    background-color: rgba(236, 72, 153, 0.08) !important;
+}
 html:not(.dark) .challenge-icon-sales {
     background-color: rgba(236, 72, 153, 0.08) !important;
     border-color: rgba(236, 72, 153, 0.2) !important;
@@ -1098,6 +1092,16 @@ html:not(.dark) .challenge-icon-sales {
 }
 html:not(.dark) .challenge-icon-sales i {
     color: #ec4899 !important;
+}
+
+html:not(.dark) .challenge-card-churn {
+    border-top-color: #7c3aed !important; /* Purple/Purpura */
+}
+html:not(.dark) .challenge-card-churn .absolute {
+    background-color: rgba(124, 58, 237, 0.04) !important;
+}
+html:not(.dark) .challenge-card-churn .absolute:hover {
+    background-color: rgba(124, 58, 237, 0.08) !important;
 }
 html:not(.dark) .challenge-icon-churn {
     background-color: rgba(124, 58, 237, 0.08) !important;
@@ -1108,43 +1112,73 @@ html:not(.dark) .challenge-icon-churn i {
     color: #7c3aed !important;
 }
 
-/* 8. Text elements, headings inside PERFIL DE RENDIMIENTO and Showcase details in Day Mode */
-html:not(.dark) .glass-card span,
-html:not(.dark) .glass-card strong,
-html:not(.dark) .glass-card p {
-    color: #334155 !important;
+/* Dynamic project card badge and label colors in Day Mode (Magenta, Pink, Purple) */
+html:not(.dark) #projects-grid .project-card[data-category="retail"] .card-badge-tag {
+    color: #db2777 !important; /* Magenta */
+    border-color: rgba(219, 39, 119, 0.25) !important;
+    background-color: rgba(219, 39, 119, 0.05) !important;
 }
-html:not(.dark) .glass-card .text-brand-purple {
-    color: #be185d !important; /* Magenta */
+html:not(.dark) #projects-grid .project-card[data-category="retail"] i {
+    color: #db2777 !important;
 }
-html:not(.dark) .glass-card .text-brand-green {
-    color: #7c3aed !important; /* Purple */
-}
-html:not(.dark) .glass-card .text-brand-cyan {
-    color: #db2777 !important; /* Pink */
-}
-html:not(.dark) .glass-card .text-slate-200 {
-    color: #7c3aed !important; /* Purple instead of green */
+html:not(.dark) #projects-grid .project-card[data-category="retail"] .project-label {
+    color: #db2777 !important;
 }
 
-/* Day Mode global neon utility mapping overrides to Magenta, Pink and Purple */
-html:not(.dark) .text-brand-cyan {
-    color: #db2777 !important; /* Pink */
+html:not(.dark) #projects-grid .project-card[data-category="marketing"] .card-badge-tag {
+    color: #ec4899 !important; /* Pink/Rosa */
+    border-color: rgba(236, 72, 153, 0.25) !important;
+    background-color: rgba(236, 72, 153, 0.05) !important;
 }
-html:not(.dark) .text-brand-purple {
+html:not(.dark) #projects-grid .project-card[data-category="marketing"] i {
+    color: #ec4899 !important;
+}
+html:not(.dark) #projects-grid .project-card[data-category="marketing"] .project-label {
+    color: #ec4899 !important;
+}
+
+html:not(.dark) #projects-grid .project-card[data-category="banking"] .card-badge-tag {
     color: #7c3aed !important; /* Purple */
+    border-color: rgba(124, 58, 237, 0.25) !important;
+    background-color: rgba(124, 58, 237, 0.05) !important;
 }
-html:not(.dark) .text-brand-green {
-    color: #db2777 !important; /* Pink */
+html:not(.dark) #projects-grid .project-card[data-category="banking"] i {
+    color: #7c3aed !important;
 }
-html:not(.dark) .text-slate-200 {
-    color: #7c3aed !important; /* Purple */
+html:not(.dark) #projects-grid .project-card[data-category="banking"] .project-label {
+    color: #7c3aed !important;
 }
-html:not(.dark) .bg-brand-cyan {
-    background-color: #db2777 !important;
+
+html:not(.dark) #projects-grid .project-card[data-category="hr"] .card-badge-tag {
+    color: #db2777 !important; /* Magenta */
+    border-color: rgba(219, 39, 119, 0.25) !important;
+    background-color: rgba(219, 39, 119, 0.05) !important;
 }
-html:not(.dark) .border-brand-cyan {
-    border-color: #db2777 !important;
+html:not(.dark) #projects-grid .project-card[data-category="hr"] i {
+    color: #db2777 !important;
+}
+html:not(.dark) #projects-grid .project-card[data-category="hr"] .project-label {
+    color: #db2777 !important;
+}
+
+/* Success/Warning Modal Button Active Styling overrides */
+.dark .modal-btn-theme {
+    background-color: #10b981 !important;
+    border-color: #10b981 !important;
+    color: #ffffff !important;
+}
+.dark .modal-btn-theme:hover {
+    background-color: #059669 !important;
+    border-color: #059669 !important;
+}
+html:not(.dark) .modal-btn-theme {
+    background-color: #7c3aed !important; /* Royal Purple */
+    border-color: #7c3aed !important;
+    color: #ffffff !important;
+}
+html:not(.dark) .modal-btn-theme:hover {
+    background-color: #6d28d9 !important; /* Deep Purple */
+    border-color: #6d28d9 !important;
 }
 
 </style>
@@ -1718,7 +1752,7 @@ Análisis integral de funcionarios activos para optimizar costos de masa salaria
 </div>
 <div id="view-contact" class="view-section hidden">
 <!-- CONTACT SECTION -->
-<section id="contact" class="pt-28 pb-12 px-6 md:px-12 bg-slate-100 dark:bg-[#1e2533] transition-colors relative overflow-hidden">
+<section id="contact" class="pt-28 pb-12 px-6 md:px-12 bg-slate-50 dark:bg-[#131722] transition-colors relative overflow-hidden">
 <div class="absolute -bottom-10 right-0 w-[300px] h-[300px] bg-brand-cyan/5 rounded-full blur-[80px] pointer-events-none"></div>
 <div class="max-w-xl mx-auto text-center relative z-10 flex flex-col gap-6">
 <div class="text-center">
@@ -1729,7 +1763,7 @@ Llevá tu negocio al siguiente nivel. Diseñemos juntos un ecosistema de Busines
 </p>
 </div>
 <!-- Form & contact links card -->
-<div class="glass-panel p-6 md:p-8 rounded-none border border-slate-200 dark:border-slate-700 dark:bg-[#2a3244] flex flex-col gap-5 text-left">
+<div class="glass-panel p-6 md:p-8 rounded-none border border-slate-200 dark:border-slate-800 dark:bg-[#1b2030] flex flex-col gap-5 text-left">
 <div class="space-y-3">
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
 <div>
@@ -2307,6 +2341,7 @@ const iconBox = card.querySelector('.w-12.h-12');
 const h3 = card.querySelector('h3');
 const p = card.querySelector('p');
 const btn = card.querySelector('button');
+const isDark = document.documentElement.classList.contains('dark');
 h3.textContent = title;
 p.textContent = text;
 
@@ -2314,25 +2349,34 @@ p.textContent = text;
 h3.className = "text-sm font-mono font-bold text-slate-800 dark:text-white uppercase tracking-wider mb-2";
 p.className = "text-xs text-slate-600 dark:text-slate-200 leading-relaxed mb-5";
 
-// Unified button for Entendido - Beautiful indigo rectangular button, same for success and warning, 0% cyan
-const btnClass = "w-full py-2.5 bg-[#4f46e5] hover:bg-[#4338ca] text-white font-normal text-xs uppercase tracking-wider transition-all rounded-none shadow-md border border-[#4f46e5] cursor-pointer";
+// Symmetrical button with theme transition
+btn.className = "modal-btn-theme w-full py-2.5 text-white font-normal text-xs uppercase tracking-wider transition-all rounded-none shadow-md border cursor-pointer";
+btn.textContent = "Entendido";
 
-if (type === 'email') {
-iconBox.className = "w-12 h-12 bg-indigo-500/10 border border-indigo-500/30 rounded-none flex items-center justify-center mx-auto mb-4 animate-bounce";
-iconBox.innerHTML = '<i data-lucide="copy" class="w-6 h-6 text-indigo-500"></i>';
-btn.className = btnClass;
-btn.textContent = "Entendido";
-} else if (type === 'warning') {
-iconBox.className = "w-12 h-12 bg-amber-500/10 border border-amber-500/20 rounded-none flex items-center justify-center mx-auto mb-4 animate-bounce";
-iconBox.innerHTML = '<i data-lucide="alert-triangle" class="w-6 h-6 text-amber-500"></i>';
-btn.className = btnClass;
-btn.textContent = "Entendido";
+if (isDark) {
+    // Modo Oscuro: TODO es "solo ese verde" (#10b981), icon background & border updated
+    iconBox.className = "w-12 h-12 bg-emerald-500/10 border border-emerald-500/20 rounded-none flex items-center justify-center mx-auto mb-4 animate-bounce";
+    if (type === 'email') {
+        iconBox.innerHTML = '<i data-lucide="copy" class="w-6 h-6 text-[#10b981]"></i>';
+    } else if (type === 'warning') {
+        iconBox.innerHTML = '<i data-lucide="alert-triangle" class="w-6 h-6 text-[#10b981]"></i>';
+    } else {
+        iconBox.innerHTML = '<i data-lucide="check" class="w-6 h-6 text-[#10b981]"></i>';
+    }
 } else {
-iconBox.className = "w-12 h-12 bg-indigo-500/10 border border-indigo-500/30 rounded-none flex items-center justify-center mx-auto mb-4 animate-bounce";
-iconBox.innerHTML = '<i data-lucide="check" class="w-6 h-6 text-indigo-500"></i>';
-btn.className = btnClass;
-btn.textContent = "Entendido";
+    // Modo Claro: Colores de la paleta Magenta/Púrpura
+    if (type === 'email') {
+        iconBox.className = "w-12 h-12 bg-purple-500/10 border border-purple-500/20 rounded-none flex items-center justify-center mx-auto mb-4 animate-bounce";
+        iconBox.innerHTML = '<i data-lucide="copy" class="w-6 h-6 text-[#7c3aed]"></i>';
+    } else if (type === 'warning') {
+        iconBox.className = "w-12 h-12 bg-pink-500/10 border border-pink-500/20 rounded-none flex items-center justify-center mx-auto mb-4 animate-bounce";
+        iconBox.innerHTML = '<i data-lucide="alert-triangle" class="w-6 h-6 text-[#ec4899]"></i>';
+    } else {
+        iconBox.className = "w-12 h-12 bg-pink-500/10 border border-pink-500/20 rounded-none flex items-center justify-center mx-auto mb-4 animate-bounce";
+        iconBox.innerHTML = '<i data-lucide="check" class="w-6 h-6 text-[#db2777]"></i>';
+    }
 }
+
 modal.classList.remove('hidden');
 setTimeout(() => {
 card.classList.remove('scale-95');
