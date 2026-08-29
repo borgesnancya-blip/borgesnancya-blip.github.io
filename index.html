@@ -220,7 +220,7 @@ color: #7c3aed !important; /* Darker indigo for purple in day mode */
 font-weight: 600;
 }
 html:not(.dark) .sim-console-container #sim-logs .text-brand-green {
-color: #10b981 !important; /* Rich green for day mode success messages */
+color: #dc2626 !important; /* Rich green for day mode success messages */
 font-weight: 600;
 }
 html:not(.dark) .sim-console-container .text-brand-textMuted {
@@ -335,7 +335,7 @@ html:not(.dark) #success-modal p {
 color: #475569 !important;
 }
 html:not(.dark) #success-modal button.bg-brand-green {
-background-color: #10b981 !important;
+background-color: #dc2626 !important;
 color: #ffffff !important;
 }
 html:not(.dark) #success-modal button.bg-brand-cyan {
@@ -472,13 +472,7 @@ html:not(.dark) .sim-console-container #sim-logs .text-brand-green {
 }
 
 /* Day Mode project-label and top tags - styled in corporate ocean blue */
-html:not(.dark) .project-label,
-html:not(.dark) .card-badge-tag {
-    color: #0284c7 !important;
-    border-color: rgba(2, 132, 199, 0.25) !important;
-    background-color: rgba(2, 132, 199, 0.05) !important;
-    font-weight: 500 !important;
-}
+
 
 /* Dark Mode project-label - change to blue-celeste (#00f2fe) and no bold */
 .dark .project-label {
@@ -571,9 +565,9 @@ html:not(.dark) .filter-btn.active,
 html:not(.dark) .mock-tab-btn.active {
     background-color: transparent !important;
     background: transparent !important;
-    color: #10b981 !important;
-    border-color: #10b981 !important;
-    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.12) !important;
+    color: #dc2626 !important;
+    border-color: #dc2626 !important;
+    box-shadow: 0 4px 12px rgba(220, 38, 38, 0.12) !important;
 }
 
 /* Hover effects */
@@ -583,9 +577,9 @@ html:not(.dark) .mock-tab-btn.active {
     background-color: rgba(0, 242, 254, 0.03) !important;
 }
 html:not(.dark) .nav-link:hover, html:not(.dark) .filter-btn:hover, html:not(.dark) .mock-tab-btn:hover {
-    border-color: #10b981 !important;
-    color: #10b981 !important;
-    background-color: rgba(16, 185, 129, 0.03) !important;
+    border-color: #dc2626 !important;
+    color: #dc2626 !important;
+    background-color: rgba(220, 38, 38, 0.03) !important;
 }
 
 /* Profile Card and Console Sombra Hover in Day Mode (Gray, not Cyan) */
@@ -659,15 +653,7 @@ html:not(.dark) .project-label {
     color: #475569 !important; /* Elegant slate grey */
 }
 
-/* Day Mode active button class unifications */
-html:not(.dark) .nav-link.active,
-html:not(.dark) .filter-btn.active,
-html:not(.dark) .mock-tab-btn.active {
-    background-color: #475569 !important;
-    background: #475569 !important;
-    color: #ffffff !important;
-    border-color: #475569 !important;
-}
+
 
 /* Interactive Showcase container hover lifting animation & shadows */
 #view-showcase .glass-panel {
@@ -716,30 +702,33 @@ html:not(.dark) .mock-showcase-container:hover {
     box-shadow: 0 12px 24px -6px rgba(51, 65, 85, 0.15) !important; /* Deep, beautiful slate gray shadow */
 }
 
-/* Day Mode active button selectors color - Nice vibrant corporate green */
+/* Day Mode active button selectors color - Outline-only Almost Red (#dc2626) */
 html:not(.dark) .nav-link.active,
 html:not(.dark) .filter-btn.active,
 html:not(.dark) .mock-tab-btn.active {
-    background-color: #10b981 !important;
-    background: #10b981 !important;
-    color: #ffffff !important;
-    border-color: #10b981 !important;
-    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2) !important;
+    background-color: transparent !important;
+    background: transparent !important;
+    color: #dc2626 !important;
+    border: 2px solid #dc2626 !important;
+    box-shadow: 0 4px 12px rgba(220, 38, 38, 0.08) !important;
+    font-weight: 500 !important;
 }
 
+/* Day Mode hover button class unifications - Outline-only Almost Red, NO Green */
 html:not(.dark) .nav-link:hover,
 html:not(.dark) .filter-btn:hover,
 html:not(.dark) .mock-tab-btn:hover {
-    border-color: #10b981 !important;
-    color: #047857 !important;
+    border-color: #dc2626 !important;
+    color: #dc2626 !important;
+    background-color: rgba(220, 38, 38, 0.03) !important;
 }
 
 /* Premium Success / Warning Modal Styling Unifications (0% Cyan for buttons) */
 html:not(.dark) #success-modal button,
 html:not(.dark) #email-success-modal button {
-    background-color: #10b981 !important;
+    background-color: #dc2626 !important;
     color: #ffffff !important;
-    border-color: #10b981 !important;
+    border-color: #dc2626 !important;
 }
 html:not(.dark) #success-modal button:hover,
 html:not(.dark) #email-success-modal button:hover {
@@ -748,9 +737,9 @@ html:not(.dark) #email-success-modal button:hover {
 }
 .dark #success-modal button,
 .dark #email-success-modal button {
-    background-color: #10b981 !important;
+    background-color: #dc2626 !important;
     color: #ffffff !important;
-    border-color: #10b981 !important;
+    border-color: #dc2626 !important;
 }
 .dark #success-modal button:hover,
 .dark #email-success-modal button:hover {
@@ -765,7 +754,7 @@ html:not(.dark) #reto-datos .glass-card {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
 html:not(.dark) #reto-datos .glass-card:hover {
-    border-color: #10b981 !important;
+    border-color: #dc2626 !important;
     box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.1) !important;
     transform: translateY(-4px) !important;
 }
@@ -864,17 +853,7 @@ html:not(.dark) .siguiente-paso-badge {
     font-weight: 400 !important;
 }
 
-/* Day Mode active button class unifications - Outline-only Amber-Orange, NO Green */
-html:not(.dark) .nav-link.active,
-html:not(.dark) .filter-btn.active,
-html:not(.dark) .mock-tab-btn.active {
-    background-color: transparent !important;
-    background: transparent !important;
-    color: #d97706 !important;
-    border: 2px solid #d97706 !important;
-    box-shadow: 0 4px 12px rgba(217, 119, 6, 0.08) !important;
-    font-weight: 500 !important;
-}
+
 
 /* Day Mode inactive button class unifications */
 html:not(.dark) .nav-link,
@@ -885,18 +864,21 @@ html:not(.dark) .mock-tab-btn {
     border: 1px solid #cbd5e1 !important;
 }
 
-/* Day Mode brand and label colors unifications - Corporate Amber-Orange */
-html:not(.dark) .project-label,
+/* Day Mode brand and label colors unifications - Almost Red (#dc2626) and Fuga Orange (#ea580c) */
 html:not(.dark) .card-badge-tag {
-    color: #d97706 !important;
-    border-color: rgba(217, 119, 6, 0.25) !important;
-    background-color: rgba(217, 119, 6, 0.05) !important;
+    color: #dc2626 !important;
+    border-color: rgba(220, 38, 38, 0.25) !important;
+    background-color: rgba(220, 38, 38, 0.05) !important;
+    font-weight: 500 !important;
+}
+html:not(.dark) .project-label {
+    color: #ea580c !important;
     font-weight: 500 !important;
 }
 html:not(.dark) .text-brand-green,
 html:not(.dark) .text-brand-purple,
 html:not(.dark) .text-brand-cyan {
-    color: #d97706 !important;
+    color: #dc2626 !important;
 }
 
 /* Enforce darker readable colors in Day Mode inside PERFIL DE RENDIMIENTO spec lists */
@@ -1230,7 +1212,7 @@ Pérdida silenciosa de depositantes detectada cuando ya retiraron sus fondos.
 </div>
 </div>
 <!-- Bridge text -->
-<div class="inline-flex items-center justify-center gap-2 py-2 px-4 rounded-lg bg-slate-200/50 dark:bg-brand-card/60 border border-slate-300/30 dark:border-brand-border font-mono text-[10px] text-slate-800 dark:text-white">
+<div class="inline-flex items-center justify-center gap-2 py-2 px-4 rounded-lg bg-slate-200/50 dark:bg-brand-card/60 border border-slate-300/30 dark:border-brand-border font-mono text-[12px] md:text-sm text-slate-800 dark:text-white">
 <span class="w-1.5 h-1.5 rounded-full bg-brand-cyan animate-pulse"></span>
 <span>Siguiente paso: Diseñar un sistema sólido para automatizar cada respuesta...</span>
 </div>
@@ -1246,11 +1228,11 @@ Pérdida silenciosa de depositantes detectada cuando ya retiraron sus fondos.
 </div>
 <!-- Category Filters -->
 <div class="flex flex-wrap gap-1.5 text-[10px] font-mono">
-<button onclick="filterProjects('all')" id="btn-all" class="filter-btn px-3 py-1.5 rounded-none bg-brand-cyan text-brand-dark font-semibold transition-all shadow-sm">Todos</button>
-<button onclick="filterProjects('retail')" id="btn-retail" class="filter-btn px-3 py-1.5 rounded-none border border-slate-200 dark:border-brand-border hover:border-brand-cyan/40 text-slate-600 dark:text-brand-textMuted hover:text-slate-900 dark:hover:text-white transition-all">Ventas, Stock & Rentabilidad</button>
-<button onclick="filterProjects('marketing')" id="btn-marketing" class="filter-btn px-3 py-1.5 rounded-none border border-slate-200 dark:border-brand-border hover:border-brand-cyan/40 text-slate-600 dark:text-brand-textMuted hover:text-slate-900 dark:hover:text-white transition-all font-mono">Clientes & RFM</button>
-<button onclick="filterProjects('banking')" id="btn-banking" class="filter-btn px-3 py-1.5 rounded-none border border-slate-200 dark:border-brand-border hover:border-brand-cyan/40 text-slate-600 dark:text-brand-textMuted hover:text-slate-900 dark:hover:text-white transition-all font-mono font-mono">Finanzas & Churn</button>
-<button onclick="filterProjects('hr')" id="btn-hr" class="filter-btn px-3 py-1.5 rounded-none border border-slate-200 dark:border-brand-border hover:border-brand-cyan/40 text-slate-600 dark:text-brand-textMuted hover:text-slate-900 dark:hover:text-white transition-all font-mono font-mono">Gestión RRHH</button>
+<button onclick="filterProjects('all')" id="btn-all" class="filter-btn active">Todos</button>
+<button onclick="filterProjects('retail')" id="btn-retail" class="filter-btn">Ventas, Stock & Rentabilidad</button>
+<button onclick="filterProjects('marketing')" id="btn-marketing" class="filter-btn">Clientes & RFM</button>
+<button onclick="filterProjects('banking')" id="btn-banking" class="filter-btn">Finanzas & Churn</button>
+<button onclick="filterProjects('hr')" id="btn-hr" class="filter-btn">Gestión RRHH</button>
 </div>
 </div>
 <!-- Grid of Projects -->
@@ -1421,14 +1403,14 @@ Análisis integral de funcionarios activos para optimizar costos de masa salaria
 <h2 class="text-xs font-mono uppercase tracking-widest text-slate-500 dark:text-white mb-1">GALERÍA VISUAL DE TABLEROS</h2>
 <h3 class="text-xl md:text-2xl font-normal text-slate-900 dark:text-white mb-4">Explora la Interfaz de Usuario</h3>
 
-<div class="glass-panel p-4 rounded-none border border-slate-200 dark:border-brand-border max-w-4xl mx-auto relative overflow-hidden showcase-card-hover">
+<div class="glass-panel p-4 rounded-none border border-slate-200 dark:border-brand-border max-w-4xl mx-auto relative overflow-visible showcase-card-hover">
 <!-- Tab switching for mock dashboards -->
 <div class="flex justify-center border-b border-slate-200 dark:border-brand-border/60 pb-3 gap-1.5 text-[11px] font-mono overflow-x-auto">
-<button onclick="switchMock('stock-mock')" id="btn-mock-stock" class="mock-tab-btn px-3 py-1.5 rounded-none bg-brand-cyan/20 text-brand-green border border-brand-cyan/30 whitespace-nowrap">Stock Dashboard</button>
-<button onclick="switchMock('sales-mock')" id="btn-mock-sales" class="mock-tab-btn px-3 py-1.5 rounded-none text-slate-500 dark:text-brand-textMuted hover:text-slate-900 dark:hover:text-white border border-transparent whitespace-nowrap">Ventas & Rentabilidad</button>
-<button onclick="switchMock('rfm-mock')" id="btn-mock-rfm" class="mock-tab-btn px-3 py-1.5 rounded-none text-slate-500 dark:text-brand-textMuted hover:text-slate-900 dark:hover:text-white border border-transparent whitespace-nowrap font-mono">RFM Dashboard</button>
-<button onclick="switchMock('churn-mock')" id="btn-mock-churn" class="mock-tab-btn px-3 py-1.5 rounded-none text-slate-500 dark:text-brand-textMuted hover:text-slate-900 dark:hover:text-white border border-transparent whitespace-nowrap font-mono">Churn Dashboard</button>
-<button onclick="switchMock('hr-mock')" id="btn-mock-hr" class="mock-tab-btn px-3 py-1.5 rounded-none text-slate-500 dark:text-brand-textMuted hover:text-slate-900 dark:hover:text-white border border-transparent whitespace-nowrap font-mono">HR Dashboard</button>
+<button onclick="switchMock('stock-mock')" id="btn-mock-stock" class="mock-tab-btn active">Stock Dashboard</button>
+<button onclick="switchMock('sales-mock')" id="btn-mock-sales" class="mock-tab-btn">Ventas & Rentabilidad</button>
+<button onclick="switchMock('rfm-mock')" id="btn-mock-rfm" class="mock-tab-btn">RFM Dashboard</button>
+<button onclick="switchMock('churn-mock')" id="btn-mock-churn" class="mock-tab-btn">Churn Dashboard</button>
+<button onclick="switchMock('hr-mock')" id="btn-mock-hr" class="mock-tab-btn">HR Dashboard</button>
 </div>
 <!-- Showcase display area - updated heights for pure visual impact -->
 <div class="mt-4 min-h-[300px] md:min-h-[500px] lg:min-h-[550px] w-full rounded-xl bg-slate-100/50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 flex items-center justify-center overflow-hidden relative group mock-showcase-container">
