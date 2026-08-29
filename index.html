@@ -1043,11 +1043,12 @@ html:not(.dark) #nav-contact-btn-mobile:hover {
     background-color: #be185d !important;
 }
 .dark #nav-contact-btn-mobile {
-    background-color: #00f2fe !important;
-    color: #131722 !important;
+    background-color: #db2777 !important;
+    color: #ffffff !important;
 }
 .dark #nav-contact-btn-mobile:hover {
-    background-color: #ffffff !important;
+    background-color: #be185d !important;
+    color: #ffffff !important;
 }
 
 /* Simular Despliegue Button styling overrides (Nancy V28) */
@@ -1595,8 +1596,8 @@ html:not(.dark) button[onclick="toggleTheme()"]:hover {
 
 /* 5. Mobile contact button styling de noche - Solid cyan with dark text */
 .dark #nav-contact-btn-mobile {
-    background-color: #00f2fe !important;
-    color: #131722 !important;
+    background-color: #db2777 !important;
+    color: #ffffff !important;
 }
 
 /* Delete any old success modal colored buttons CSS rules */
@@ -2779,13 +2780,10 @@ p.className = "text-xs text-slate-500 dark:text-slate-300 leading-relaxed mb-5";
 
 iconBox.className = "w-12 h-12 bg-slate-500/10 border border-slate-500/30 rounded-none flex items-center justify-center mx-auto mb-4 animate-bounce";
 if (type === 'warning') {
-    iconBox.className = "w-12 h-12 bg-slate-500/10 border border-slate-500/30 rounded-none flex items-center justify-center mx-auto mb-4 animate-bounce";
     iconBox.innerHTML = '<i data-lucide="alert-triangle" class="w-6 h-6 text-slate-500 dark:text-slate-400"></i>';
 } else if (type === 'email') {
-    iconBox.className = "w-12 h-12 bg-slate-500/10 border border-slate-500/30 rounded-none flex items-center justify-center mx-auto mb-4 animate-bounce";
     iconBox.innerHTML = '<i data-lucide="copy" class="w-6 h-6 text-slate-500 dark:text-slate-400"></i>';
 } else {
-    iconBox.className = "w-12 h-12 bg-slate-500/10 border border-slate-500/30 rounded-none flex items-center justify-center mx-auto mb-4 animate-bounce";
     iconBox.innerHTML = '<i data-lucide="check" class="w-6 h-6 text-slate-500 dark:text-slate-400"></i>';
 }
 
