@@ -770,7 +770,7 @@ html:not(.dark) #reto-datos .glass-card:hover {
 
 
 /* ==========================================================================
-   Nancy V18 Premium Styling Override Block - MAGENTA, ROSA & PURPURA 100% UNIFIED
+   Nancy V18 Premium Styling Override Block - MAGENTA, ROSA & PURPURA 100% UNIFIED (Nancy V28)
    ========================================================================== */
 
 /* Premium KPI/Metric Card styles */
@@ -841,11 +841,80 @@ html:not(.dark) .mock-showcase-container:hover {
 }
 
 /* Day/Night Mode Disponibilidad Badge text color unifications */
+html:not(.dark) .disponible-badge-container {
+    background-color: rgba(236, 72, 153, 0.08) !important; /* Soft Pink bg */
+    border-color: rgba(236, 72, 153, 0.25) !important; /* Pink border */
+    border-radius: 9999px !important;
+}
 html:not(.dark) .disponible-badge {
-    color: #db2777 !important; /* Pink/Magenta for Day mode */
+    color: #ec4899 !important; /* Rose Pink text */
+    font-weight: 600 !important;
+}
+html:not(.dark) .disponible-badge-container span.bg-brand-cyan {
+    background-color: #ec4899 !important; /* Pink dot */
+}
+
+.dark .disponible-badge-container {
+    background-color: rgba(0, 242, 254, 0.1) !important;
+    border-color: rgba(0, 242, 254, 0.2) !important;
 }
 .dark .disponible-badge {
-    color: #ffffff !important; /* White for dark theme */
+    color: #00f2fe !important;
+    font-weight: 500 !important;
+}
+.dark .disponible-badge-container span.bg-brand-cyan {
+    background-color: #00f2fe !important;
+}
+
+/* Day Mode Title Gradient Override */
+html:not(.dark) .title-gradient-day {
+    background: linear-gradient(135deg, #db2777, #ec4899, #7c3aed) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    display: inline-block !important;
+    font-weight: 650 !important;
+}
+.dark .title-gradient-day {
+    color: #ffffff !important;
+    background: none !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+
+/* Day Mode Siguiente paso text gradient override */
+html:not(.dark) .siguiente-paso-badge {
+    border-color: rgba(124, 58, 237, 0.25) !important;
+    background-color: rgba(124, 58, 237, 0.05) !important;
+    border-radius: 0px !important;
+}
+html:not(.dark) .siguiente-paso-text {
+    background: linear-gradient(135deg, #db2777, #ec4899, #7c3aed) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    font-weight: 600 !important;
+}
+/* In dark mode, keep it clean white */
+.dark .siguiente-paso-text {
+    color: #ffffff !important;
+    background: none !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+
+/* Dynamic styling overrides for alert modals - Unified solid gray button */
+.dark #success-modal button,
+.dark #email-success-modal button,
+html:not(.dark) #success-modal button,
+html:not(.dark) #email-success-modal button {
+    background-color: #64748b !important;
+    border-color: #64748b !important;
+    color: #ffffff !important;
+    border-radius: 0px !important;
+}
+.dark #success-modal button:hover,
+.dark #email-success-modal button:hover,
+html:not(.dark) #success-modal button:hover,
+html:not(.dark) #email-success-modal button:hover {
+    background-color: #475569 !important;
+    border-color: #475569 !important;
 }
 
 /* Day Mode Titles - same soft corporate charcoal gray, no bold */
@@ -866,17 +935,19 @@ html:not(.dark) .siguiente-paso-badge {
 }
 
 /* ==========================================================
-   BUTTONS ACTIVE / HOVER STATE UNIFICATIONS (NANCY V27)
+   BUTTONS ACTIVE / HOVER STATE UNIFICATIONS (NANCY V28)
    ========================================================== */
 
-/* Day Mode inactive button class unifications */
+/* Day Mode inactive button class unifications - Outline / Vacio initially! */
 html:not(.dark) .nav-link,
 html:not(.dark) .filter-btn,
 html:not(.dark) .mock-tab-btn {
-    background-color: #f1f5f9 !important;
+    background-color: transparent !important;
+    background: transparent !important;
     color: #475569 !important;
     border: 1px solid #cbd5e1 !important;
     border-radius: 0px !important;
+    box-shadow: none !important;
 }
 
 /* Day Mode HOVER button states - elegant pink outline overlay */
@@ -888,28 +959,116 @@ html:not(.dark) .mock-tab-btn:hover {
     color: #ec4899 !important;
 }
 
-/* Day Mode ACTIVE (Selected) button states - SOLID Pink background with PURE WHITE letters! */
+/* Day Mode ACTIVE (Selected) button states - SOLID WHITE background with pink letters & border! */
 html:not(.dark) .nav-link.active,
 html:not(.dark) .filter-btn.active,
 html:not(.dark) .mock-tab-btn.active {
-    background-color: #ec4899 !important;
-    background: #ec4899 !important;
-    color: #ffffff !important; /* Guaranteed pure white letters */
-    border-color: #ec4899 !important;
-    box-shadow: 0 4px 12px rgba(236, 72, 153, 0.22) !important;
-    font-weight: 500 !important;
+    background-color: #ffffff !important;
+    background: #ffffff !important;
+    color: #ec4899 !important; /* Hot pink text color! */
+    border: 2px solid #ec4899 !important; /* Thick Pink Border */
+    box-shadow: 0 4px 12px rgba(236, 72, 153, 0.15) !important;
+    font-weight: 600 !important;
 }
 
-/* Desktop & Mobile Contact Button unifications in Day Mode - Sólido Magenta with White letters! */
-html:not(.dark) nav a[href="#contact"],
-html:not(.dark) nav a[href="#contact"]:hover,
-html:not(.dark) nav a[href="#contact"].active,
-html:not(.dark) #mobile-menu a[href="#contact"],
-html:not(.dark) #mobile-menu a[href="#contact"]:hover,
-html:not(.dark) #mobile-menu a[href="#contact"].active {
+/* Dark Mode Inactive nav-link menu links - PURE WHITE letters instead of textMuted gray! */
+.dark .nav-link,
+.dark #mobile-menu a {
+    color: #ffffff !important; /* Pure white inactive letters */
+    background-color: transparent !important;
+    border: 1px solid transparent !important;
+}
+.dark .nav-link:hover,
+.dark #mobile-menu a:hover {
+    color: #00f2fe !important;
+    border-color: rgba(0, 242, 254, 0.25) !important;
+    background-color: rgba(0, 242, 254, 0.03) !important;
+}
+.dark .nav-link.active,
+.dark #mobile-menu a.active {
+    color: #ffffff !important;
+    background-color: rgba(0, 242, 254, 0.15) !important;
+    border-color: #00f2fe !important;
+    box-shadow: 0 0 10px rgba(0, 242, 254, 0.2) !important;
+}
+
+/* Day Mode navbar toggle buttons moon icons custom overrides */
+html:not(.dark) #theme-icon-moon,
+html:not(.dark) button[onclick="toggleTheme()"] {
+    color: #ec4899 !important; /* Pink moon icon in light mode */
+    border-color: rgba(236, 72, 153, 0.2) !important;
+}
+
+/* Navbar & Mobile Direct Contact Button overrides (Nancy V28) */
+html:not(.dark) #nav-contact-btn {
+    background-color: transparent !important;
+    border: 1px solid #db2777 !important; /* Magenta Border */
+    color: #db2777 !important; /* Magenta text */
+}
+html:not(.dark) #nav-contact-btn:hover {
+    background-color: rgba(219, 39, 119, 0.04) !important;
+    color: #db2777 !important;
+}
+html:not(.dark) #nav-contact-btn.active {
     background-color: #db2777 !important;
-    color: #ffffff !important; /* Guaranteed pure white letters */
-    border-color: #db2777 !important;
+    color: #ffffff !important; /* Filled with white text */
+}
+
+/* Dark Mode Direct Contact button overrides */
+.dark #nav-contact-btn {
+    background-color: transparent !important;
+    border: 1px solid #00f2fe !important; /* Cyan Border */
+    color: #ffffff !important; /* White text */
+}
+.dark #nav-contact-btn:hover {
+    background-color: rgba(0, 242, 254, 0.08) !important;
+    color: #00f2fe !important;
+}
+.dark #nav-contact-btn.active {
+    background-color: #00f2fe !important;
+    color: #131722 !important; /* Filled with dark text */
+}
+
+/* Day Mode Direct Contact Mobile Button overrides */
+html:not(.dark) #nav-contact-btn-mobile {
+    background-color: #db2777 !important;
+    color: #ffffff !important;
+}
+html:not(.dark) #nav-contact-btn-mobile:hover {
+    background-color: #be185d !important;
+}
+.dark #nav-contact-btn-mobile {
+    background-color: #00f2fe !important;
+    color: #131722 !important;
+}
+.dark #nav-contact-btn-mobile:hover {
+    background-color: #ffffff !important;
+}
+
+/* Simular Despliegue Button styling overrides (Nancy V28) */
+html:not(.dark) #btn-simulate {
+    background-color: transparent !important;
+    border: 1px solid #ec4899 !important; /* Pink Border */
+    color: #ec4899 !important; /* Pink text */
+}
+html:not(.dark) #btn-simulate:hover {
+    background-color: rgba(236, 72, 153, 0.04) !important;
+    color: #ec4899 !important;
+}
+
+/* Dark Mode contact card style unifications - remove any blue tint completely! */
+.dark #contact {
+    background-color: #0a0c10 !important; /* Absolute dark body background */
+}
+.dark #contact .glass-panel {
+    background-color: #121214 !important; /* Deep neutral black-gray card background, 0% blue */
+    border-color: #27272a !important; /* Deep neutral gray border */
+    box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.4) !important;
+}
+.dark #contact input,
+.dark #contact textarea {
+    background-color: #121214 !important;
+    border-color: #27272a !important;
 }
 
 /* Day Mode brand and label colors unifications inside project cards */
@@ -961,6 +1120,45 @@ html:not(.dark) #projects-grid .project-card[data-category="hr"] .project-label 
     color: #db2777 !important; /* Magenta for Antes / Después labels! */
 }
 
+/* Stack Principal tag unifications inside Hero in both modes (Nancy V28) */
+.dark .stack-tag-powerbi,
+.dark .stack-tag-lakehouse {
+    background-color: rgba(0, 242, 254, 0.1) !important;
+    border-color: rgba(0, 242, 254, 0.2) !important;
+    color: #00f2fe !important; /* Celeste */
+}
+.dark .stack-tag-sql,
+.dark .stack-tag-pipelines {
+    background-color: rgba(192, 132, 252, 0.1) !important;
+    border-color: rgba(192, 132, 252, 0.2) !important;
+    color: #c084fc !important; /* Lila */
+}
+.dark .stack-tag-warehouse,
+.dark .stack-tag-github {
+    background-color: rgba(0, 245, 160, 0.1) !important;
+    border-color: rgba(0, 245, 160, 0.2) !important;
+    color: #00f5a0 !important; /* Verde */
+}
+
+html:not(.dark) .stack-tag-powerbi,
+html:not(.dark) .stack-tag-pipelines {
+    background-color: rgba(219, 39, 119, 0.05) !important;
+    border-color: rgba(219, 39, 119, 0.2) !important;
+    color: #db2777 !important; /* Magenta */
+}
+html:not(.dark) .stack-tag-sql,
+html:not(.dark) .stack-tag-lakehouse {
+    background-color: rgba(236, 72, 153, 0.05) !important;
+    border-color: rgba(236, 72, 153, 0.2) !important;
+    color: #ec4899 !important; /* Rosa */
+}
+html:not(.dark) .stack-tag-warehouse,
+html:not(.dark) .stack-tag-github {
+    background-color: rgba(124, 58, 237, 0.05) !important;
+    border-color: rgba(124, 58, 237, 0.2) !important;
+    color: #7c3aed !important; /* Purpura */
+}
+
 /* Enforce darker readable colors in Day Mode inside PERFIL DE RENDIMIENTO spec lists */
 html:not(.dark) .glass-card span,
 html:not(.dark) .glass-card strong,
@@ -994,7 +1192,7 @@ html:not(.dark) #contact h3 {
     color: #334155 !important; /* Soft dark grey for titles h3 */
 }
 
-/* Dynamic Console Log coloring (Nancy V27 unifications) */
+/* Dynamic Console Log coloring (Nancy V28 unifications) */
 html:not(.dark) .sim-console-container #sim-logs .text-brand-cyan {
     color: #db2777 !important; /* Magenta for process */
 }
@@ -1006,30 +1204,6 @@ html:not(.dark) .sim-console-container #sim-logs .text-slate-500 {
 }
 html:not(.dark) .sim-console-container #sim-logs div:not(.text-brand-cyan):not(.text-brand-purple):not(.text-slate-500) {
     color: #475569 !important; /* Default slate gray */
-}
-
-/* Success Warning Popups Modals and Email understood button overrides in Day Mode */
-html:not(.dark) .modal-btn-theme {
-    background-color: #64748b !important; /* Elegant gray/slate */
-    border-color: #64748b !important;
-    color: #ffffff !important;
-}
-html:not(.dark) .modal-btn-theme:hover {
-    background-color: #475569 !important; /* Darker gray/slate */
-    border-color: #475569 !important;
-}
-
-/* Dynamic styling overrides for alert modals in Dark Mode - Unified solid gray button */
-.dark #success-modal button,
-.dark #email-success-modal button {
-    background-color: #64748b !important;
-    border-color: #64748b !important;
-    color: #ffffff !important;
-}
-.dark #success-modal button:hover,
-.dark #email-success-modal button:hover {
-    background-color: #475569 !important;
-    border-color: #475569 !important;
 }
 </style>
 
@@ -1056,7 +1230,7 @@ html:not(.dark) .modal-btn-theme:hover {
 <i id="theme-icon-moon" data-lucide="moon" class="w-4 h-4 block dark:hidden"></i>
 </button>
 <!-- Contact Menu Trigger Link -->
-<a href="#contact" onclick="showView('view-contact'); return false;" class="hidden sm:flex px-3 py-1.5 text-[10px] font-semibold uppercase tracking-wider text-slate-800 dark:text-brand-dark bg-slate-200 dark:bg-brand-cyan hover:bg-brand-cyan dark:hover:bg-white transition-all rounded-none flex items-center gap-1.5">
+<a href="#contact" id="nav-contact-btn" onclick="showView('view-contact'); return false;" class="hidden sm:flex px-3 py-1.5 text-[10px] font-semibold uppercase tracking-wider transition-all rounded-none flex items-center gap-1.5">
 <i data-lucide="message-square" class="w-3 h-3"></i> Contacto
 </a>
 <!-- Mobile Hamburger Toggle -->
@@ -1071,7 +1245,7 @@ html:not(.dark) .modal-btn-theme:hover {
 <a href="#pipeline" onclick="showView('view-pipeline'); toggleMobileMenu(); return false;" class="text-slate-700 dark:text-brand-textMuted hover:text-slate-200 dark:hover:text-white py-1.5 border-b border-slate-200 dark:border-brand-border/40">Mi Infraestructura</a>
 <a href="#projects" onclick="showView('view-projects'); toggleMobileMenu(); return false;" class="text-slate-700 dark:text-brand-textMuted hover:text-slate-200 dark:hover:text-white py-1.5 border-b border-slate-200 dark:border-brand-border/40">Proyectos</a>
 <a href="#showcase" onclick="showView('view-showcase'); toggleMobileMenu(); return false;" class="text-slate-700 dark:text-brand-textMuted hover:text-slate-200 dark:hover:text-white py-1.5 border-b border-slate-200 dark:border-brand-border/40">Dashboard</a>
-<a href="#contact" onclick="showView('view-contact'); toggleMobileMenu(); return false;" class="w-full py-2 bg-brand-cyan text-brand-dark font-bold text-center rounded-none flex items-center justify-center gap-2 text-[11px] uppercase tracking-wider mt-1">
+<a href="#contact" id="nav-contact-btn-mobile" onclick="showView('view-contact'); toggleMobileMenu(); return false;" class="w-full py-2 font-bold text-center rounded-none flex items-center justify-center gap-2 text-[11px] uppercase tracking-wider mt-1">
 <i data-lucide="mail" class="w-3.5 h-3.5"></i> Contactame Directo
 </a>
 </div>
@@ -1088,7 +1262,10 @@ html:not(.dark) .modal-btn-theme:hover {
 <span class="w-1.5 h-1.5 rounded-full bg-brand-cyan animate-pulse"></span>
 <span class="disponible-badge text-[10px] font-mono uppercase tracking-wider">Disponible para Proyectos / Propuestas 2026</span>
 </div>
-<h1 class="text-3xl md:text-5xl font-normal tracking-tight leading-tight text-slate-700 dark:text-white">Transformo datos en <br>Decisiones de Negocio</h1>
+<h1 class="text-3xl md:text-5xl font-normal tracking-tight leading-tight text-slate-700 dark:text-white">
+Transformo datos en <br>
+<span class="title-gradient-day">Decisiones de Negocio</span>
+</h1>
 <p class="text-sm md:text-base text-slate-600 dark:text-brand-textMuted max-w-xl leading-relaxed">
 Desarrolladora de Business Intelligence con base en Río Cuarto, Córdoba. Me especializo en diseñar soluciones analíticas end-to-end: desde la ingeniería de datos en <strong>SQL Server</strong> y la automatización de flujos de despliegue continuo (<strong>CI/CD con GitHub y Microsoft Fabric</strong>), hasta el modelado dimensional en estrella y la creación de tableros de control ejecutivos que impactan la rentabilidad del negocio.
 </p>
@@ -1144,12 +1321,12 @@ Desarrolladora de Business Intelligence con base en Río Cuarto, Córdoba. Me es
 <div class="mt-2 pt-3 border-t border-slate-200 dark:border-brand-border/60">
 <span class="text-[11px] font-normal text-slate-800 dark:text-white block mb-1.5">Stack Principal</span>
 <div class="flex flex-wrap gap-1">
-<span class="px-1.5 py-0.5 bg-brand-cyan/10 dark:bg-brand-cyan/5 text-[9px] text-slate-200 rounded border border-brand-cyan/20 font-mono">Power BI</span>
-<span class="px-1.5 py-0.5 bg-brand-purple/10 dark:bg-brand-purple/5 text-[9px] text-brand-purple rounded border border-brand-purple/20 font-mono">SQL Server</span>
-<span class="px-1.5 py-0.5 bg-brand-green/10 dark:bg-brand-green/5 text-[9px] text-slate-200 rounded border border-brand-green/20 font-mono">Warehouse</span>
-<span class="px-1.5 py-0.5 bg-brand-cyan/10 dark:bg-brand-cyan/5 text-[9px] text-slate-200 rounded border border-brand-cyan/20 font-mono">Lakehouse</span>
-<span class="px-1.5 py-0.5 bg-brand-purple/10 dark:bg-brand-purple/5 text-[9px] text-brand-purple rounded border border-brand-purple/20 font-mono">Pipelines</span>
-<span class="px-1.5 py-0.5 bg-brand-green/10 dark:bg-brand-green/5 text-[9px] text-slate-200 rounded border border-brand-green/20 font-mono">Git/GitHub</span>
+<span class="stack-tag-powerbi px-1.5 py-0.5 text-[9px] rounded-none font-mono">Power BI</span>
+<span class="stack-tag-sql px-1.5 py-0.5 text-[9px] rounded-none font-mono">SQL Server</span>
+<span class="stack-tag-warehouse px-1.5 py-0.5 text-[9px] rounded-none font-mono">Warehouse</span>
+<span class="stack-tag-lakehouse px-1.5 py-0.5 text-[9px] rounded-none font-mono">Lakehouse</span>
+<span class="stack-tag-pipelines px-1.5 py-0.5 text-[9px] rounded-none font-mono">Pipelines</span>
+<span class="stack-tag-github px-1.5 py-0.5 text-[9px] rounded-none font-mono">Git/GitHub</span>
 </div>
 </div>
 </div>
@@ -1327,9 +1504,9 @@ Pérdida silenciosa de depositantes detectada cuando ya retiraron sus fondos.
 </div>
 </div>
 <!-- Bridge text -->
-<div class="siguiente-paso-badge inline-flex items-center justify-center gap-2 py-2 px-4 rounded-lg bg-slate-200/50 dark:bg-brand-card/60 border border-slate-300/30 dark:border-brand-border font-mono text-sm md:text-[15px] text-slate-800 dark:text-white">
+<div class="siguiente-paso-badge inline-flex items-center justify-center gap-2 py-2 px-4 rounded-none bg-slate-200/50 dark:bg-brand-card/60 border border-slate-300/30 dark:border-brand-border font-mono text-sm md:text-[15px] text-slate-800 dark:text-white">
 <span class="w-1.5 h-1.5 rounded-full bg-brand-cyan animate-pulse"></span>
-<span>Siguiente paso: Diseñar un sistema sólido para automatizar cada respuesta...</span>
+<span class="siguiente-paso-text">Siguiente paso: Diseñar un sistema sólido para automatizar cada respuesta...</span>
 </div>
 </div>
 </section>
@@ -1632,7 +1809,7 @@ Llevá tu negocio al siguiente nivel. Diseñemos juntos un ecosistema de Busines
 </div>
 <!-- Action choices -->
 <div class="pt-1">
-<button onclick="sendWhatsAppMessage()" class="w-full py-3 bg-brand-green text-slate-900 font-bold text-center rounded-none transition-all shadow-md flex items-center justify-center gap-2 uppercase tracking-wider text-xs hover:bg-white hover:text-slate-200 border border-transparent hover:border-brand-green">
+<button onclick="sendWhatsAppMessage()" class="w-full py-3 bg-[#10b981] hover:bg-[#059669] text-white font-bold text-center rounded-none transition-all shadow-md flex items-center justify-center gap-2 uppercase tracking-wider text-xs border border-[#10b981] hover:border-[#059669] cursor-pointer">
 <i data-lucide="message-square" class="w-4 h-4"></i> Enviar por WhatsApp
 </button>
 </div>
@@ -2194,21 +2371,2619 @@ const btn = card.querySelector('button');
 h3.textContent = title;
 p.textContent = text;
 
-// Unified corporate slate/charcoal gray theme ("que todo sea en gris y listo")
-h3.className = "text-sm font-mono font-bold text-slate-800 dark:text-slate-100 uppercase tracking-wider mb-2";
-p.className = "text-xs text-slate-500 dark:text-slate-300 leading-relaxed mb-5";
+const isDark = document.documentElement.classList.contains('dark');
 
-iconBox.className = "w-12 h-12 bg-slate-500/10 border border-slate-500/30 rounded-none flex items-center justify-center mx-auto mb-4 animate-bounce";
-if (type === 'warning') {
-    iconBox.innerHTML = '<i data-lucide="alert-triangle" class="w-6 h-6 text-slate-500 dark:text-slate-400"></i>';
-} else if (type === 'email') {
-    iconBox.innerHTML = '<i data-lucide="copy" class="w-6 h-6 text-slate-500 dark:text-slate-400"></i>';
+if (isDark) {
+    // Modo Oscuro: Strictly Green (#10b981) for success, warning, and email!
+    h3.className = "text-sm font-mono font-bold text-white uppercase tracking-wider mb-2";
+    p.className = "text-xs text-slate-300 leading-relaxed mb-5";
+    
+    iconBox.className = "w-12 h-12 bg-[#10b981]/10 border border-[#10b981]/30 rounded-none flex items-center justify-center mx-auto mb-4 animate-bounce";
+    if (type === 'warning') {
+        iconBox.innerHTML = '<i data-lucide="alert-triangle" class="w-6 h-6 text-[#10b981]"></i>';
+    } else if (type === 'email') {
+        iconBox.innerHTML = '<i data-lucide="copy" class="w-6 h-6 text-[#10b981]"></i>';
+    } else {
+        iconBox.innerHTML = '<i data-lucide="check" class="w-6 h-6 text-[#10b981]"></i>';
+    }
+    
+    btn.className = "w-full py-2.5 bg-[#10b981] hover:bg-[#059669] text-white font-normal text-xs uppercase tracking-wider transition-all rounded-none shadow-md border border-[#10b981] cursor-pointer";
+    btn.textContent = "Entendido";
 } else {
-    iconBox.innerHTML = '<i data-lucide="check" class="w-6 h-6 text-slate-500 dark:text-slate-400"></i>';
+    // Modo Día (Light): Strictly Elegant Corporate Slate Gray (#64748b / #475569) for success, warning, and email!
+    h3.className = "text-sm font-mono font-bold text-slate-800 uppercase tracking-wider mb-2";
+    p.className = "text-xs text-slate-500 leading-relaxed mb-5";
+    
+    iconBox.className = "w-12 h-12 bg-slate-500/10 border border-slate-500/20 rounded-none flex items-center justify-center mx-auto mb-4 animate-bounce";
+    if (type === 'warning') {
+        iconBox.innerHTML = '<i data-lucide="alert-triangle" class="w-6 h-6 text-slate-500"></i>';
+    } else if (type === 'email') {
+        iconBox.innerHTML = '<i data-lucide="copy" class="w-6 h-6 text-slate-500"></i>';
+    } else {
+        iconBox.innerHTML = '<i data-lucide="check" class="w-6 h-6 text-slate-500"></i>';
+    }
+    
+    btn.className = "w-full py-2.5 bg-[#64748b] hover:bg-[#475569] text-white font-normal text-xs uppercase tracking-wider transition-all rounded-none shadow-md border border-[#64748b] cursor-pointer";
+    btn.textContent = "Entendido";
 }
 
-btn.className = "w-full py-2.5 bg-slate-600 hover:bg-slate-700 text-white font-normal text-xs uppercase tracking-wider transition-all rounded-none shadow-md border border-slate-600 cursor-pointer";
-btn.textContent = "Entendido";
+modal.classList.remove('hidden');
+setTimeout(() => {
+    card.classList.remove('scale-95');
+    card.classList.add('scale-100');
+}, 10);
+if (window.lucide) { lucide.createIcons(); }
+}
+
+function copyEmailToClipboard() {
+const email = 'borgesnancya@gmail.com';
+const btn = document.getElementById('copy-email-btn');
+const originalHTML = btn.innerHTML;
+if (navigator.clipboard && navigator.clipboard.writeText) {
+navigator.clipboard.writeText(email).then(() => {
+showCopyFeedback(btn, originalHTML);
+}).catch(() => {
+fallbackCopyText(email, btn, originalHTML);
+});
+} else {
+fallbackCopyText(email, btn, originalHTML);
+}
+}
+function showCopyFeedback(btn, originalHTML) {
+btn.innerHTML = '<i data-lucide="check" class="w-3.5 h-3.5 text-slate-200"></i> ¡Copiado!';
+if (window.lucide) { lucide.createIcons(); }
+setTimeout(() => {
+btn.innerHTML = originalHTML;
+if (window.lucide) { lucide.createIcons(); }
+}, 2000);
+}
+function fallbackCopyText(text, btn, originalHTML) {
+const textArea = document.createElement("textarea");
+textArea.value = text;
+textArea.style.position = "fixed";
+document.body.appendChild(textArea);
+textArea.focus();
+textArea.select();
+try {
+document.execCommand('copy');
+showCopyFeedback(btn, originalHTML);
+} catch (err) {
+btn.innerHTML = '¡Copiado!';
+setTimeout(() => {
+btn.innerHTML = originalHTML;
+if (window.lucide) { lucide.createIcons(); }
+}, 2000);
+}
+document.body.removeChild(textArea);
+}
+function closeSuccessModal() {
+const modal = document.getElementById('success-modal');
+const card = document.getElementById('success-modal-card');
+card.classList.remove('scale-100');
+card.classList.add('scale-95');
+setTimeout(() => {
+modal.classList.add('hidden');
+document.body.classList.remove('modal-open');
+document.body.style.overflow = 'auto';
+}, 200);
+}
+function onModalImageLoad() {
+document.getElementById('image-modal-spinner').classList.add('hidden');
+document.getElementById('image-modal-img').classList.remove('hidden');
+// Re-inicializar iconos de lucide por si se pintó algo nuevo
+if (window.lucide) { lucide.createIcons(); }
+}
+function onModalImageError() {
+document.getElementById('image-modal-spinner').classList.add('hidden');
+document.getElementById('image-modal-img').classList.add('hidden');
+document.getElementById('image-modal-error').classList.remove('hidden');
+if (window.lucide) { lucide.createIcons(); }
+}
+function viewActiveRealDashboard() {
+const activeViews = ['stock-mock', 'sales-mock', 'rfm-mock', 'churn-mock', 'hr-mock'];
+for (const id of activeViews) {
+const el = document.getElementById(id);
+if (el && !el.classList.contains('hidden')) {
+openImageModal(id);
+return;
+}
+}
+}
+// ESC key to close modal and drawers
+window.addEventListener('keydown', function(event) {
+if (event.key === 'Escape') {
+closeImageModal();
+closeAllDrawers();
+}
+});
+// Contact Form Submissions
+function getContactData() {
+const name = document.getElementById('contact-name').value.trim();
+const business = document.getElementById('contact-business').value.trim();
+const message = document.getElementById('contact-message').value.trim();
+if (!name || !message) {
+openSuccessModal('Campos Requeridos', 'Por favor completá los campos obligatorios: Nombre y Mensaje para poder enviar el mensaje.', 'warning');
+return null;
+}
+return { name, business, message };
+}
+function sendWhatsAppMessage() {
+const data = getContactData();
+if (!data) return;
+let text = `Hola Nancy, mi nombre es *${data.name}*`;
+if (data.business) text += ` de *${data.business}*`;
+text += `. Te escribo desde tu portafolio web:
+"${data.message}"`;
+const encodedText = encodeURIComponent(text);
+// Pre-filled WhatsApp link with Nancy's location/standard contact flow
+window.open(`https://wa.me/5493385467284?text=${encodedText}`, '_blank', 'noopener,noreferrer');
+}
+function openEmailSuccessModal() {
+const modal = document.getElementById('email-success-modal');
+const card = document.getElementById('email-success-modal-card');
+modal.classList.remove('hidden');
+setTimeout(() => {
+card.classList.remove('scale-95');
+card.classList.add('scale-100');
+}, 10);
+if (window.lucide) { lucide.createIcons(); }
+}
+function closeEmailSuccessModal() {
+const modal = document.getElementById('email-success-modal');
+const card = document.getElementById('email-success-modal-card');
+card.classList.remove('scale-100');
+card.classList.add('scale-95');
+setTimeout(() => {
+modal.classList.add('hidden');
+document.body.classList.remove('modal-open');
+document.body.style.overflow = 'auto';
+}, 200);
+}
+function sendEmailMessage() {
+const data = getContactData();
+if (!data) return;
+const subject = encodeURIComponent(`Contacto Portafolio - ${data.name}`);
+let body = `Hola Nancy,\nMi nombre es ${data.name}`;
+if (data.business) body += ` de ${data.business}`;
+body += `.\nTe escribo para consultarte lo siguiente:\n"${data.message}"\nSaludos.`;
+const encodedBody = encodeURIComponent(body);
+const email = "borgesnancya@gmail.com";
+const mailtoUrl = `mailto:${email}?subject=${subject}&body=${encodedBody}`;
+// Copiar al portapapeles de respaldo
+navigator.clipboard.writeText(email).then(() => {
+openEmailSuccessModal();
+setTimeout(() => {
+window.location.href = mailtoUrl;
+}, 100);
+}).catch(() => {
+window.location.href = mailtoUrl;
+});
+}
+// Dom Content Loaded Initializer
+window.addEventListener('DOMContentLoaded', () => {
+const hash = window.location.hash;
+if (hash === '#pipeline') {
+showView('view-pipeline');
+} else if (hash === '#projects') {
+showView('view-projects');
+} else if (hash === '#showcase') {
+showView('view-showcase');
+} else if (hash === '#contact') {
+showView('view-contact');
+} else {
+showView('view-about');
+}
+});
+</script>
+</body>
+</html><!-- NAVBAR & MENU DRAWER -->
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nancy Borges — Data Analyst BI Portafolio</title>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- Lucide Icons -->
+<script src="https://unpkg.com/lucide@latest"></script>
+<!-- Google Fonts: Inter & JetBrains Mono -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght=300;400;500;600;700;800&family=JetBrains+Mono:wght=400;500;700&display=swap" rel="stylesheet">
+<script>
+tailwind.config = {
+darkMode: 'class',
+theme: {
+extend: {
+colors: {
+brand: {
+dark: '#131722',
+card: '#1b2030',
+border: '#1f293d',
+cyan: '#00f2fe',
+purple: '#9b51e0',
+green: '#00f5a0',
+textMuted: '#94a3b8',
+// Light mode overrides
+lightBg: '#f8fafc',
+lightCard: '#ffffff',
+lightBorder: '#e2e8f0',
+lightText: '#0f172a',
+lightTextMuted: '#64748b'
+}
+},
+fontFamily: {
+sans: ['Inter', 'sans-serif'],
+mono: ['JetBrains Mono', 'monospace'],
+}
+}
+}
+}
+</script>
+<style>
+/* Base Dark Mode background setup */
+html, body {
+transition: background-color 0.3s ease, color 0.3s ease;
+overflow-x: hidden;
+overflow-y: auto;
+}
+.dark body {
+background-color: #131722;
+color: #f8fafc;
+}
+body {
+background-color: #f8fafc;
+color: #0f172a;
+}
+body.modal-open {
+overflow: hidden !important;
+}
+/* Glassmorphism effects for Dark Mode */
+.dark .glass-panel {
+background: rgba(26, 32, 48, 0.7);
+backdrop-filter: blur(12px);
+border: 1px solid rgba(255, 255, 255, 0.05);
+}
+/* Glassmorphism effects for Light Mode */
+.glass-panel {
+background: rgba(255, 255, 255, 0.8);
+backdrop-filter: blur(12px);
+border: 1px solid rgba(0, 0, 0, 0.05);
+box-shadow: 0 4px 20px -5px rgba(0, 0, 0, 0.05);
+}
+.dark .glass-card {
+background: rgba(26, 32, 48, 0.55);
+backdrop-filter: blur(8px);
+border: 1px solid rgba(255, 255, 255, 0.04);
+transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.glass-card {
+background: #ffffff;
+border: 1px solid #e2e8f0;
+box-shadow: 0 4px 15px -3px rgba(0, 0, 0, 0.03);
+transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.dark .glass-card:hover {
+border-color: rgba(0, 242, 254, 0.4);
+transform: translateY(-4px);
+box-shadow: 0 12px 30px -10px rgba(0, 242, 254, 0.15);
+}
+.glass-card:hover {
+border-color: #00f2fe;
+transform: translateY(-4px);
+box-shadow: 0 12px 25px -10px rgba(0, 242, 254, 0.2);
+}
+/* Neon glows in dark mode only */
+.dark .glow-cyan {
+box-shadow: 0 0 25px rgba(0, 242, 254, 0.2);
+}
+.dark .glow-purple {
+box-shadow: 0 0 25px rgba(155, 81, 224, 0.15);
+}
+.dark .text-neon-cyan {
+color: #00f2fe;
+text-shadow: 0 0 8px rgba(0, 242, 254, 0.4);
+}
+.dark .text-neon-purple {
+color: #9b51e0;
+text-shadow: 0 0 8px rgba(155, 81, 224, 0.4);
+}
+/* Hide ALL scrollbars visually globally but keep scrolling enabled */
+* {
+    scrollbar-width: none !important;  /* Firefox */
+    -ms-overflow-style: none !important;  /* IE and Edge */
+}
+*::-webkit-scrollbar {
+    display: none !important;  /* Chrome, Safari, Opera */
+}
+/* Drawers sliding setup */
+.drawer {
+transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+/* Smooth progress transitions */
+.progress-bar-fill {
+transition: width 0.8s ease-in-out;
+}
+/* ==========================================================================
+EXTRA HIGH-FIDELITY LIGHT MODE CONTRAST & ADAPTATION DEVELOPED FOR NANCY
+========================================================================== */
+/* Crisper glass containers with more defined contours for day mode */
+html:not(.dark) .glass-panel {
+background: rgba(255, 255, 255, 0.9) !important;
+backdrop-filter: blur(16px) !important;
+border: 1px solid #cbd5e1 !important; /* Visible, elegant slate border instead of invisible white */
+box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.08), 0 1px 3px rgba(15, 23, 42, 0.02) !important;
+}
+html:not(.dark) .glass-card {
+background: #ffffff !important;
+border: 1px solid #cbd5e1 !important; /* Stronger gray borders so cards have excellent definition */
+box-shadow: 0 10px 25px -10px rgba(15, 23, 42, 0.08), 0 4px 10px -5px rgba(15, 23, 42, 0.04) !important;
+}
+html:not(.dark) .glass-card:hover {
+    border-color: #cbd5e1 !important;
+    box-shadow: 0 12px 25px -10px rgba(71, 85, 105, 0.15) !important;
+}
+/* Light mode overrides for the live showcase container frame (no more forced dark box) */
+html:not(.dark) .mock-showcase-container {
+background-color: #f1f5f9 !important; /* Elegant light background instead of deep black */
+border-color: #cbd5e1 !important; /* Symmetrical borders matching the card contours */
+}
+/* Light mode overrides for mock-views content details */
+html:not(.dark) .mock-view {
+color: #1e293b !important;
+}
+html:not(.dark) .mock-view h4,
+html:not(.dark) .mock-view .text-white,
+html:not(.dark) .mock-view strong {
+color: #334155 !important; /* Bold headings in soft slate-700 instead of deep slate */
+}
+/* Fix the invisible text on the right side panel */
+html:not(.dark) .mock-view .text-slate-300,
+html:not(.dark) .mock-view .text-slate-400,
+html:not(.dark) .mock-view .text-brand-textMuted {
+color: #334155 !important; /* Highly readable dark slate instead of unreadable light gray */
+}
+html:not(.dark) .mock-view .bg-brand-card\/80,
+html:not(.dark) .mock-view .bg-brand-card\/60,
+html:not(.dark) .mock-view .bg-brand-card\/50,
+html:not(.dark) .mock-view .bg-brand-card\/40,
+html:not(.dark) .mock-view .bg-brand-card\/30,
+html:not(.dark) .mock-view .bg-slate-800\/60 {
+background-color: #ffffff !important; /* Clear card backgrounds in day mode */
+border: 1px solid #cbd5e1 !important; /* Define borders on cards inside mockup */
+}
+html:not(.dark) .mock-view .border-brand-border,
+html:not(.dark) .mock-view .border-brand-border\/60,
+html:not(.dark) .mock-view .border-brand-border\/40,
+html:not(.dark) .mock-view .border-slate-800 {
+border-color: #cbd5e1 !important; /* Crisp divider borders instead of invisible dark lines */
+}
+html:not(.dark) .mock-view .bg-slate-900\/40 {
+background-color: #f1f5f9 !important; /* Light background for mockup image wrapper */
+border-color: #cbd5e1 !important;
+}
+/* Force dark overlay with 65% opacity on hover in Light Mode to ensure white 'Ver Captura HD' stands out */
+html:not(.dark) .mock-view .group .absolute.inset-0 {
+background-color: rgba(15, 23, 42, 0.7) !important;
+}
+/* Ensure neon/light-colored text is darkened to readable colors in Light Mode */
+html:not(.dark) .mock-view .text-slate-200 {
+color: #0284c7 !important; /* Intense, legible ocean-blue */
+}
+html:not(.dark) .mock-view .text-brand-purple {
+color: #6d28d9 !important; /* Vibrant royal purple */
+}
+html:not(.dark) .mock-view .text-slate-200 {
+color: #15803d !important; /* Legible deep forest green */
+}
+html:not(.dark) .mock-view .text-red-400,
+html:not(.dark) .mock-view .text-red-300 {
+color: #dc2626 !important; /* Deep red for high contrast alerts and losses */
+}
+/* Console simulation day mode */
+html:not(.dark) .sim-console-container {
+background-color: #ffffff !important;
+border-color: #cbd5e1 !important;
+}
+html:not(.dark) .sim-console-container #sim-logs div {
+color: #475569 !important; /* Slate gray font for standard logs */
+}
+html:not(.dark) .sim-console-container #sim-logs .text-slate-200 {
+color: #0284c7 !important; /* Darker sky-blue for cyan in day mode */
+font-weight: 600;
+}
+html:not(.dark) .sim-console-container #sim-logs .text-brand-purple {
+color: #7c3aed !important; /* Darker indigo for purple in day mode */
+font-weight: 600;
+}
+html:not(.dark) .sim-console-container #sim-logs .text-slate-200 {
+color: #dc2626 !important; /* Rich green for day mode success messages */
+font-weight: 600;
+}
+html:not(.dark) .sim-console-container .text-brand-textMuted {
+color: #64748b !important;
+}
+/* Custom Light Mode style overrides for success modal */
+/* Micro-interaction hovers for step cards */
+#sim-step-1 i, #sim-step-2 i, #sim-step-3 svg, #sim-step-4 i {
+transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+#sim-step-1:hover i { transform: scale(1.15) rotate(8deg); }
+#sim-step-2:hover i { transform: scale(1.15) translateY(-3px); }
+#sim-step-3:hover svg { transform: scale(1.15) rotate(-8deg); }
+#sim-step-4:hover i { transform: scale(1.15) translateY(-3px); }
+html:not(.dark) .border-slate-200 {
+border-color: #e2e8f0 !important;
+}
+/* Crisp, beautiful light mode hover overlay (soft white blur instead of heavy dark mask) */
+html:not(.dark) .mock-view .group .absolute.inset-0 {
+background-color: rgba(255, 255, 255, 0.75) !important;
+backdrop-filter: blur(3px) !important;
+}
+html:not(.dark) .mock-view .group .absolute.inset-0 svg {
+color: #0284c7 !important; /* Elegant dark sky blue eye SVG */
+}
+html:not(.dark) .mock-view .group .absolute.inset-0 .w-10.h-10 {
+background-color: rgba(2, 132, 199, 0.1) !important;
+border-color: rgba(2, 132, 199, 0.3) !important;
+}
+html:not(.dark) .mock-view .group .absolute.inset-0 span {
+background-color: #ffffff !important;
+color: #334155 !important;
+border-color: #cbd5e1 !important;
+box-shadow: 0 4px 12px -2px rgba(15, 23, 42, 0.1) !important;
+}
+/* Crisp, beautiful light mode hover overlay (soft white blur instead of heavy dark mask) */
+html:not(.dark) .mock-view .absolute.inset-0.bg-black\/60 {
+background-color: rgba(255, 255, 255, 0.55) !important;
+backdrop-filter: blur(2px) !important;
+}
+html:not(.dark) .mock-view .absolute.inset-0.bg-black\/60 .text-slate-200 {
+color: #0284c7 !important; /* Beautiful dark sky blue for high visibility on light background */
+}
+html:not(.dark) .mock-view .absolute.inset-0.bg-black\/60 .bg-brand-cyan\/20 {
+background-color: rgba(2, 132, 199, 0.12) !important;
+border-color: rgba(2, 132, 199, 0.35) !important;
+}
+/* Ensure brand-cyan elements are high-contrast and fully readable in Light Mode (Day Mode) globally */
+html:not(.dark) .text-slate-200 {
+color: #0369a1 !important; /* Rich deep ocean-blue */
+font-weight: 500 !important;
+}
+html:not(.dark) .text-brand-purple {
+color: #5b21b6 !important; /* Rich deep royal purple */
+font-weight: 500 !important;
+}
+html:not(.dark) .text-slate-200 {
+color: #166534 !important; /* Rich deep forest green */
+font-weight: 500 !important;
+}
+html:not(.dark) .bg-brand-cyan {
+background-color: #0284c7 !important;
+}
+html:not(.dark) .border-brand-cyan {
+border-color: #0284c7 !important;
+}
+html:not(.dark) .hover\:text-slate-200:hover {
+color: #0284c7 !important;
+}
+html:not(.dark) .hover\:bg-brand-cyan:hover {
+background-color: #0284c7 !important;
+}
+html:not(.dark) .selection\:bg-brand-cyan::selection {
+background-color: #0284c7 !important;
+}
+/* Day Mode styling for the glass cards and sections to make them look ultra-premium and defined */
+html:not(.dark) #reto-datos .glass-card {
+background: #ffffff !important;
+border: 1px solid #cbd5e1 !important; /* Visible crisp border */
+box-shadow: 0 10px 25px -10px rgba(15, 23, 42, 0.08), 0 4px 10px -5px rgba(15, 23, 42, 0.04) !important;
+}
+html:not(.dark) #reto-datos .font-mono.text-slate-200 {
+color: #0284c7 !important;
+}
+/* Day Mode responsive styling for the showcase outer container */
+html:not(.dark) .mock-showcase-container {
+background-color: #f1f5f9 !important; /* Light slate gray */
+border-color: #cbd5e1 !important;
+}
+/* Clean up light mode hover overlays to use white backdrop-blur with a x-eye-blue icon and NO text */
+html:not(.dark) .mock-view .group .absolute.inset-0 {
+background-color: rgba(255, 255, 255, 0.6) !important;
+backdrop-filter: blur(2px) !important;
+}
+html:not(.dark) .mock-view .group .absolute.inset-0 svg {
+color: #0284c7 !important; /* Ocean-blue eye icon */
+}
+html:not(.dark) .mock-view .group .absolute.inset-0 .w-10.h-10 {
+background-color: rgba(2, 132, 199, 0.1) !important;
+border-color: rgba(2, 132, 199, 0.3) !important;
+}
+/* Ensure the success modal matches the day/night theme perfectly */
+/* Custom Light Mode style overrides for success modal */
+html:not(.dark) #success-modal .relative {
+background-color: #ffffff !important;
+border-color: #cbd5e1 !important;
+}
+html:not(.dark) #success-modal h3 {
+color: #334155 !important;
+}
+html:not(.dark) #success-modal p {
+color: #475569 !important;
+}
+html:not(.dark) #success-modal button.bg-brand-green {
+background-color: #dc2626 !important;
+color: #ffffff !important;
+}
+html:not(.dark) #success-modal button.bg-brand-cyan {
+background-color: #0284c7 !important;
+color: #ffffff !important;
+}
+html:not(.dark) #success-modal button.bg-amber-500 {
+background-color: #d97706 !important;
+color: #ffffff !important;
+}
+html:not(.dark) #success-modal button:hover {
+background-color: #334155 !important;
+}
+/* Single Page View Transitions */
+.view-section {
+opacity: 0;
+transition: opacity 0.3s ease-in-out;
+}
+.view-section:not(.hidden) {
+opacity: 1;
+}
+
+/* Master Corporate Soft Gray Overrides for Legible Day Mode */
+html:not(.dark) body {
+    color: #475569 !important; /* Soft slate gray body text */
+}
+html:not(.dark) .text-slate-900,
+html:not(.dark) .text-slate-950,
+html:not(.dark) .text-slate-800,
+html:not(.dark) h1,
+html:not(.dark) h3,
+html:not(.dark) h4,
+html:not(.dark) strong,
+html:not(.dark) p,
+html:not(.dark) li,
+html:not(.dark) a:not(.bg-brand-cyan):not(.bg-slate-900) {
+    color: #334155 !important; /* Softer, elegant corporate charcoal gray instead of black */
+}
+html:not(.dark) #success-modal h3 {
+    color: #334155 !important;
+}
+html:not(.dark) #success-modal p {
+    color: #475569 !important;
+}
+html:not(.dark) .border-slate-200,
+html:not(.dark) .border-slate-300 {
+    border-color: #cbd5e1 !important; /* Standardize elegant borders */
+}
+
+html:not(.dark) h2 {
+    color: #334155 !important;
+    font-weight: 500 !important;
+}
+
+/* ==========================================================================
+   PREMIUM CORPORATE DESIGN & COLOR IMPROVEMENTS BY GEMINI NOTEBOOK
+   ========================================================================== */
+.mock-tab-btn, .filter-btn, .project-card, .glass-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Active Tab button styling - Solid, matching filters */
+.dark .mock-tab-btn.active {
+    background-color: #00f2fe !important;
+    background: #00f2fe !important;
+    color: #0a0c10 !important;
+    border-color: #00f2fe !important;
+    box-shadow: 0 4px 15px rgba(0, 242, 254, 0.2) !important;
+    transform: translateY(-1px);
+}
+html:not(.dark) .mock-tab-btn.active {
+    background-color: #475569 !important;
+    background: #475569 !important;
+    color: #ffffff !important;
+    border-color: #475569 !important;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.1) !important;
+    transform: translateY(-1px);
+}
+
+/* Active Filter button styling - Solid color, no gradient */
+.dark .filter-btn.active {
+    background-color: #00f2fe !important;
+    background: #00f2fe !important;
+    color: #0a0c10 !important;
+    box-shadow: 0 4px 15px rgba(0, 242, 254, 0.2) !important;
+    font-weight: 500 !important;
+    transform: translateY(-1px);
+}
+html:not(.dark) .filter-btn.active {
+    background-color: #475569 !important;
+    background: #475569 !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.1) !important;
+    font-weight: 500 !important;
+    transform: translateY(-1px);
+}
+
+/* Extra premium interactive glow for Project Cards in dark mode */
+.dark .project-card:hover {
+    border-color: rgba(0, 242, 254, 0.3) !important;
+    box-shadow: 0 10px 25px -5px rgba(0, 242, 254, 0.1), 0 8px 10px -6px rgba(155, 81, 224, 0.05) !important;
+}
+html:not(.dark) .project-card:hover {
+    border-color: rgba(2, 132, 199, 0.3) !important;
+    box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.06) !important;
+}
+
+/* Console simulation text contrast improvement & highly readable colors by Gemini Notebook */
+.sim-console-container #sim-logs .text-slate-200 {
+    color: #22d3ee !important; /* Vibrant bright cyan */
+    font-weight: 400 !important;
+}
+.sim-console-container #sim-logs .text-brand-purple {
+    color: #d8b4fe !important; /* Soft, bright, highly-readable lavender/violet */
+    font-weight: 400 !important;
+}
+.sim-console-container #sim-logs .text-slate-200 {
+    color: #4ade80 !important; /* Vibrant bright green */
+    font-weight: 400 !important;
+}
+
+/* Day Mode console logs - keep them deep and readable */
+html:not(.dark) .sim-console-container #sim-logs .text-slate-200 {
+    color: #0284c7 !important;
+    font-weight: 400 !important;
+}
+html:not(.dark) .sim-console-container #sim-logs .text-brand-purple {
+    color: #7c3aed !important; /* Darker legible violet for day mode */
+    font-weight: 400 !important;
+}
+html:not(.dark) .sim-console-container #sim-logs .text-slate-200 {
+    color: #16a34a !important;
+    font-weight: 400 !important;
+}
+
+/* Day Mode project-label and top tags - styled in corporate ocean blue */
+
+
+/* Dark Mode project-label - change to blue-celeste (#00f2fe) and no bold */
+.dark .project-label {
+    color: #00f2fe !important;
+    font-weight: 400 !important;
+}
+
+
+/* Master Input Placeholder color in dark mode */
+.dark ::placeholder {
+    color: rgba(255, 255, 255, 0.6) !important;
+    opacity: 1 !important;
+}
+
+/* Master Project Label color in Light Mode - High-contrast day-mode ocean blue */
+html:not(.dark) .project-label {
+    color: #0284c7 !important;
+    font-weight: 400 !important;
+}
+
+/* Premium Hover Glow for Showcase Mockup Image wrappers */
+.mock-view > div {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+.dark .mock-view > div:hover {
+    border-color: rgba(0, 242, 254, 0.5) !important;
+    box-shadow: 0 15px 35px -10px rgba(0, 242, 254, 0.3) !important;
+    transform: translateY(-2px);
+}
+html:not(.dark) .mock-view > div:hover {
+    border-color: #0284c7 !important;
+    box-shadow: 0 15px 35px -10px rgba(2, 132, 199, 0.2) !important;
+    transform: translateY(-2px);
+}
+
+/* Day Mode Titles - same soft corporate charcoal gray, no bold */
+html:not(.dark) h3 {
+    color: #334155 !important;
+    font-weight: 400 !important;
+}
+
+
+/* ==========================================================================
+   UNIFIED BUTTONS & NAV-LINKS DESIGN LOGIC BY GEMINI NOTEBOOK (NANCY V13)
+   ========================================================================== */
+.nav-link, .filter-btn, .mock-tab-btn {
+    border-radius: 0px !important; /* Force completely rectangular/square buttons */
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    font-family: 'JetBrains Mono', monospace !important;
+    font-size: 11px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+    padding: 0.5rem 0.85rem !important; /* py-2 px-3.5 */
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-weight: 400 !important; /* Clean normal weight */
+    height: 34px !important; /* Symmetrical height for all buttons */
+}
+
+/* Inactive styling: clean and identical */
+.dark .nav-link, .dark .filter-btn, .dark .mock-tab-btn {
+    background-color: transparent !important;
+    color: #94a3b8 !important; /* textMuted */
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+html:not(.dark) .nav-link, html:not(.dark) .filter-btn, html:not(.dark) .mock-tab-btn {
+    background-color: #f1f5f9 !important; /* Soft gray background for day mode */
+    color: #475569 !important; /* Soft slate gray font */
+    border: 1px solid #cbd5e1 !important;
+}
+
+
+
+/* Active Styling: Outline-only (no full color fill, just elegant border and text) */
+/* Dark Mode Active - Glowing Cyan Outline and Text */
+.dark .nav-link.active,
+.dark .filter-btn.active,
+.dark .mock-tab-btn.active {
+    background-color: transparent !important;
+    background: transparent !important;
+    color: #00f2fe !important;
+    border-color: #00f2fe !important;
+    box-shadow: 0 0 10px rgba(0, 242, 254, 0.25) !important;
+}
+
+/* Light Mode Active - Beautiful outline with emerald-600 border and text */
+html:not(.dark) .nav-link.active,
+html:not(.dark) .filter-btn.active,
+html:not(.dark) .mock-tab-btn.active {
+    background-color: transparent !important;
+    background: transparent !important;
+    color: #dc2626 !important;
+    border-color: #dc2626 !important;
+    box-shadow: 0 4px 12px rgba(220, 38, 38, 0.12) !important;
+}
+
+/* Hover effects */
+.dark .nav-link:hover, .dark .filter-btn:hover, .dark .mock-tab-btn:hover {
+    border-color: #00f2fe !important;
+    color: #00f2fe !important;
+    background-color: rgba(0, 242, 254, 0.03) !important;
+}
+html:not(.dark) .nav-link:hover, html:not(.dark) .filter-btn:hover, html:not(.dark) .mock-tab-btn:hover {
+    border-color: #dc2626 !important;
+    color: #dc2626 !important;
+    background-color: rgba(220, 38, 38, 0.03) !important;
+}
+
+/* Profile Card and Console Sombra Hover in Day Mode (Gray, not Cyan) */
+.dark .glass-card:hover {
+    border-color: rgba(0, 242, 254, 0.3) !important;
+    box-shadow: 0 12px 25px -10px rgba(0, 242, 254, 0.15) !important;
+}
+html:not(.dark) .glass-card:hover {
+    border-color: #cbd5e1 !important;
+    box-shadow: 0 12px 25px -10px rgba(71, 85, 105, 0.15) !important;
+}
+
+/* Interactive Showcase container hover lifting animation & shadows */
+.mock-showcase-container {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.dark .mock-showcase-container:hover {
+    transform: translateY(-4px);
+    border-color: rgba(0, 242, 254, 0.3) !important;
+    box-shadow: 0 12px 25px -10px rgba(0, 242, 254, 0.15) !important;
+}
+html:not(.dark) .mock-showcase-container:hover {
+    transform: translateY(-4px);
+    border-color: #cbd5e1 !important;
+    box-shadow: 0 12px 25px -10px rgba(71, 85, 105, 0.15) !important;
+}
+
+
+/* Console simulation card hover */
+.console-card-hover {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+.dark .console-card-hover:hover {
+    border-color: rgba(0, 242, 254, 0.3) !important;
+    box-shadow: 0 12px 25px -10px rgba(0, 242, 254, 0.15) !important;
+    transform: translateY(-4px);
+}
+html:not(.dark) .console-card-hover:hover {
+    border-color: #cbd5e1 !important;
+    box-shadow: 0 12px 25px -10px rgba(71, 85, 105, 0.15) !important;
+    transform: translateY(-4px);
+}
+
+/* Interactive Showcase container hover */
+.showcase-card-hover {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+.dark .showcase-card-hover:hover {
+    border-color: rgba(0, 242, 254, 0.3) !important;
+    box-shadow: 0 12px 25px -10px rgba(0, 242, 254, 0.15) !important;
+    transform: translateY(-4px);
+}
+html:not(.dark) .showcase-card-hover:hover {
+    border-color: #cbd5e1 !important;
+    box-shadow: 0 12px 25px -10px rgba(71, 85, 105, 0.15) !important;
+    transform: translateY(-4px);
+}
+
+
+/* Exact premium hover transition for Perfil card and simulation console day mode */
+html:not(.dark) .glass-card:hover,
+html:not(.dark) .sim-console-container:hover,
+html:not(.dark) .project-card:hover {
+    border-color: #cbd5e1 !important;
+    box-shadow: 0 12px 25px -10px rgba(71, 85, 105, 0.2) !important;
+}
+
+/* Day Mode h2 subheadings style (gris oscuro consistent w/ titles) */
+html:not(.dark) h2,
+html:not(.dark) .project-label {
+    color: #475569 !important; /* Elegant slate grey */
+}
+
+
+
+/* Interactive Showcase container hover lifting animation & shadows */
+#view-showcase .glass-panel {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    border-radius: 0px !important;
+}
+#view-showcase .glass-panel:hover {
+    transform: translateY(-4px) !important;
+}
+.dark #view-showcase .glass-panel:hover {
+    border-color: rgba(0, 242, 254, 0.3) !important;
+    box-shadow: 0 12px 30px -10px rgba(0, 242, 254, 0.15) !important;
+}
+html:not(.dark) #view-showcase .glass-panel:hover {
+    border-color: #cbd5e1 !important;
+    box-shadow: 0 12px 30px -10px rgba(71, 85, 105, 0.2) !important;
+}
+
+/* Custom overrides for V16 */
+.disponible-badge {
+    color: #00f2fe !important;
+}
+html:not(.dark) .disponible-badge {
+    color: #0284c7 !important;
+    font-weight: 600 !important;
+}
+
+/* Master Hover and Shadow Unifications in Day Mode (Gray Slate, not Cyan) */
+.glass-card, .project-card, .mock-showcase-container {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.dark .glass-card:hover,
+.dark .project-card:hover,
+.dark .mock-showcase-container:hover {
+    transform: translateY(-4px) !important;
+    border-color: rgba(0, 242, 254, 0.4) !important;
+    box-shadow: 0 12px 25px -10px rgba(0, 242, 254, 0.15) !important;
+}
+
+html:not(.dark) .glass-card:hover,
+html:not(.dark) .project-card:hover,
+html:not(.dark) .mock-showcase-container:hover {
+    transform: translateY(-4px) !important;
+    border-color: #dc2626 !important; /* Elegant almost red border on hover instead of slate */
+    box-shadow: 0 12px 24px -6px rgba(220, 38, 38, 0.12) !important; /* Sutil red-slate shadow */
+}
+
+/* Day Mode active button selectors color - Outline-only Almost Red (#dc2626) */
+html:not(.dark) .nav-link.active,
+html:not(.dark) .filter-btn.active,
+html:not(.dark) .mock-tab-btn.active {
+    background-color: transparent !important;
+    background: transparent !important;
+    color: #dc2626 !important;
+    border: 2px solid #dc2626 !important;
+    box-shadow: 0 4px 12px rgba(220, 38, 38, 0.08) !important;
+    font-weight: 500 !important;
+}
+
+/* Day Mode hover button class unifications - Outline-only Almost Red, NO Green */
+html:not(.dark) .nav-link:hover,
+html:not(.dark) .filter-btn:hover,
+html:not(.dark) .mock-tab-btn:hover {
+    border-color: #dc2626 !important;
+    color: #dc2626 !important;
+    background-color: rgba(220, 38, 38, 0.03) !important;
+}
+
+/* Premium Success / Warning Modal Styling Unifications (0% Cyan for buttons) */
+html:not(.dark) #success-modal button,
+html:not(.dark) #email-success-modal button {
+    background-color: #dc2626 !important;
+    color: #ffffff !important;
+    border-color: #dc2626 !important;
+}
+html:not(.dark) #success-modal button:hover,
+html:not(.dark) #email-success-modal button:hover {
+    background-color: #059669 !important;
+    border-color: #059669 !important;
+}
+.dark #success-modal button,
+.dark #email-success-modal button {
+    background-color: #dc2626 !important;
+    color: #ffffff !important;
+    border-color: #dc2626 !important;
+}
+.dark #success-modal button:hover,
+.dark #email-success-modal button:hover {
+    background-color: #059669 !important;
+    border-color: #059669 !important;
+}
+/* Beautiful design 'onda' for Day Mode challenges cards */
+html:not(.dark) #reto-datos .glass-card {
+    background-color: #ffffff !important;
+    border: 1px solid #cbd5e1 !important;
+    box-shadow: 0 4px 15px -3px rgba(15, 23, 42, 0.04) !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+html:not(.dark) #reto-datos .glass-card:hover {
+    border-color: #dc2626 !important;
+    box-shadow: 0 10px 25px -5px rgba(220, 38, 38, 0.1) !important;
+    transform: translateY(-4px) !important;
+}
+
+
+/* Brighter glowing lavender/purple in Dark Mode for SQL and Pipelines */
+.dark .border-brand-purple\/20 {
+    border-color: rgba(192, 132, 252, 0.45) !important;
+}
+.dark .text-brand-purple {
+    color: #c084fc !important;
+}
+
+
+/* ==========================================================================
+   Nancy V18 Premium Styling Override Block - MAGENTA, ROSA & PURPURA 100% UNIFIED (Nancy V28)
+   ========================================================================== */
+
+/* Premium KPI/Metric Card styles */
+.metric-card {
+    background-color: #ffffff !important;
+    border: 1px solid #cbd5e1 !important;
+    border-left: 4px solid #db2777 !important; /* Left Accent in Magenta for Day */
+    box-shadow: 0 4px 12px -2px rgba(15, 23, 42, 0.04) !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+.metric-card:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 10px 20px -5px rgba(219, 39, 119, 0.1) !important;
+    border-color: #fbcfe8 !important;
+}
+.dark .metric-card {
+    background-color: #1b2030 !important;
+    border: 1px solid #1f293d !important;
+    border-left: 4px solid #00f2fe !important; /* Left Accent in Celeste for Night */
+    box-shadow: none !important;
+}
+
+/* Day Mode Challenges Cards - 100% Unified in Pink/Magenta with Coherence */
+.challenge-card {
+    background-color: #ffffff !important;
+    border: 1px solid #cbd5e1 !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+.challenge-card:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 10px 20px -5px rgba(236, 72, 153, 0.15) !important;
+    border-color: #f472b6 !important;
+}
+.dark .challenge-card {
+    background-color: #1b2030 !important;
+    border: 1px solid #1f293d !important;
+}
+
+/* 100% Unified Border Tops for Challenges in Day Mode to guarantee coherence */
+html:not(.dark) .challenge-card-stock,
+html:not(.dark) .challenge-card-sales,
+html:not(.dark) .challenge-card-churn {
+    border-top: 4px solid #db2777 !important; /* Solid Magenta top border */
+}
+
+/* 100% Unified Icon Box colors for Challenges in Day Mode to guarantee coherence */
+html:not(.dark) .challenge-icon-stock,
+html:not(.dark) .challenge-icon-sales,
+html:not(.dark) .challenge-icon-churn {
+    background-color: rgba(219, 39, 119, 0.08) !important;
+    border-color: rgba(219, 39, 119, 0.2) !important;
+    color: #db2777 !important;
+}
+html:not(.dark) .challenge-icon-stock i,
+html:not(.dark) .challenge-icon-sales i,
+html:not(.dark) .challenge-icon-churn i {
+    color: #db2777 !important;
+}
+
+/* Profile and Console Day Mode shadow overrides */
+html:not(.dark) .glass-card:hover,
+html:not(.dark) .console-card-hover:hover,
+html:not(.dark) .showcase-card-hover:hover,
+html:not(.dark) .mock-showcase-container:hover {
+    border-color: #f472b6 !important;
+    box-shadow: 0 12px 24px -8px rgba(219, 39, 119, 0.15) !important;
+    transform: translateY(-3px) !important;
+}
+
+/* Day/Night Mode Disponibilidad Badge text color unifications */
+html:not(.dark) .disponible-badge-container {
+    background-color: rgba(236, 72, 153, 0.08) !important; /* Soft Pink bg */
+    border-color: rgba(236, 72, 153, 0.25) !important; /* Pink border */
+    border-radius: 9999px !important;
+}
+html:not(.dark) .disponible-badge {
+    color: #ec4899 !important; /* Rose Pink text */
+    font-weight: 600 !important;
+}
+html:not(.dark) .disponible-badge-container span.bg-brand-cyan {
+    background-color: #ec4899 !important; /* Pink dot */
+}
+
+.dark .disponible-badge-container {
+    background-color: rgba(0, 242, 254, 0.1) !important;
+    border-color: rgba(0, 242, 254, 0.2) !important;
+}
+.dark .disponible-badge {
+    color: #00f2fe !important;
+    font-weight: 500 !important;
+}
+.dark .disponible-badge-container span.bg-brand-cyan {
+    background-color: #00f2fe !important;
+}
+
+/* Day Mode Title Gradient Override */
+html:not(.dark) .title-gradient-day {
+    background: linear-gradient(135deg, #db2777, #ec4899, #7c3aed) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    display: inline-block !important;
+    font-weight: 650 !important;
+}
+.dark .title-gradient-day {
+    color: #ffffff !important;
+    background: none !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+
+/* Day Mode Siguiente paso text gradient override */
+html:not(.dark) .siguiente-paso-badge {
+    border-color: rgba(124, 58, 237, 0.25) !important;
+    background-color: rgba(124, 58, 237, 0.05) !important;
+    border-radius: 0px !important;
+}
+html:not(.dark) .siguiente-paso-text {
+    background: linear-gradient(135deg, #db2777, #ec4899, #7c3aed) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    font-weight: 600 !important;
+}
+/* In dark mode, keep it clean white */
+.dark .siguiente-paso-text {
+    color: #ffffff !important;
+    background: none !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+
+/* Dynamic styling overrides for alert modals - Unified solid gray button */
+.dark #success-modal button,
+.dark #email-success-modal button,
+html:not(.dark) #success-modal button,
+html:not(.dark) #email-success-modal button {
+    background-color: #64748b !important;
+    border-color: #64748b !important;
+    color: #ffffff !important;
+    border-radius: 0px !important;
+}
+.dark #success-modal button:hover,
+.dark #email-success-modal button:hover,
+html:not(.dark) #success-modal button:hover,
+html:not(.dark) #email-success-modal button:hover {
+    background-color: #475569 !important;
+    border-color: #475569 !important;
+}
+
+/* Day Mode Titles - same soft corporate charcoal gray, no bold */
+html:not(.dark) h2,
+html:not(.dark) h3,
+html:not(.dark) .project-label,
+html:not(.dark) .siguiente-paso-badge {
+    color: #334155 !important;
+    font-weight: 400 !important;
+}
+
+/* Dark Mode titles unifications in white and normal weight */
+.dark h2,
+.dark h3,
+.dark .siguiente-paso-badge {
+    color: #ffffff !important;
+    font-weight: 400 !important;
+}
+
+/* ==========================================================
+   BUTTONS ACTIVE / HOVER STATE UNIFICATIONS (NANCY V28)
+   ========================================================== */
+
+/* Day Mode inactive button class unifications - Outline / Vacio initially! */
+html:not(.dark) .nav-link,
+html:not(.dark) .filter-btn,
+html:not(.dark) .mock-tab-btn {
+    background-color: transparent !important;
+    background: transparent !important;
+    color: #475569 !important;
+    border: 1px solid #cbd5e1 !important;
+    border-radius: 0px !important;
+    box-shadow: none !important;
+}
+
+/* Day Mode HOVER button states - elegant pink outline overlay */
+html:not(.dark) .nav-link:hover,
+html:not(.dark) .filter-btn:hover,
+html:not(.dark) .mock-tab-btn:hover {
+    background-color: rgba(236, 72, 153, 0.04) !important;
+    border-color: #ec4899 !important;
+    color: #ec4899 !important;
+}
+
+/* Day Mode ACTIVE (Selected) button states - SOLID WHITE background with pink letters & border! */
+html:not(.dark) .nav-link.active,
+html:not(.dark) .filter-btn.active,
+html:not(.dark) .mock-tab-btn.active {
+    background-color: #ffffff !important;
+    background: #ffffff !important;
+    color: #ec4899 !important; /* Hot pink text color! */
+    border: 2px solid #ec4899 !important; /* Thick Pink Border */
+    box-shadow: 0 4px 12px rgba(236, 72, 153, 0.15) !important;
+    font-weight: 600 !important;
+}
+
+/* Dark Mode Inactive nav-link menu links - PURE WHITE letters instead of textMuted gray! */
+.dark .nav-link,
+.dark #mobile-menu a {
+    color: #ffffff !important; /* Pure white inactive letters */
+    background-color: transparent !important;
+    border: 1px solid transparent !important;
+}
+.dark .nav-link:hover,
+.dark #mobile-menu a:hover {
+    color: #00f2fe !important;
+    border-color: rgba(0, 242, 254, 0.25) !important;
+    background-color: rgba(0, 242, 254, 0.03) !important;
+}
+.dark .nav-link.active,
+.dark #mobile-menu a.active {
+    color: #ffffff !important;
+    background-color: rgba(0, 242, 254, 0.15) !important;
+    border-color: #00f2fe !important;
+    box-shadow: 0 0 10px rgba(0, 242, 254, 0.2) !important;
+}
+
+/* Day Mode navbar toggle buttons moon icons custom overrides */
+html:not(.dark) #theme-icon-moon,
+html:not(.dark) button[onclick="toggleTheme()"] {
+    color: #ec4899 !important; /* Pink moon icon in light mode */
+    border-color: rgba(236, 72, 153, 0.2) !important;
+}
+
+/* Navbar & Mobile Direct Contact Button overrides (Nancy V28) */
+html:not(.dark) #nav-contact-btn {
+    background-color: transparent !important;
+    border: 1px solid #db2777 !important; /* Magenta Border */
+    color: #db2777 !important; /* Magenta text */
+}
+html:not(.dark) #nav-contact-btn:hover {
+    background-color: rgba(219, 39, 119, 0.04) !important;
+    color: #db2777 !important;
+}
+html:not(.dark) #nav-contact-btn.active {
+    background-color: #db2777 !important;
+    color: #ffffff !important; /* Filled with white text */
+}
+
+/* Dark Mode Direct Contact button overrides */
+.dark #nav-contact-btn {
+    background-color: transparent !important;
+    border: 1px solid #00f2fe !important; /* Cyan Border */
+    color: #ffffff !important; /* White text */
+}
+.dark #nav-contact-btn:hover {
+    background-color: rgba(0, 242, 254, 0.08) !important;
+    color: #00f2fe !important;
+}
+.dark #nav-contact-btn.active {
+    background-color: #00f2fe !important;
+    color: #131722 !important; /* Filled with dark text */
+}
+
+/* Day Mode Direct Contact Mobile Button overrides */
+html:not(.dark) #nav-contact-btn-mobile {
+    background-color: #db2777 !important;
+    color: #ffffff !important;
+}
+html:not(.dark) #nav-contact-btn-mobile:hover {
+    background-color: #be185d !important;
+}
+.dark #nav-contact-btn-mobile {
+    background-color: #00f2fe !important;
+    color: #131722 !important;
+}
+.dark #nav-contact-btn-mobile:hover {
+    background-color: #ffffff !important;
+}
+
+/* Simular Despliegue Button styling overrides (Nancy V28) */
+html:not(.dark) #btn-simulate {
+    background-color: transparent !important;
+    border: 1px solid #ec4899 !important; /* Pink Border */
+    color: #ec4899 !important; /* Pink text */
+}
+html:not(.dark) #btn-simulate:hover {
+    background-color: rgba(236, 72, 153, 0.04) !important;
+    color: #ec4899 !important;
+}
+
+/* Dark Mode contact card style unifications - remove any blue tint completely! */
+.dark #contact {
+    background-color: #0a0c10 !important; /* Absolute dark body background */
+}
+.dark #contact .glass-panel {
+    background-color: #121214 !important; /* Deep neutral black-gray card background, 0% blue */
+    border-color: #27272a !important; /* Deep neutral gray border */
+    box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.4) !important;
+}
+.dark #contact input,
+.dark #contact textarea {
+    background-color: #121214 !important;
+    border-color: #27272a !important;
+}
+
+/* Day Mode brand and label colors unifications inside project cards */
+html:not(.dark) #projects-grid .project-card[data-category="retail"] .card-badge-tag {
+    color: #db2777 !important; /* Magenta */
+    border-color: rgba(219, 39, 119, 0.25) !important;
+    background-color: rgba(219, 39, 119, 0.05) !important;
+}
+html:not(.dark) #projects-grid .project-card[data-category="retail"] i {
+    color: #db2777 !important;
+}
+html:not(.dark) #projects-grid .project-card[data-category="retail"] .project-label {
+    color: #db2777 !important; /* Magenta for Antes / Después labels! */
+}
+
+html:not(.dark) #projects-grid .project-card[data-category="marketing"] .card-badge-tag {
+    color: #ec4899 !important; /* Pink/Rosa */
+    border-color: rgba(236, 72, 153, 0.25) !important;
+    background-color: rgba(236, 72, 153, 0.05) !important;
+}
+html:not(.dark) #projects-grid .project-card[data-category="marketing"] i {
+    color: #ec4899 !important;
+}
+html:not(.dark) #projects-grid .project-card[data-category="marketing"] .project-label {
+    color: #ec4899 !important; /* Pink for Antes / Después labels! */
+}
+
+html:not(.dark) #projects-grid .project-card[data-category="banking"] .card-badge-tag {
+    color: #7c3aed !important; /* Purple */
+    border-color: rgba(124, 58, 237, 0.25) !important;
+    background-color: rgba(124, 58, 237, 0.05) !important;
+}
+html:not(.dark) #projects-grid .project-card[data-category="banking"] i {
+    color: #7c3aed !important;
+}
+html:not(.dark) #projects-grid .project-card[data-category="banking"] .project-label {
+    color: #7c3aed !important; /* Purple for Antes / Después labels! */
+}
+
+html:not(.dark) #projects-grid .project-card[data-category="hr"] .card-badge-tag {
+    color: #db2777 !important; /* Magenta */
+    border-color: rgba(219, 39, 119, 0.25) !important;
+    background-color: rgba(219, 39, 119, 0.05) !important;
+}
+html:not(.dark) #projects-grid .project-card[data-category="hr"] i {
+    color: #db2777 !important;
+}
+html:not(.dark) #projects-grid .project-card[data-category="hr"] .project-label {
+    color: #db2777 !important; /* Magenta for Antes / Después labels! */
+}
+
+/* Stack Principal tag unifications inside Hero in both modes (Nancy V28) */
+.dark .stack-tag-powerbi,
+.dark .stack-tag-lakehouse {
+    background-color: rgba(0, 242, 254, 0.1) !important;
+    border-color: rgba(0, 242, 254, 0.2) !important;
+    color: #00f2fe !important; /* Celeste */
+}
+.dark .stack-tag-sql,
+.dark .stack-tag-pipelines {
+    background-color: rgba(192, 132, 252, 0.1) !important;
+    border-color: rgba(192, 132, 252, 0.2) !important;
+    color: #c084fc !important; /* Lila */
+}
+.dark .stack-tag-warehouse,
+.dark .stack-tag-github {
+    background-color: rgba(0, 245, 160, 0.1) !important;
+    border-color: rgba(0, 245, 160, 0.2) !important;
+    color: #00f5a0 !important; /* Verde */
+}
+
+html:not(.dark) .stack-tag-powerbi,
+html:not(.dark) .stack-tag-pipelines {
+    background-color: rgba(219, 39, 119, 0.05) !important;
+    border-color: rgba(219, 39, 119, 0.2) !important;
+    color: #db2777 !important; /* Magenta */
+}
+html:not(.dark) .stack-tag-sql,
+html:not(.dark) .stack-tag-lakehouse {
+    background-color: rgba(236, 72, 153, 0.05) !important;
+    border-color: rgba(236, 72, 153, 0.2) !important;
+    color: #ec4899 !important; /* Rosa */
+}
+html:not(.dark) .stack-tag-warehouse,
+html:not(.dark) .stack-tag-github {
+    background-color: rgba(124, 58, 237, 0.05) !important;
+    border-color: rgba(124, 58, 237, 0.2) !important;
+    color: #7c3aed !important; /* Purpura */
+}
+
+/* Enforce darker readable colors in Day Mode inside PERFIL DE RENDIMIENTO spec lists */
+html:not(.dark) .glass-card span,
+html:not(.dark) .glass-card strong,
+html:not(.dark) .glass-card p {
+    color: #334155 !important;
+}
+html:not(.dark) .glass-card .text-brand-purple {
+    color: #be185d !important; /* Magenta */
+}
+html:not(.dark) .glass-card .text-brand-green {
+    color: #7c3aed !important; /* Purple */
+}
+html:not(.dark) .glass-card .text-brand-cyan {
+    color: #db2777 !important; /* Pink */
+}
+
+/* Day Mode h2 subheadings style (Gris pizarra oscuro) */
+html:not(.dark) #reto-datos h2,
+html:not(.dark) #projects h2,
+html:not(.dark) #pipeline h2,
+html:not(.dark) #showcase h2,
+html:not(.dark) #contact h2 {
+    color: #475569 !important; /* Gris pizarra oscuro Section Header h2 */
+    font-weight: 500 !important;
+}
+html:not(.dark) #reto-datos h3,
+html:not(.dark) #projects h3,
+html:not(.dark) #pipeline h3,
+html:not(.dark) #showcase h3,
+html:not(.dark) #contact h3 {
+    color: #334155 !important; /* Soft dark grey for titles h3 */
+}
+
+/* Dynamic Console Log coloring (Nancy V28 unifications) */
+html:not(.dark) .sim-console-container #sim-logs .text-brand-cyan {
+    color: #db2777 !important; /* Magenta for process */
+}
+html:not(.dark) .sim-console-container #sim-logs .text-brand-purple {
+    color: #7c3aed !important; /* Purple for git */
+}
+html:not(.dark) .sim-console-container #sim-logs .text-slate-500 {
+    color: #ec4899 !important; /* Pink for success */
+}
+html:not(.dark) .sim-console-container #sim-logs div:not(.text-brand-cyan):not(.text-brand-purple):not(.text-slate-500) {
+    color: #475569 !important; /* Default slate gray */
+}
+</style>
+
+</head>
+<body class="selection:bg-brand-cyan selection:text-brand-dark font-sans">
+<!-- NAVBAR -->
+<nav class="fixed top-0 left-0 w-full z-50 glass-panel py-3 px-6 md:px-12 flex justify-between items-center transition-all">
+<div class="flex items-center gap-3">
+<div>
+<span class="font-bold text-base tracking-wider text-slate-900 dark:text-white">NANCY BORGES</span>
+</div>
+</div>
+<!-- Desktop menu -->
+<div class="hidden md:flex items-center gap-4 text-xs font-semibold uppercase tracking-wider font-mono">
+<a href="#about" onclick="showView('view-about'); return false;" class="nav-link">Quién Soy</a>
+<a href="#pipeline" onclick="showView('view-pipeline'); return false;" class="nav-link">Mi Infraestructura</a>
+<a href="#projects" onclick="showView('view-projects'); return false;" class="nav-link">Proyectos</a>
+<a href="#showcase" onclick="showView('view-showcase'); return false;" class="nav-link">Dashboard</a>
+</div>
+<div class="flex items-center gap-3">
+<!-- Dark/Light Mode Switcher -->
+<button onclick="toggleTheme()" class="p-1.5 rounded-lg border border-slate-200 dark:border-brand-border hover:bg-slate-100 dark:hover:bg-brand-card/50 transition-all text-slate-600 dark:text-slate-200" title="Cambiar Tema">
+<i id="theme-icon-sun" data-lucide="sun" class="w-4 h-4 hidden dark:block"></i>
+<i id="theme-icon-moon" data-lucide="moon" class="w-4 h-4 block dark:hidden"></i>
+</button>
+<!-- Contact Menu Trigger Link -->
+<a href="#contact" id="nav-contact-btn" onclick="showView('view-contact'); return false;" class="hidden sm:flex px-3 py-1.5 text-[10px] font-semibold uppercase tracking-wider transition-all rounded-none flex items-center gap-1.5">
+<i data-lucide="message-square" class="w-3 h-3"></i> Contacto
+</a>
+<!-- Mobile Hamburger Toggle -->
+<button onclick="toggleMobileMenu()" class="md:hidden p-1.5 rounded-lg border border-slate-200 dark:border-brand-border text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-brand-card/50">
+<i data-lucide="menu" id="hamburger-icon" class="w-4 h-4"></i>
+</button>
+</div>
+</nav>
+<!-- MOBILE MENU DRAWER -->
+<div id="mobile-menu" class="fixed top-[57px] left-0 w-full bg-white dark:bg-brand-dark/95 border-b border-slate-200 dark:border-brand-border z-40 hidden md:hidden flex flex-col p-5 gap-3 font-medium transition-all shadow-xl text-sm">
+<a href="#about" onclick="showView('view-about'); toggleMobileMenu(); return false;" class="text-slate-700 dark:text-brand-textMuted hover:text-slate-200 dark:hover:text-white py-1.5 border-b border-slate-200 dark:border-brand-border/40">Quién Soy</a>
+<a href="#pipeline" onclick="showView('view-pipeline'); toggleMobileMenu(); return false;" class="text-slate-700 dark:text-brand-textMuted hover:text-slate-200 dark:hover:text-white py-1.5 border-b border-slate-200 dark:border-brand-border/40">Mi Infraestructura</a>
+<a href="#projects" onclick="showView('view-projects'); toggleMobileMenu(); return false;" class="text-slate-700 dark:text-brand-textMuted hover:text-slate-200 dark:hover:text-white py-1.5 border-b border-slate-200 dark:border-brand-border/40">Proyectos</a>
+<a href="#showcase" onclick="showView('view-showcase'); toggleMobileMenu(); return false;" class="text-slate-700 dark:text-brand-textMuted hover:text-slate-200 dark:hover:text-white py-1.5 border-b border-slate-200 dark:border-brand-border/40">Dashboard</a>
+<a href="#contact" id="nav-contact-btn-mobile" onclick="showView('view-contact'); toggleMobileMenu(); return false;" class="w-full py-2 font-bold text-center rounded-none flex items-center justify-center gap-2 text-[11px] uppercase tracking-wider mt-1">
+<i data-lucide="mail" class="w-3.5 h-3.5"></i> Contactame Directo
+</a>
+</div>
+<!-- VIEW SECTIONS (SINGLE PAGE APP STRUCTURE) -->
+<div id="view-about" class="view-section">
+<!-- HERO / ABOUT SECTION -->
+<section id="about" class="min-h-screen pt-28 pb-12 px-6 md:px-12 flex flex-col justify-center relative overflow-hidden bg-white dark:bg-[#131722]">
+<!-- Glowing decorative blur -->
+<div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-brand-cyan/10 rounded-full blur-[100px] pointer-events-none"></div>
+<div class="absolute bottom-10 left-10 w-[300px] h-[300px] bg-brand-purple/10 rounded-full blur-[80px] pointer-events-none"></div>
+<div class="max-w-5xl mx-auto w-full grid grid-cols-1 md:grid-cols-12 gap-8 items-start relative z-10">
+<div class="md:col-span-8 flex flex-col gap-4">
+<div class="disponible-badge-container inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full bg-brand-cyan/10 border border-brand-cyan/20 w-fit">
+<span class="w-1.5 h-1.5 rounded-full bg-brand-cyan animate-pulse"></span>
+<span class="disponible-badge text-[10px] font-mono uppercase tracking-wider">Disponible para Proyectos / Propuestas 2026</span>
+</div>
+<h1 class="text-3xl md:text-5xl font-normal tracking-tight leading-tight text-slate-700 dark:text-white">
+Transformo datos en <br>
+<span class="title-gradient-day">Decisiones de Negocio</span>
+</h1>
+<p class="text-sm md:text-base text-slate-600 dark:text-brand-textMuted max-w-xl leading-relaxed">
+Desarrolladora de Business Intelligence con base en Río Cuarto, Córdoba. Me especializo en diseñar soluciones analíticas end-to-end: desde la ingeniería de datos en <strong>SQL Server</strong> y la automatización de flujos de despliegue continuo (<strong>CI/CD con GitHub y Microsoft Fabric</strong>), hasta el modelado dimensional en estrella y la creación de tableros de control ejecutivos que impactan la rentabilidad del negocio.
+</p>
+<!-- Key Metrics row -->
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-4 pt-4">
+                    <div class="metric-card p-4 bg-white dark:bg-[#1b2030] border-l-4 border-l-[#0284c7] dark:border-l-brand-cyan border border-slate-200/80 dark:border-brand-border/40 rounded-none shadow-sm flex flex-col gap-1.5 transition-all duration-300 hover:shadow-md hover:-translate-y-1">
+                        <div class="text-2xl md:text-3xl font-semibold text-slate-800 dark:text-white">5+</div>
+                        <div class="text-[10px] text-slate-600 dark:text-brand-textMuted font-mono uppercase tracking-wider font-semibold">Proyectos de BI</div>
+                    </div>
+                    <div class="metric-card p-4 bg-white dark:bg-[#1b2030] border-l-4 border-l-[#0284c7] dark:border-l-brand-cyan border border-slate-200/80 dark:border-brand-border/40 rounded-none shadow-sm flex flex-col gap-1.5 transition-all duration-300 hover:shadow-md hover:-translate-y-1">
+                        <div class="text-2xl md:text-3xl font-semibold text-slate-800 dark:text-white">100%</div>
+                        <div class="text-[10px] text-slate-600 dark:text-brand-textMuted font-mono uppercase tracking-wider font-semibold">Sincronizado CI/CD</div>
+                    </div>
+                    <div class="metric-card p-4 bg-white dark:bg-[#1b2030] border-l-4 border-l-[#0284c7] dark:border-l-brand-cyan border border-slate-200/80 dark:border-brand-border/40 rounded-none shadow-sm flex flex-col gap-1.5 transition-all duration-300 hover:shadow-md hover:-translate-y-1">
+                        <div class="text-2xl md:text-3xl font-semibold text-slate-800 dark:text-white">SQL/DAX</div>
+                        <div class="text-[10px] text-slate-600 dark:text-brand-textMuted font-mono uppercase tracking-wider font-semibold">Modelado Sólido</div>
+                    </div>
+                    <div class="metric-card p-4 bg-white dark:bg-[#1b2030] border-l-4 border-l-[#0284c7] dark:border-l-brand-cyan border border-slate-200/80 dark:border-brand-border/40 rounded-none shadow-sm flex flex-col gap-1.5 transition-all duration-300 hover:shadow-md hover:-translate-y-1">
+                        <div class="text-2xl md:text-3xl font-semibold text-slate-800 dark:text-white">Fabric</div>
+                        <div class="text-[10px] text-slate-600 dark:text-brand-textMuted font-mono uppercase tracking-wider font-semibold">Infraestructura</div>
+                    </div>
+                </div>
+            </div> <!-- Closes left col-span-8 cleanly -->
+<!-- Profile card with quick specifications -->
+<div class="md:col-span-4 glass-card p-5 rounded-none border border-slate-200 dark:border-brand-border/80 flex flex-col gap-3.5 relative overflow-hidden group">
+<div class="absolute -top-12 -right-12 w-20 h-20 bg-brand-purple/10 rounded-full blur-xl group-hover:bg-brand-cyan/20 transition-all"></div>
+<div class="flex items-center justify-between">
+<span class="text-[10px] font-mono text-slate-200 font-normal tracking-wider">PERFIL DE RENDIMIENTO</span>
+<i data-lucide="cpu" class="w-4 h-4"></i>
+</div>
+<div class="grid grid-cols-2 gap-x-4 gap-y-3 font-mono text-[10px] text-slate-600 dark:text-brand-textMuted">
+<div class="border-b border-slate-200 dark:border-brand-border/40 pb-1 flex flex-col gap-0.5">
+<span class="text-[8px] uppercase tracking-wider text-brand-purple font-normal">Data Eng / WH</span>
+<span class="text-slate-900 dark:text-white font-sans text-[11px] font-normal leading-tight">SQL Server, Warehouse, Lakehouse</span>
+</div>
+<div class="border-b border-slate-200 dark:border-brand-border/40 pb-1 flex flex-col gap-0.5">
+<span class="text-[8px] uppercase tracking-wider text-slate-200 font-normal">BI Modeling</span>
+<span class="text-slate-900 dark:text-white font-sans text-[11px] font-normal leading-tight">DAX, Star Schema</span>
+</div>
+<div class="border-b border-slate-200 dark:border-brand-border/40 pb-1 flex flex-col gap-0.5">
+<span class="text-[8px] uppercase tracking-wider text-slate-200 font-normal">Control de Cambios</span>
+<span class="text-slate-900 dark:text-white font-sans text-[11px] font-normal leading-tight">VS Code, Git</span>
+</div>
+<div class="border-b border-slate-200 dark:border-brand-border/40 pb-1 flex flex-col gap-0.5">
+<span class="text-[8px] uppercase tracking-wider text-brand-purple font-normal">Orquestación</span>
+<span class="text-slate-900 dark:text-white font-sans text-[11px] font-normal leading-tight">Pipelines, GitHub, Fabric</span>
+</div>
+<div class="border-b border-slate-200 dark:border-brand-border/40 pb-1 flex flex-col gap-0.5 col-span-2">
+<span class="text-[8px] uppercase tracking-wider text-slate-200 font-normal">Canalización Impl</span>
+<span class="text-slate-900 dark:text-white font-sans text-[11px] font-normal leading-tight">Fabric Deployment Pipelines</span>
+</div>
+</div>
+<div class="mt-2 pt-3 border-t border-slate-200 dark:border-brand-border/60">
+<span class="text-[11px] font-normal text-slate-800 dark:text-white block mb-1.5">Stack Principal</span>
+<div class="flex flex-wrap gap-1">
+<span class="stack-tag-powerbi px-1.5 py-0.5 text-[9px] rounded-none font-mono">Power BI</span>
+<span class="stack-tag-sql px-1.5 py-0.5 text-[9px] rounded-none font-mono">SQL Server</span>
+<span class="stack-tag-warehouse px-1.5 py-0.5 text-[9px] rounded-none font-mono">Warehouse</span>
+<span class="stack-tag-lakehouse px-1.5 py-0.5 text-[9px] rounded-none font-mono">Lakehouse</span>
+<span class="stack-tag-pipelines px-1.5 py-0.5 text-[9px] rounded-none font-mono">Pipelines</span>
+<span class="stack-tag-github px-1.5 py-0.5 text-[9px] rounded-none font-mono">Git/GitHub</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<div id="view-pipeline" class="view-section hidden">
+<!-- INFRASTRUCTURE / PIPELINE SECTION -->
+<section id="pipeline" class="pt-28 pb-12 px-6 md:px-12 bg-slate-50 dark:bg-brand-dark/40 border-y border-slate-200 dark:border-brand-border/50 relative">
+<div class="max-w-5xl mx-auto">
+<div class="flex flex-col mb-6 gap-3 text-left">
+<div>
+<h2 class="text-xs font-mono uppercase tracking-widest text-slate-500 dark:text-white mb-1">INFRAESTRUCTURA DE DESARROLLO</h2>
+<h3 class="text-xl md:text-2xl font-normal text-slate-900 dark:text-white tracking-tight">El Pipeline de Datos Automatizado</h3>
+</div>
+<p class="text-slate-600 dark:text-brand-textMuted max-w-2xl text-xs md:text-sm leading-relaxed">
+No trabajo con archivos locales sueltos. He diseñado e implementado una arquitectura moderna de CI/CD para centralizar, auditar y desplegar cada reporte de forma profesional.
+</p>
+</div>
+<!-- Pipeline Diagram Card -->
+<div class="glass-card p-5 md:p-6 rounded-2xl border border-slate-200 dark:border-brand-border flex flex-col gap-6 relative overflow-hidden">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4 items-center relative z-10">
+<!-- Local -->
+<div id="sim-step-1" class="p-4 rounded-xl bg-slate-100 dark:bg-brand-dark/80 border border-slate-200 dark:border-brand-border flex flex-col items-center text-center gap-2 relative transition-all duration-300">
+<div class="w-10 h-10 rounded-lg bg-brand-cyan/10 border border-brand-cyan/30 flex items-center justify-center text-slate-200">
+<i data-lucide="monitor" class="w-5 h-5"></i>
+</div>
+<div>
+<h4 class="font-normal text-slate-900 dark:text-white text-xs">1. VS Code + Power BI</h4>
+<p class="text-[10px] text-slate-500 dark:text-brand-textMuted mt-0.5">Estructuración del proyecto en formato legible .pbip y desarrollo local.</p>
+</div>
+<span class="text-[9px] font-mono px-2 py-0.5 rounded bg-brand-cyan/10 text-slate-200 border border-brand-cyan/20 mt-1">Local Desktop</span>
+</div>
+<!-- Git local Agent -->
+<div id="sim-step-2" class="p-4 rounded-xl bg-slate-100 dark:bg-brand-dark/80 border border-slate-200 dark:border-brand-border flex flex-col items-center text-center gap-2 relative transition-all duration-300">
+<div class="w-10 h-10 rounded-lg bg-brand-purple/10 border border-brand-purple/30 flex items-center justify-center text-brand-purple">
+<i data-lucide="git-commit" class="w-5 h-5"></i>
+</div>
+<div>
+<h4 class="font-normal text-slate-900 dark:text-white text-xs">2. Agente de Control</h4>
+<p class="text-[10px] text-slate-500 dark:text-brand-textMuted mt-0.5">Sincronizador local Git registra cambios paso a paso en ramas locales.</p>
+</div>
+<span class="text-[9px] font-mono px-2 py-0.5 rounded bg-brand-purple/10 text-brand-purple border border-brand-purple/20 mt-1">Git Local</span>
+</div>
+<!-- GitHub Remote -->
+<div id="sim-step-3" class="p-4 rounded-xl bg-slate-100 dark:bg-brand-dark/80 border border-slate-200 dark:border-brand-border flex flex-col items-center text-center gap-2 relative transition-all duration-300 shadow-[0_0_15px_rgba(99,102,241,0.06)]">
+<div class="w-10 h-10 rounded-lg bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center text-indigo-500 dark:text-indigo-400">
+<svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 3.533 1.305 4.394.997.107-.775.518-1.305.962-1.602-2.665-.303-5.467-1.332-5.467-5.93 0-1.31.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+</svg>
+</div>
+<div>
+<h4 class="font-normal text-slate-900 dark:text-white text-xs">3. GitHub (Puente)</h4>
+<p class="text-[10px] text-slate-500 dark:text-brand-textMuted mt-0.5">Repositorio central remoto que audita commits y automatiza el flujo.</p>
+</div>
+<span class="text-[9px] font-mono px-2 py-0.5 rounded bg-slate-200 text-slate-800 dark:bg-white/10 dark:text-white border border-slate-300/20 mt-1">Repositorio CI/CD</span>
+</div>
+<!-- Fabric Cloud -->
+<div id="sim-step-4" class="p-4 rounded-xl bg-slate-100 dark:bg-brand-dark/80 border border-slate-200 dark:border-brand-border flex flex-col items-center text-center gap-2 relative transition-all duration-300">
+<div class="w-10 h-10 rounded-lg bg-brand-green/10 border border-slate-500/30 flex items-center justify-center text-slate-200">
+<i data-lucide="cloud" class="w-5 h-5"></i>
+</div>
+<div>
+<h4 class="font-normal text-slate-900 dark:text-white text-xs">4. Microsoft Fabric</h4>
+<p class="text-[10px] text-slate-500 dark:text-brand-textMuted mt-0.5">Destino final en la nube. Recibe alertas de GitHub y actualiza tableros.</p>
+</div>
+<span class="text-[9px] font-mono px-2 py-0.5 rounded bg-brand-green/10 text-slate-200 border border-brand-green/20 mt-1">Cloud Production</span>
+</div>
+</div>
+<!-- Connective arrows in background (Desktop only) -->
+<div class="hidden md:flex justify-around absolute top-[30%] left-0 w-full pointer-events-none px-20">
+<i data-lucide="chevron-right" class="text-slate-300 dark:text-slate-200/20 w-6 h-6"></i>
+<i data-lucide="chevron-right" class="text-slate-300 dark:text-brand-purple/20 w-6 h-6"></i>
+<i data-lucide="chevron-right" class="text-slate-300 dark:text-slate-200/20 w-6 h-6"></i>
+</div>
+<!-- LIVE INTERACTIVE SIMULATOR CARD -->
+<div class="p-4 md:p-5 rounded-none bg-slate-100 dark:bg-brand-dark/90 border border-slate-200 dark:border-brand-border flex flex-col gap-3 relative console-card-hover">
+<div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-brand-cyan/10 border border-brand-cyan/30 flex items-center justify-center text-slate-200 animate-pulse">
+<i data-lucide="terminal" class="w-4 h-4"></i>
+</div>
+<div class="text-left">
+<span class="font-normal text-slate-900 dark:text-white text-xs md:text-sm block">Consola de Simulación CI/CD</span>
+<span class="text-[10px] md:text-xs text-slate-500 dark:text-brand-textMuted">Hacé clic en el botón para ver cómo funciona el despliegue automático en Fabric en tiempo real.</span>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-2 w-full sm:w-auto shrink-0">
+<button onclick="startPipelineSimulation()" id="btn-simulate" class="w-full sm:w-auto px-4 py-2 rounded-none bg-transparent hover:bg-indigo-500/5 text-indigo-600 border border-indigo-600 dark:text-indigo-400 dark:border-indigo-400 dark:hover:bg-indigo-500/10 transition-all font-normal text-[10px] uppercase tracking-wider shadow-sm flex items-center justify-center gap-1.5">
+<i data-lucide="play" class="w-3.5 h-3.5"></i> Simular Despliegue (Push)
+</button>
+<button onclick="openImageModal('images/git-pipeline.png', 'Mapa de Arquitectura Git & Fabric')" class="w-full sm:w-auto px-4 py-2 rounded border border-slate-200 dark:border-brand-border text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-brand-card/50 font-bold text-[10px] uppercase tracking-wider transition-all flex items-center justify-center gap-1.5">
+<i data-lucide="map" class="w-3.5 h-3.5"></i> Ver Diagrama Real
+</button>
+</div>
+</div>
+<!-- Progress bar -->
+<div class="w-full bg-slate-200 dark:bg-slate-800 h-2 rounded-full overflow-hidden hidden" id="sim-progress-container">
+<div class="bg-gradient-to-r from-brand-cyan via-brand-purple to-brand-green h-full w-0 progress-bar-fill" id="sim-progress-bar"></div>
+</div>
+<!-- Live console logs -->
+<div class="bg-slate-950 p-3.5 rounded-lg font-mono text-[11px] text-slate-300 border border-slate-800 text-left min-h-[90px] flex flex-col justify-end overflow-hidden relative sim-console-container">
+<div class="absolute top-1.5 right-2.5 flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-brand-green animate-pulse"></span>
+<span class="text-[8px] text-brand-textMuted uppercase">Agente Activo</span>
+</div>
+<div class="space-y-0.5" id="sim-logs">
+<div class="text-brand-textMuted">&gt; Presione "Simular Despliegue" para iniciar el agente de sincronización local...</div>
+</div>
+</div>
+</div>
+<div class="p-4 rounded-xl bg-slate-100/50 dark:bg-brand-dark/40 border border-slate-200 dark:border-brand-border/60 flex flex-col md:flex-row gap-4 justify-between items-center mt-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-brand-purple/10 border border-brand-purple/30 flex items-center justify-center text-brand-purple">
+<i data-lucide="settings" class="w-4 h-4 animate-spin"></i>
+</div>
+<div class="text-left">
+<span class="font-bold text-slate-900 dark:text-white text-xs block">Integración Sólida y Profesional</span>
+<span class="text-[10px] text-slate-500 dark:text-brand-textMuted font-mono">Control de ramas (develop / main), Pipelines automáticos y despliegues sin fricciones.</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<div id="view-projects" class="view-section hidden">
+<!-- CASE OF BUSINESS & PROJECTS GRID SECTIONS -->
+<section id="reto-datos" class="pt-28 pb-12 px-6 md:px-12 bg-slate-100 dark:bg-brand-dark/20 border-t border-slate-200 dark:border-brand-border/40 transition-colors">
+<div class="max-w-5xl mx-auto text-center">
+<h2 class="text-xs font-mono uppercase tracking-widest text-slate-500 dark:text-white mb-1.5">EL VERDADERO RETO DE LOS DATOS</h2>
+<h3 class="text-xl md:text-2xl font-normal text-slate-900 dark:text-white mb-4">¿Por qué las empresas pierden dinero hoy?</h3>
+<p class="text-slate-600 dark:text-brand-textMuted max-w-2xl mx-auto text-xs md:text-sm mb-10 leading-relaxed">
+Muchas compañías operan a ciegas. Tienen datos, pero están dispersos, son manuales o se actualizan tarde. En mi portafolio, decidí resolver desafíos reales inspirados en problemas corporativos de alta demanda:
+</p>
+<!-- Challenges Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left mb-10">
+<!-- Challenge 1: Stock -->
+<div class="challenge-card challenge-card-stock bg-white dark:bg-[#1b2030] p-6 rounded-none border-t-4 border border-slate-200/80 dark:border-brand-border/40 flex flex-col gap-3.5 relative overflow-hidden transition-all duration-300 hover:shadow-md hover:-translate-y-1 group">
+<div class="absolute -top-12 -right-12 w-24 h-24 bg-amber-500/5 dark:bg-amber-500/10 rounded-full blur-xl group-hover:bg-amber-500/15 transition-all"></div>
+<div class="flex items-center gap-2.5">
+<div class="challenge-icon-stock w-8 h-8 rounded-none bg-amber-500/10 dark:bg-amber-500/20 text-amber-600 dark:text-amber-400 border border-amber-500/20 flex items-center justify-center font-bold text-xs select-none">
+<i data-lucide="alert-circle" class="w-4 h-4"></i>
+</div>
+<h4 class="font-normal text-slate-800 dark:text-slate-200 text-xs uppercase tracking-wider font-mono">Control de Stock</h4>
+</div>
+<p class="text-[11px] text-slate-600 dark:text-brand-textMuted leading-relaxed font-normal">
+Roturas recurrentes de stock y total incertidumbre sobre el valor financiero inmovilizado.
+</p>
+</div>
+<!-- Challenge 2: Ventas -->
+<div class="challenge-card challenge-card-sales bg-white dark:bg-[#1b2030] p-6 rounded-none border-t-4 border border-slate-200/80 dark:border-brand-border/40 flex flex-col gap-3.5 relative overflow-hidden transition-all duration-300 hover:shadow-md hover:-translate-y-1 group">
+<div class="absolute -top-12 -right-12 w-24 h-24 bg-red-500/5 dark:bg-red-500/10 rounded-full blur-xl group-hover:bg-red-500/15 transition-all"></div>
+<div class="flex items-center gap-2.5">
+<div class="challenge-icon-sales w-8 h-8 rounded-none bg-red-500/10 dark:bg-red-500/20 text-red-600 dark:text-red-400 border border-red-500/20 flex items-center justify-center font-bold text-xs select-none">
+<i data-lucide="alert-triangle" class="w-4 h-4"></i>
+</div>
+<h4 class="font-normal text-slate-800 dark:text-slate-200 text-xs uppercase tracking-wider font-mono">Ventas & Lucro</h4>
+</div>
+<p class="text-[11px] text-slate-600 dark:text-brand-textMuted leading-relaxed font-normal">
+Falta de visibilidad sobre el lucro neto real y el rendimiento geográfico por cliente.
+</p>
+</div>
+<!-- Challenge 3: Fuga -->
+<div class="challenge-card challenge-card-churn bg-white dark:bg-[#1b2030] p-6 rounded-none border-t-4 border border-slate-200/80 dark:border-brand-border/40 flex flex-col gap-3.5 relative overflow-hidden transition-all duration-300 hover:shadow-md hover:-translate-y-1 group">
+<div class="absolute -top-12 -right-12 w-24 h-24 bg-orange-500/5 dark:bg-orange-500/10 rounded-full blur-xl group-hover:bg-orange-500/15 transition-all"></div>
+<div class="flex items-center gap-2.5">
+<div class="challenge-icon-churn w-8 h-8 rounded-none bg-orange-500/10 dark:bg-orange-500/20 text-orange-600 dark:text-orange-400 border border-orange-500/20 flex items-center justify-center font-bold text-xs select-none">
+<i data-lucide="users" class="w-4 h-4"></i>
+</div>
+<h4 class="font-normal text-slate-800 dark:text-slate-200 text-xs uppercase tracking-wider font-mono">Fuga de Clientes</h4>
+</div>
+<p class="text-[11px] text-slate-600 dark:text-brand-textMuted leading-relaxed font-normal">
+Pérdida silenciosa de depositantes detectada cuando ya retiraron sus fondos.
+</p>
+</div>
+</div>
+<!-- Bridge text -->
+<div class="siguiente-paso-badge inline-flex items-center justify-center gap-2 py-2 px-4 rounded-none bg-slate-200/50 dark:bg-brand-card/60 border border-slate-300/30 dark:border-brand-border font-mono text-sm md:text-[15px] text-slate-800 dark:text-white">
+<span class="w-1.5 h-1.5 rounded-full bg-brand-cyan animate-pulse"></span>
+<span class="siguiente-paso-text">Siguiente paso: Diseñar un sistema sólido para automatizar cada respuesta...</span>
+</div>
+</div>
+</section>
+<!-- PROJECTS CONTAINER -->
+<section id="projects" class="py-12 px-6 md:px-12">
+<div class="max-w-5xl mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+<div class="text-left">
+<h2 class="text-xs font-mono uppercase tracking-widest text-slate-500 dark:text-white mb-1">PORTAFOLIO DE PROYECTOS</h2>
+<h3 class="text-xl md:text-2xl font-normal text-slate-900 dark:text-white tracking-tight">Modelos Analíticos que Resuelven Desafíos de Negocio</h3>
+</div>
+<!-- Category Filters -->
+<div class="flex flex-wrap gap-1.5 text-[10px] font-mono">
+<button onclick="filterProjects('all')" id="btn-all" class="filter-btn active">Todos</button>
+<button onclick="filterProjects('retail')" id="btn-retail" class="filter-btn">Ventas, Stock & Rentabilidad</button>
+<button onclick="filterProjects('marketing')" id="btn-marketing" class="filter-btn">Clientes & RFM</button>
+<button onclick="filterProjects('banking')" id="btn-banking" class="filter-btn">Finanzas & Churn</button>
+<button onclick="filterProjects('hr')" id="btn-hr" class="filter-btn">Gestión RRHH</button>
+</div>
+</div>
+<!-- Grid of Projects -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-5" id="projects-grid">
+<!-- Project 1: Control de Stock -->
+<div class="project-card glass-card p-5 rounded-2xl flex flex-col justify-between h-full relative overflow-hidden text-left" data-category="retail">
+<div class="flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="card-badge-tag text-[9px] font-mono text-slate-200 uppercase px-2 py-0.5 rounded-none bg-brand-cyan/10 border border-brand-cyan/20">Ventas & Inventario</span>
+<i data-lucide="box" class="w-4 h-4"></i>
+</div>
+<h4 class="text-lg font-normal text-slate-900 dark:text-white">Sustentación de Control de Stock y Ventas</h4>
+<!-- Antes vs Después -->
+<div class="space-y-3 my-1 border-t border-b border-slate-200 dark:border-brand-border/40 py-3 text-xs">
+<div class="text-slate-600 dark:text-brand-textMuted">
+<span class="project-label font-medium font-mono text-[10px] block uppercase mb-0.5">El Desafío Comercial (Antes):</span>
+Control manual de inventarios, quiebres de stock recurrentes y total incertidumbre sobre el valor financiero inmovilizado.
+</div>
+<div>
+<span class="project-label font-medium font-mono text-[10px] block uppercase mb-0.5">El Sistema Automatizado (Después):</span>
+<p class="text-[11px] text-slate-600 dark:text-brand-textMuted mb-2 leading-relaxed">
+Solución analítica orientada a mitigar la incertidumbre sobre el capital inmovilizado y evitar quiebres recurrentes de existencias.
+</p>
+<ul class="space-y-1 font-mono text-[11px] text-slate-700 dark:text-slate-300">
+<li><span class="text-slate-200">&gt;</span> <strong>Auditoría de Desviaciones:</strong> Mapeo preciso de ajustes de inventario para el control de mermas y errores operativos.</li>
+<li><span class="text-slate-200">&gt;</span> <strong>Proyección de Compras:</strong> Alertas automáticas de Stock Mínimo y de Seguridad para anticipar compras de forma inteligente.</li>
+<li><span class="text-slate-200">&gt;</span> <strong>Capital Inmovilizado:</strong> Valoración financiera del stock clasificado por categorías de margen de lucro neto.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between mt-4">
+<span class="text-[10px] font-mono text-slate-500 dark:text-brand-textMuted">DAX · Modelo Estrella · SQL</span>
+</div>
+</div>
+
+<!-- Project 5: Ventas & Rentabilidad -->
+<div class="project-card glass-card p-5 rounded-2xl flex flex-col justify-between h-full relative overflow-hidden text-left" data-category="retail">
+<div class="flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="card-badge-tag text-[9px] font-mono text-slate-200 uppercase px-2 py-0.5 rounded-none bg-brand-cyan/10 border border-brand-cyan/20">Ventas & Rentabilidad</span>
+<i data-lucide="bar-chart-3" class="w-4 h-4"></i>
+</div>
+<h4 class="text-lg font-normal text-slate-900 dark:text-white">Visión General de Ventas & Rentabilidad</h4>
+<div class="space-y-3 my-1 border-t border-b border-slate-200 dark:border-brand-border/40 py-3 text-xs">
+<div class="text-slate-600 dark:text-brand-textMuted">
+<span class="project-label font-medium font-mono text-[10px] block uppercase mb-0.5">El Desafío Comercial (Antes):</span>
+Dificultad para rastrear el lucro real, falta de visibilidad geográfica de la facturación y desconocimiento del rendimiento por tipo de cliente.
+</div>
+<div>
+<span class="project-label font-medium font-mono text-[10px] block uppercase mb-0.5">El Sistema Automatizado (Después):</span>
+<p class="text-[11px] text-slate-600 dark:text-brand-textMuted mb-2 leading-relaxed">
+Monitoreo en tiempo real de facturación y rentabilidad neta distribuido por geografía y canales de venta.
+</p>
+<ul class="space-y-1 font-mono text-[11px] text-slate-700 dark:text-slate-300">
+<li><span class="text-slate-200">&gt;</span> <strong>Facturación & Margen:</strong> Seguimiento automático de los ingresos frente al margen de lucro por categoría de productos.</li>
+<li><span class="text-slate-200">&gt;</span> <strong>Eficiencia Logística:</strong> Monitoreo del tiempo medio de entrega por tienda física y cumplimiento estricto de pedidos.</li>
+<li><span class="text-slate-200">&gt;</span> <strong>Análisis Geográfico:</strong> Distribución analítica de la facturación y clasificación por segmento comercial.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between mt-4">
+<span class="text-[10px] font-mono text-slate-500 dark:text-brand-textMuted">DAX · Lucro Neto · Análisis Geográfico</span>
+</div>
+</div>
+
+<!-- Project 2: RFM Analysis -->
+<div class="project-card glass-card p-5 rounded-2xl flex flex-col justify-between h-full relative overflow-hidden text-left" data-category="marketing">
+<div class="flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="card-badge-tag text-[9px] font-mono text-slate-200 uppercase px-2 py-0.5 rounded-none bg-brand-cyan/10 border border-brand-cyan/20">Fidelización & SQL</span>
+<i data-lucide="users" class="w-4 h-4"></i>
+</div>
+<h4 class="text-lg font-normal text-slate-900 dark:text-white">Segmentación de Clientes por Valor (RFM)</h4>
+<div class="space-y-3 my-1 border-t border-b border-slate-200 dark:border-brand-border/40 py-3 text-xs">
+<div class="text-slate-600 dark:text-brand-textMuted">
+<span class="project-label font-medium font-mono text-[10px] block uppercase mb-0.5">El Desafío Comercial (Antes):</span>
+Campañas de marketing masivas enviadas a ciegas, baja conversión, y fuga desapercibida de clientes de alto valor.
+</div>
+<div>
+<span class="project-label font-medium font-mono text-[10px] block uppercase mb-0.5">El Sistema Automatizado (Después):</span>
+<p class="text-[11px] text-slate-600 dark:text-brand-textMuted mb-2 leading-relaxed">
+Agrupación estadística automática de clientes utilizando funciones analíticas en origen para potenciar ventas repetidas.
+</p>
+<ul class="space-y-1 font-mono text-[11px] text-slate-700 dark:text-slate-300">
+<li><span class="text-slate-200">&gt;</span> <strong>Marketing Dirigido:</strong> Creación de audiencias personalizadas para campañas de Email Marketing altamente segmentadas.</li>
+<li><span class="text-slate-200">&gt;</span> <strong>Fidelización & VIP:</strong> Identificación de clientes "Campeones" para el diseño de beneficios exclusivos y ofertas dedicadas.</li>
+<li><span class="text-slate-200">&gt;</span> <strong>Optimización del LTV:</strong> Recuperación de clientes "Dormidos" y "En Riesgo" mediante estrategias de remarketing temporales.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between mt-4">
+<span class="text-[10px] font-mono text-slate-500 dark:text-brand-textMuted">SQL Server · Vistas · NTILE</span>
+</div>
+</div>
+
+<!-- Project 3: Churn Analytics -->
+<div class="project-card glass-card p-5 rounded-2xl flex flex-col justify-between h-full relative overflow-hidden text-left" data-category="banking">
+<div class="flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="card-badge-tag text-[9px] font-mono text-slate-200 uppercase px-2 py-0.5 rounded-none bg-brand-cyan/10 border border-brand-cyan/20">Retención de Clientes</span>
+<i data-lucide="trending-down" class="w-4 h-4"></i>
+</div>
+<h4 class="text-lg font-normal text-slate-900 dark:text-white">Churn Analytics para Banca Digital</h4>
+<div class="space-y-3 my-1 border-t border-b border-slate-200 dark:border-brand-border/40 py-3 text-xs">
+<div class="text-slate-600 dark:text-brand-textMuted">
+<span class="project-label font-medium font-mono text-[10px] block uppercase mb-0.5">El Desafío Comercial (Antes):</span>
+Pérdida silenciosa de depositantes detectada tarde, cuando los fondos ya se habían retirado de la plataforma bancaria.
+</div>
+<div>
+<span class="project-label font-medium font-mono text-[10px] block uppercase mb-0.5">El Sistema Automatizado (Después):</span>
+<p class="text-[11px] text-slate-600 dark:text-brand-textMuted mb-2 leading-relaxed">
+Monitoreo y alerta temprana para prevenir la pérdida silenciosa de depositantes y priorizar carteras VIP antes del retiro de fondos.
+</p>
+<ul class="space-y-1 font-mono text-[11px] text-slate-700 dark:text-slate-300">
+<li><span class="text-slate-200">&gt;</span> <strong>Impacto de la Fuga:</strong> Cuantificación financiera de ingresos bajo riesgo directo para priorizar esfuerzos de retención.</li>
+<li><span class="text-slate-200">&gt;</span> <strong>Identificación Proactiva:</strong> Score interactivo de riesgo para detectar inactividad y volumen de reclamos operativos.</li>
+<li><span class="text-slate-200">&gt;</span> <strong>Retención Focalizada:</strong> Segmentación por patrimonio para priorizar esfuerzos proactivos en clientes VIP.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between mt-4">
+<span class="text-[10px] font-mono text-slate-500 dark:text-brand-textMuted">Métricas Churn · DAX · SQL Views</span>
+</div>
+</div>
+
+<!-- Project 4: HR Analytics -->
+<div class="project-card glass-card p-5 rounded-2xl flex flex-col justify-between h-full relative overflow-hidden text-left" data-category="hr">
+<div class="flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="card-badge-tag text-[9px] font-mono text-slate-200 uppercase px-2 py-0.5 rounded-none bg-brand-cyan/10 border border-brand-cyan/20">Análisis Humano</span>
+<i data-lucide="user-check" class="w-4 h-4"></i>
+</div>
+<h4 class="text-lg font-normal text-slate-900 dark:text-white">HR Analytics & Gestión de Capital Humano</h4>
+<div class="space-y-3 my-1 border-t border-b border-slate-200 dark:border-brand-border/40 py-3 text-xs">
+<div class="text-slate-600 dark:text-brand-textMuted">
+<span class="project-label font-medium font-mono text-[10px] block uppercase mb-0.5">El Desafío Comercial (Antes):</span>
+Alta rotación de personal inexplicable, clima laboral ciego y dinero invertido a ciegas en portales de selección.
+</div>
+<div>
+<span class="project-label font-medium font-mono text-[10px] block uppercase mb-0.5">El Sistema Automatizado (Después):</span>
+<p class="text-[11px] text-slate-600 dark:text-brand-textMuted mb-2 leading-relaxed">
+Análisis integral de funcionarios activos para optimizar costos de masa salarial, medir el clima de trabajo y analizar canales de reclutamiento.
+</p>
+<ul class="space-y-1 font-mono text-[11px] text-slate-700 dark:text-slate-300">
+<li><span class="text-slate-200">&gt;</span> <strong>Clima & Costos:</strong> Correlación en tiempo real entre salarios, satisfacción por departamento y masa salarial.</li>
+<li><span class="text-slate-200">&gt;</span> <strong>Reclutamiento Óptimo:</strong> Análisis de efectividad de canales de selección para optimizar presupuestos.</li>
+<li><span class="text-slate-200">&gt;</span> <strong>Análisis de Fuga:</strong> Identificación proactiva de departamentos con alto riesgo de rotación voluntaria.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between mt-4">
+<span class="text-[10px] font-mono text-slate-500 dark:text-brand-textMuted">Modelado RRHH · DAX · SQL server</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<div id="view-showcase" class="view-section hidden">
+<!-- INTERACTIVE DASHBOARD SHOWCASE SECTION -->
+<section class="pt-28 pb-12 px-6 md:px-12 bg-slate-50 dark:bg-brand-dark/20 border-t border-slate-200 dark:border-brand-border/40">
+<div class="max-w-5xl mx-auto text-center">
+<h2 class="text-xs font-mono uppercase tracking-widest text-slate-500 dark:text-white mb-1">GALERÍA VISUAL DE TABLEROS</h2>
+<h3 class="text-xl md:text-2xl font-normal text-slate-900 dark:text-white mb-4">Explora la Interfaz de Usuario</h3>
+
+<div class="glass-panel p-4 rounded-none border border-slate-200 dark:border-brand-border max-w-4xl mx-auto relative overflow-visible showcase-card-hover">
+<!-- Tab switching for mock dashboards -->
+<div class="flex justify-center border-b border-slate-200 dark:border-brand-border/60 pt-2 pb-3 gap-1.5 text-[11px] font-mono overflow-x-auto">
+<button onclick="switchMock('stock-mock')" id="btn-mock-stock" class="mock-tab-btn active">Stock Dashboard</button>
+<button onclick="switchMock('sales-mock')" id="btn-mock-sales" class="mock-tab-btn">Ventas & Rentabilidad</button>
+<button onclick="switchMock('rfm-mock')" id="btn-mock-rfm" class="mock-tab-btn">RFM Dashboard</button>
+<button onclick="switchMock('churn-mock')" id="btn-mock-churn" class="mock-tab-btn">Churn Dashboard</button>
+<button onclick="switchMock('hr-mock')" id="btn-mock-hr" class="mock-tab-btn">HR Dashboard</button>
+</div>
+<!-- Showcase display area - updated heights for pure visual impact -->
+<div class="mt-4 min-h-[300px] md:min-h-[500px] lg:min-h-[550px] w-full rounded-xl bg-slate-100/50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 flex items-center justify-center overflow-hidden relative group mock-showcase-container">
+
+<!-- Stock Mock -->
+<div id="stock-mock" class="mock-view w-full h-full p-2 flex items-center justify-center">
+<div onclick="openImageModal('stock-mock')" class="w-full flex items-center justify-center bg-slate-100/30 dark:bg-slate-900/10 rounded-xl p-2 relative group overflow-hidden cursor-pointer" >
+<img src="images/stock-dashboard.png" class="max-w-full max-h-[460px] md:max-h-[520px] object-contain rounded-lg shadow-2xl transition-transform duration-500 group-hover:scale-[1.015]" alt="Stock Dashboard">
+<div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center gap-2.5">
+<div class="w-12 h-12 rounded-full bg-brand-cyan/20 border border-brand-cyan/40 text-slate-200 flex items-center justify-center shadow-lg transition-all duration-300 scale-90 group-hover:scale-100 hover:scale-110">
+<i data-lucide="maximize-2" class="w-6 h-6 text-slate-200"></i>
+</div>
+<span class="text-xs font-mono font-bold text-white uppercase tracking-wider bg-slate-950/80 px-3 py-1.5 rounded-lg border border-slate-800">Ver Pantalla Completa</span>
+</div>
+</div>
+</div>
+
+<!-- Sales & Rentabilidad Mock -->
+<div id="sales-mock" class="mock-view w-full h-full p-2 hidden flex items-center justify-center">
+<div onclick="openImageModal('sales-mock')" class="w-full flex items-center justify-center bg-slate-100/30 dark:bg-slate-900/10 rounded-xl p-2 relative group overflow-hidden cursor-pointer" >
+<img src="images/sales-dashboard1.png" class="max-w-full max-h-[460px] md:max-h-[520px] object-contain rounded-lg shadow-2xl transition-transform duration-500 group-hover:scale-[1.015]" alt="Ventas & Rentabilidad Dashboard">
+<div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center gap-2.5">
+<div class="w-12 h-12 rounded-full bg-brand-cyan/20 border border-brand-cyan/40 text-slate-200 flex items-center justify-center shadow-lg transition-all duration-300 scale-90 group-hover:scale-100 hover:scale-110">
+<i data-lucide="maximize-2" class="w-6 h-6 text-slate-200"></i>
+</div>
+<span class="text-xs font-mono font-bold text-white uppercase tracking-wider bg-slate-950/80 px-3 py-1.5 rounded-lg border border-slate-800">Ver Pantalla Completa</span>
+</div>
+</div>
+</div>
+
+<!-- RFM Mock -->
+<div id="rfm-mock" class="mock-view w-full h-full p-2 hidden flex items-center justify-center">
+<div onclick="openImageModal('rfm-mock')" class="w-full flex items-center justify-center bg-slate-100/30 dark:bg-slate-900/10 rounded-xl p-2 relative group overflow-hidden cursor-pointer" >
+<img src="images/rfm-dashboard1.png" class="max-w-full max-h-[460px] md:max-h-[520px] object-contain rounded-lg shadow-2xl transition-transform duration-500 group-hover:scale-[1.015]" alt="RFM Dashboard">
+<div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center gap-2.5">
+<div class="w-12 h-12 rounded-full bg-brand-cyan/20 border border-brand-cyan/40 text-slate-200 flex items-center justify-center shadow-lg transition-all duration-300 scale-90 group-hover:scale-100 hover:scale-110">
+<i data-lucide="maximize-2" class="w-6 h-6 text-slate-200"></i>
+</div>
+<span class="text-xs font-mono font-bold text-white uppercase tracking-wider bg-slate-950/80 px-3 py-1.5 rounded-lg border border-slate-800">Ver Pantalla Completa</span>
+</div>
+</div>
+</div>
+
+<!-- Churn Mock -->
+<div id="churn-mock" class="mock-view w-full h-full p-2 hidden flex items-center justify-center">
+<div onclick="openImageModal('churn-mock')" class="w-full flex items-center justify-center bg-slate-100/30 dark:bg-slate-900/10 rounded-xl p-2 relative group overflow-hidden cursor-pointer" >
+<img src="images/churn-dashboard.png" class="max-w-full max-h-[460px] md:max-h-[520px] object-contain rounded-lg shadow-2xl transition-transform duration-500 group-hover:scale-[1.015]" alt="Churn Dashboard">
+<div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center gap-2.5">
+<div class="w-12 h-12 rounded-full bg-brand-cyan/20 border border-brand-cyan/40 text-slate-200 flex items-center justify-center shadow-lg transition-all duration-300 scale-90 group-hover:scale-100 hover:scale-110">
+<i data-lucide="maximize-2" class="w-6 h-6 text-slate-200"></i>
+</div>
+<span class="text-xs font-mono font-bold text-white uppercase tracking-wider bg-slate-950/80 px-3 py-1.5 rounded-lg border border-slate-800">Ver Pantalla Completa</span>
+</div>
+</div>
+</div>
+
+<!-- HR Mock -->
+<div id="hr-mock" class="mock-view w-full h-full p-2 hidden flex items-center justify-center">
+<div onclick="openImageModal('hr-mock')" class="w-full flex items-center justify-center bg-slate-100/30 dark:bg-slate-900/10 rounded-xl p-2 relative group overflow-hidden cursor-pointer" >
+<img src="images/hr-dashboard.png" class="max-w-full max-h-[460px] md:max-h-[520px] object-contain rounded-lg shadow-2xl transition-transform duration-500 group-hover:scale-[1.015]" alt="HR Dashboard">
+<div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center gap-2.5">
+<div class="w-12 h-12 rounded-full bg-brand-cyan/20 border border-brand-cyan/40 text-slate-200 flex items-center justify-center shadow-lg transition-all duration-300 scale-90 group-hover:scale-100 hover:scale-110">
+<i data-lucide="maximize-2" class="w-6 h-6 text-slate-200"></i>
+</div>
+<span class="text-xs font-mono font-bold text-white uppercase tracking-wider bg-slate-950/80 px-3 py-1.5 rounded-lg border border-slate-800">Ver Pantalla Completa</span>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</section>
+</div>
+<div id="view-contact" class="view-section hidden">
+<!-- CONTACT SECTION -->
+<section id="contact" class="pt-28 pb-12 px-6 md:px-12 bg-slate-50 dark:bg-[#131722] transition-colors relative overflow-hidden">
+<div class="absolute -bottom-10 right-0 w-[300px] h-[300px] bg-brand-cyan/5 rounded-full blur-[80px] pointer-events-none"></div>
+<div class="max-w-xl mx-auto text-center relative z-10 flex flex-col gap-6">
+<div class="text-center">
+<h2 class="text-xs md:text-sm font-mono uppercase tracking-widest text-slate-500 dark:text-white mb-1">HABLEMOS DE TU PROYECTO</h2>
+<h3 class="text-2xl md:text-3xl font-normal text-slate-900 dark:text-white mb-4">¿Tenés datos que potenciar?</h3>
+<p class="text-slate-600 dark:text-white text-xs md:text-sm mt-2 leading-relaxed">
+Llevá tu negocio al siguiente nivel. Diseñemos juntos un ecosistema de Business Intelligence automatizado, reportes dinámicos en tiempo real y decisiones estratégicas pensadas para multiplicar tu rentabilidad.
+</p>
+</div>
+<!-- Form & contact links card -->
+<div class="glass-panel p-6 md:p-8 rounded-none border border-slate-200 dark:border-slate-800 dark:bg-[#1b2030] flex flex-col gap-5 text-left">
+<div class="space-y-3">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<div>
+<label class="block text-[10px] font-mono font-bold text-slate-700 dark:text-slate-200 mb-1 uppercase">Nombre</label>
+<input type="text" id="contact-name" placeholder="Tu Nombre" class="w-full bg-slate-100 dark:bg-[#131722] text-slate-950 dark:text-white placeholder-slate-400 dark:placeholder-slate-300 text-xs p-2.5 rounded-none border border-slate-200 dark:border-slate-700 focus:outline-none focus:border-brand-cyan font-sans">
+</div>
+<div>
+<label class="block text-[10px] font-mono font-bold text-slate-700 dark:text-slate-200 mb-1 uppercase font-mono">Negocio o Rubro</label>
+<input type="text" id="contact-business" placeholder="Tu Negocio (Opcional)" class="w-full bg-slate-100 dark:bg-[#131722] text-slate-950 dark:text-white placeholder-slate-400 dark:placeholder-slate-300 text-xs p-2.5 rounded-none border border-slate-200 dark:border-slate-700 focus:outline-none focus:border-brand-cyan font-sans">
+</div>
+</div>
+<div>
+<label class="block text-[10px] font-mono font-bold text-slate-700 dark:text-slate-200 mb-1 uppercase">¿Cómo funciona tu negocio hoy o qué necesitás?</label>
+<textarea id="contact-message" rows="2.5" placeholder="Contame brevemente qué datos te gustaría automatizar o analizar..." class="w-full bg-slate-100 dark:bg-[#131722] text-slate-950 dark:text-white placeholder-slate-400 dark:placeholder-slate-300 text-xs p-2.5 rounded-none border border-slate-200 dark:border-slate-700 focus:outline-none focus:border-brand-cyan font-sans"></textarea>
+</div>
+</div>
+<!-- Action choices -->
+<div class="pt-1">
+<button onclick="sendWhatsAppMessage()" class="w-full py-3 bg-[#10b981] hover:bg-[#059669] text-white font-bold text-center rounded-none transition-all shadow-md flex items-center justify-center gap-2 uppercase tracking-wider text-xs border border-[#10b981] hover:border-[#059669] cursor-pointer">
+<i data-lucide="message-square" class="w-4 h-4"></i> Enviar por WhatsApp
+</button>
+</div>
+<div class="border-t border-slate-200 dark:border-brand-border/60 pt-4 flex flex-col gap-2.5">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-lg bg-brand-cyan/10 border border-brand-cyan/20 flex items-center justify-center text-slate-200">
+<i data-lucide="mail" class="w-4 h-4"></i>
+</div>
+<div class="flex-grow flex justify-between items-center">
+<div>
+<span class="text-[9px] text-slate-500 dark:text-slate-200 block font-mono">CORREO DIRECTO</span>
+<span class="text-xs font-semibold text-slate-950 dark:text-white select-all">borgesnancya@gmail.com</span>
+</div>
+<button onclick="copyEmailToClipboard()" id="copy-email-btn" class="px-2.5 py-1 bg-slate-200 hover:bg-slate-300 dark:bg-brand-border dark:hover:bg-brand-border/80 border border-slate-300 dark:border-brand-border text-slate-700 dark:text-slate-200 rounded-none text-[10px] font-mono font-bold transition-all uppercase flex items-center gap-1.5" title="Copiar correo al portapapeles">
+<i data-lucide="copy" class="w-3 h-3"></i> Copiar
+</button>
+</div>
+</div>
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-lg bg-brand-purple/10 border border-brand-purple/20 flex items-center justify-center text-brand-purple">
+<svg class="w-4 h-4 text-[#0077b5]" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+</svg>
+</div>
+<div>
+<span class="text-[9px] text-slate-500 dark:text-slate-200 block font-mono">LINKEDIN PROFESIONAL</span>
+<a href="https://www.linkedin.com/in/nancy-borgesa/" target="_blank" class="text-xs font-semibold text-slate-950 dark:text-white hover:text-brand-purple transition-colors">linkedin.com/in/nancy-borgesa/</a>
+</div>
+</div>
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-lg bg-slate-500/10 border border-slate-500/20 flex items-center justify-center text-slate-200">
+<i data-lucide="map-pin" class="w-4 h-4"></i>
+</div>
+<div>
+<span class="text-[9px] text-slate-500 dark:text-slate-200 block font-mono">UBICACIÓN</span>
+<span class="text-xs font-semibold text-slate-950 dark:text-white">Río Cuarto, Córdoba, Argentina</span>
+</div>
+</div>
+</div>
+</div>
+<span class="text-[10px] text-slate-500 dark:text-slate-200 font-mono mt-4 block">© 2026 Nancy Borges. Todos los derechos reservados.</span>
+</div>
+</section>
+</div>
+<!-- CUSTOM SUCCESS MODAL (ALERTA PREMIUM) -->
+<div id="success-modal" class="fixed inset-0 z-50 flex items-center justify-center hidden p-4 sm:p-6 bg-black/80 backdrop-blur-sm transition-all duration-300">
+<div class="absolute inset-0 cursor-pointer" onclick="closeSuccessModal()"></div>
+<div class="relative max-w-sm w-full bg-white dark:bg-[#1b2030] border border-slate-300 dark:border-slate-700 rounded-none shadow-2xl p-6 text-center z-10 transition-all scale-95 duration-300 shadow-[0_10px_40px_-10px_rgba(79,70,229,0.15)]" id="success-modal-card">
+<div class="w-12 h-12 bg-slate-500/10 border border-slate-500/20 rounded-full flex items-center justify-center mx-auto mb-4 animate-bounce">
+<i data-lucide="check" class="w-6 h-6 text-slate-500 dark:text-slate-400"></i>
+</div>
+<h3 class="text-sm font-mono font-normal text-white uppercase tracking-wider mb-2">¡Proceso Exitoso!</h3>
+<p class="text-xs text-slate-300 leading-relaxed mb-5">
+Has desplegado una actualización de tus modelos de BI desde local hasta Microsoft Fabric de forma 100% automatizada.
+</p>
+<button onclick="closeSuccessModal()" class="w-full py-2.5 bg-slate-600 hover:bg-slate-700 text-white font-normal text-xs uppercase tracking-wider transition-all rounded-none shadow-md border border-slate-600 cursor-pointer">
+Entendido
+</button>
+</div>
+</div>
+<!-- CUSTOM EMAIL SUCCESS MODAL -->
+<div id="email-success-modal" class="fixed inset-0 z-50 flex items-center justify-center hidden p-4 sm:p-6 bg-black/80 backdrop-blur-sm transition-all duration-300">
+<div class="absolute inset-0 cursor-pointer" onclick="closeEmailSuccessModal()"></div>
+<div class="relative max-w-sm w-full bg-[#1b2030] border border-slate-700 rounded-none shadow-2xl p-6 text-center z-10 transition-all scale-95 duration-300" id="email-success-modal-card">
+<div class="w-12 h-12 bg-slate-500/10 border border-slate-500/30 rounded-none flex items-center justify-center mx-auto mb-4 animate-bounce">
+<i data-lucide="mail" class="w-6 h-6 text-slate-500 dark:text-slate-400"></i>
+</div>
+<h3 class="text-sm font-mono font-normal text-white uppercase tracking-wider mb-2">¡Correo Copiado!</h3>
+<p class="text-xs text-slate-300 leading-relaxed mb-5">
+La dirección <strong class="text-slate-200">borgesnancya@gmail.com</strong> se copió al portapapeles.<br><br>
+Se está abriendo tu cliente de correo. Si no se abre, podés abrir tu Gmail o webmail y pegarla directamente.
+</p>
+<button onclick="closeEmailSuccessModal()" class="modal-btn-theme w-full py-2.5 text-white font-normal text-xs uppercase tracking-wider transition-all rounded-none shadow-md border cursor-pointer">
+Entendido
+</button>
+</div>
+</div>
+<!-- REAL IMAGE MODAL (LIGHTBOX WITH MULTI-IMAGE CAROUSEL) -->
+<div id="image-modal" class="fixed inset-0 z-50 flex items-center justify-center hidden p-4 sm:p-6 bg-black/95 backdrop-blur-sm transition-all duration-300">
+<!-- Backdrop Click to Close -->
+<div class="absolute inset-0 cursor-pointer" onclick="closeImageModal()"></div>
+
+
+
+<!-- Floating Close Button -->
+<button onclick="closeImageModal()" class="absolute top-4 right-4 z-50 text-slate-400 hover:text-white bg-black/60 hover:bg-black/80 p-3 rounded-full transition-all shadow-lg border border-white/10" title="Cerrar (Esc)">
+<i data-lucide="x" class="w-6 h-6"></i>
+</button>
+
+<!-- Invisible elements so JS doesn't throw errors -->
+<span id="image-modal-title" class="hidden"></span>
+<span id="modal-footer-tip" class="hidden"></span>
+
+<!-- The main container, now transparent and borderless -->
+<div class="relative max-w-6xl w-full max-h-[92vh] bg-transparent border-0 shadow-none flex flex-col justify-center items-center overflow-hidden z-10 transition-all scale-95 duration-300" id="image-modal-card">
+<!-- Modal Content (Pure image view) -->
+<div class="relative w-full flex items-center justify-center overflow-visible min-h-[300px]">
+<!-- Prev Slide Button -->
+<button id="modal-prev-btn" onclick="prevSlide()" class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/75 hover:bg-brand-cyan hover:text-brand-dark text-white p-3 rounded-full transition-all z-30 hidden shadow-lg focus:outline-none focus:ring-2 focus:ring-brand-cyan border border-white/10" title="Anterior">
+<i data-lucide="chevron-left" class="w-6 h-6"></i>
+</button>
+
+<!-- Carousel Image - max-h increased to 88vh for pure fullscreen display -->
+<img id="image-modal-img" src="" alt="Cargando tablero..." class="max-w-full max-h-[88vh] object-contain rounded-lg shadow-2xl border-0 hidden" onload="onModalImageLoad()" onerror="onModalImageError()">
+
+<!-- Next Slide Button -->
+<button id="modal-next-btn" onclick="nextSlide()" class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/75 hover:bg-brand-cyan hover:text-brand-dark text-white p-3 rounded-full transition-all z-30 hidden shadow-lg focus:outline-none focus:ring-2 focus:ring-brand-cyan border border-white/10" title="Siguiente">
+<i data-lucide="chevron-right" class="w-6 h-6"></i>
+</button>
+
+<!-- Slide Indicators (Dots) -->
+<div id="modal-indicators" class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-30 hidden bg-black/60 px-4 py-2 rounded-full backdrop-blur-sm border border-white/10"></div>
+
+<!-- Loading Spinner -->
+<div id="image-modal-spinner" class="flex flex-col items-center gap-3">
+<div class="w-8 h-8 border-4 border-brand-cyan border-t-transparent rounded-full animate-spin"></div>
+<span class="text-[10px] font-mono text-brand-textMuted uppercase tracking-wider">Cargando Captura HD...</span>
+</div>
+
+<!-- Custom Error Box -->
+<div id="image-modal-error" class="hidden max-w-md p-6 rounded-xl bg-slate-900 border border-red-500/30 text-left flex flex-col gap-4 font-sans z-30">
+<div class="flex items-center gap-2 text-red-400 font-sans">
+<i data-lucide="alert-triangle" class="w-5 h-5"></i>
+<span class="font-bold text-xs uppercase font-mono">¡Imagen pendiente en tu GitHub!</span>
+</div>
+<p class="text-xs text-slate-300 leading-relaxed font-sans">
+Nancy, para ver tu captura real en este pop-up, solo tenés que subir la imagen a tu repositorio de GitHub con esta ruta exacta:
+</p>
+<div class="bg-slate-950 p-3 rounded font-mono text-xs text-slate-200 select-all break-all border border-slate-800" id="image-modal-error-path">
+images/stock-dashboard.png
+</div>
+<button onclick="closeImageModal()" class="w-full py-2 bg-slate-800 hover:bg-slate-700 text-white rounded font-bold text-xs uppercase transition-all">
+Entendido
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- JAVASCRIPT FOR DYNAMIC INTERACTIVE BEHAVIOR -->
+<script>
+// Initialize Lucide icons
+lucide.createIcons();
+// Theme Toggle logic
+function toggleTheme() {
+const htmlElement = document.documentElement;
+const isDark = htmlElement.classList.toggle('dark');
+localStorage.setItem('theme', isDark ? 'dark' : 'light');
+}
+// Apply theme on load
+(function() {
+const savedTheme = localStorage.getItem('theme');
+const htmlElement = document.documentElement;
+if (savedTheme === 'light') {
+htmlElement.classList.remove('dark');
+} else {
+htmlElement.classList.add('dark');
+}
+})();
+// Mobile Menu Toggle
+function toggleMobileMenu() {
+const menu = document.getElementById('mobile-menu');
+const icon = document.getElementById('hamburger-icon');
+const isHidden = menu.classList.toggle('hidden');
+if (isHidden) {
+icon.setAttribute('data-lucide', 'menu');
+} else {
+icon.setAttribute('data-lucide', 'x');
+}
+lucide.createIcons();
+}
+// Projects filtering
+function filterProjects(category) {
+const cards = document.querySelectorAll('.project-card');
+const buttons = document.querySelectorAll('.filter-btn');
+// Reset active styles on all buttons (CSS handles active class)
+buttons.forEach(btn => {
+    btn.classList.remove('active');
+});
+// Activate chosen button style
+const activeButton = document.getElementById('btn-' + category);
+if (activeButton) {
+    activeButton.classList.add('active');
+}
+// Filter cards
+cards.forEach(card => {
+if (category === 'all' || card.getAttribute('data-category') === category) {
+card.style.display = 'flex';
+} else {
+card.style.display = 'none';
+}
+});
+}
+// Mock Dashboard Switcher
+function switchMock(mockId) {
+const views = document.querySelectorAll('.mock-view');
+const buttons = document.querySelectorAll('.mock-tab-btn');
+// Hide all views
+views.forEach(v => v.classList.add('hidden'));
+// Show target view
+document.getElementById(mockId).classList.remove('hidden');
+// Reset active state for tabs (CSS handles active class)
+buttons.forEach(b => {
+    b.classList.remove('active');
+});
+// Set active state for clicked tab
+let btnId = '';
+if (mockId === 'stock-mock') btnId = 'btn-mock-stock';
+else if (mockId === 'rfm-mock') btnId = 'btn-mock-rfm';
+else if (mockId === 'churn-mock') btnId = 'btn-mock-churn';
+else if (mockId === 'sales-mock') btnId = 'btn-mock-sales';
+else if (mockId === 'hr-mock') btnId = 'btn-mock-hr';
+const activeTab = document.getElementById(btnId);
+if (activeTab) {
+    activeTab.classList.add('active');
+}
+}
+// Sliding Drawers Control
+function openDrawer(drawerId) {
+const backdrop = document.getElementById('drawer-backdrop');
+if (backdrop) backdrop.classList.remove('hidden');
+// Hide other open drawers
+const drawers = document.querySelectorAll('.drawer');
+drawers.forEach(d => {
+d.classList.add('translate-x-full');
+});
+// Show targeted drawer
+const target = document.getElementById(drawerId);
+if (target) target.classList.remove('translate-x-full');
+// Prevent body scroll
+document.body.classList.add('modal-open');
+}
+function closeAllDrawers() {
+const backdrop = document.getElementById('drawer-backdrop');
+if (backdrop) backdrop.classList.add('hidden');
+// Close drawers
+const drawers = document.querySelectorAll('.drawer');
+drawers.forEach(d => {
+d.classList.add('translate-x-full');
+});
+// Restore scroll
+document.body.classList.remove('modal-open');
+document.body.style.overflow = 'auto';
+}
+// Single Page App - View Controller developed for Nancy
+function showView(viewId, mockId = null) {
+// Reset scroll locks
+document.body.classList.remove('modal-open');
+document.body.style.overflow = 'auto';
+const views = ['view-about', 'view-pipeline', 'view-projects', 'view-showcase', 'view-contact'];
+views.forEach(id => {
+const el = document.getElementById(id);
+if (el) {
+el.classList.add('hidden');
+el.style.opacity = '0';
+}
+});
+const activeEl = document.getElementById(viewId);
+if (activeEl) {
+activeEl.classList.remove('hidden');
+// Trigger CSS fade-in transition
+void activeEl.offsetHeight;
+activeEl.style.opacity = '1';
+// Always scroll to top of the new active view so it starts clean
+try {
+window.scrollTo({ top: 0, behavior: 'instant' });
+} catch (err) {
+window.scrollTo(0, 0);
+}
+}
+// Update navbar links active styling (CSS handles the active class)
+const navLinks = document.querySelectorAll('nav a, #mobile-menu a');
+navLinks.forEach(link => {
+    link.classList.remove('active');
+});
+// Highlight selected navbar link
+let linkHref = '#' + viewId.replace('view-', '');
+const activeLinks = document.querySelectorAll(`nav a[href="${linkHref}"], #mobile-menu a[href="${linkHref}"]`);
+activeLinks.forEach(link => {
+    link.classList.add('active');
+});
+if (mockId) {
+switchMock(mockId);
+}
+}
+// CV Download helper
+function showCVMessage(event) {
+event.preventDefault();
+alert("¡Hola! Para vincular tu Currículum real en PDF, subilo a tu Google Drive de forma pública y copiá el enlace de descarga en la etiqueta <a> del botón en tu código HTML. ¡Éxitos con tu postulación!");
+}
+// INTERACTIVE CI/CD PIPELINE SIMULATOR - BUG FIX APPLIED
+function startPipelineSimulation() {
+const btn = document.getElementById('btn-simulate');
+const progressContainer = document.getElementById('sim-progress-container');
+const progressBar = document.getElementById('sim-progress-bar');
+const logsContainer = document.getElementById('sim-logs');
+const steps = [
+document.getElementById('sim-step-1'),
+document.getElementById('sim-step-2'),
+document.getElementById('sim-step-3'),
+document.getElementById('sim-step-4')
+];
+// Disable button during animation
+btn.disabled = true;
+btn.classList.add('opacity-50', 'cursor-not-allowed');
+// Reset UI states
+progressContainer.classList.remove('hidden');
+progressBar.style.width = '0%';
+steps.forEach(s => {
+s.classList.remove('ring-4', 'ring-brand-cyan', 'ring-brand-purple', 'ring-brand-green', 'ring-slate-400', 'scale-105');
+const ic = s.querySelector('div');
+if (ic) ic.classList.remove('animate-pulse', 'animate-bounce', 'scale-110');
+});
+logsContainer.innerHTML = '';
+const appendLog = (text, type = 'info') => {
+let colorClass = 'text-slate-300';
+if (type === 'success') colorClass = 'text-slate-500';
+if (type === 'process') colorClass = 'text-brand-cyan';
+if (type === 'git') colorClass = 'text-brand-purple';
+logsContainer.innerHTML += `<div class="${colorClass}">&gt; ${text}</div>`;
+logsContainer.scrollTop = logsContainer.scrollHeight;
+};
+// Simulation timeline with fixed step classList indexes
+setTimeout(() => {
+appendLog('Iniciando orquestación local en VS Code...', 'process');
+steps[0].classList.add('ring-4', 'ring-brand-cyan', 'scale-105');
+const ic = steps[0].querySelector('div');
+if (ic) ic.classList.add('animate-pulse', 'scale-110');
+progressBar.style.width = '25%';
+}, 500);
+setTimeout(() => {
+appendLog('Sincronizador local Git: git add . && git commit -m "update: modelo semántico estrella"', 'git');
+steps[0].classList.remove('ring-4', 'ring-brand-cyan', 'scale-105');
+const ic0 = steps[0].querySelector('div');
+if (ic0) ic0.classList.remove('animate-pulse', 'scale-110');
+steps[1].classList.add('ring-4', 'ring-brand-purple', 'scale-105'); // Fixed index
+const ic1 = steps[1].querySelector('div');
+if (ic1) ic1.classList.add('animate-pulse', 'scale-110');
+progressBar.style.width = '50%';
+}, 2500);
+setTimeout(() => {
+appendLog('Subiendo commit a GitHub: git push origin main', 'git');
+appendLog('Webhook disparado de manera segura en GitHub Actions...', 'process');
+steps[1].classList.remove('ring-4', 'ring-brand-purple', 'scale-105'); // Fixed index
+const ic1 = steps[1].querySelector('div');
+if (ic1) ic1.classList.remove('animate-pulse', 'scale-110');
+steps[2].classList.add('ring-4', 'ring-slate-400', 'scale-105'); // Fixed index
+const ic2 = steps[2].querySelector('div');
+if (ic2) ic2.classList.add('animate-pulse', 'scale-110');
+progressBar.style.width = '75%';
+}, 4500);
+setTimeout(() => {
+appendLog('GitHub Actions: Setup Node.js y autenticación exitosa.', 'info');
+appendLog('Notificando API de Microsoft Fabric Cloud...', 'process');
+appendLog('Fabric: Sincronización automática de Metadatos completada.', 'info');
+steps[2].classList.remove('ring-4', 'ring-slate-400', 'scale-105'); // Fixed index
+const ic2 = steps[2].querySelector('div');
+if (ic2) ic2.classList.remove('animate-pulse', 'scale-110');
+steps[3].classList.add('ring-4', 'ring-brand-green', 'scale-105'); // Fixed index
+const ic3 = steps[3].querySelector('div');
+if (ic3) ic3.classList.add('animate-bounce', 'scale-110');
+progressBar.style.width = '100%';
+}, 6500);
+setTimeout(() => {
+appendLog('¡PROCESO CI/CD EXITOSO! Dashboard en vivo de Fabric actualizado sin intervención manual.', 'success');
+steps[3].classList.remove('ring-4', 'ring-brand-green', 'scale-105'); // Fixed index cleanup
+const ic3 = steps[3].querySelector('div');
+if (ic3) ic3.classList.remove('animate-bounce', 'scale-110');
+openSuccessModal();
+// Re-enable button
+btn.disabled = false;
+btn.classList.remove('opacity-50', 'cursor-not-allowed');
+}, 8500);
+}
+// Base de diapositivas por proyecto (Soporte para múltiples capturas/sustentación técnica)
+const projectSlides = {
+'git-pipeline': [
+{ path: 'images/git-pipeline1.png', title: 'Automatización del Pipeline - Detalle de Implementación' },
+{ path: 'images/git-pipeline.png', title: 'Automatización del Pipeline - Flujo de Trabajo CI/CD' }
+],
+'stock-mock': [
+{ path: 'images/stock-dashboard.png', title: 'Dashboard de Control de Stock - Captura Real' }
+],
+'sales-mock': [
+{ path: 'images/sales-dashboard1.png', title: 'Dashboard de Ventas & Rentabilidad - Sustentación Técnica (SQL/DAX)' },
+{ path: 'images/sales-dashboard.png', title: 'Dashboard de Ventas & Rentabilidad - Captura Real' }
+],
+'rfm-mock': [
+{ path: 'images/rfm-dashboard1.png', title: 'Dashboard de Segmentación RFM - Sustentación de Datos SQL Server' },
+{ path: 'images/rfm-dashboard.png', title: 'Dashboard de Segmentación de Clientes RFM - Captura Real' }
+],
+'churn-mock': [
+{ path: 'images/churn-dashboard.png', title: 'Dashboard de Churn Analytics - Captura Real' }
+],
+'hr-mock': [
+{ path: 'images/hr-dashboard.png', title: 'Dashboard de HR Analytics - Captura Real' }
+]
+};
+let currentSlides = [];
+let currentSlideIndex = 0;
+let currentAlternativePaths = [];
+let pathAttemptIndex = 0;
+// Resuelve dinámicamente las rutas alternativas basándose en los nombres reales de GitHub
+function getAlternativePaths(path) {
+const filename = path.split('/').pop(); // Ej: "sales-dashboard1.png"
+const cleanFilename = filename.replace(/^im[aá]genes|^images/, ''); // Quita cualquier prefijo duplicado
+// Retorna rutas ordenadas de mayor a menor probabilidad de éxito en el entorno de Nancy
+return [
+path,                              // Opción 1: images/sales-dashboard1.png (Carpeta prolija)
+filename,                          // Opción 2: sales-dashboard1.png (Suelto en la raíz)
+`images${cleanFilename}`,          // Opción 3: imagessales-dashboard1.png (Root prefijo inglés)
+`imágenes${cleanFilename}`,         // Opción 4: imágenesgit-pipeline1.png (Root prefijo español con acento)
+`images/${filename}`,              // Opción 5: images/sales-dashboard1.png
+`imágenes/${filename}`             // Opción 6: imágenes/sales-dashboard1.png (Con carpeta con acento)
+];
+}
+// Carga de imágenes inteligente con fallback automático anti-error
+function loadImageWithFallback(imgElement, pathsArray) {
+currentAlternativePaths = pathsArray;
+pathAttemptIndex = 0;
+imgElement.onerror = function() {
+pathAttemptIndex++;
+if (pathAttemptIndex < currentAlternativePaths.length) {
+console.log("Cargando ruta alternativa (" + pathAttemptIndex + "): " + currentAlternativePaths[pathAttemptIndex]);
+imgElement.src = currentAlternativePaths[pathAttemptIndex];
+document.getElementById('image-modal-error-path').textContent = currentAlternativePaths[0];
+} else {
+// Si se agotaron todas las combinaciones posibles, mostrar el modal de error personalizado
+onModalImageError();
+}
+};
+imgElement.onload = function() {
+onModalImageLoad();
+};
+console.log("Iniciando carga de imagen: " + currentAlternativePaths[0]);
+imgElement.src = currentAlternativePaths[0];
+}
+// Control del Modal de Visualización Inteligente (Carousel V6)
+function openImageModal(target, defaultTitle = 'Captura del Tablero Real') {
+const modal = document.getElementById('image-modal');
+const modalCard = document.getElementById('image-modal-card');
+// Resolver si es una clave del diccionario o una ruta directa
+if (projectSlides[target]) {
+currentSlides = projectSlides[target];
+} else {
+// Buscar si el target coincide de alguna manera con una de nuestras rutas de proyectos
+let foundKey = Object.keys(projectSlides).find(k =>
+k === target ||
+projectSlides[k].some(s => s.path === target || s.path.endsWith(target))
+);
+if (foundKey) {
+currentSlides = projectSlides[foundKey];
+} else {
+currentSlides = [{ path: target, title: defaultTitle }];
+}
+}
+currentSlideIndex = 0;
+// Mostrar modal principal
+modal.classList.remove('hidden');
+setTimeout(() => {
+modalCard.classList.remove('scale-95');
+modalCard.classList.add('scale-100');
+}, 10);
+// Actualizar contenido de la diapositiva
+updateModalSlide();
+// Desactivar scroll del body principal
+document.body.classList.add('modal-open');
+}
+function updateModalSlide() {
+const modalImg = document.getElementById('image-modal-img');
+const modalTitle = document.getElementById('image-modal-title');
+const spinner = document.getElementById('image-modal-spinner');
+const errorBox = document.getElementById('image-modal-error');
+const slide = currentSlides[currentSlideIndex];
+// Cambiar el título superior de forma elegante
+modalTitle.textContent = slide.title || 'Captura del Tablero Real';
+// Resetear estados visuales
+modalImg.classList.add('hidden');
+errorBox.classList.add('hidden');
+spinner.classList.remove('hidden');
+// Calcular fallbacks dinámicos e iniciar carga
+const paths = getAlternativePaths(slide.path);
+loadImageWithFallback(modalImg, paths);
+// Configurar flechas de navegación y dots
+const prevBtn = document.getElementById('modal-prev-btn');
+const nextBtn = document.getElementById('modal-next-btn');
+const indicators = document.getElementById('modal-indicators');
+const footerTip = document.getElementById('modal-footer-tip');
+if (currentSlides.length > 1) {
+// Show navigation buttons linearly
+if (currentSlideIndex === 0) {
+prevBtn.classList.add('hidden');
+} else {
+prevBtn.classList.remove('hidden');
+}
+
+if (currentSlideIndex === currentSlides.length - 1) {
+nextBtn.classList.add('hidden');
+} else {
+nextBtn.classList.remove('hidden');
+}
+
+indicators.classList.remove('hidden');
+footerTip.textContent = `💡 Diapositiva ${currentSlideIndex + 1} de ${currentSlides.length}. Podés usar las flechas laterales para navegar por el análisis.`;
+// Generar botones de puntos (dots) de navegación
+let dotsHtml = '';
+for (let i = 0; i < currentSlides.length; i++) {
+const activeClass = i === currentSlideIndex ? 'bg-brand-cyan scale-125' : 'bg-slate-600 hover:bg-slate-400';
+dotsHtml += `<button onclick="goToSlide(${i})" class="w-2 md:w-2.5 h-2 md:h-2.5 rounded-full transition-all ${activeClass}" title="Ver Diapositiva ${i+1}"></button>`;
+}
+indicators.innerHTML = dotsHtml;
+} else {
+prevBtn.classList.add('hidden');
+nextBtn.classList.add('hidden');
+indicators.classList.add('hidden');
+footerTip.textContent = '💡 Se recomienda visualizar en pantalla completa (F11) para mayor detalle.';
+}
+}
+function prevSlide() {
+if (currentSlides.length <= 1) return;
+if (currentSlideIndex > 0) {
+currentSlideIndex--;
+updateModalSlide();
+}
+}
+function nextSlide() {
+if (currentSlides.length <= 1) return;
+if (currentSlideIndex < currentSlides.length - 1) {
+currentSlideIndex++;
+updateModalSlide();
+}
+}
+function goToSlide(index) {
+if (index < 0 || index >= currentSlides.length) return;
+currentSlideIndex = index;
+updateModalSlide();
+}
+function closeImageModal() {
+const modal = document.getElementById('image-modal');
+const modalCard = document.getElementById('image-modal-card');
+modalCard.classList.remove('scale-100');
+modalCard.classList.add('scale-95');
+setTimeout(() => {
+modal.classList.add('hidden');
+// Restaurar el scroll únicamente si no hay paneles laterales abiertos
+const activeDrawers = Array.from(document.querySelectorAll('.drawer')).some(d => !d.classList.contains('translate-x-full'));
+if (!activeDrawers) {
+document.body.classList.remove('modal-open');
+document.body.style.overflow = 'auto';
+}
+}, 200);
+}
+function openSuccessModal(title = '¡Proceso Exitoso!', text = 'Has desplegado una actualización de tus modelos de BI de forma 100% automatizada.', type = 'success') {
+const modal = document.getElementById('success-modal');
+const card = document.getElementById('success-modal-card');
+const iconBox = card.querySelector('.w-12.h-12');
+const h3 = card.querySelector('h3');
+const p = card.querySelector('p');
+const btn = card.querySelector('button');
+h3.textContent = title;
+p.textContent = text;
+
+const isDark = document.documentElement.classList.contains('dark');
+
+if (isDark) {
+    // Modo Oscuro: Strictly Green (#10b981) for success, warning, and email!
+    h3.className = "text-sm font-mono font-bold text-white uppercase tracking-wider mb-2";
+    p.className = "text-xs text-slate-300 leading-relaxed mb-5";
+    
+    iconBox.className = "w-12 h-12 bg-[#10b981]/10 border border-[#10b981]/30 rounded-none flex items-center justify-center mx-auto mb-4 animate-bounce";
+    if (type === 'warning') {
+        iconBox.innerHTML = '<i data-lucide="alert-triangle" class="w-6 h-6 text-[#10b981]"></i>';
+    } else if (type === 'email') {
+        iconBox.innerHTML = '<i data-lucide="copy" class="w-6 h-6 text-[#10b981]"></i>';
+    } else {
+        iconBox.innerHTML = '<i data-lucide="check" class="w-6 h-6 text-[#10b981]"></i>';
+    }
+    
+    btn.className = "w-full py-2.5 bg-[#10b981] hover:bg-[#059669] text-white font-normal text-xs uppercase tracking-wider transition-all rounded-none shadow-md border border-[#10b981] cursor-pointer";
+    btn.textContent = "Entendido";
+} else {
+    // Modo Día (Light): Strictly Elegant Corporate Slate Gray (#64748b / #475569) for success, warning, and email!
+    h3.className = "text-sm font-mono font-bold text-slate-800 uppercase tracking-wider mb-2";
+    p.className = "text-xs text-slate-500 leading-relaxed mb-5";
+    
+    iconBox.className = "w-12 h-12 bg-slate-500/10 border border-slate-500/20 rounded-none flex items-center justify-center mx-auto mb-4 animate-bounce";
+    if (type === 'warning') {
+        iconBox.innerHTML = '<i data-lucide="alert-triangle" class="w-6 h-6 text-slate-500"></i>';
+    } else if (type === 'email') {
+        iconBox.innerHTML = '<i data-lucide="copy" class="w-6 h-6 text-slate-500"></i>';
+    } else {
+        iconBox.innerHTML = '<i data-lucide="check" class="w-6 h-6 text-slate-500"></i>';
+    }
+    
+    btn.className = "w-full py-2.5 bg-[#64748b] hover:bg-[#475569] text-white font-normal text-xs uppercase tracking-wider transition-all rounded-none shadow-md border border-[#64748b] cursor-pointer";
+    btn.textContent = "Entendido";
+}
 
 modal.classList.remove('hidden');
 setTimeout(() => {
