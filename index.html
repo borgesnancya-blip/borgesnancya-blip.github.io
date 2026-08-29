@@ -1441,6 +1441,111 @@ html:not(.dark) .mock-view > div:hover {
         max-height: 420px !important;
     }
 }
+
+/* ==========================================================================
+   NANCY'S CUSTOM V34 OVERRIDES FOR MAXIMUM DARK MODE CONTRAST, GLOW & COHERENCE
+   ========================================================================== */
+
+/* Golden/Amber Sun icon in dark mode */
+.dark #theme-icon-sun {
+    color: #fbbf24 !important;
+    filter: drop-shadow(0 0 6px rgba(251, 191, 36, 0.45)) !important;
+    display: block !important;
+}
+
+/* Colored and glowing Contact Section in Dark Mode */
+.dark #contact {
+    background-color: #0f1322 !important; /* Slightly more colorful dark slate background */
+    position: relative;
+}
+.dark #contact .glass-panel {
+    background-color: rgba(26, 32, 48, 0.85) !important; /* Rich glass card background */
+    border-top: 4px solid #00f2fe !important; /* Beautiful Glowing Cyan top border matching light mode's design */
+    border-color: rgba(0, 242, 254, 0.2) !important;
+    box-shadow: 0 15px 40px -10px rgba(0, 242, 254, 0.25) !important; /* Majestic glowing neon shadow */
+}
+.dark #contact h2 {
+    color: #00f2fe !important; /* Cyan section tag */
+}
+.dark #contact h3 {
+    color: #ffffff !important; /* White title */
+}
+/* Neon glow input highlights for dark mode */
+.dark #contact input,
+.dark #contact textarea {
+    background-color: rgba(18, 22, 33, 0.95) !important;
+    border-color: rgba(0, 242, 254, 0.2) !important;
+    color: #ffffff !important;
+    border-radius: 0px !important;
+}
+.dark #contact input:focus,
+.dark #contact textarea:focus {
+    border-color: #00f2fe !important;
+    box-shadow: 0 0 10px rgba(0, 242, 254, 0.2) !important;
+}
+.dark #contact label {
+    color: #00f2fe !important; /* Cyan labels for high contrast and color */
+    font-weight: 500 !important;
+}
+
+/* Brighten general cards, project cards and list items in Dark Mode for perfect definition */
+.dark .glass-card, 
+.dark .project-card, 
+.dark .challenge-card {
+    background-color: #1c2235 !important; /* Much lighter and cleaner dark blue/slate card backgrounds */
+    background: #1c2235 !important;
+    border-color: rgba(255, 255, 255, 0.08) !important; /* Brighter borders for crisp separation */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3) !important;
+}
+.dark .glass-card:hover, 
+.dark .project-card:hover, 
+.dark .challenge-card:hover {
+    border-color: #00f2fe !important; /* Cyan hover highlight */
+    box-shadow: 0 12px 30px -5px rgba(0, 242, 254, 0.2) !important;
+}
+
+/* Brighten list items and descriptions in Dark Mode cards */
+.dark .project-card p,
+.dark .challenge-card p,
+.dark .glass-card p,
+.dark .project-card li,
+.dark .glass-card li,
+.dark .challenge-card li,
+.dark .project-card div {
+    color: #e2e8f0 !important; /* Highly readable light gray (slate-200) instead of dark muted text! */
+}
+.dark .project-card strong,
+.dark .challenge-card strong,
+.dark .glass-card strong {
+    color: #ffffff !important; /* Pure white for strong elements */
+    font-weight: 600 !important;
+}
+
+/* Brighten Mockup Showcase Container and Internal Cards in Dark Mode */
+.dark .mock-showcase-container {
+    background-color: #141a29 !important; /* Lighter background for the container frame */
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+.dark .mock-view .bg-brand-card\/60,
+.dark .mock-view .bg-brand-card\/50,
+.dark .mock-view .bg-brand-card\/40,
+.dark .mock-view .bg-brand-card\/30,
+.dark .mock-view .bg-slate-800\/60,
+.dark .mock-view .bg-brand-card {
+    background-color: #1e2640 !important; /* Brighter container for internal mockup cards */
+    border-color: rgba(255, 255, 255, 0.12) !important;
+}
+.dark .mock-view p,
+.dark .mock-view span {
+    color: #e2e8f0 !important; /* Ensure readable, clear text inside the showcase dashboard info */
+}
+.dark .mock-view h4,
+.dark .mock-view strong {
+    color: #ffffff !important; /* Bright white headings and metrics */
+}
+.dark .mock-view .text-brand-textMuted {
+    color: #a0aec0 !important; /* Slate-400 for secondary details (perfect contrast) */
+}
 </style>
 
 </head>
@@ -1661,7 +1766,7 @@ No trabajo con archivos locales sueltos. He diseñado e implementado una arquite
 </div>
 </div>
 <!-- Progress bar -->
-<div class="w-full bg-slate-200 dark:bg-slate-800 h-2 rounded-full overflow-hidden hidden" id="sim-progress-container">
+<div class="w-full bg-slate-200 dark:bg-slate-800 h-[4px] rounded-none overflow-hidden hidden" id="sim-progress-container">
 <div class="bg-gradient-to-r from-brand-cyan via-brand-purple to-brand-green h-full w-0 progress-bar-fill" id="sim-progress-bar"></div>
 </div>
 <!-- Live console logs -->
@@ -2045,8 +2150,8 @@ Llevá tu negocio al siguiente nivel. Diseñemos juntos un ecosistema de Busines
 </div>
 </div>
 <!-- Action choices -->
-<div class="pt-1">
-<button onclick="sendWhatsAppMessage()" class="w-full py-3 bg-[#10b981] hover:bg-[#059669] text-white font-bold text-center rounded-none transition-all shadow-md flex items-center justify-center gap-2 uppercase tracking-wider text-xs border border-[#10b981] hover:border-[#059669] cursor-pointer">
+<div class="pt-1 flex justify-center">
+<button onclick="sendWhatsAppMessage()" class="w-fit px-8 py-2 bg-[#10b981] hover:bg-[#059669] text-white font-bold text-center rounded-none transition-all shadow-md flex items-center justify-center gap-2 uppercase tracking-wider text-xs border border-[#10b981] hover:border-[#059669] cursor-pointer mx-auto">
 <i data-lucide="message-square" class="w-4 h-4"></i> Enviar por WhatsApp
 </button>
 </div>
