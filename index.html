@@ -1546,6 +1546,66 @@ html:not(.dark) .mock-view > div:hover {
 .dark .mock-view .text-brand-textMuted {
     color: #a0aec0 !important; /* Slate-400 for secondary details (perfect contrast) */
 }
+
+/* ==========================================================================
+   NANCY'S MOBILE DRAWER WHITE LINKS, SILVER MOON & COHERENT DARK MODALES (V35)
+   ========================================================================== */
+
+/* 1. Mobile Menu Inactive menu links - strictly white de noche */
+.dark #mobile-menu a {
+    color: #ffffff !important;
+}
+
+/* 2. Silver Moon icon in light mode instead of pink ("color luna") */
+html:not(.dark) #theme-icon-moon {
+    color: #cbd5e1 !important; /* Elegant silver-white color luna */
+    filter: drop-shadow(0 0 6px rgba(203, 213, 225, 0.7)) !important;
+}
+
+/* Day Mode Theme switcher button border unifications */
+html:not(.dark) button[onclick="toggleTheme()"] {
+    border-color: #cbd5e1 !important;
+    color: #475569 !important;
+}
+html:not(.dark) button[onclick="toggleTheme()"]:hover {
+    background-color: #f1f5f9 !important;
+}
+
+/* 3. Contact Section Labels & Headings strictly white in Dark Mode */
+.dark #contact h2,
+.dark #contact h3,
+.dark #contact p,
+.dark #contact label {
+    color: #ffffff !important;
+}
+
+/* 4. Ensure WhatsApp button remains green on hover and active, never turns white! */
+#contact button[onclick="sendWhatsAppMessage()"],
+#contact button[onclick="sendWhatsAppMessage()"]:hover,
+#contact button[onclick="sendWhatsAppMessage()"]:active,
+#contact button[onclick="sendWhatsAppMessage()"]:focus {
+    background-color: #10b981 !important;
+    color: #ffffff !important;
+    border-color: #10b981 !important;
+}
+#contact button[onclick="sendWhatsAppMessage()"]:hover {
+    background-color: #059669 !important;
+    border-color: #059669 !important;
+}
+
+/* 5. Mobile contact button styling de noche - Solid cyan with dark text */
+.dark #nav-contact-btn-mobile {
+    background-color: #00f2fe !important;
+    color: #131722 !important;
+}
+
+/* Delete any old success modal colored buttons CSS rules */
+html:not(.dark) #success-modal button.bg-brand-green,
+html:not(.dark) #success-modal button.bg-brand-cyan,
+html:not(.dark) #success-modal button.bg-amber-500 {
+    background-color: #64748b !important;
+    color: #ffffff !important;
+}
 </style>
 
 </head>
@@ -1582,10 +1642,10 @@ html:not(.dark) .mock-view > div:hover {
 </nav>
 <!-- MOBILE MENU DRAWER -->
 <div id="mobile-menu" class="fixed top-[57px] left-0 w-full bg-white dark:bg-brand-dark/95 border-b border-slate-200 dark:border-brand-border z-40 hidden md:hidden flex flex-col p-5 gap-3 font-medium transition-all shadow-xl text-sm">
-<a href="#about" onclick="showView('view-about'); toggleMobileMenu(); return false;" class="text-slate-700 dark:text-brand-textMuted hover:text-slate-200 dark:hover:text-white py-1.5 border-b border-slate-200 dark:border-brand-border/40">Quién Soy</a>
-<a href="#pipeline" onclick="showView('view-pipeline'); toggleMobileMenu(); return false;" class="text-slate-700 dark:text-brand-textMuted hover:text-slate-200 dark:hover:text-white py-1.5 border-b border-slate-200 dark:border-brand-border/40">Mi Infraestructura</a>
-<a href="#projects" onclick="showView('view-projects'); toggleMobileMenu(); return false;" class="text-slate-700 dark:text-brand-textMuted hover:text-slate-200 dark:hover:text-white py-1.5 border-b border-slate-200 dark:border-brand-border/40">Proyectos</a>
-<a href="#showcase" onclick="showView('view-showcase'); toggleMobileMenu(); return false;" class="text-slate-700 dark:text-brand-textMuted hover:text-slate-200 dark:hover:text-white py-1.5 border-b border-slate-200 dark:border-brand-border/40">Dashboard</a>
+<a href="#about" onclick="showView('view-about'); toggleMobileMenu(); return false;" class="text-slate-700 dark:text-white hover:text-slate-200 dark:hover:text-white py-1.5 border-b border-slate-200 dark:border-brand-border/40">Quién Soy</a>
+<a href="#pipeline" onclick="showView('view-pipeline'); toggleMobileMenu(); return false;" class="text-slate-700 dark:text-white hover:text-slate-200 dark:hover:text-white py-1.5 border-b border-slate-200 dark:border-brand-border/40">Mi Infraestructura</a>
+<a href="#projects" onclick="showView('view-projects'); toggleMobileMenu(); return false;" class="text-slate-700 dark:text-white hover:text-slate-200 dark:hover:text-white py-1.5 border-b border-slate-200 dark:border-brand-border/40">Proyectos</a>
+<a href="#showcase" onclick="showView('view-showcase'); toggleMobileMenu(); return false;" class="text-slate-700 dark:text-white hover:text-slate-200 dark:hover:text-white py-1.5 border-b border-slate-200 dark:border-brand-border/40">Dashboard</a>
 <a href="#contact" id="nav-contact-btn-mobile" onclick="showView('view-contact'); toggleMobileMenu(); return false;" class="w-full py-2 font-bold text-center rounded-none flex items-center justify-center gap-2 text-[11px] uppercase tracking-wider mt-1">
 <i data-lucide="mail" class="w-3.5 h-3.5"></i> Contactame Directo
 </a>
@@ -2713,41 +2773,24 @@ const btn = card.querySelector('button');
 h3.textContent = title;
 p.textContent = text;
 
-const isDark = document.documentElement.classList.contains('dark');
+// Unified corporate slate/charcoal gray theme for both day and night mode ("dejalo en gris")
+h3.className = "text-sm font-mono font-bold text-slate-800 dark:text-slate-100 uppercase tracking-wider mb-2";
+p.className = "text-xs text-slate-500 dark:text-slate-300 leading-relaxed mb-5";
 
-if (isDark) {
-    // Modo Oscuro: Strictly Green (#10b981) for success, warning, and email!
-    h3.className = "text-sm font-mono font-bold text-white uppercase tracking-wider mb-2";
-    p.className = "text-xs text-slate-300 leading-relaxed mb-5";
-    
-    iconBox.className = "w-12 h-12 bg-[#10b981]/10 border border-[#10b981]/30 rounded-none flex items-center justify-center mx-auto mb-4 animate-bounce";
-    if (type === 'warning') {
-        iconBox.innerHTML = '<i data-lucide="alert-triangle" class="w-6 h-6 text-[#10b981]"></i>';
-    } else if (type === 'email') {
-        iconBox.innerHTML = '<i data-lucide="copy" class="w-6 h-6 text-[#10b981]"></i>';
-    } else {
-        iconBox.innerHTML = '<i data-lucide="check" class="w-6 h-6 text-[#10b981]"></i>';
-    }
-    
-    btn.className = "w-full py-2.5 bg-[#10b981] hover:bg-[#059669] text-white font-normal text-xs uppercase tracking-wider transition-all rounded-none shadow-md border border-[#10b981] cursor-pointer";
-    btn.textContent = "Entendido";
+iconBox.className = "w-12 h-12 bg-slate-500/10 border border-slate-500/30 rounded-none flex items-center justify-center mx-auto mb-4 animate-bounce";
+if (type === 'warning') {
+    iconBox.className = "w-12 h-12 bg-slate-500/10 border border-slate-500/30 rounded-none flex items-center justify-center mx-auto mb-4 animate-bounce";
+    iconBox.innerHTML = '<i data-lucide="alert-triangle" class="w-6 h-6 text-slate-500 dark:text-slate-400"></i>';
+} else if (type === 'email') {
+    iconBox.className = "w-12 h-12 bg-slate-500/10 border border-slate-500/30 rounded-none flex items-center justify-center mx-auto mb-4 animate-bounce";
+    iconBox.innerHTML = '<i data-lucide="copy" class="w-6 h-6 text-slate-500 dark:text-slate-400"></i>';
 } else {
-    // Modo Día (Light): Strictly Elegant Corporate Slate Gray (#64748b / #475569) for success, warning, and email!
-    h3.className = "text-sm font-mono font-bold text-slate-800 uppercase tracking-wider mb-2";
-    p.className = "text-xs text-slate-500 leading-relaxed mb-5";
-    
-    iconBox.className = "w-12 h-12 bg-slate-500/10 border border-slate-500/20 rounded-none flex items-center justify-center mx-auto mb-4 animate-bounce";
-    if (type === 'warning') {
-        iconBox.innerHTML = '<i data-lucide="alert-triangle" class="w-6 h-6 text-slate-500"></i>';
-    } else if (type === 'email') {
-        iconBox.innerHTML = '<i data-lucide="copy" class="w-6 h-6 text-slate-500"></i>';
-    } else {
-        iconBox.innerHTML = '<i data-lucide="check" class="w-6 h-6 text-slate-500"></i>';
-    }
-    
-    btn.className = "w-full py-2.5 bg-[#64748b] hover:bg-[#475569] text-white font-normal text-xs uppercase tracking-wider transition-all rounded-none shadow-md border border-[#64748b] cursor-pointer";
-    btn.textContent = "Entendido";
+    iconBox.className = "w-12 h-12 bg-slate-500/10 border border-slate-500/30 rounded-none flex items-center justify-center mx-auto mb-4 animate-bounce";
+    iconBox.innerHTML = '<i data-lucide="check" class="w-6 h-6 text-slate-500 dark:text-slate-400"></i>';
 }
+
+btn.className = "w-full py-2.5 bg-slate-600 hover:bg-slate-700 text-white font-normal text-xs uppercase tracking-wider transition-all rounded-none shadow-md border border-slate-600 cursor-pointer";
+btn.textContent = "Entendido";
 
 modal.classList.remove('hidden');
 setTimeout(() => {
