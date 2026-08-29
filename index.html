@@ -1344,6 +1344,103 @@ html:not(.dark) #hr-mock .group:hover {
     transform: translateY(-4px) rotate(0.15deg) !important;
 }
 
+
+/* ==========================================================================
+   NANCY'S HIGH-FIDELITY MAGICAL ICONS, COLORS & MOVEMENTS overrides (V33)
+   ========================================================================== */
+
+/* A. Category badge tags style improvements for Day Mode */
+html:not(.dark) .card-badge-tag {
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.05em !important;
+}
+
+/* B. Project Card Icons - Magical Color, Glow & Floating Movement */
+.project-card i {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+    display: inline-block !important;
+    animation: float-icon 4s ease-in-out infinite;
+}
+
+@keyframes float-icon {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-3px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Hover rotation and zoom on the project icons */
+.project-card:hover i {
+    transform: scale(1.3) rotate(15deg) !important;
+    filter: drop-shadow(0 0 8px currentColor) !important;
+}
+
+/* Specific beautiful day-mode icon colors matching the category tag */
+html:not(.dark) .project-card[data-category="retail"] i {
+    color: #db2777 !important; /* Magenta */
+}
+html:not(.dark) .project-card[data-category="marketing"] i {
+    color: #ec4899 !important; /* Pink */
+}
+html:not(.dark) .project-card[data-category="banking"] i {
+    color: #7c3aed !important; /* Purple */
+}
+html:not(.dark) .project-card[data-category="hr"] i {
+    color: #db2777 !important; /* Magenta */
+}
+
+/* Specific beautiful dark-mode icon glows */
+.dark .project-card[data-category="retail"] i {
+    color: #00f2fe !important; /* Celeste neon */
+}
+.dark .project-card[data-category="marketing"] i {
+    color: #c084fc !important; /* Lila/Purple */
+}
+.dark .project-card[data-category="banking"] i {
+    color: #00f2fe !important; /* Celeste neon */
+}
+.dark .project-card[data-category="hr"] i {
+    color: #00f5a0 !important; /* Verde neon */
+}
+
+/* C. Showcase Dashboard Image 3D Magic (Tilt, Float and Color Glows) */
+.mock-view > div {
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    transform-style: preserve-3d !important;
+    perspective: 1000px !important;
+}
+
+/* Hover effect: Subtle 3D tilt, rotation and magical glow outline */
+.dark .mock-view > div:hover {
+    transform: translateY(-5px) rotateX(3deg) rotateY(-3deg) scale(1.02) !important;
+    border-color: rgba(219, 39, 119, 0.4) !important;
+}
+
+html:not(.dark) .mock-view > div:hover {
+    transform: translateY(-5px) rotateX(3deg) rotateY(-3deg) scale(1.02) !important;
+    border-color: #ec4899 !important;
+}
+
+/* Pause floating animation and scale the image itself cleanly on hover */
+.mock-view > div:hover img {
+    animation-play-state: paused !important;
+    transform: scale(1.03) translateZ(10px) !important;
+}
+
+/* D. Showcase images size increase for maximum impact */
+.mock-view img {
+    max-height: 280px !important;
+}
+@media (min-width: 768px) {
+    .mock-view img {
+        max-height: 380px !important;
+    }
+}
+@media (min-width: 1024px) {
+    .mock-view img {
+        max-height: 420px !important;
+    }
+}
 </style>
 
 </head>
@@ -1673,7 +1770,7 @@ Pérdida silenciosa de depositantes detectada cuando ya retiraron sus fondos.
 <div class="project-card glass-card p-5 rounded-2xl flex flex-col justify-between h-full relative overflow-hidden text-left" data-category="retail">
 <div class="flex flex-col gap-3">
 <div class="flex items-center justify-between">
-<span class="card-badge-tag text-[9px] font-mono text-slate-200 uppercase px-2 py-0.5 rounded-none bg-brand-cyan/10 border border-brand-cyan/20">Ventas & Inventario</span>
+<span class="card-badge-tag text-xs font-mono font-semibold uppercase px-2.5 py-1 rounded-none bg-brand-cyan/10 border border-brand-cyan/20">Ventas & Inventario</span>
 <i data-lucide="box" class="w-4 h-4"></i>
 </div>
 <h4 class="text-xl font-medium tracking-tight text-slate-900 dark:text-white">Sustentación de Control de Stock y Ventas</h4>
@@ -1705,7 +1802,7 @@ Solución analítica orientada a mitigar la incertidumbre sobre el capital inmov
 <div class="project-card glass-card p-5 rounded-2xl flex flex-col justify-between h-full relative overflow-hidden text-left" data-category="retail">
 <div class="flex flex-col gap-3">
 <div class="flex items-center justify-between">
-<span class="card-badge-tag text-[9px] font-mono text-slate-200 uppercase px-2 py-0.5 rounded-none bg-brand-cyan/10 border border-brand-cyan/20">Ventas & Rentabilidad</span>
+<span class="card-badge-tag text-xs font-mono font-semibold uppercase px-2.5 py-1 rounded-none bg-brand-cyan/10 border border-brand-cyan/20">Ventas & Rentabilidad</span>
 <i data-lucide="bar-chart-3" class="w-4 h-4"></i>
 </div>
 <h4 class="text-xl font-medium tracking-tight text-slate-900 dark:text-white">Visión General de Ventas & Rentabilidad</h4>
@@ -1736,7 +1833,7 @@ Monitoreo en tiempo real de facturación y rentabilidad neta distribuido por geo
 <div class="project-card glass-card p-5 rounded-2xl flex flex-col justify-between h-full relative overflow-hidden text-left" data-category="marketing">
 <div class="flex flex-col gap-3">
 <div class="flex items-center justify-between">
-<span class="card-badge-tag text-[9px] font-mono text-slate-200 uppercase px-2 py-0.5 rounded-none bg-brand-cyan/10 border border-brand-cyan/20">Fidelización & SQL</span>
+<span class="card-badge-tag text-xs font-mono font-semibold uppercase px-2.5 py-1 rounded-none bg-brand-cyan/10 border border-brand-cyan/20">Fidelización & SQL</span>
 <i data-lucide="users" class="w-4 h-4"></i>
 </div>
 <h4 class="text-xl font-medium tracking-tight text-slate-900 dark:text-white">Segmentación de Clientes por Valor (RFM)</h4>
@@ -1767,7 +1864,7 @@ Agrupación estadística automática de clientes utilizando funciones analítica
 <div class="project-card glass-card p-5 rounded-2xl flex flex-col justify-between h-full relative overflow-hidden text-left" data-category="banking">
 <div class="flex flex-col gap-3">
 <div class="flex items-center justify-between">
-<span class="card-badge-tag text-[9px] font-mono text-slate-200 uppercase px-2 py-0.5 rounded-none bg-brand-cyan/10 border border-brand-cyan/20">Retención de Clientes</span>
+<span class="card-badge-tag text-xs font-mono font-semibold uppercase px-2.5 py-1 rounded-none bg-brand-cyan/10 border border-brand-cyan/20">Retención de Clientes</span>
 <i data-lucide="trending-down" class="w-4 h-4"></i>
 </div>
 <h4 class="text-xl font-medium tracking-tight text-slate-900 dark:text-white">Churn Analytics para Banca Digital</h4>
@@ -1798,7 +1895,7 @@ Monitoreo y alerta temprana para prevenir la pérdida silenciosa de depositantes
 <div class="project-card glass-card p-5 rounded-2xl flex flex-col justify-between h-full relative overflow-hidden text-left" data-category="hr">
 <div class="flex flex-col gap-3">
 <div class="flex items-center justify-between">
-<span class="card-badge-tag text-[9px] font-mono text-slate-200 uppercase px-2 py-0.5 rounded-none bg-brand-cyan/10 border border-brand-cyan/20">Análisis Humano</span>
+<span class="card-badge-tag text-xs font-mono font-semibold uppercase px-2.5 py-1 rounded-none bg-brand-cyan/10 border border-brand-cyan/20">Análisis Humano</span>
 <i data-lucide="user-check" class="w-4 h-4"></i>
 </div>
 <h4 class="text-xl font-medium tracking-tight text-slate-900 dark:text-white">HR Analytics & Gestión de Capital Humano</h4>
