@@ -1210,6 +1210,24 @@ html:not(.dark) .sim-console-container #sim-logs .text-slate-500 {
 html:not(.dark) .sim-console-container #sim-logs div:not(.text-brand-cyan):not(.text-brand-purple):not(.text-slate-500) {
     color: #475569 !important; /* Default slate gray */
 }
+
+/* Nancy's Custom V31 overrides for Perfil de Rendimiento and Siguiente paso badge */
+html:not(.dark) .profile-title {
+    color: #db2777 !important; /* Pink/magenta de día */
+    font-weight: 700 !important;
+}
+.dark .profile-title {
+    color: #00f2fe !important; /* Celeste de noche */
+}
+html:not(.dark) .profile-cpu-icon {
+    color: #db2777 !important; /* Pink/magenta CPU icon */
+}
+.dark .profile-cpu-icon {
+    color: #00f2fe !important; /* Celeste CPU icon */
+}
+html:not(.dark) .siguiente-paso-dot {
+    background-color: #ec4899 !important; /* Pink/Rosa dot de día */
+}
 </style>
 
 </head>
@@ -1298,28 +1316,28 @@ Desarrolladora de Business Intelligence con base en Río Cuarto, Córdoba. Me es
 <div class="md:col-span-4 glass-card p-5 rounded-none border border-slate-200 dark:border-brand-border/80 flex flex-col gap-3.5 relative overflow-hidden group">
 <div class="absolute -top-12 -right-12 w-20 h-20 bg-brand-purple/10 rounded-full blur-xl group-hover:bg-brand-cyan/20 transition-all"></div>
 <div class="flex items-center justify-between">
-<span class="text-[10px] font-mono text-slate-200 font-normal tracking-wider">PERFIL DE RENDIMIENTO</span>
-<i data-lucide="cpu" class="w-4 h-4"></i>
+<span class="profile-title text-[11px] font-mono font-bold tracking-wider">PERFIL DE RENDIMIENTO</span>
+<i data-lucide="cpu" class="profile-cpu-icon w-4 h-4"></i>
 </div>
 <div class="grid grid-cols-2 gap-x-4 gap-y-3 font-mono text-[10px] text-slate-600 dark:text-brand-textMuted">
 <div class="border-b border-slate-200 dark:border-brand-border/40 pb-1 flex flex-col gap-0.5">
-<span class="text-[8px] uppercase tracking-wider text-brand-purple font-normal">Data Eng / WH</span>
+<span class="text-[10px] uppercase tracking-wider text-brand-purple font-bold">Data Eng / WH</span>
 <span class="text-slate-900 dark:text-white font-sans text-[11px] font-normal leading-tight">SQL Server, Warehouse, Lakehouse</span>
 </div>
 <div class="border-b border-slate-200 dark:border-brand-border/40 pb-1 flex flex-col gap-0.5">
-<span class="text-[8px] uppercase tracking-wider text-slate-200 font-normal">BI Modeling</span>
+<span class="text-[10px] uppercase tracking-wider text-brand-green font-bold">BI Modeling</span>
 <span class="text-slate-900 dark:text-white font-sans text-[11px] font-normal leading-tight">DAX, Star Schema</span>
 </div>
 <div class="border-b border-slate-200 dark:border-brand-border/40 pb-1 flex flex-col gap-0.5">
-<span class="text-[8px] uppercase tracking-wider text-slate-200 font-normal">Control de Cambios</span>
+<span class="text-[10px] uppercase tracking-wider text-brand-cyan font-bold">Control de Cambios</span>
 <span class="text-slate-900 dark:text-white font-sans text-[11px] font-normal leading-tight">VS Code, Git</span>
 </div>
 <div class="border-b border-slate-200 dark:border-brand-border/40 pb-1 flex flex-col gap-0.5">
-<span class="text-[8px] uppercase tracking-wider text-brand-purple font-normal">Orquestación</span>
+<span class="text-[10px] uppercase tracking-wider text-brand-purple font-bold">Orquestación</span>
 <span class="text-slate-900 dark:text-white font-sans text-[11px] font-normal leading-tight">Pipelines, GitHub, Fabric</span>
 </div>
 <div class="border-b border-slate-200 dark:border-brand-border/40 pb-1 flex flex-col gap-0.5 col-span-2">
-<span class="text-[8px] uppercase tracking-wider text-slate-200 font-normal">Canalización Impl</span>
+<span class="text-[10px] uppercase tracking-wider text-brand-green font-bold">Canalización Impl</span>
 <span class="text-slate-900 dark:text-white font-sans text-[11px] font-normal leading-tight">Fabric Deployment Pipelines</span>
 </div>
 </div>
@@ -1510,8 +1528,8 @@ Pérdida silenciosa de depositantes detectada cuando ya retiraron sus fondos.
 </div>
 </div>
 <!-- Bridge text -->
-<div class="siguiente-paso-badge inline-flex items-center justify-center gap-2 py-2 px-4 rounded-none bg-slate-200/50 dark:bg-brand-card/60 border border-slate-300/30 dark:border-brand-border font-mono text-sm md:text-[15px] text-slate-800 dark:text-white">
-<span class="w-1.5 h-1.5 rounded-full bg-brand-cyan animate-pulse"></span>
+<div class="siguiente-paso-badge inline-flex items-center justify-center gap-1.5 py-1.5 px-3 rounded-none bg-slate-200/50 dark:bg-brand-card/60 border border-slate-300/30 dark:border-brand-border font-mono text-[11px] md:text-xs text-slate-800 dark:text-white">
+<span class="siguiente-paso-dot w-1.5 h-1.5 rounded-full bg-brand-cyan animate-pulse"></span>
 <span class="siguiente-paso-text">Siguiente paso: Diseñar un sistema sólido para automatizar cada respuesta...</span>
 </div>
 </div>
