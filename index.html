@@ -1228,6 +1228,122 @@ html:not(.dark) .profile-cpu-icon {
 html:not(.dark) .siguiente-paso-dot {
     background-color: #ec4899 !important; /* Pink/Rosa dot de día */
 }
+
+/* ==========================================================================
+   NANCY'S MOCKUP GALLERY IMAGES MAGIA, COLOR & MOVIMIENTO overrides (V32)
+   ========================================================================== */
+
+/* Subtle floating movement animation */
+@keyframes float-dashboard {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-4px); }
+    100% { transform: translateY(0px); }
+}
+
+.mock-view img {
+    animation: float-dashboard 5s ease-in-out infinite;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Pause float and apply scale/glow when hovered */
+.mock-view > div:hover img {
+    animation-play-state: paused !important;
+    transform: scale(1.025) !important;
+}
+
+/* Specific background gradients for Showcase Image Containers in Day Mode (Light) */
+html:not(.dark) #stock-mock > div {
+    background: linear-gradient(135deg, rgba(219, 39, 119, 0.03), rgba(124, 58, 237, 0.03)) !important;
+}
+html:not(.dark) #sales-mock > div {
+    background: linear-gradient(135deg, rgba(236, 72, 153, 0.03), rgba(219, 39, 119, 0.03)) !important;
+}
+html:not(.dark) #rfm-mock > div {
+    background: linear-gradient(135deg, rgba(124, 58, 237, 0.03), rgba(219, 39, 119, 0.02)) !important;
+}
+html:not(.dark) #churn-mock > div {
+    background: linear-gradient(135deg, rgba(14, 165, 233, 0.03), rgba(124, 58, 237, 0.03)) !important;
+}
+html:not(.dark) #hr-mock > div {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.03), rgba(219, 39, 119, 0.02)) !important;
+}
+
+/* Individualized Premium Hover Glows with Custom Colors depending on active view */
+/* Stock Mock: Celeste Glow in Night, Pink/Magenta in Day */
+#stock-mock .group {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+.dark #stock-mock .group:hover {
+    border-color: rgba(0, 242, 254, 0.4) !important;
+    box-shadow: 0 20px 40px -10px rgba(0, 242, 254, 0.3) !important;
+    transform: translateY(-4px) rotate(0.15deg) !important;
+}
+html:not(.dark) #stock-mock .group:hover {
+    border-color: #db2777 !important;
+    box-shadow: 0 20px 40px -10px rgba(219, 39, 119, 0.2) !important;
+    transform: translateY(-4px) rotate(0.15deg) !important;
+}
+
+/* Sales Mock: Pink/Magenta in both modes */
+#sales-mock .group {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+.dark #sales-mock .group:hover {
+    border-color: rgba(236, 72, 153, 0.4) !important;
+    box-shadow: 0 20px 40px -10px rgba(236, 72, 153, 0.3) !important;
+    transform: translateY(-4px) rotate(-0.15deg) !important;
+}
+html:not(.dark) #sales-mock .group:hover {
+    border-color: #ec4899 !important;
+    box-shadow: 0 20px 40px -10px rgba(236, 72, 153, 0.2) !important;
+    transform: translateY(-4px) rotate(-0.15deg) !important;
+}
+
+/* RFM Mock: Purple in both modes */
+#rfm-mock .group {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+.dark #rfm-mock .group:hover {
+    border-color: rgba(124, 58, 237, 0.4) !important;
+    box-shadow: 0 20px 40px -10px rgba(124, 58, 237, 0.3) !important;
+    transform: translateY(-4px) rotate(0.15deg) !important;
+}
+html:not(.dark) #rfm-mock .group:hover {
+    border-color: #7c3aed !important;
+    box-shadow: 0 20px 40px -10px rgba(124, 58, 237, 0.2) !important;
+    transform: translateY(-4px) rotate(0.15deg) !important;
+}
+
+/* Churn Mock: Celestial in Night, Purple in Day */
+#churn-mock .group {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+.dark #churn-mock .group:hover {
+    border-color: rgba(0, 242, 254, 0.4) !important;
+    box-shadow: 0 20px 40px -10px rgba(0, 242, 254, 0.3) !important;
+    transform: translateY(-4px) rotate(-0.15deg) !important;
+}
+html:not(.dark) #churn-mock .group:hover {
+    border-color: #7c3aed !important;
+    box-shadow: 0 20px 40px -10px rgba(124, 58, 237, 0.2) !important;
+    transform: translateY(-4px) rotate(-0.15deg) !important;
+}
+
+/* HR Mock: Green in Night, Pink in Day */
+#hr-mock .group {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+.dark #hr-mock .group:hover {
+    border-color: rgba(0, 245, 160, 0.4) !important;
+    box-shadow: 0 20px 40px -10px rgba(0, 245, 160, 0.3) !important;
+    transform: translateY(-4px) rotate(0.15deg) !important;
+}
+html:not(.dark) #hr-mock .group:hover {
+    border-color: #db2777 !important;
+    box-shadow: 0 20px 40px -10px rgba(219, 39, 119, 0.2) !important;
+    transform: translateY(-4px) rotate(0.15deg) !important;
+}
+
 </style>
 
 </head>
@@ -1560,7 +1676,7 @@ Pérdida silenciosa de depositantes detectada cuando ya retiraron sus fondos.
 <span class="card-badge-tag text-[9px] font-mono text-slate-200 uppercase px-2 py-0.5 rounded-none bg-brand-cyan/10 border border-brand-cyan/20">Ventas & Inventario</span>
 <i data-lucide="box" class="w-4 h-4"></i>
 </div>
-<h4 class="text-lg font-normal text-slate-900 dark:text-white">Sustentación de Control de Stock y Ventas</h4>
+<h4 class="text-xl font-medium tracking-tight text-slate-900 dark:text-white">Sustentación de Control de Stock y Ventas</h4>
 <!-- Antes vs Después -->
 <div class="space-y-3 my-1 border-t border-b border-slate-200 dark:border-brand-border/40 py-3 text-xs">
 <div class="text-slate-600 dark:text-brand-textMuted">
@@ -1592,7 +1708,7 @@ Solución analítica orientada a mitigar la incertidumbre sobre el capital inmov
 <span class="card-badge-tag text-[9px] font-mono text-slate-200 uppercase px-2 py-0.5 rounded-none bg-brand-cyan/10 border border-brand-cyan/20">Ventas & Rentabilidad</span>
 <i data-lucide="bar-chart-3" class="w-4 h-4"></i>
 </div>
-<h4 class="text-lg font-normal text-slate-900 dark:text-white">Visión General de Ventas & Rentabilidad</h4>
+<h4 class="text-xl font-medium tracking-tight text-slate-900 dark:text-white">Visión General de Ventas & Rentabilidad</h4>
 <div class="space-y-3 my-1 border-t border-b border-slate-200 dark:border-brand-border/40 py-3 text-xs">
 <div class="text-slate-600 dark:text-brand-textMuted">
 <span class="project-label font-medium font-mono text-[10px] block uppercase mb-0.5">El Desafío Comercial (Antes):</span>
@@ -1623,7 +1739,7 @@ Monitoreo en tiempo real de facturación y rentabilidad neta distribuido por geo
 <span class="card-badge-tag text-[9px] font-mono text-slate-200 uppercase px-2 py-0.5 rounded-none bg-brand-cyan/10 border border-brand-cyan/20">Fidelización & SQL</span>
 <i data-lucide="users" class="w-4 h-4"></i>
 </div>
-<h4 class="text-lg font-normal text-slate-900 dark:text-white">Segmentación de Clientes por Valor (RFM)</h4>
+<h4 class="text-xl font-medium tracking-tight text-slate-900 dark:text-white">Segmentación de Clientes por Valor (RFM)</h4>
 <div class="space-y-3 my-1 border-t border-b border-slate-200 dark:border-brand-border/40 py-3 text-xs">
 <div class="text-slate-600 dark:text-brand-textMuted">
 <span class="project-label font-medium font-mono text-[10px] block uppercase mb-0.5">El Desafío Comercial (Antes):</span>
@@ -1654,7 +1770,7 @@ Agrupación estadística automática de clientes utilizando funciones analítica
 <span class="card-badge-tag text-[9px] font-mono text-slate-200 uppercase px-2 py-0.5 rounded-none bg-brand-cyan/10 border border-brand-cyan/20">Retención de Clientes</span>
 <i data-lucide="trending-down" class="w-4 h-4"></i>
 </div>
-<h4 class="text-lg font-normal text-slate-900 dark:text-white">Churn Analytics para Banca Digital</h4>
+<h4 class="text-xl font-medium tracking-tight text-slate-900 dark:text-white">Churn Analytics para Banca Digital</h4>
 <div class="space-y-3 my-1 border-t border-b border-slate-200 dark:border-brand-border/40 py-3 text-xs">
 <div class="text-slate-600 dark:text-brand-textMuted">
 <span class="project-label font-medium font-mono text-[10px] block uppercase mb-0.5">El Desafío Comercial (Antes):</span>
@@ -1685,7 +1801,7 @@ Monitoreo y alerta temprana para prevenir la pérdida silenciosa de depositantes
 <span class="card-badge-tag text-[9px] font-mono text-slate-200 uppercase px-2 py-0.5 rounded-none bg-brand-cyan/10 border border-brand-cyan/20">Análisis Humano</span>
 <i data-lucide="user-check" class="w-4 h-4"></i>
 </div>
-<h4 class="text-lg font-normal text-slate-900 dark:text-white">HR Analytics & Gestión de Capital Humano</h4>
+<h4 class="text-xl font-medium tracking-tight text-slate-900 dark:text-white">HR Analytics & Gestión de Capital Humano</h4>
 <div class="space-y-3 my-1 border-t border-b border-slate-200 dark:border-brand-border/40 py-3 text-xs">
 <div class="text-slate-600 dark:text-brand-textMuted">
 <span class="project-label font-medium font-mono text-[10px] block uppercase mb-0.5">El Desafío Comercial (Antes):</span>
