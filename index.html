@@ -111,12 +111,12 @@ text-shadow: 0 0 8px rgba(0, 242, 254, 0.4);
 color: #9b51e0;
 text-shadow: 0 0 8px rgba(155, 81, 224, 0.4);
 }
-/* Hide scrollbar visually but keep scrolling enabled via mouse/wheel */
-html, body {
-    -ms-overflow-style: none !important;  /* IE and Edge */
+/* Hide ALL scrollbars visually globally but keep scrolling enabled */
+* {
     scrollbar-width: none !important;  /* Firefox */
+    -ms-overflow-style: none !important;  /* IE and Edge */
 }
-::-webkit-scrollbar {
+*::-webkit-scrollbar {
     display: none !important;  /* Chrome, Safari, Opera */
 }
 /* Drawers sliding setup */
@@ -779,6 +779,162 @@ html:not(.dark) #reto-datos .glass-card:hover {
     color: #c084fc !important;
 }
 
+
+/* ==========================================================================
+   Nancy V18 Premium Styling Override Block
+   ========================================================================== */
+
+/* Premium KPI/Metric Card styles */
+.metric-card {
+    background-color: #ffffff !important;
+    border: 1px solid #cbd5e1 !important;
+    border-left: 4px solid #d97706 !important; /* Left Accent in Amber for Day */
+    box-shadow: 0 4px 12px -2px rgba(15, 23, 42, 0.04) !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+.metric-card:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 10px 20px -5px rgba(71, 85, 105, 0.15) !important;
+    border-color: #94a3b8 !important;
+}
+.dark .metric-card {
+    background-color: #1b2030 !important;
+    border: 1px solid #1f293d !important;
+    border-left: 4px solid #00f2fe !important; /* Left Accent in Celeste for Night */
+    box-shadow: none !important;
+}
+
+/* Day Mode Challenges Cards premium styles (Amber to Red) */
+.challenge-card {
+    background-color: #ffffff !important;
+    border: 1px solid #cbd5e1 !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+.challenge-card:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 10px 20px -5px rgba(71, 85, 105, 0.15) !important;
+    border-color: #94a3b8 !important;
+}
+.dark .challenge-card {
+    background-color: #1b2030 !important;
+    border: 1px solid #1f293d !important;
+}
+.challenge-card-stock {
+    border-top: 4px solid #d97706 !important;
+}
+.challenge-card-sales {
+    border-top: 4px solid #f97316 !important;
+}
+.challenge-card-churn {
+    border-top: 4px solid #ef4444 !important;
+}
+
+/* Profile and Console Day Mode shadow overrides (Gray instead of Cyan) */
+html:not(.dark) .glass-card:hover,
+html:not(.dark) .console-card-hover:hover,
+html:not(.dark) .showcase-card-hover:hover,
+html:not(.dark) .mock-showcase-container:hover {
+    border-color: #cbd5e1 !important;
+    box-shadow: 0 12px 24px -8px rgba(71, 85, 105, 0.18) !important;
+    transform: translateY(-3px) !important;
+}
+
+/* Day/Night Mode Disponibilidad Badge text color unifications */
+html:not(.dark) .disponible-badge {
+    color: #0284c7 !important; /* Elegant corporate ocean-blue for visibility */
+}
+.dark .disponible-badge {
+    color: #ffffff !important; /* White for dark theme */
+}
+
+/* Day Mode Titles - same soft corporate charcoal gray, no bold */
+html:not(.dark) h2,
+html:not(.dark) h3,
+html:not(.dark) .project-label,
+html:not(.dark) .siguiente-paso-badge {
+    color: #334155 !important;
+    font-weight: 400 !important;
+}
+
+/* Dark Mode titles unifications in white and normal weight */
+.dark h2,
+.dark h3,
+.dark .siguiente-paso-badge {
+    color: #ffffff !important;
+    font-weight: 400 !important;
+}
+
+/* Day Mode active button class unifications - Outline-only Amber-Orange, NO Green */
+html:not(.dark) .nav-link.active,
+html:not(.dark) .filter-btn.active,
+html:not(.dark) .mock-tab-btn.active {
+    background-color: transparent !important;
+    background: transparent !important;
+    color: #d97706 !important;
+    border: 2px solid #d97706 !important;
+    box-shadow: 0 4px 12px rgba(217, 119, 6, 0.08) !important;
+    font-weight: 500 !important;
+}
+
+/* Day Mode inactive button class unifications */
+html:not(.dark) .nav-link,
+html:not(.dark) .filter-btn,
+html:not(.dark) .mock-tab-btn {
+    background-color: #f1f5f9 !important;
+    color: #475569 !important;
+    border: 1px solid #cbd5e1 !important;
+}
+
+/* Day Mode brand and label colors unifications - Corporate Amber-Orange */
+html:not(.dark) .project-label,
+html:not(.dark) .card-badge-tag {
+    color: #d97706 !important;
+    border-color: rgba(217, 119, 6, 0.25) !important;
+    background-color: rgba(217, 119, 6, 0.05) !important;
+    font-weight: 500 !important;
+}
+html:not(.dark) .text-brand-green,
+html:not(.dark) .text-brand-purple,
+html:not(.dark) .text-brand-cyan {
+    color: #d97706 !important;
+}
+
+/* Enforce darker readable colors in Day Mode inside PERFIL DE RENDIMIENTO spec lists */
+html:not(.dark) .glass-card span,
+html:not(.dark) .glass-card strong,
+html:not(.dark) .glass-card p {
+    color: #334155 !important;
+}
+html:not(.dark) .glass-card .text-brand-purple {
+    color: #6d28d9 !important; /* Deep Purple */
+}
+html:not(.dark) .glass-card .text-brand-green {
+    color: #15803d !important; /* Deep Green */
+}
+html:not(.dark) .glass-card .text-brand-cyan {
+    color: #0284c7 !important; /* Deep Ocean-Blue */
+}
+
+/* Dark Mode project labels and top tags unifications to blue-celeste (#00f2fe) */
+.dark .project-label,
+.dark .card-badge-tag {
+    color: #00f2fe !important;
+    font-weight: 400 !important;
+}
+
+/* Dynamic styling overrides for alert modals - Unified solid indigo button, NO Cyan */
+.dark #success-modal button,
+.dark #email-success-modal button {
+    background-color: #4f46e5 !important;
+    border-color: #4f46e5 !important;
+    color: #ffffff !important;
+}
+html:not(.dark) #success-modal button,
+html:not(.dark) #email-success-modal button {
+    background-color: #4f46e5 !important;
+    border-color: #4f46e5 !important;
+    color: #ffffff !important;
+}
 </style>
 </head>
 <body class="selection:bg-brand-cyan selection:text-brand-dark font-sans">
@@ -829,7 +985,7 @@ html:not(.dark) #reto-datos .glass-card:hover {
 <!-- Glowing decorative blur -->
 <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-brand-cyan/10 rounded-full blur-[100px] pointer-events-none"></div>
 <div class="absolute bottom-10 left-10 w-[300px] h-[300px] bg-brand-purple/10 rounded-full blur-[80px] pointer-events-none"></div>
-<div class="max-w-5xl mx-auto w-full grid grid-cols-1 md:grid-cols-12 gap-8 items-center relative z-10">
+<div class="max-w-5xl mx-auto w-full grid grid-cols-1 md:grid-cols-12 gap-8 items-start relative z-10">
 <div class="md:col-span-8 flex flex-col gap-4">
 <div class="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full bg-brand-cyan/10 border border-brand-cyan/20 w-fit">
 <span class="w-1.5 h-1.5 rounded-full bg-brand-cyan animate-pulse"></span>
@@ -985,7 +1141,7 @@ No trabajo con archivos locales sueltos. He diseñado e implementado una arquite
 </div>
 </div>
 <div class="flex flex-wrap items-center gap-2 w-full sm:w-auto shrink-0">
-<button onclick="startPipelineSimulation()" id="btn-simulate" class="w-full sm:w-auto px-4 py-2 rounded-none bg-transparent hover:bg-emerald-500/5 text-emerald-600 border border-emerald-600 dark:text-brand-green dark:border-brand-cyan dark:hover:bg-brand-cyan/5 transition-all font-normal text-[10px] uppercase tracking-wider shadow-sm flex items-center justify-center gap-1.5">
+<button onclick="startPipelineSimulation()" id="btn-simulate" class="w-full sm:w-auto px-4 py-2 rounded-none bg-transparent hover:bg-indigo-500/5 text-indigo-600 border border-indigo-600 dark:text-indigo-400 dark:border-indigo-400 dark:hover:bg-indigo-500/10 transition-all font-normal text-[10px] uppercase tracking-wider shadow-sm flex items-center justify-center gap-1.5">
 <i data-lucide="play" class="w-3.5 h-3.5"></i> Simular Despliegue (Push)
 </button>
 <button onclick="openImageModal('images/git-pipeline.png', 'Mapa de Arquitectura Git & Fabric')" class="w-full sm:w-auto px-4 py-2 rounded border border-slate-200 dark:border-brand-border text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-brand-card/50 font-bold text-[10px] uppercase tracking-wider transition-all flex items-center justify-center gap-1.5">
@@ -1435,7 +1591,7 @@ Llevá tu negocio al siguiente nivel. Diseñemos juntos un ecosistema de Busines
 <p class="text-xs text-slate-300 leading-relaxed mb-5">
 Has desplegado una actualización de tus modelos de BI desde local hasta Microsoft Fabric de forma 100% automatizada.
 </p>
-<button onclick="closeSuccessModal()" class="w-full py-2.5 bg-brand-green hover:bg-white text-slate-900 hover:text-brand-dark rounded-lg font-bold text-xs uppercase tracking-wider transition-all shadow-md">
+<button onclick="closeSuccessModal()" class="w-full py-2.5 bg-indigo-600 hover:bg-indigo-500 text-white font-normal text-xs uppercase tracking-wider transition-all rounded-none shadow-md border border-indigo-600 cursor-pointer">
 Entendido
 </button>
 </div>
