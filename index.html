@@ -770,21 +770,21 @@ html:not(.dark) #reto-datos .glass-card:hover {
 
 
 /* ==========================================================================
-   Nancy V18 Premium Styling Override Block
+   Nancy V18 Premium Styling Override Block - MAGENTA, ROSA & PURPURA 100% UNIFIED
    ========================================================================== */
 
 /* Premium KPI/Metric Card styles */
 .metric-card {
     background-color: #ffffff !important;
     border: 1px solid #cbd5e1 !important;
-    border-left: 4px solid #d97706 !important; /* Left Accent in Amber for Day */
+    border-left: 4px solid #db2777 !important; /* Left Accent in Magenta for Day */
     box-shadow: 0 4px 12px -2px rgba(15, 23, 42, 0.04) !important;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
 .metric-card:hover {
     transform: translateY(-3px) !important;
-    box-shadow: 0 10px 20px -5px rgba(71, 85, 105, 0.15) !important;
-    border-color: #94a3b8 !important;
+    box-shadow: 0 10px 20px -5px rgba(219, 39, 119, 0.1) !important;
+    border-color: #fbcfe8 !important;
 }
 .dark .metric-card {
     background-color: #1b2030 !important;
@@ -793,7 +793,7 @@ html:not(.dark) #reto-datos .glass-card:hover {
     box-shadow: none !important;
 }
 
-/* Day Mode Challenges Cards premium styles (Amber to Red) */
+/* Day Mode Challenges Cards - 100% Unified in Pink/Magenta with Coherence */
 .challenge-card {
     background-color: #ffffff !important;
     border: 1px solid #cbd5e1 !important;
@@ -801,36 +801,48 @@ html:not(.dark) #reto-datos .glass-card:hover {
 }
 .challenge-card:hover {
     transform: translateY(-3px) !important;
-    box-shadow: 0 10px 20px -5px rgba(71, 85, 105, 0.15) !important;
-    border-color: #94a3b8 !important;
+    box-shadow: 0 10px 20px -5px rgba(236, 72, 153, 0.15) !important;
+    border-color: #f472b6 !important;
 }
 .dark .challenge-card {
     background-color: #1b2030 !important;
     border: 1px solid #1f293d !important;
 }
-.dark .challenge-card-stock {
-    border-top: 4px solid #d97706 !important;
-}
-.dark .challenge-card-sales {
-    border-top: 4px solid #f97316 !important;
-}
-.dark .challenge-card-churn {
-    border-top: 4px solid #ef4444 !important;
+
+/* 100% Unified Border Tops for Challenges in Day Mode to guarantee coherence */
+html:not(.dark) .challenge-card-stock,
+html:not(.dark) .challenge-card-sales,
+html:not(.dark) .challenge-card-churn {
+    border-top: 4px solid #db2777 !important; /* Solid Magenta top border */
 }
 
-/* Profile and Console Day Mode shadow overrides (Gray instead of Cyan) */
+/* 100% Unified Icon Box colors for Challenges in Day Mode to guarantee coherence */
+html:not(.dark) .challenge-icon-stock,
+html:not(.dark) .challenge-icon-sales,
+html:not(.dark) .challenge-icon-churn {
+    background-color: rgba(219, 39, 119, 0.08) !important;
+    border-color: rgba(219, 39, 119, 0.2) !important;
+    color: #db2777 !important;
+}
+html:not(.dark) .challenge-icon-stock i,
+html:not(.dark) .challenge-icon-sales i,
+html:not(.dark) .challenge-icon-churn i {
+    color: #db2777 !important;
+}
+
+/* Profile and Console Day Mode shadow overrides */
 html:not(.dark) .glass-card:hover,
 html:not(.dark) .console-card-hover:hover,
 html:not(.dark) .showcase-card-hover:hover,
 html:not(.dark) .mock-showcase-container:hover {
-    border-color: #cbd5e1 !important;
-    box-shadow: 0 12px 24px -8px rgba(71, 85, 105, 0.18) !important;
+    border-color: #f472b6 !important;
+    box-shadow: 0 12px 24px -8px rgba(219, 39, 119, 0.15) !important;
     transform: translateY(-3px) !important;
 }
 
 /* Day/Night Mode Disponibilidad Badge text color unifications */
 html:not(.dark) .disponible-badge {
-    color: #0284c7 !important; /* Elegant corporate ocean-blue for visibility */
+    color: #db2777 !important; /* Pink/Magenta for Day mode */
 }
 .dark .disponible-badge {
     color: #ffffff !important; /* White for dark theme */
@@ -853,7 +865,9 @@ html:not(.dark) .siguiente-paso-badge {
     font-weight: 400 !important;
 }
 
-
+/* ==========================================================
+   BUTTONS ACTIVE / HOVER STATE UNIFICATIONS (NANCY V27)
+   ========================================================== */
 
 /* Day Mode inactive button class unifications */
 html:not(.dark) .nav-link,
@@ -862,9 +876,90 @@ html:not(.dark) .mock-tab-btn {
     background-color: #f1f5f9 !important;
     color: #475569 !important;
     border: 1px solid #cbd5e1 !important;
+    border-radius: 0px !important;
 }
 
+/* Day Mode HOVER button states - elegant pink outline overlay */
+html:not(.dark) .nav-link:hover,
+html:not(.dark) .filter-btn:hover,
+html:not(.dark) .mock-tab-btn:hover {
+    background-color: rgba(236, 72, 153, 0.04) !important;
+    border-color: #ec4899 !important;
+    color: #ec4899 !important;
+}
 
+/* Day Mode ACTIVE (Selected) button states - SOLID Pink background with PURE WHITE letters! */
+html:not(.dark) .nav-link.active,
+html:not(.dark) .filter-btn.active,
+html:not(.dark) .mock-tab-btn.active {
+    background-color: #ec4899 !important;
+    background: #ec4899 !important;
+    color: #ffffff !important; /* Guaranteed pure white letters */
+    border-color: #ec4899 !important;
+    box-shadow: 0 4px 12px rgba(236, 72, 153, 0.22) !important;
+    font-weight: 500 !important;
+}
+
+/* Desktop & Mobile Contact Button unifications in Day Mode - Sólido Magenta with White letters! */
+html:not(.dark) nav a[href="#contact"],
+html:not(.dark) nav a[href="#contact"]:hover,
+html:not(.dark) nav a[href="#contact"].active,
+html:not(.dark) #mobile-menu a[href="#contact"],
+html:not(.dark) #mobile-menu a[href="#contact"]:hover,
+html:not(.dark) #mobile-menu a[href="#contact"].active {
+    background-color: #db2777 !important;
+    color: #ffffff !important; /* Guaranteed pure white letters */
+    border-color: #db2777 !important;
+}
+
+/* Day Mode brand and label colors unifications inside project cards */
+html:not(.dark) #projects-grid .project-card[data-category="retail"] .card-badge-tag {
+    color: #db2777 !important; /* Magenta */
+    border-color: rgba(219, 39, 119, 0.25) !important;
+    background-color: rgba(219, 39, 119, 0.05) !important;
+}
+html:not(.dark) #projects-grid .project-card[data-category="retail"] i {
+    color: #db2777 !important;
+}
+html:not(.dark) #projects-grid .project-card[data-category="retail"] .project-label {
+    color: #db2777 !important; /* Magenta for Antes / Después labels! */
+}
+
+html:not(.dark) #projects-grid .project-card[data-category="marketing"] .card-badge-tag {
+    color: #ec4899 !important; /* Pink/Rosa */
+    border-color: rgba(236, 72, 153, 0.25) !important;
+    background-color: rgba(236, 72, 153, 0.05) !important;
+}
+html:not(.dark) #projects-grid .project-card[data-category="marketing"] i {
+    color: #ec4899 !important;
+}
+html:not(.dark) #projects-grid .project-card[data-category="marketing"] .project-label {
+    color: #ec4899 !important; /* Pink for Antes / Después labels! */
+}
+
+html:not(.dark) #projects-grid .project-card[data-category="banking"] .card-badge-tag {
+    color: #7c3aed !important; /* Purple */
+    border-color: rgba(124, 58, 237, 0.25) !important;
+    background-color: rgba(124, 58, 237, 0.05) !important;
+}
+html:not(.dark) #projects-grid .project-card[data-category="banking"] i {
+    color: #7c3aed !important;
+}
+html:not(.dark) #projects-grid .project-card[data-category="banking"] .project-label {
+    color: #7c3aed !important; /* Purple for Antes / Después labels! */
+}
+
+html:not(.dark) #projects-grid .project-card[data-category="hr"] .card-badge-tag {
+    color: #db2777 !important; /* Magenta */
+    border-color: rgba(219, 39, 119, 0.25) !important;
+    background-color: rgba(219, 39, 119, 0.05) !important;
+}
+html:not(.dark) #projects-grid .project-card[data-category="hr"] i {
+    color: #db2777 !important;
+}
+html:not(.dark) #projects-grid .project-card[data-category="hr"] .project-label {
+    color: #db2777 !important; /* Magenta for Antes / Después labels! */
+}
 
 /* Enforce darker readable colors in Day Mode inside PERFIL DE RENDIMIENTO spec lists */
 html:not(.dark) .glass-card span,
@@ -873,233 +968,22 @@ html:not(.dark) .glass-card p {
     color: #334155 !important;
 }
 html:not(.dark) .glass-card .text-brand-purple {
-    color: #6d28d9 !important; /* Deep Purple */
+    color: #be185d !important; /* Magenta */
 }
-
+html:not(.dark) .glass-card .text-brand-green {
+    color: #7c3aed !important; /* Purple */
+}
 html:not(.dark) .glass-card .text-brand-cyan {
-    color: #0284c7 !important; /* Deep Ocean-Blue */
+    color: #db2777 !important; /* Pink */
 }
 
-/* Dark Mode project labels and top tags unifications to blue-celeste (#00f2fe) */
-.dark .project-label,
-.dark .card-badge-tag {
-    color: #00f2fe !important;
-    font-weight: 400 !important;
-}
-
-/* Dynamic styling overrides for alert modals - Unified solid indigo button, NO Cyan */
-.dark #success-modal button,
-.dark #email-success-modal button {
-    background-color: #4f46e5 !important;
-    border-color: #4f46e5 !important;
-    color: #ffffff !important;
-}
-html:not(.dark) #success-modal button,
-html:not(.dark) #email-success-modal button {
-    background-color: #4f46e5 !important;
-    border-color: #4f46e5 !important;
-    color: #ffffff !important;
-}
-
-
-.dark .project-card i {
-    color: #00f2fe !important; /* Elegant celeste for dark mode card icons */
-}
-/* ==========================================================================
-   NANCY'S CUSTOM HIGH-FIDELITY MAGENTA, PINK & PURPLE LIGHT MODE OVERRIDES
-   ========================================================================== */
-html:not(.dark) body {
-    color: #334155 !important;
-}
-
-/* 1. Header Navigation & Filter Button selectors active and hover */
-html:not(.dark) .nav-link,
-html:not(.dark) .filter-btn,
-html:not(.dark) .mock-tab-btn {
-    border-radius: 0px !important;
-    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
-    background-color: transparent !important;
-    color: #475569 !important;
-    border: 1px solid #cbd5e1 !important;
-}
-
-/* Day Mode Navbar adjustments for inactive nav links */
-html:not(.dark) nav .nav-link {
-    background-color: transparent !important;
-    border: 1px solid transparent !important;
-}
-
-/* Day Mode Contact Button in Navbar - Empty/Outline when inactive */
-html:not(.dark) nav a[href="#contact"] {
-    background-color: transparent !important;
-    border: 1px solid #db2777 !important;
-    color: #db2777 !important;
-}
-html:not(.dark) nav a[href="#contact"]:hover {
-    background-color: rgba(219, 39, 119, 0.04) !important;
-    border-color: #be185d !important;
-    color: #be185d !important;
-}
-
-/* Active style: Solid Magenta with WHITE text (No gray text allowed!) */
-html:not(.dark) .nav-link.active,
-html:not(.dark) .filter-btn.active,
-html:not(.dark) .mock-tab-btn.active,
-html:not(.dark) nav a[href="#contact"].active {
-    background-color: #db2777 !important;
-    background: #db2777 !important;
-    color: #ffffff !important; /* Pure white text */
-    border: 2px solid #db2777 !important; /* Magenta Border */
-    box-shadow: 0 4px 15px rgba(219, 39, 119, 0.2) !important;
-    font-weight: 500 !important;
-}
-
-/* Hover effects: Beautiful outline rose-magenta on hover */
-html:not(.dark) .nav-link:hover,
-html:not(.dark) .filter-btn:hover,
-html:not(.dark) .mock-tab-btn:hover {
-    border-color: #ec4899 !important; /* Turns Pink on hover */
-    color: #ec4899 !important;
-    background-color: rgba(236, 72, 153, 0.04) !important;
-}
-
-/* 2. Challenge cards in "El verdadero reto de los datos" (Stock, Sales, Churn) - Unified Magenta Border */
-html:not(.dark) .challenge-card {
-    background-color: #ffffff !important;
-    border: 1px solid #cbd5e1 !important;
-}
-
-html:not(.dark) .challenge-card-stock,
-html:not(.dark) .challenge-card-sales,
-html:not(.dark) .challenge-card-churn {
-    border-top: 4px solid #db2777 !important; /* Unified Magenta Top Border */
-}
-
-/* Hover effects on cards with a soft pink/purple shadow */
-html:not(.dark) .glass-card:hover,
-html:not(.dark) .project-card:hover,
-html:not(.dark) .mock-showcase-container:hover,
-html:not(.dark) .challenge-card:hover,
-html:not(.dark) .showcase-card-hover:hover {
-    transform: translateY(-4px) !important;
-    border-color: #db2777 !important; /* Magenta border */
-    box-shadow: 0 12px 24px -6px rgba(219, 39, 119, 0.15) !important; /* Magenta soft glow shadow */
-}
-
-/* 3. Disponible Badge Hero top */
-html:not(.dark) .disponible-badge-container {
-    background-color: rgba(219, 39, 119, 0.06) !important;
-    border-color: rgba(219, 39, 119, 0.2) !important;
-}
-html:not(.dark) .disponible-badge {
-    color: #db2777 !important; /* Hot pink/Magenta */
-    font-weight: 500 !important;
-}
-html:not(.dark) .disponible-badge-container span.bg-brand-cyan {
-    background-color: #db2777 !important; /* Matching dot color */
-}
-
-/* 4. Metric Cards (5+, 100%, SQL/DAX, Fabric) left border tag */
-html:not(.dark) .metric-card {
-    border-left: 4px solid #db2777 !important; /* Magenta left vertical line */
-}
-
-/* 5. Siguiente paso bridge badge with gradient */
-html:not(.dark) .siguiente-paso-badge {
-    background: linear-gradient(135deg, rgba(219, 39, 119, 0.05), rgba(124, 58, 237, 0.05)) !important;
-    border: 1.5px solid #ec4899 !important;
-    color: #7c3aed !important; /* Royal Purple */
-    font-weight: 600 !important;
-    font-size: 15px !important;
-    padding: 0.6rem 1.2rem !important;
-    box-shadow: 0 4px 15px rgba(236, 72, 153, 0.08) !important;
-}
-html:not(.dark) .siguiente-paso-badge span.bg-brand-cyan {
-    background-color: #7c3aed !important; /* purple dot */
-}
-
-/* 6. Desafío Comercial (Antes) & Sistema Automatizado (Después) inside case cards */
-html:not(.dark) .project-card[data-category="retail"] .project-label,
-html:not(.dark) .project-card[data-category="retail"] .card-badge-tag {
-    color: #db2777 !important; /* Magenta */
-    border-color: rgba(219, 39, 119, 0.25) !important;
-    background-color: rgba(219, 39, 119, 0.05) !important;
-}
-html:not(.dark) .project-card[data-category="retail"] i {
-    color: #db2777 !important;
-}
-
-html:not(.dark) .project-card[data-category="marketing"] .project-label,
-html:not(.dark) .project-card[data-category="marketing"] .card-badge-tag {
-    color: #ec4899 !important; /* Pink/Rosa */
-    border-color: rgba(236, 72, 153, 0.25) !important;
-    background-color: rgba(236, 72, 153, 0.05) !important;
-}
-html:not(.dark) .project-card[data-category="marketing"] i {
-    color: #ec4899 !important;
-}
-
-html:not(.dark) .project-card[data-category="banking"] .project-label,
-html:not(.dark) .project-card[data-category="banking"] .card-badge-tag {
-    color: #7c3aed !important; /* Purple */
-    border-color: rgba(124, 58, 237, 0.25) !important;
-    background-color: rgba(124, 58, 237, 0.05) !important;
-}
-html:not(.dark) .project-card[data-category="banking"] i {
-    color: #7c3aed !important;
-}
-
-html:not(.dark) .project-card[data-category="hr"] .project-label,
-html:not(.dark) .project-card[data-category="hr"] .card-badge-tag {
-    color: #db2777 !important; /* Magenta */
-    border-color: rgba(219, 39, 119, 0.25) !important;
-    background-color: rgba(219, 39, 119, 0.05) !important;
-}
-html:not(.dark) .project-card[data-category="hr"] i {
-    color: #db2777 !important;
-}
-
-/* 7. Success Warning Popups Modals and Email understood button overrides in Day Mode */
-html:not(.dark) .modal-btn-theme {
-    background-color: #64748b !important; /* Elegant slate gray */
-    border-color: #64748b !important;
-    color: #ffffff !important;
-}
-html:not(.dark) .modal-btn-theme:hover {
-    background-color: #475569 !important; /* Deep slate gray */
-    border-color: #475569 !important;
-}
-
-/* 8. Text elements, headings inside PERFIL DE RENDIMIENTO and Showcase details in Day Mode */
-html:not(.dark) .glass-card span:not(.font-mono),
-html:not(.dark) .glass-card strong,
-html:not(.dark) .glass-card p {
-    color: #334155 !important;
-}
-
-/* Day Mode technology tags - beautiful brand colors overrides (no more gray!) */
-html:not(.dark) .glass-card span.font-mono {
-    background-color: rgba(219, 39, 119, 0.05) !important;
-    border: 1px solid rgba(219, 39, 119, 0.2) !important;
-    color: #db2777 !important; /* Magenta */
-}
-html:not(.dark) .glass-card span.font-mono:nth-child(even) {
-    background-color: rgba(124, 58, 237, 0.05) !important;
-    border: 1px solid rgba(124, 58, 237, 0.2) !important;
-    color: #7c3aed !important; /* Purple */
-}
-html:not(.dark) .glass-card span.font-mono:nth-child(3n) {
-    background-color: rgba(236, 72, 153, 0.05) !important;
-    border: 1px solid rgba(236, 72, 153, 0.2) !important;
-    color: #ec4899 !important; /* Pink */
-}
-
+/* Day Mode h2 subheadings style (Gris pizarra oscuro) */
 html:not(.dark) #reto-datos h2,
 html:not(.dark) #projects h2,
 html:not(.dark) #pipeline h2,
 html:not(.dark) #showcase h2,
 html:not(.dark) #contact h2 {
-    color: #475569 !important; /* Gris pizarra oscuro subheadings instead of magenta */
+    color: #475569 !important; /* Gris pizarra oscuro Section Header h2 */
     font-weight: 500 !important;
 }
 html:not(.dark) #reto-datos h3,
@@ -1110,72 +994,7 @@ html:not(.dark) #contact h3 {
     color: #334155 !important; /* Soft dark grey for titles h3 */
 }
 
-/* 9. Glass panel dark mode blue tint removal overrides */
-.dark .glass-panel {
-    background: rgba(18, 20, 26, 0.8) !important; /* Neutral dark overlay */
-}
-.dark .glass-card {
-    background: rgba(26, 32, 40, 0.6) !important; /* Neutral dark card bg */
-}
-
-/* 11. Day Mode Challenges Cards premium style overrides - Unified Magenta */
-html:not(.dark) .challenge-card-stock,
-html:not(.dark) .challenge-card-sales,
-html:not(.dark) .challenge-card-churn {
-    border-top-color: #db2777 !important; /* Unified Magenta */
-}
-html:not(.dark) .challenge-card-stock .absolute,
-html:not(.dark) .challenge-card-sales .absolute,
-html:not(.dark) .challenge-card-churn .absolute {
-    background-color: rgba(219, 39, 119, 0.04) !important;
-}
-html:not(.dark) .challenge-card-stock .absolute:hover,
-html:not(.dark) .challenge-card-sales .absolute:hover,
-html:not(.dark) .challenge-card-churn .absolute:hover {
-    background-color: rgba(219, 39, 119, 0.08) !important;
-}
-html:not(.dark) .challenge-icon-stock,
-html:not(.dark) .challenge-icon-sales,
-html:not(.dark) .challenge-icon-churn {
-    background-color: rgba(219, 39, 119, 0.08) !important;
-    border-color: rgba(219, 39, 119, 0.2) !important;
-    color: #db2777 !important;
-}
-html:not(.dark) .challenge-icon-stock i,
-html:not(.dark) .challenge-icon-sales i,
-html:not(.dark) .challenge-icon-churn i {
-    color: #db2777 !important;
-}
-
-/* 12. Contact section and card in Day Mode unifications to pure white and pink glow */
-html:not(.dark) #contact {
-    background-color: #ffffff !important;
-}
-html:not(.dark) #contact .glass-panel {
-    background-color: #ffffff !important;
-    border-color: #e2e8f0 !important;
-    box-shadow: 0 10px 30px -5px rgba(219, 39, 119, 0.08) !important;
-}
-
-/* Day Mode simulate button and theme icon overrides */
-html:not(.dark) #btn-simulate {
-    background-color: #ec4899 !important; /* Solid pink */
-    color: #ffffff !important;
-    border-color: #ec4899 !important;
-}
-html:not(.dark) #btn-simulate:hover {
-    background-color: #db2777 !important;
-    border-color: #db2777 !important;
-}
-html:not(.dark) #theme-icon-moon,
-html:not(.dark) button[onclick="toggleTheme()"] i {
-    color: #ec4899 !important; /* Hot pink switcher icon */
-}
-html:not(.dark) button[onclick="toggleTheme()"] {
-    border-color: rgba(236, 72, 153, 0.3) !important;
-}
-
-/* Day Mode Console Log coloring (Nancy V25) */
+/* Dynamic Console Log coloring (Nancy V27 unifications) */
 html:not(.dark) .sim-console-container #sim-logs .text-brand-cyan {
     color: #db2777 !important; /* Magenta for process */
 }
@@ -1187,6 +1006,30 @@ html:not(.dark) .sim-console-container #sim-logs .text-slate-500 {
 }
 html:not(.dark) .sim-console-container #sim-logs div:not(.text-brand-cyan):not(.text-brand-purple):not(.text-slate-500) {
     color: #475569 !important; /* Default slate gray */
+}
+
+/* Success Warning Popups Modals and Email understood button overrides in Day Mode */
+html:not(.dark) .modal-btn-theme {
+    background-color: #64748b !important; /* Elegant gray/slate */
+    border-color: #64748b !important;
+    color: #ffffff !important;
+}
+html:not(.dark) .modal-btn-theme:hover {
+    background-color: #475569 !important; /* Darker gray/slate */
+    border-color: #475569 !important;
+}
+
+/* Dynamic styling overrides for alert modals in Dark Mode - Unified solid gray button */
+.dark #success-modal button,
+.dark #email-success-modal button {
+    background-color: #64748b !important;
+    border-color: #64748b !important;
+    color: #ffffff !important;
+}
+.dark #success-modal button:hover,
+.dark #email-success-modal button:hover {
+    background-color: #475569 !important;
+    border-color: #475569 !important;
 }
 </style>
 
@@ -1839,7 +1682,7 @@ Llevá tu negocio al siguiente nivel. Diseñemos juntos un ecosistema de Busines
 <div class="absolute inset-0 cursor-pointer" onclick="closeSuccessModal()"></div>
 <div class="relative max-w-sm w-full bg-white dark:bg-[#1b2030] border border-slate-300 dark:border-slate-700 rounded-none shadow-2xl p-6 text-center z-10 transition-all scale-95 duration-300 shadow-[0_10px_40px_-10px_rgba(79,70,229,0.15)]" id="success-modal-card">
 <div class="w-12 h-12 bg-slate-500/10 border border-slate-500/20 rounded-full flex items-center justify-center mx-auto mb-4 animate-bounce">
-<i data-lucide="check" class="w-6 h-6 text-[#10b981]"></i>
+<i data-lucide="check" class="w-6 h-6 text-slate-500 dark:text-slate-400"></i>
 </div>
 <h3 class="text-sm font-mono font-normal text-white uppercase tracking-wider mb-2">¡Proceso Exitoso!</h3>
 <p class="text-xs text-slate-300 leading-relaxed mb-5">
@@ -1854,8 +1697,8 @@ Entendido
 <div id="email-success-modal" class="fixed inset-0 z-50 flex items-center justify-center hidden p-4 sm:p-6 bg-black/80 backdrop-blur-sm transition-all duration-300">
 <div class="absolute inset-0 cursor-pointer" onclick="closeEmailSuccessModal()"></div>
 <div class="relative max-w-sm w-full bg-[#1b2030] border border-slate-700 rounded-none shadow-2xl p-6 text-center z-10 transition-all scale-95 duration-300" id="email-success-modal-card">
-<div class="w-12 h-12 bg-brand-cyan/10 border border-brand-cyan/20 rounded-full flex items-center justify-center mx-auto mb-4 animate-bounce">
-<i data-lucide="mail" class="w-6 h-6 text-slate-200"></i>
+<div class="w-12 h-12 bg-slate-500/10 border border-slate-500/30 rounded-none flex items-center justify-center mx-auto mb-4 animate-bounce">
+<i data-lucide="mail" class="w-6 h-6 text-slate-500 dark:text-slate-400"></i>
 </div>
 <h3 class="text-sm font-mono font-normal text-white uppercase tracking-wider mb-2">¡Correo Copiado!</h3>
 <p class="text-xs text-slate-300 leading-relaxed mb-5">
@@ -2105,9 +1948,9 @@ if (ic) ic.classList.remove('animate-pulse', 'animate-bounce', 'scale-110');
 logsContainer.innerHTML = '';
 const appendLog = (text, type = 'info') => {
 let colorClass = 'text-slate-300';
-if (type === 'success') colorClass = 'text-[#4ade80] font-normal';
-if (type === 'process') colorClass = 'text-[#22d3ee] font-normal';
-if (type === 'git') colorClass = 'text-[#cbd5e1] font-normal';
+if (type === 'success') colorClass = 'text-slate-500';
+if (type === 'process') colorClass = 'text-brand-cyan';
+if (type === 'git') colorClass = 'text-brand-purple';
 logsContainer.innerHTML += `<div class="${colorClass}">&gt; ${text}</div>`;
 logsContainer.scrollTop = logsContainer.scrollHeight;
 };
@@ -2367,32 +2210,6 @@ if (type === 'warning') {
 btn.className = "w-full py-2.5 bg-slate-600 hover:bg-slate-700 text-white font-normal text-xs uppercase tracking-wider transition-all rounded-none shadow-md border border-slate-600 cursor-pointer";
 btn.textContent = "Entendido";
 
-modal.classList.remove('hidden');
-setTimeout(() => {
-    card.classList.remove('scale-95');
-    card.classList.add('scale-100');
-}, 10);
-if (window.lucide) { lucide.createIcons(); }
-} else {
-    // Light Mode: Dynamic beautiful Pink/Purple
-    h3.className = "text-sm font-mono font-bold text-slate-800 uppercase tracking-wider mb-2";
-    p.className = "text-xs text-slate-600 leading-relaxed mb-5";
-    
-    if (type === 'warning') {
-        iconBox.className = "w-12 h-12 bg-amber-500/10 border border-amber-500/20 rounded-none flex items-center justify-center mx-auto mb-4 animate-bounce";
-        iconBox.innerHTML = '<i data-lucide="alert-triangle" class="w-6 h-6 text-amber-500"></i>';
-        btn.className = "w-full py-2.5 bg-amber-500 hover:bg-amber-600 text-white font-normal text-xs uppercase tracking-wider transition-all rounded-none shadow-md border border-amber-500 cursor-pointer";
-    } else if (type === 'email') {
-        iconBox.className = "w-12 h-12 bg-indigo-500/10 border border-indigo-500/20 rounded-none flex items-center justify-center mx-auto mb-4 animate-bounce";
-        iconBox.innerHTML = '<i data-lucide="copy" class="w-6 h-6 text-indigo-500"></i>';
-        btn.className = "w-full py-2.5 bg-[#7c3aed] hover:bg-[#6d28d9] text-white font-normal text-xs uppercase tracking-wider transition-all rounded-none shadow-md border border-[#7c3aed] cursor-pointer";
-    } else {
-        iconBox.className = "w-12 h-12 bg-pink-500/10 border border-pink-500/20 rounded-none flex items-center justify-center mx-auto mb-4 animate-bounce";
-        iconBox.innerHTML = '<i data-lucide="check" class="w-6 h-6 text-pink-500"></i>';
-        btn.className = "w-full py-2.5 bg-[#db2777] hover:bg-[#be185d] text-white font-normal text-xs uppercase tracking-wider transition-all rounded-none shadow-md border border-[#db2777] cursor-pointer";
-    }
-    btn.textContent = "Entendido";
-}
 modal.classList.remove('hidden');
 setTimeout(() => {
     card.classList.remove('scale-95');
